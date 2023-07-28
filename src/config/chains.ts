@@ -165,7 +165,7 @@ export const RPC_PROVIDERS = {
   [ARBITRUM_TESTNET]: ["https://rinkeby.arbitrum.io/rpc"],
   [AVALANCHE]: ["https://api.avax.network/ext/bc/C/rpc"],
   [AVALANCHE_FUJI]: ["https://api.avax-test.network/ext/bc/C/rpc"],
-  [SEPOLIA]: ["https://rpc.sepolia.org/"],
+  [SEPOLIA]: ["https://eth-sepolia.g.alchemy.com/v2/Y3RwKW9kEoiq94_e1pUYNLnVdAO0iGCv"],
 };
 
 export const FALLBACK_PROVIDERS = {
