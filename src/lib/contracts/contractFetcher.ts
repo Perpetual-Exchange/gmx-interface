@@ -20,7 +20,6 @@ export const contractFetcher =
       params,
       additionalArgs,
     });
-
     let shouldCallFallback = true;
 
     const handleFallback = async (resolve, reject, error) => {

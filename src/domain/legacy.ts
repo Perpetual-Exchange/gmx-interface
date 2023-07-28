@@ -15,7 +15,7 @@ import Token from "abis/Token.json";
 import PositionRouter from "abis/PositionRouter.json";
 
 import { getContract } from "config/contracts";
-import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, getConstant, getHighExecutionFee } from "config/chains";
+import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, getConstant, getHighExecutionFee, SEPOLIA } from "config/chains";
 import { DECREASE, getOrderKey, INCREASE, SWAP, USD_DECIMALS } from "lib/legacy";
 
 import { groupBy } from "lodash";
@@ -391,10 +391,15 @@ export function useExecutionFee(library, active, chainId, infoTokens) {
     multiplier = 700000;
   }
 
+  if (chainId === SEPOLIA) {
+    multiplier = 700000;
+  }
+
   let finalExecutionFee = minExecutionFee;
 
   if (gasPrice && minExecutionFee) {
     const estimatedExecutionFee = gasPrice.mul(multiplier);
+
     if (estimatedExecutionFee.gt(minExecutionFee)) {
       finalExecutionFee = estimatedExecutionFee;
     }

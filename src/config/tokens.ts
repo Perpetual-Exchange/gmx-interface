@@ -384,7 +384,7 @@ export const TOKENS: { [chainId: number]: Token[] } = {
     {
       name: "Ethereum (WETH.e)",
       symbol: "WETH",
-      address: "0xb16F35c0Ae2912430DAc15764477E179D9B9EbEa",
+      address: "0x05a43eACB39cE876C9303417659c125Db3723d0A",
       decimals: 18,
       isShortable: true,
       imageUrl: "https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880",
@@ -392,7 +392,7 @@ export const TOKENS: { [chainId: number]: Token[] } = {
     {
       name: "USD Coin",
       symbol: "USDC",
-      address: "0x51fCe89b9f6D4c530698f181167043e1bB4abf89",
+      address: "0xd41D4FeF58b8c008F6e4d9614f2Fa9ed2Aec8aAb",
       decimals: 6,
       isStable: true,
       imageUrl: "https://assets.coingecko.com/coins/images/6319/thumb/USD_Coin_icon.png?1547042389",
