@@ -7,7 +7,7 @@
 .vscode
 
 # lingui
-/src/locales/**/*.js
+# /src/locales/**/*.js
 /src/locales/en/messages.po
 /src/locales/_build/
 
