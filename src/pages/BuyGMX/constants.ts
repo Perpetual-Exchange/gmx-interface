@@ -1,8 +1,9 @@
-import { ARBITRUM, AVALANCHE } from "config/chains";
+import { ARBITRUM, AVALANCHE, SEPOLIA } from "config/chains";
 import { getContract } from "config/contracts";
 
 const ARBITRUM_GMX = getContract(ARBITRUM, "GMX").toLowerCase();
 const AVALANCHE_GMX = getContract(AVALANCHE, "GMX").toLowerCase();
+const SEPOLIA_GMX = getContract(SEPOLIA, "GMX").toLowerCase();
 
 type Exchange = {
   name: string;
@@ -21,6 +22,12 @@ export const EXTERNAL_LINKS = {
     networkWebsite: "https://www.avax.network/",
     buyGmx: {
       traderjoe: `https://traderjoexyz.com/trade?outputCurrency=${AVALANCHE_GMX}`,
+    },
+  },
+  [SEPOLIA]: {
+    networkWebsite: "https://sepolia.etherscan.io/",
+    buyGmx: {
+      traderjoe: `https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=${SEPOLIA_GMX}`,
     },
   },
 };

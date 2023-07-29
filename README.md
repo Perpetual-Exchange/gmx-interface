@@ -234,4 +234,8 @@ Use the following syntax to import scss modules:
 }
 ```
 
+## Note
+
+- `src\pages\BuyGMX\constants.ts`
+
 ---
