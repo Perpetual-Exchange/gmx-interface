@@ -8,7 +8,7 @@ import { useWeb3React } from "@web3-react/core";
 
 import APRLabel from "../APRLabel/APRLabel";
 import { HeaderLink } from "../Header/HeaderLink";
-import { ARBITRUM, AVALANCHE } from "config/chains";
+import { ARBITRUM, AVALANCHE, SEPOLIA } from "config/chains";
 import { switchNetwork } from "lib/wallets";
 import { useChainId } from "lib/chains";
 import ExternalLink from "components/ExternalLink/ExternalLink";
@@ -98,15 +98,16 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           </div>
           <div className="Home-token-card-option-apr">
             <Trans>Arbitrum APR:</Trans> <APRLabel chainId={ARBITRUM} label="glpAprTotal" key="ARBITRUM" />,{" "}
-            <Trans>Avalanche APR:</Trans> <APRLabel chainId={AVALANCHE} label="glpAprTotal" key="AVALANCHE" />
+            {/* <Trans>Avalanche APR:</Trans> <APRLabel chainId={AVALANCHE} label="glpAprTotal" key="AVALANCHE" />,{" "} */}
+            <Trans>SEPOLIA APR:</Trans> <APRLabel chainId={SEPOLIA} label="glpAprTotal" key="SEPOLIA" />
           </div>
           <div className="Home-token-card-option-action">
             <div className="buy">
               <BuyLink to="/buy_glp" className="default-btn" network={ARBITRUM}>
                 <Trans>Buy on Arbitrum</Trans>
               </BuyLink>
-              <BuyLink to="/buy_glp" className="default-btn" network={AVALANCHE}>
-                <Trans>Buy on Avalanche</Trans>
+              <BuyLink to="/buy_glp" className="default-btn" network={SEPOLIA}>
+                <Trans>Buy on SEPOLIA</Trans>
               </BuyLink>
             </div>
             <a
