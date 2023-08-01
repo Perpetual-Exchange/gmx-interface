@@ -384,7 +384,7 @@ export const TOKENS: { [chainId: number]: Token[] } = {
     {
       name: "Ethereum (WETH.e)",
       symbol: "WETH",
-      address: "0x05a43eACB39cE876C9303417659c125Db3723d0A",
+      address: "0x7E160F7a1f90E3BfB380eA6Fba9cbD860d7Cd0D1",
       decimals: 18,
       isWrapped: true,
       imageUrl: "https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880",
@@ -777,7 +777,7 @@ export function getNormalizedTokenSymbol(tokenSymbol) {
 const AVAILABLE_CHART_TOKENS = {
   [ARBITRUM]: ["ETH", "BTC", "LINK", "UNI"],
   [AVALANCHE]: ["AVAX", "ETH", "BTC"],
-  [SEPOLIA]: ["ETH", "BTC"],
+  [SEPOLIA]: ["ETH", "BTC", "LINK"],
 };
 
 export function isChartAvailabeForToken(chainId: number, tokenSymbol: string) {
