@@ -418,7 +418,7 @@ export const TOKENS: { [chainId: number]: Token[] } = {
       name: "USD Coin",
       symbol: "USDC",
       address: "0xd41D4FeF58b8c008F6e4d9614f2Fa9ed2Aec8aAb",
-      decimals: 6,
+      decimals: 18,
       isStable: true,
       imageUrl: "https://assets.coingecko.com/coins/images/6319/thumb/USD_Coin_icon.png?1547042389",
     },
