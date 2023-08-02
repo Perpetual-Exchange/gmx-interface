@@ -56,8 +56,6 @@ export const contractFetcher =
         });
     };
 
-    // console.warn(111111111111111, "contractFetcher", contractInfo.contractName, method);
-
     return new Promise(async (resolve, reject) => {
       contractCall
         .then((result) => {
@@ -77,6 +75,8 @@ export const contractFetcher =
   };
 
 function getContractCall({ provider, contractInfo, arg0, arg1, method, params, additionalArgs }) {
+  // console.warn(111111111111111, "contractFetcher", contractInfo.contractName, method, params, additionalArgs);
+
   if (ethers.utils.isAddress(arg0)) {
     const address = arg0;
     const contract = new ethers.Contract(address, contractInfo.abi, provider);

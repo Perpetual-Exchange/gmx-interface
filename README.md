@@ -241,6 +241,6 @@ Use the following syntax to import scss modules:
 - referer fetch config : `src\domain\referrals\index.ts`
 - graph config: `src\lib\subgraph\clients.ts`
 
-- signup: https://www.satsuma.xyz/
+- signup: https://www.satsuma.xyz/ `src\config\subgraph.ts`
 
 ---
