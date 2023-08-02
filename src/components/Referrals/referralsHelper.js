@@ -6,7 +6,7 @@ import {
   REFERRAL_CODE_QUERY_PARAM,
 } from "lib/legacy";
 import { encodeReferralCode, getReferralCodeOwner } from "domain/referrals";
-import { ARBITRUM, AVALANCHE } from "config/chains";
+import { SEPOLIA } from "config/chains";
 import { bigNumberify, formatAmount } from "lib/numbers";
 import { t } from "@lingui/macro";
 import { getRootUrl } from "lib/url";
@@ -23,20 +23,14 @@ export function isRecentReferralCodeNotExpired(referralCodeInfo) {
 
 export async function getReferralCodeTakenStatus(account, referralCode, chainId) {
   const referralCodeBytes32 = encodeReferralCode(referralCode);
-  const [ownerArbitrum, ownerAvax] = await Promise.all([
-    getReferralCodeOwner(ARBITRUM, referralCodeBytes32),
-    getReferralCodeOwner(AVALANCHE, referralCodeBytes32),
-  ]);
+  const [ownerArbitrum, ownerAvax] = await Promise.all([getReferralCodeOwner(SEPOLIA, referralCodeBytes32)]);
 
-  const takenOnArb =
-    !isAddressZero(ownerArbitrum) && (ownerArbitrum !== account || (ownerArbitrum === account && chainId === ARBITRUM));
-  const takenOnAvax =
-    !isAddressZero(ownerAvax) && (ownerAvax !== account || (ownerAvax === account && chainId === AVALANCHE));
+  const takenOnSEPOLIA =
+    !isAddressZero(ownerArbitrum) && (ownerArbitrum !== account || (ownerArbitrum === account && chainId === SEPOLIA));
 
   const referralCodeTakenInfo = {
-    [ARBITRUM]: takenOnArb,
-    [AVALANCHE]: takenOnAvax,
-    both: takenOnArb && takenOnAvax,
+    [SEPOLIA]: takenOnSEPOLIA,
+    both: takenOnSEPOLIA,
     ownerArbitrum,
     ownerAvax,
   };
@@ -47,9 +41,9 @@ export async function getReferralCodeTakenStatus(account, referralCode, chainId)
   if (referralCodeTakenInfo[chainId]) {
     return { status: "current", info: referralCodeTakenInfo };
   }
-  if (chainId === AVALANCHE ? referralCodeTakenInfo[ARBITRUM] : referralCodeTakenInfo[AVALANCHE]) {
-    return { status: "other", info: referralCodeTakenInfo };
-  }
+  // if (chainId === AVALANCHE ? referralCodeTakenInfo[ARBITRUM] : referralCodeTakenInfo[AVALANCHE]) {
+  //   return { status: "other", info: referralCodeTakenInfo };
+  // }
   return { status: "none", info: referralCodeTakenInfo };
 }
 

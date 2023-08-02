@@ -236,6 +236,11 @@ Use the following syntax to import scss modules:
 
 ## Note
 
-- `src\pages\BuyGMX\constants.ts`
+- buy gmx link: `src\pages\BuyGMX\constants.ts`
+- refer chain config: `referralsHelper`
+- referer fetch config : `src\domain\referrals\index.ts`
+- graph config: `src\lib\subgraph\clients.ts`
+
+- signup: https://www.satsuma.xyz/
 
 ---
