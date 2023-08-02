@@ -56,7 +56,7 @@ export const contractFetcher =
         });
     };
 
-    console.warn(111111111111111, "contractFetcher", contractInfo.contractName, method);
+    // console.warn(111111111111111, "contractFetcher", contractInfo.contractName, method);
 
     return new Promise(async (resolve, reject) => {
       contractCall
