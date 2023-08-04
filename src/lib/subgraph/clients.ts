@@ -1,5 +1,5 @@
 import { createClient } from "./utils";
-import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, ETH_MAINNET, SEPOLIA } from "config/chains";
+import { ARBITRUM, AVALANCHE, ETH_MAINNET, SEPOLIA } from "config/chains";
 
 export const chainlinkClient = createClient(ETH_MAINNET, "chainLink");
 
@@ -18,8 +18,8 @@ export function getGmxGraphClient(chainId: number) {
     return arbitrumGraphClient;
   } else if (chainId === SEPOLIA) {
     return sepoliaGraphClient;
-  } else if (chainId === ARBITRUM_TESTNET) {
-    return null;
+  } else if (chainId === AVALANCHE) {
+    return avalancheGraphClient;
   }
 
   throw new Error(`Unsupported chain ${chainId}`);

@@ -18,6 +18,7 @@ import { useUserStat } from "domain/legacy";
 
 import arbitrumIcon from "img/ic_arbitrum_96.svg";
 import avaxIcon from "img/ic_avalanche_96.svg";
+import linePic from "img/vector1.png";
 
 import TokenCard from "components/TokenCard/TokenCard";
 import { Trans } from "@lingui/macro";
@@ -126,7 +127,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
   const LaunchExchangeButton = () => {
     return (
       <HeaderLink
-        className="default-btn"
+        className="default-btn LaunchExchangeButton"
         to="/trade"
         redirectPopupTimestamp={redirectPopupTimestamp}
         showRedirectModal={showRedirectModal}
@@ -144,17 +145,70 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
           <div className="Home-title-section">
             <div className="Home-title">
               <Trans>
-                Decentralized
+                DECENTRALIZED
                 <br />
-                Perpetual Exchange
+                <span style={{ color: "#e0ee8d" }}>PERPETUAL</span>
+                <br />
+                EXCHANGE
               </Trans>
             </div>
+            <img src={linePic} style={{ margin: "0 auto 40px" }} alt="line" />
             <div className="Home-description">
-              <Trans>
-                Trade BTC, ETH, AVAX and other top cryptocurrencies with up to 50x leverage directly from your wallet
-              </Trans>
+              <Trans>Trade cryptocurrencies with liquidity, leverage and low fees.</Trans>
             </div>
             <LaunchExchangeButton />
+          </div>
+        </div>
+        <div className="Home-feature-wrap default-container">
+          <div className="Home-feature">
+            <h2>Features</h2>
+            <ul className="Home-feature-list grid grid-cols-3 divide-x divide-y divide-[#E0EE8D]">
+              <li>
+                <h3>Leveraged Trading</h3>
+                <div>
+                  Traders could now take advantage of up to 50x leverage on assets such as BTC, ETH, USDT, SYS, PSYS,
+                  etc.
+                </div>
+              </li>
+              <li>
+                <h3>Cross-Margin Collateral</h3>
+                <div>
+                  Rollex enables cross-margin collateral management, allowing margin balance sharing across positions.
+                  Traders can efficiently and conveniently manage their entire portfolio.
+                </div>
+              </li>
+              <li>
+                <h3>More APR% for LP</h3>
+                <div>
+                  Rollex offers one of the highest APR% for LPs in the market through multiple rewards programs and
+                  incentive campaign.
+                </div>
+              </li>
+              <li>
+                <h3>Mutil Rewards Programma</h3>
+                <div>Rollex has the following incentive programs </div>
+                <div class="easy-list mt-sm">
+                  <div>Trader's loyalty and credit </div>
+                  <div>Holding incentive rewards </div>
+                  <div>Liquidity provider rewards </div>
+                  <div>Referral program</div>
+                </div>
+              </li>
+              <li>
+                <h3>More APR% for LP</h3>
+                <div>
+                  Rollex offers one of the highest APR% for LPs in the market through multiple rewards programs and
+                  incentive campaign.
+                </div>
+              </li>
+              <li>
+                <h3>More APR% for LP</h3>
+                <div>
+                  Rollex offers one of the highest APR% for LPs in the market through multiple rewards programs and
+                  incentive campaign.
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
         <div className="Home-latest-info-container default-container">

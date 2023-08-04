@@ -545,6 +545,7 @@ export default function ConfirmationBox(props) {
   const INCREASE_ORDER_EXECUTION_GAS_FEE = getConstant(chainId, "INCREASE_ORDER_EXECUTION_GAS_FEE");
   const executionFee = isSwap ? SWAP_ORDER_EXECUTION_GAS_FEE : INCREASE_ORDER_EXECUTION_GAS_FEE;
   const executionFeeUsd = getUsd(executionFee, nativeTokenAddress, false, infoTokens);
+  //
   const currentExecutionFee = isMarketOrder ? minExecutionFee : executionFee;
   const currentExecutionFeeUsd = isMarketOrder ? minExecutionFeeUSD : executionFeeUsd;
 

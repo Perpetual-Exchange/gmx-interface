@@ -341,11 +341,6 @@ msgstr "Verfügbarer Auszahlungsbetrag aus GLP. Mittel, die nicht durch aktuelle
 msgid "Available on your preferred network"
 msgstr "Verfügbar in deinem bevorzugten Netzwerk"
 
-#: src/components/TokenCard/TokenCard.js
-#: src/components/TokenCard/TokenCard.js
-msgid "Avalanche APR:"
-msgstr "Avalanche APR:"
-
 #: src/components/Exchange/SwapBox.js
 #: src/components/Exchange/SwapBox.js
 #: src/components/Glp/GlpSwap.js
@@ -468,8 +463,8 @@ msgstr "Auf Arbitrum kaufen"
 
 #: src/components/TokenCard/TokenCard.js
 #: src/components/TokenCard/TokenCard.js
-msgid "Buy on Avalanche"
-msgstr "Auf Avalanche kaufen"
+msgid "Buy on SEPOLIA"
+msgstr ""
 
 #: src/pages/BuyGMX/BuyGMX.tsx
 msgid "Buy or Transfer AVAX to Avalanche"
@@ -910,6 +905,10 @@ msgstr "Aktuell {0} long"
 msgid "Current {0} shorts"
 msgstr "Aktuell {0} shorts"
 
+#: src/pages/Home/Home.js
+msgid "DECENTRALIZED<0/><1>PERPETUAL</1><2/>EXCHANGE"
+msgstr ""
+
 #: src/pages/Ecosystem/Ecosystem.js
 #: src/pages/Ecosystem/Ecosystem.js
 #: src/pages/Ecosystem/Ecosystem.js
@@ -968,10 +967,6 @@ msgstr ""
 #: src/pages/Ecosystem/Ecosystem.js
 msgid "Decentralized Trading Protocol"
 msgstr "Dezentrales Tradingprotokoll"
-
-#: src/pages/Home/Home.js
-msgid "Decentralized<0/>Perpetual Exchange"
-msgstr "Dezentralisierte<0/>Perpetual Börse"
 
 #: src/components/Exchange/ConfirmationBox.js
 #: src/components/Exchange/ConfirmationBox.js
@@ -2597,14 +2592,16 @@ msgstr "Rabatte, die mit diesem Konto als Händler verdient wurden."
 msgid "Rebates earned by this account as an affiliate."
 msgstr "Rabatte, die von diesem Konto als Affiliate-Partner verdient wurden."
 
-#: src/components/Referrals/AffiliatesStats.js
 #: src/components/Referrals/TradersStats.js
 msgid "Rebates on Arbitrum"
 msgstr ""
 
-#: src/components/Referrals/AffiliatesStats.js
 #: src/components/Referrals/TradersStats.js
 msgid "Rebates on Avalanche"
+msgstr ""
+
+#: src/components/Referrals/AffiliatesStats.js
+msgid "Rebates on sepolia"
 msgstr ""
 
 #: src/components/Exchange/ConfirmationBox.js
@@ -2758,6 +2755,11 @@ msgstr "Historie der Rewardsverteilung"
 #: src/components/Referrals/AffiliatesStats.js
 msgid "Rewards are airdropped weekly."
 msgstr "Die Rewards werden wöchentlich airdropped."
+
+#: src/components/TokenCard/TokenCard.js
+#: src/components/TokenCard/TokenCard.js
+msgid "SEPOLIA APR:"
+msgstr ""
 
 #: src/components/Referrals/JoinReferralCode.js
 msgid "Same as current active code"
@@ -3408,7 +3410,7 @@ msgid "Trade"
 msgstr "Handeln"
 
 #: src/pages/Home/Home.js
-msgid "Trade BTC, ETH, AVAX and other top cryptocurrencies with up to 50x leverage directly from your wallet"
+msgid "Trade cryptocurrencies with liquidity, leverage and low fees."
 msgstr ""
 
 #: src/components/Exchange/ExchangeBanner.js
@@ -3429,11 +3431,7 @@ msgid "Traders Referred"
 msgstr "Vermittelte Trader"
 
 #: src/components/Referrals/AffiliatesStats.js
-msgid "Traders Referred on Arbitrum"
-msgstr ""
-
-#: src/components/Referrals/AffiliatesStats.js
-msgid "Traders Referred on Avalanche"
+msgid "Traders Referred on sepolia"
 msgstr ""
 
 #: src/pages/Exchange/Exchange.js
@@ -3445,14 +3443,16 @@ msgstr "Trades"
 msgid "Trading Volume"
 msgstr ""
 
-#: src/components/Referrals/AffiliatesStats.js
 #: src/components/Referrals/TradersStats.js
 msgid "Trading Volume on Arbitrum"
 msgstr ""
 
-#: src/components/Referrals/AffiliatesStats.js
 #: src/components/Referrals/TradersStats.js
 msgid "Trading Volume on Avalanche"
+msgstr ""
+
+#: src/components/Referrals/AffiliatesStats.js
+msgid "Trading Volume on sepolia"
 msgstr ""
 
 #: src/components/Exchange/UsefulLinks.tsx

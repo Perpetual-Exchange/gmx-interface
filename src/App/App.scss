@@ -31,16 +31,6 @@
   border-bottom: 1px solid #ffffff10;
 }
 
-.App-header.large::after {
-  height: 1.3rem;
-  width: 100%;
-  content: " ";
-  background: transparent linear-gradient(180deg, #00000030 0%, #00000000 100%) 0% 0% no-repeat padding-box;
-  position: absolute;
-  bottom: -1.3rem;
-  left: 0;
-}
-
 .App-header.large .App-header-links {
   display: flex;
 }
@@ -609,8 +599,9 @@ button.App-connect-wallet:hover {
 
 .App-header-link-main img {
   display: inline-block;
-  height: 2.15rem;
+  height: 3rem;
   vertical-align: middle;
+  margin-right: 6px;
 }
 
 .App-header-link-main img.small {

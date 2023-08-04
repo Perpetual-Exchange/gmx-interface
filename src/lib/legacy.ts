@@ -1053,7 +1053,6 @@ export function getStakingData(stakingInfo) {
   if (!stakingInfo || stakingInfo.length === 0) {
     return;
   }
-
   const keys = ["stakedGmxTracker", "bonusGmxTracker", "feeGmxTracker", "stakedGlpTracker", "feeGlpTracker"];
   const data = {};
   const propsLength = 5;
@@ -1071,7 +1070,7 @@ export function getStakingData(stakingInfo) {
 
   return data;
 }
-
+//
 export function getProcessedData(
   balanceData,
   supplyData,
@@ -1098,7 +1097,6 @@ export function getProcessedData(
   ) {
     return {};
   }
-
   const data: any = {};
 
   data.gmxBalance = balanceData.gmx;
@@ -1213,7 +1211,8 @@ export function getProcessedData(
   data.totalNativeTokenRewardsUsd = data.feeGmxTrackerRewardsUsd.add(data.feeGlpTrackerRewardsUsd);
 
   data.totalRewardsUsd = data.totalEsGmxRewardsUsd.add(data.totalNativeTokenRewardsUsd).add(data.totalVesterRewardsUsd);
-
+  // TODO find all data source
+  // stakingData.stakedGmxTracker.claimable   stakingData.feeGmxTracker.claimable    vestingData.gmxVester.claimable
   return data;
 }
 
