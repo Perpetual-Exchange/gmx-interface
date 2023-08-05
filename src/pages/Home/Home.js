@@ -10,6 +10,13 @@ import totaluserIcon from "img/ic_totaluser.svg";
 import statsIcon from "img/ic_stats.svg";
 import tradingIcon from "img/ic_trading.svg";
 
+import featureIcon1 from "img/feature/f-1.png";
+import featureIcon2 from "img/feature/f-2.png";
+import featureIcon3 from "img/feature/f-3.png";
+import featureIcon4 from "img/feature/f-4.png";
+import featureIcon5 from "img/feature/f-5.png";
+import featureIcon6 from "img/feature/f-6.png";
+
 import useSWR from "swr";
 
 import { USD_DECIMALS, getTotalVolumeSum } from "lib/legacy";
@@ -169,6 +176,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
                   Traders could now take advantage of up to 50x leverage on assets such as BTC, ETH, USDT, SYS, PSYS,
                   etc.
                 </div>
+                <img src={featureIcon1} alt="" />
               </li>
               <li>
                 <h3>Cross-Margin Collateral</h3>
@@ -176,6 +184,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
                   Rollex enables cross-margin collateral management, allowing margin balance sharing across positions.
                   Traders can efficiently and conveniently manage their entire portfolio.
                 </div>
+                <img src={featureIcon2} alt="" />
               </li>
               <li>
                 <h3>More APR% for LP</h3>
@@ -183,16 +192,18 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
                   Rollex offers one of the highest APR% for LPs in the market through multiple rewards programs and
                   incentive campaign.
                 </div>
+                <img src={featureIcon3} alt="" />
               </li>
               <li>
                 <h3>Mutil Rewards Programma</h3>
                 <div>Rollex has the following incentive programs </div>
-                <div class="easy-list mt-sm">
+                <div className="easy-list mt-sm">
                   <div>Trader's loyalty and credit </div>
                   <div>Holding incentive rewards </div>
                   <div>Liquidity provider rewards </div>
                   <div>Referral program</div>
                 </div>
+                <img src={featureIcon4} alt="" />
               </li>
               <li>
                 <h3>More APR% for LP</h3>
@@ -200,6 +211,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
                   Rollex offers one of the highest APR% for LPs in the market through multiple rewards programs and
                   incentive campaign.
                 </div>
+                <img src={featureIcon5} alt="" />
               </li>
               <li>
                 <h3>More APR% for LP</h3>
@@ -207,36 +219,36 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
                   Rollex offers one of the highest APR% for LPs in the market through multiple rewards programs and
                   incentive campaign.
                 </div>
+                <img src={featureIcon6} alt="" />
               </li>
             </ul>
           </div>
         </div>
-        <div className="Home-latest-info-container default-container">
-          <div className="Home-latest-info-block">
-            <img src={tradingIcon} alt="Total Trading Volume Icon" className="Home-latest-info__icon" />
-            <div className="Home-latest-info-content">
+        <div className="Home-latest-info-container default-container" style={{ marginTop: "40px" }}>
+          <div className="flex border border-1 !border-[#e0ee8d] divide-x divide-[#E0EE8D]">
+            <div className="flex-1 py-10">
               <div className="Home-latest-info__title">
                 <Trans>Total Trading Volume</Trans>
               </div>
               <div className="Home-latest-info__value">${formatAmount(totalVolumeSum, USD_DECIMALS, 0, true)}</div>
             </div>
-          </div>
-          <div className="Home-latest-info-block">
-            <img src={statsIcon} alt="Open Interest Icon" className="Home-latest-info__icon" />
-            <div className="Home-latest-info-content">
+            <div className="flex-1 py-10">
+              <div className="Home-latest-info__title">
+                <Trans>Total Value Locked</Trans>
+              </div>
+              <div className="Home-latest-info__value">${0}</div>
+            </div>
+            <div className="flex-1 py-10">
+              <div className="Home-latest-info__title">
+                <Trans>Total Fees</Trans>
+              </div>
+              <div className="Home-latest-info__value">{0}</div>
+            </div>
+            <div className="flex-1 py-10">
               <div className="Home-latest-info__title">
                 <Trans>Open Interest</Trans>
               </div>
               <div className="Home-latest-info__value">${formatAmount(openInterest, USD_DECIMALS, 0, true)}</div>
-            </div>
-          </div>
-          <div className="Home-latest-info-block">
-            <img src={totaluserIcon} alt="Total Users Icon" className="Home-latest-info__icon" />
-            <div className="Home-latest-info-content">
-              <div className="Home-latest-info__title">
-                <Trans>Total Users</Trans>
-              </div>
-              <div className="Home-latest-info__value">{numberWithCommas(totalUsers.toFixed(0))}</div>
             </div>
           </div>
         </div>
