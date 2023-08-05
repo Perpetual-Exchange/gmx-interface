@@ -341,11 +341,6 @@ msgstr "Доступная сумма для вывода средств из GL
 msgid "Available on your preferred network"
 msgstr "Доступно в предпочитаемой сети"
 
-#: src/components/TokenCard/TokenCard.js
-#: src/components/TokenCard/TokenCard.js
-msgid "Avalanche APR:"
-msgstr "Avalanche APR:"
-
 #: src/components/Exchange/SwapBox.js
 #: src/components/Exchange/SwapBox.js
 #: src/components/Glp/GlpSwap.js
@@ -468,8 +463,8 @@ msgstr "Купить на Arbitrum"
 
 #: src/components/TokenCard/TokenCard.js
 #: src/components/TokenCard/TokenCard.js
-msgid "Buy on Avalanche"
-msgstr "Купить на Avalanche"
+msgid "Buy on SEPOLIA"
+msgstr ""
 
 #: src/pages/BuyGMX/BuyGMX.tsx
 msgid "Buy or Transfer AVAX to Avalanche"
@@ -910,6 +905,10 @@ msgstr "Текущий {0} лонгшезам"
 msgid "Current {0} shorts"
 msgstr "Текущий {0} Шорт"
 
+#: src/pages/Home/Home.js
+msgid "DECENTRALIZED<0/><1>PERPETUAL</1><2/>EXCHANGE"
+msgstr ""
+
 #: src/pages/Ecosystem/Ecosystem.js
 #: src/pages/Ecosystem/Ecosystem.js
 #: src/pages/Ecosystem/Ecosystem.js
@@ -968,10 +967,6 @@ msgstr ""
 #: src/pages/Ecosystem/Ecosystem.js
 msgid "Decentralized Trading Protocol"
 msgstr "Децентрализованный Торговый Протокол"
-
-#: src/pages/Home/Home.js
-msgid "Decentralized<0/>Perpetual Exchange"
-msgstr "Децентрализованная<0/>Бессрочная Биржа"
 
 #: src/components/Exchange/ConfirmationBox.js
 #: src/components/Exchange/ConfirmationBox.js
@@ -2597,14 +2592,16 @@ msgstr "Рибейты, заработанные этим аккаунтом в 
 msgid "Rebates earned by this account as an affiliate."
 msgstr "Рибейты, заработанные этим аккаунтом в качестве аффилированного лица."
 
-#: src/components/Referrals/AffiliatesStats.js
 #: src/components/Referrals/TradersStats.js
 msgid "Rebates on Arbitrum"
 msgstr ""
 
-#: src/components/Referrals/AffiliatesStats.js
 #: src/components/Referrals/TradersStats.js
 msgid "Rebates on Avalanche"
+msgstr ""
+
+#: src/components/Referrals/AffiliatesStats.js
+msgid "Rebates on sepolia"
 msgstr ""
 
 #: src/components/Exchange/ConfirmationBox.js
@@ -2758,6 +2755,11 @@ msgstr "История Распределения Вознаграждений"
 #: src/components/Referrals/AffiliatesStats.js
 msgid "Rewards are airdropped weekly."
 msgstr "Вознаграждения Рассылаются Еженедельно"
+
+#: src/components/TokenCard/TokenCard.js
+#: src/components/TokenCard/TokenCard.js
+msgid "SEPOLIA APR:"
+msgstr ""
 
 #: src/components/Referrals/JoinReferralCode.js
 msgid "Same as current active code"
@@ -3329,6 +3331,7 @@ msgstr "Общая сумма Размещенных Активов"
 
 #: src/pages/Dashboard/DashboardV2.js
 #: src/pages/Dashboard/DashboardV2.js
+#: src/pages/Home/Home.js
 msgid "Total Fees"
 msgstr "Общая сумма Комиссии"
 
@@ -3376,9 +3379,12 @@ msgstr "Общий Объем Торгов"
 
 #: src/pages/Dashboard/DashboardV2.js
 #: src/pages/Dashboard/DashboardV2.js
-#: src/pages/Home/Home.js
 msgid "Total Users"
 msgstr "Всего Пользователей"
+
+#: src/pages/Home/Home.js
+msgid "Total Value Locked"
+msgstr ""
 
 #: src/components/Referrals/AffiliatesStats.js
 #: src/pages/Dashboard/DashboardV2.js
@@ -3408,8 +3414,8 @@ msgid "Trade"
 msgstr "Торговля"
 
 #: src/pages/Home/Home.js
-msgid "Trade BTC, ETH, AVAX and other top cryptocurrencies with up to 50x leverage directly from your wallet"
-msgstr "Торгуйте BTC, ETH, AVAX и другими популярными криптовалютами с кредитным плечом до 50x прямо из вашего кошелька."
+msgid "Trade cryptocurrencies with liquidity, leverage and low fees."
+msgstr ""
 
 #: src/components/Exchange/ExchangeBanner.js
 msgid "Trade on GMX and win <0>$250.000</0> in prizes! Live until November 30th, <1>click here</1> to learn more."
@@ -3429,11 +3435,7 @@ msgid "Traders Referred"
 msgstr "Привлеченные Трейдеров"
 
 #: src/components/Referrals/AffiliatesStats.js
-msgid "Traders Referred on Arbitrum"
-msgstr ""
-
-#: src/components/Referrals/AffiliatesStats.js
-msgid "Traders Referred on Avalanche"
+msgid "Traders Referred on sepolia"
 msgstr ""
 
 #: src/pages/Exchange/Exchange.js
@@ -3445,14 +3447,16 @@ msgstr "Торги"
 msgid "Trading Volume"
 msgstr ""
 
-#: src/components/Referrals/AffiliatesStats.js
 #: src/components/Referrals/TradersStats.js
 msgid "Trading Volume on Arbitrum"
 msgstr ""
 
-#: src/components/Referrals/AffiliatesStats.js
 #: src/components/Referrals/TradersStats.js
 msgid "Trading Volume on Avalanche"
+msgstr ""
+
+#: src/components/Referrals/AffiliatesStats.js
+msgid "Trading Volume on sepolia"
 msgstr ""
 
 #: src/components/Exchange/UsefulLinks.tsx

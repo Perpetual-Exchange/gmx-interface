@@ -1,6 +1,5 @@
 .Home {
   min-height: 100vh;
-  padding-bottom: calc(4.65rem + 20rem);
 }
 
 .Home-top {
@@ -11,11 +10,10 @@
   padding-top: 6.2rem;
   position: relative;
   padding-bottom: 6.4rem;
-  background: url("img/Artwork_gmx.svg");
+  background: url("img/shapes2.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right;
-  margin-top: -6.2rem;
+  background-size: auto 1300px;
+  background-position: right -160px;
 }
 
 .Home-title {
@@ -30,8 +28,7 @@
   position: relative;
   /* z-index: 2; */
   width: 100%;
-  /* padding-top: 7.548rem; */
-  padding-top: 6.2rem;
+  padding-top: 10rem;
 }
 
 .Home-title-section {
@@ -42,11 +39,11 @@
 }
 
 .Home-description {
-  font-size: 2rem;
+  font-size: 2.4rem;
   line-height: 2.5rem;
-  max-width: 44.4rem;
+  max-width: 52rem;
   color: #a0a3c4;
-  margin-bottom: 2.8rem;
+  margin-bottom: 4rem;
 }
 
 .Home-benefits-section {
@@ -279,12 +276,14 @@
 } */
 
 .Home-latest-info-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   padding-top: 6.2rem;
   padding-bottom: 1.5rem;
   width: 100%;
+  color: #979797;
+}
+
+.Home-latest-info-container .flex-1 {
+  padding-left: 30px;
 }
 
 .Home-latest-info-block {
@@ -323,6 +322,7 @@
   font-size: 2.9rem;
   line-height: 3.9rem;
   letter-spacing: 0px;
+  font-weight: 700;
 }
 
 .Home-latest-info__description {
@@ -555,4 +555,131 @@
   .Home-latest-info__icon {
     margin: 0 1.5rem;
   }
+}
+
+/* custom css */
+.LaunchExchangeButton {
+  font-weight: 700;
+  font-size: 2.6rem !important;
+  line-height: 6rem !important;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+.Home-feature-wrap {
+  width: 100%;
+  margin-top: 15rem !important;
+}
+.Home-feature {
+  border: 1px solid #e0ee8d;
+  color: #858585;
+}
+.Home-feature h2 {
+  font-size: 3.6rem;
+  height: 8rem;
+  line-height: 8rem;
+  text-align: center;
+  border-bottom: 1px solid #e0ee8d;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+}
+
+.Home-feature-list h3 {
+  color: #fff;
+  font-size: 2.4rem;
+  padding: 30px 0;
+  text-align: center;
+}
+.Home-feature-list {
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+}
+.Home-feature-list > li {
+  position: relative;
+  padding-left: 20px;
+  padding-bottom: 30px;
+  height: 265px;
+}
+.Home-feature-list > li > img {
+  position: absolute;
+  max-width: 60%;
+  left: 50%;
+  top: 55%;
+  max-height: 60%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.easy-list div {
+  position: relative;
+  padding: 2px 0 2px 14px;
+}
+.easy-list div::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  margin-top: -1px;
+
+  background: #858585;
+}
+.tokenomics-list {
+  padding: 0;
+}
+.tokenomics-list > li {
+  padding: 0 0 20px 30px;
+}
+.tokenomics-list > li > h3 {
+  color: #fff;
+  font-size: 2.4rem;
+  padding: 30px 0;
+}
+
+.tokenomics-list .read-more {
+  color: #e0ee8d;
+}
+
+.tokenomics-list .custom-buy-btn {
+  font-size: 1.8rem;
+  height: 50px;
+  line-height: 50px;
+  padding-right: 70px !important;
+  background-image: url(../../img/RightArrow.png);
+  background-position: 90% center;
+  background-repeat: no-repeat;
+  margin-top: 20px;
+}
+
+.Home-tip-list h3 {
+  color: #fff;
+  font-size: 2.4rem;
+  padding: 30px 0;
+  text-transform: uppercase;
+}
+
+.Home-tip-list > li {
+  padding-bottom: 40px;
+}
+
+.Home-parnter-list {
+  margin-top: 100px;
+}
+.Home-parnter-list h3 {
+  font-size: 3.6rem;
+  text-align: center;
+  color: "#EAECEF";
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.Home-parnter-list > ul {
+  background: #1c1c1c;
+  border-radius: 100px;
+  padding: 10px 0;
+}
+.Home-parnter-list > ul > li {
+  padding: 0;
+  color: "#9E9E9E";
+  font-size: 2.4rem;
 }

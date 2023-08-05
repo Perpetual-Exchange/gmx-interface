@@ -341,11 +341,6 @@ msgstr ""
 msgid "Available on your preferred network"
 msgstr ""
 
-#: src/components/TokenCard/TokenCard.js
-#: src/components/TokenCard/TokenCard.js
-msgid "Avalanche APR:"
-msgstr ""
-
 #: src/components/Exchange/SwapBox.js
 #: src/components/Exchange/SwapBox.js
 #: src/components/Glp/GlpSwap.js
@@ -468,7 +463,7 @@ msgstr ""
 
 #: src/components/TokenCard/TokenCard.js
 #: src/components/TokenCard/TokenCard.js
-msgid "Buy on Avalanche"
+msgid "Buy on SEPOLIA"
 msgstr ""
 
 #: src/pages/BuyGMX/BuyGMX.tsx
@@ -910,6 +905,10 @@ msgstr ""
 msgid "Current {0} shorts"
 msgstr ""
 
+#: src/pages/Home/Home.js
+msgid "DECENTRALIZED<0/><1>PERPETUAL</1><2/>EXCHANGE"
+msgstr ""
+
 #: src/pages/Ecosystem/Ecosystem.js
 #: src/pages/Ecosystem/Ecosystem.js
 #: src/pages/Ecosystem/Ecosystem.js
@@ -967,10 +966,6 @@ msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
 msgid "Decentralized Trading Protocol"
-msgstr ""
-
-#: src/pages/Home/Home.js
-msgid "Decentralized<0/>Perpetual Exchange"
 msgstr ""
 
 #: src/components/Exchange/ConfirmationBox.js
@@ -2594,14 +2589,16 @@ msgstr ""
 msgid "Rebates earned by this account as an affiliate."
 msgstr ""
 
-#: src/components/Referrals/AffiliatesStats.js
 #: src/components/Referrals/TradersStats.js
 msgid "Rebates on Arbitrum"
 msgstr ""
 
-#: src/components/Referrals/AffiliatesStats.js
 #: src/components/Referrals/TradersStats.js
 msgid "Rebates on Avalanche"
+msgstr ""
+
+#: src/components/Referrals/AffiliatesStats.js
+msgid "Rebates on sepolia"
 msgstr ""
 
 #: src/components/Exchange/ConfirmationBox.js
@@ -2754,6 +2751,11 @@ msgstr ""
 
 #: src/components/Referrals/AffiliatesStats.js
 msgid "Rewards are airdropped weekly."
+msgstr ""
+
+#: src/components/TokenCard/TokenCard.js
+#: src/components/TokenCard/TokenCard.js
+msgid "SEPOLIA APR:"
 msgstr ""
 
 #: src/components/Referrals/JoinReferralCode.js
@@ -3326,6 +3328,7 @@ msgstr ""
 
 #: src/pages/Dashboard/DashboardV2.js
 #: src/pages/Dashboard/DashboardV2.js
+#: src/pages/Home/Home.js
 msgid "Total Fees"
 msgstr ""
 
@@ -3373,8 +3376,11 @@ msgstr ""
 
 #: src/pages/Dashboard/DashboardV2.js
 #: src/pages/Dashboard/DashboardV2.js
-#: src/pages/Home/Home.js
 msgid "Total Users"
+msgstr ""
+
+#: src/pages/Home/Home.js
+msgid "Total Value Locked"
 msgstr ""
 
 #: src/components/Referrals/AffiliatesStats.js
@@ -3405,7 +3411,7 @@ msgid "Trade"
 msgstr ""
 
 #: src/pages/Home/Home.js
-msgid "Trade BTC, ETH, AVAX and other top cryptocurrencies with up to 50x leverage directly from your wallet"
+msgid "Trade cryptocurrencies with liquidity, leverage and low fees."
 msgstr ""
 
 #: src/components/Exchange/ExchangeBanner.js
@@ -3426,11 +3432,7 @@ msgid "Traders Referred"
 msgstr ""
 
 #: src/components/Referrals/AffiliatesStats.js
-msgid "Traders Referred on Arbitrum"
-msgstr ""
-
-#: src/components/Referrals/AffiliatesStats.js
-msgid "Traders Referred on Avalanche"
+msgid "Traders Referred on sepolia"
 msgstr ""
 
 #: src/pages/Exchange/Exchange.js
@@ -3442,14 +3444,16 @@ msgstr ""
 msgid "Trading Volume"
 msgstr ""
 
-#: src/components/Referrals/AffiliatesStats.js
 #: src/components/Referrals/TradersStats.js
 msgid "Trading Volume on Arbitrum"
 msgstr ""
 
-#: src/components/Referrals/AffiliatesStats.js
 #: src/components/Referrals/TradersStats.js
 msgid "Trading Volume on Avalanche"
+msgstr ""
+
+#: src/components/Referrals/AffiliatesStats.js
+msgid "Trading Volume on sepolia"
 msgstr ""
 
 #: src/components/Exchange/UsefulLinks.tsx

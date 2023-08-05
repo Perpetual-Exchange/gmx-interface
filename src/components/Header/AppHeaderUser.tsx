@@ -91,7 +91,7 @@ export function AppHeaderUser({
       <div className="App-header-user">
         <div className={cx("App-header-trade-link", { "homepage-header": isHomeSite() })}>
           <HeaderLink
-            className="default-btn"
+            className="default-btn strong"
             to="/trade"
             redirectPopupTimestamp={redirectPopupTimestamp}
             showRedirectModal={showRedirectModal}
@@ -100,22 +100,23 @@ export function AppHeaderUser({
           </HeaderLink>
         </div>
 
-        {showConnectionOptions ? (
-          <>
-            <ConnectWalletButton onClick={() => setWalletModalVisible(true)} imgSrc={connectWalletImg}>
-              {small ? <Trans>Connect</Trans> : <Trans>Connect Wallet</Trans>}
-            </ConnectWalletButton>
-            <NetworkDropdown
-              small={small}
-              networkOptions={NETWORK_OPTIONS}
-              selectorLabel={selectorLabel}
-              onNetworkSelect={onNetworkSelect}
-              openSettings={openSettings}
-            />
-          </>
-        ) : (
-          <LanguagePopupHome />
-        )}
+        {
+          showConnectionOptions ? (
+            <>
+              <ConnectWalletButton onClick={() => setWalletModalVisible(true)} imgSrc={connectWalletImg}>
+                {small ? <Trans>Connect</Trans> : <Trans>Connect Wallet</Trans>}
+              </ConnectWalletButton>
+              <NetworkDropdown
+                small={small}
+                networkOptions={NETWORK_OPTIONS}
+                selectorLabel={selectorLabel}
+                onNetworkSelect={onNetworkSelect}
+                openSettings={openSettings}
+              />
+            </>
+          ) : null
+          // <LanguagePopupHome />
+        }
       </div>
     );
   }
@@ -126,7 +127,7 @@ export function AppHeaderUser({
     <div className="App-header-user">
       <div className="App-header-trade-link">
         <HeaderLink
-          className="default-btn"
+          className="default-btn strong"
           to="/trade"
           redirectPopupTimestamp={redirectPopupTimestamp}
           showRedirectModal={showRedirectModal}
@@ -152,9 +153,9 @@ export function AppHeaderUser({
             openSettings={openSettings}
           />
         </>
-      ) : (
-        <LanguagePopupHome />
-      )}
+      ) : null
+      // <LanguagePopupHome />
+      }
     </div>
   );
 }

@@ -1071,7 +1071,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
   const depositBalanceData = getDepositBalanceData(depositBalances);
   const stakingData = getStakingData(stakingInfo);
   const vestingData = getVestingData(vestingInfo);
-
+  //
   const processedData = getProcessedData(
     balanceData,
     supplyData,

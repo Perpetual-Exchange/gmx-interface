@@ -20,12 +20,18 @@
 }
 
 .App-header.large::after {
-  height: 1.3rem;
+  height: 1px;
   width: 100%;
   content: " ";
-  background: transparent linear-gradient(180deg, #00000030 0%, #00000000 100%) 0% 0% no-repeat padding-box;
+  background: linear-gradient(
+    90deg,
+    rgba(251, 251, 251, 0) 0%,
+    rgba(251, 251, 251) 30%,
+    rgba(251, 251, 251) 70%,
+    rgba(251, 251, 251, 0) 100%
+  );
   position: absolute;
-  bottom: -1.3rem;
+  bottom: 0;
   left: 0;
 }
 
@@ -124,21 +130,19 @@
 
 .App-header a.App-header-link-main,
 .App-header .App-header-link-main {
-  font-size: 1.7rem;
+  font-size: 2rem;
   padding: 1.5rem;
   margin-left: -1.5rem;
   display: flex;
   margin-right: 1.2rem;
+  color: #fff;
+  align-items: center;
 }
 
 .App-header-link-main img {
   display: inline-block;
-  height: 2.15rem;
+  height: 3rem;
   vertical-align: middle;
-}
-
-.App-header-link-main img.small {
-  display: none;
 }
 
 .App-header .a,
@@ -293,10 +297,6 @@
 }
 
 @media (max-width: 600px) {
-  .App-header-link-main img.big {
-    display: none;
-  }
-
   .App-header-link-main img.small {
     display: inline-block;
   }
