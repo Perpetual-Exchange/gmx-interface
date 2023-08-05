@@ -6,7 +6,7 @@ import { isHomeSite } from "lib/legacy";
 import { useWeb3React } from "@web3-react/core";
 
 import { HeaderLink } from "../Header/HeaderLink";
-import { ARBITRUM, SEPOLIA } from "config/chains";
+import { SEPOLIA } from "config/chains";
 import { switchNetwork } from "lib/wallets";
 import { useChainId } from "lib/chains";
 

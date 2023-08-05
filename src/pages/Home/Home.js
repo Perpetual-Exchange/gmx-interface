@@ -42,7 +42,7 @@ import { Trans } from "@lingui/macro";
 import { HeaderLink } from "components/Header/HeaderLink";
 import { ARBITRUM, AVALANCHE } from "config/chains";
 import { getServerUrl } from "config/backend";
-import { bigNumberify, formatAmount, numberWithCommas } from "lib/numbers";
+import { bigNumberify, formatAmount } from "lib/numbers";
 
 export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
   // const [openedFAQIndex, setOpenedFAQIndex] = useState(null)
@@ -126,19 +126,6 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
   ) {
     openInterest = openInterest.add(avalanchePositionStats.totalLongPositionSizes);
     openInterest = openInterest.add(avalanchePositionStats.totalShortPositionSizes);
-  }
-
-  // user stat
-  const arbitrumUserStats = useUserStat(ARBITRUM);
-  const avalancheUserStats = useUserStat(AVALANCHE);
-  let totalUsers = 0;
-
-  if (arbitrumUserStats && arbitrumUserStats.uniqueCount) {
-    totalUsers += arbitrumUserStats.uniqueCount;
-  }
-
-  if (avalancheUserStats && avalancheUserStats.uniqueCount) {
-    totalUsers += avalancheUserStats.uniqueCount;
   }
 
   const LaunchExchangeButton = () => {
