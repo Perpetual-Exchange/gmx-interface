@@ -1,21 +1,14 @@
 import React, { useCallback } from "react";
 import { Link } from "react-router-dom";
-import { Trans } from "@lingui/macro";
 
 import { isHomeSite } from "lib/legacy";
 
 import { useWeb3React } from "@web3-react/core";
 
-import APRLabel from "../APRLabel/APRLabel";
 import { HeaderLink } from "../Header/HeaderLink";
 import { ARBITRUM, SEPOLIA } from "config/chains";
 import { switchNetwork } from "lib/wallets";
 import { useChainId } from "lib/chains";
-import ExternalLink from "components/ExternalLink/ExternalLink";
-import { getIcon } from "config/icons";
-
-const glpIcon = getIcon("common", "glp");
-const gmxIcon = getIcon("common", "gmx");
 
 export default function TokenCard({ showRedirectModal, redirectPopupTimestamp }) {
   const isHome = isHomeSite();
@@ -71,11 +64,9 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           </a>
         </div>
         <div className="Home-token-card-option-action">
-          <div className="buy">
-            <BuyLink to="/buy_gmx" className="default-btn custom-buy-btn" network={SEPOLIA}>
-              Buy RLX
-            </BuyLink>
-          </div>
+          <BuyLink to="/buy_gmx" className="default-btn custom-buy-btn" network={SEPOLIA}>
+            Buy RLX
+          </BuyLink>
         </div>
       </li>
       <li>
@@ -88,11 +79,9 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           Learn more
         </a>
         <div className="Home-token-card-option-action">
-          <div className="buy">
-            <BuyLink to="/buy_glp" className="default-btn custom-buy-btn" network={SEPOLIA}>
-              Buy RLP
-            </BuyLink>
-          </div>
+          <BuyLink to="/buy_glp" className="default-btn custom-buy-btn" network={SEPOLIA}>
+            Buy RLP
+          </BuyLink>
         </div>
       </li>
     </>

@@ -149,7 +149,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
         redirectPopupTimestamp={redirectPopupTimestamp}
         showRedirectModal={showRedirectModal}
       >
-        <Trans>Launch App</Trans>
+        <Trans>Launch DApp</Trans>
       </HeaderLink>
     );
   };
@@ -179,7 +179,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
         <div className="Home-feature-wrap default-container">
           <div className="Home-feature">
             <h2>Features</h2>
-            <ul className="divide-x divide-y divide-[#E0EE8D] grid grid-cols-3 Home-feature-list">
+            <ul className="divide-x divide-y divide-[#E0EE8D] max-md:grid-cols-1 grid grid-cols-3 Home-feature-list">
               <li>
                 <h3>Leveraged Trading</h3>
                 <div>
@@ -216,18 +216,20 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
                 <img src={featureIcon4} alt="" />
               </li>
               <li>
-                <h3>More APR% for LP</h3>
+                <h3>Save on Costs</h3>
                 <div>
-                  Rollex offers one of the highest APR% for LPs in the market through multiple rewards programs and
-                  incentive campaign.
+                  Enter and exit positions with minimal spread and zero price impact.
+                  <a href="###" target="_blank">
+                    learn more
+                  </a>
                 </div>
                 <img src={featureIcon5} alt="" />
               </li>
               <li>
-                <h3>More APR% for LP</h3>
+                <h3>Insurance Funding</h3>
                 <div>
-                  Rollex offers one of the highest APR% for LPs in the market through multiple rewards programs and
-                  incentive campaign.
+                  The Insurance Fund helps to ensure liquidity in RLP and provide a reliable stream of SYS rewards for
+                  all staked RLX.
                 </div>
                 <img src={featureIcon6} alt="" />
               </li>
@@ -235,26 +237,26 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
           </div>
         </div>
         <div className="Home-latest-info-container default-container" style={{ marginTop: "150px" }}>
-          <div className="divide-x border flex divide-[#E0EE8D] border-1 !border-[#e0ee8d]">
-            <div className="flex-1 py-10">
+          <div className="divide-x divide-y border max-md:text-center divide-[#E0EE8D] border-1 max-md:grid-cols-2 grid grid-cols-4 !border-[#e0ee8d]">
+            <div className="py-10">
               <div className="Home-latest-info__title">
                 <Trans>Total Trading Volume</Trans>
               </div>
               <div className="Home-latest-info__value">${formatAmount(totalVolumeSum, USD_DECIMALS, 0, true)}</div>
             </div>
-            <div className="flex-1 py-10">
+            <div className=" py-10">
               <div className="Home-latest-info__title">
                 <Trans>Total Value Locked</Trans>
               </div>
               <div className="Home-latest-info__value">${0}</div>
             </div>
-            <div className="flex-1 py-10">
+            <div className=" py-10">
               <div className="Home-latest-info__title">
                 <Trans>Total Fees</Trans>
               </div>
               <div className="Home-latest-info__value">{0}</div>
             </div>
-            <div className="flex-1 py-10">
+            <div className="py-10">
               <div className="Home-latest-info__title">
                 <Trans>Open Interest</Trans>
               </div>
@@ -266,7 +268,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
       <div className="Home-feature-wrap default-container">
         <div className="Home-feature">
           <h2>Tokenomics</h2>
-          <ul className="divide-x divide-y divide-[#E0EE8D] grid grid-cols-2 tokenomics-list">
+          <ul className="divide-x divide-y divide-[#E0EE8D] max-md:grid-cols-1 grid grid-cols-2 tokenomics-list">
             <TokenCard showRedirectModal={showRedirectModal} redirectPopupTimestamp={redirectPopupTimestamp} />
           </ul>
         </div>
@@ -275,32 +277,32 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
       <div className="Home-feature-wrap default-container">
         <div className="Home-feature">
           <h2>Trade</h2>
-          <ul className="divide-x divide-y divide-[#E0EE8D] grid grid-cols-2 Home-tip-list">
-            <li className="relative even:text-right even:pr-60 odd:pl-60">
+          <ul className="divide-x divide-y divide-[#E0EE8D] max-md:grid-cols-1 grid grid-cols-2 Home-tip-list">
+            <li className="max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 odd:pl-60">
               <h3>Zero price impact</h3>
               <div>Swap tokens with lowest trading fees and zero price impact.</div>
-              <img src={homeTrade1} alt="" className="top-16 left-12 absolute" />
+              <img src={homeTrade1} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
             </li>
-            <li className="relative even:text-right even:pr-60 odd:pl-60">
+            <li className="max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 odd:pl-60">
               <h3>50x Leverage</h3>
               <div>Trade BTC, ETH, SYS, PSYS and other top cryptocurrencies with up to 50x leverage</div>
-              <img src={homeTrade2} alt="" className="top-16 right-12 absolute" />
+              <img src={homeTrade2} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
             </li>
-            <li className="relative even:text-right even:pr-60 odd:pl-60">
+            <li className="max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 odd:pl-60">
               <h3>Robust price oracle</h3>
               <div>
                 Rollex uses SuperOracle as a reliable price oracle to achieve accurate and stable pricing so that
                 traders can confidently execute trades with reliable pricing information.
               </div>
-              <img src={homeTrade3} alt="" className="top-16 left-12 absolute" />
+              <img src={homeTrade3} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
             </li>
-            <li className="relative even:text-right even:pr-60 odd:pl-60">
+            <li className="max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 odd:pl-60">
               <h3>Peer to Pool</h3>
               <div>
                 Rollex leverages liquidity pools and peer-to-peer principles for permissionless automated trading,
                 eliminating centralized order books and traditional marketplaces.
               </div>
-              <img src={homeTrade4} alt="" className="top-16 right-12 absolute" />
+              <img src={homeTrade4} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
             </li>
           </ul>
         </div>
@@ -309,28 +311,28 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
       <div className="Home-feature-wrap default-container">
         <div className="Home-feature">
           <h2>Earn</h2>
-          <ul className="divide-x divide-y divide-[#E0EE8D] grid grid-cols-2 Home-tip-list">
-            <li className="relative even:text-right even:pr-60 odd:pl-60">
+          <ul className="divide-x divide-y divide-[#E0EE8D] max-md:grid-cols-1 grid grid-cols-2 Home-tip-list">
+            <li className="max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 odd:pl-60">
               <h3>Providing Liquidity</h3>
               <div>Providing Liquidity earn esRLX rewards and 70% of platform fees</div>
-              <img src={homeEarn1} alt="" className="top-16 left-12 absolute" />
+              <img src={homeEarn1} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
             </li>
-            <li className="relative even:text-right even:pr-60 odd:pl-60">
+            <li className="max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 odd:pl-60">
               <h3>Stake to earn</h3>
               <div>
                 Staked RLX receives three types of rewards that includes Escrowed GMX, Multiplier Points and SYS Rewards
               </div>
-              <img src={homeEarn2} alt="" className="top-16 right-12 absolute" />
+              <img src={homeEarn2} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
             </li>
-            <li className="relative even:text-right even:pr-60 odd:pl-60">
+            <li className="max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 odd:pl-60">
               <h3>Trade to earn</h3>
               <div>Earn RLX by trading volume, the bigger the trading volume, the more you earn</div>
-              <img src={homeEarn3} alt="" className="top-16 left-12 absolute" />
+              <img src={homeEarn3} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
             </li>
-            <li className="relative even:text-right even:pr-60 odd:pl-60">
+            <li className="max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 odd:pl-60">
               <h3>Open Positions</h3>
               <div>Traders will receive esRLX rewards for the period that their leveraged positions are active.</div>
-              <img src={homeEarn4} alt="" className="top-16 right-12 absolute" />
+              <img src={homeEarn4} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
             </li>
           </ul>
         </div>
@@ -339,58 +341,58 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
       <div className="Home-feature-wrap default-container">
         <div className="Home-feature">
           <h2>Rewards</h2>
-          <ul className="divide-x divide-y divide-[#E0EE8D] grid grid-cols-2 Home-tip-list">
-            <li className="relative even:text-right even:pr-60 odd:pl-60">
+          <ul className="divide-x divide-y divide-[#E0EE8D]  max-md:grid-cols-1 grid grid-cols-2 Home-tip-list">
+            <li className="max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 odd:pl-60">
               <h3>Traders' Loyalty Credit</h3>
               <div>
                 In accordance with trading volume, Traders will be awarded RLX token(the rate depends on which asset
                 users trade on) learn more
               </div>
-              <img src={homeReward1} alt="" className="top-16 left-12 absolute" />
+              <img src={homeReward1} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
             </li>
-            <li className="relative even:text-right even:pr-60 odd:pl-60">
+            <li className="max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 odd:pl-60">
               <h3>Open Positions incentives</h3>
               <div>
                 Rollex will allocate a portion of esRLX tokens to open positions. You will earn esRLX by just keeping
                 your positions opened. Learn more
               </div>
-              <img src={homeReward2} alt="" className="top-16 right-12 absolute" />
+              <img src={homeReward2} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
             </li>
-            <li className="relative even:text-right even:pr-60 odd:pl-60">
+            <li className="max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 odd:pl-60">
               <h3>Liquidity Providers rewards</h3>
               <div>
                 In addition to the protocol fees that liquidity providers will receive, Rollex will also provide esRLX
                 rewards as additional incentives to Liquidity Providers. learn more
               </div>
-              <img src={homeReward3} alt="" className="top-16 left-12 absolute" />
+              <img src={homeReward3} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
             </li>
-            <li className="relative even:text-right even:pr-60 odd:pl-60">
+            <li className="max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 odd:pl-60">
               <h3>Referral Program</h3>
               <div>
                 Reward referrals who help rollux attract new users. Referral users can get up to 10.0% discount on
                 transaction fees, and referrers can earn up to 15% of referral transaction fee income.Learn more
               </div>
-              <img src={homeReward4} alt="" className="top-16 right-12 absolute" />
+              <img src={homeReward4} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
             </li>
           </ul>
         </div>
 
         <div className="Home-parnter-list">
           <h3>Backed by the Best</h3>
-          <ul className="flex items-center">
-            <li className="flex flex-1 items-center justify-center">
+          <ul className="max-md:grid-cols-2 max-md:gap-y-10 grid  grid-cols-4">
+            <li className="flex  max-md:justify-start items-center justify-center">
               <img src={homeRollux} alt="" className="mr-5" />
               <div>Rollux</div>
             </li>
-            <li className="flex flex-1 items-center justify-center">
+            <li className="flex max-md:justify-start items-center justify-center">
               <img src={homeWEconomy} alt="" className="mr-5" />
               <div>WEconomy</div>
             </li>
-            <li className="flex flex-1 items-center justify-center">
+            <li className="flex max-md:justify-start items-center justify-center">
               <img src={homeSyscoin} alt="" className="mr-5" />
               <div>Syscoin</div>
             </li>
-            <li className="flex flex-1 items-center justify-center">
+            <li className="flex max-md:justify-start items-center justify-center">
               <img src={homePegasys} alt="" className="mr-5" />
               <div>Pegasys</div>
             </li>

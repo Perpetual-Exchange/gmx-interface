@@ -240,10 +240,6 @@ msgstr ""
 msgid "Amount to claim"
 msgstr "取回金额"
 
-#: src/pages/Home/Home.js
-msgid "An aggregate of high-quality price feeds determine when liquidations occur. This keeps positions safe from temporary wicks."
-msgstr "高质量价格供给的总和决定了清算时间。使头寸不受暂时波动的影响"
-
 #: src/components/Header/HomeHeaderLinks.tsx
 msgid "App"
 msgstr ""
@@ -297,11 +293,6 @@ msgstr "核准中"
 msgid "Approving..."
 msgstr "核准中"
 
-#: src/components/TokenCard/TokenCard.js
-#: src/components/TokenCard/TokenCard.js
-msgid "Arbitrum APR:"
-msgstr "Arbitrum年利率"
-
 #: src/components/Exchange/NoLiquidityErrorModal.tsx
 msgid "As there is not enough liquidity in GLP to swap {0} to {swapTokenSymbol}, you can use the option below to do so:"
 msgstr "若流动率不足以交换GLP {0} 成 {swapTokenSymbol}, 您可使用下方其他选项："
@@ -336,10 +327,6 @@ msgstr "可供存入GLP的金额"
 #: src/components/Glp/GlpSwap.js
 msgid "Available amount to withdraw from GLP. Funds not utilized by current open positions."
 msgstr "可提取的GLP数量. 资金未被当前开仓所使用."
-
-#: src/pages/Home/Home.js
-msgid "Available on your preferred network"
-msgstr "可在您的首选网络上使用"
 
 #: src/components/Exchange/SwapBox.js
 #: src/components/Exchange/SwapBox.js
@@ -455,16 +442,6 @@ msgstr ""
 #: src/components/Glp/GlpSwap.js
 msgid "Buy failed."
 msgstr "买入失败"
-
-#: src/components/TokenCard/TokenCard.js
-#: src/components/TokenCard/TokenCard.js
-msgid "Buy on Arbitrum"
-msgstr "在Arbitrum上购买"
-
-#: src/components/TokenCard/TokenCard.js
-#: src/components/TokenCard/TokenCard.js
-msgid "Buy on SEPOLIA"
-msgstr ""
 
 #: src/pages/BuyGMX/BuyGMX.tsx
 msgid "Buy or Transfer AVAX to Avalanche"
@@ -1243,10 +1220,6 @@ msgstr "輸入價錢"
 msgid "Enter an amount"
 msgstr "输入金额"
 
-#: src/pages/Home/Home.js
-msgid "Enter and exit positions with minimal spread and zero price impact. Get the optimal price without incurring additional costs."
-msgstr "以最小的点差和零价格影响进入和退出头寸。获得最佳价格而不产生额外费用"
-
 #: src/components/Exchange/OrderEditor.js
 #: src/components/Exchange/OrderEditor.js
 msgid "Enter new Price"
@@ -1404,10 +1377,6 @@ msgstr ""
 msgid "GLP buy disabled, pending {0} upgrade"
 msgstr "GLP购买已禁止，等待{0}升级"
 
-#: src/components/TokenCard/TokenCard.js
-msgid "GLP is the liquidity provider token. Accrues 70% of the platform's generated fees."
-msgstr "GLP是流动性提供者代币。累积了70%平台产生的费用"
-
 #: src/components/Glp/GlpSwap.js
 msgid "GLP sell disabled, pending {0} upgrade"
 msgstr "GLP售卖已禁止，等待{0}升级"
@@ -1473,17 +1442,9 @@ msgstr "用于统计和交易的GMX探索器"
 msgid "GMX fundamentals"
 msgstr "GMX基础"
 
-#: src/pages/Home/Home.js
-msgid "GMX is currently live on Arbitrum and Avalanche."
-msgstr "GMX目前在Arbitrum和Avalanche上线"
-
 #: src/pages/Jobs/Jobs.js
 msgid "GMX is not actively looking for new hires at the moment. However, if you think you can contribute to the project, please email <0>jobs@gmx.io</0>."
 msgstr "GMX目前没有积极寻找新员工。但是，如果你认为你能为项目做出贡献，请发电子邮件到<0>jobs@gmx.io</0>"
-
-#: src/components/TokenCard/TokenCard.js
-msgid "GMX is the utility and governance token. Accrues 30% of the platform's generated fees."
-msgstr "GMX是效用和治理代币。拥有30%累积平台产生的费用"
 
 #: src/pages/Ecosystem/Ecosystem.js
 msgid "GMX staking calculator"
@@ -2241,10 +2202,6 @@ msgstr "在Coingecko开启"
 msgid "Open in Explorer"
 msgstr "在Explorer开启"
 
-#: src/pages/Home/Home.js
-msgid "Open positions through a simple swap interface. Conveniently swap from any supported asset into the position of your choice."
-msgstr "通过简单的互换界面开立头寸。方便地从任何币值换成你选择的头寸"
-
 #: src/pages/PositionsOverview/PositionsOverview.js
 msgid "Open positions: {0}<0/>Under risk: {1}"
 msgstr "未结头寸: {0}<0/>风险之下: {1}"
@@ -2560,11 +2517,6 @@ msgstr "购买<0>GLP代币</0>，从掉期和杠杆交易中获得{nativeTokenSy
 msgid "Purchase Insurance"
 msgstr "购买保险"
 
-#: src/components/TokenCard/TokenCard.js
-#: src/components/TokenCard/TokenCard.js
-msgid "Read more"
-msgstr "了解更多<<<<<<< HEAD"
-
 #: src/components/Exchange/PositionSeller.js
 msgid "Realized PnL insufficient for Fees"
 msgstr ""
@@ -2630,10 +2582,6 @@ msgstr "收款人未质押过GMX代币"
 #: src/components/Glp/GlpSwap.js
 msgid "Redemption time not yet reached"
 msgstr "赎回时间尚未到达"
-
-#: src/pages/Home/Home.js
-msgid "Reduce Liquidation Risks"
-msgstr "降低清算风险"
 
 #: src/components/Exchange/PositionSeller.js
 msgid "Reducing the position at the current price will forfeit a <0>pending profit</0> of {deltaStr}. <1/>"
@@ -2756,11 +2704,6 @@ msgstr "奖励分配历史"
 msgid "Rewards are airdropped weekly."
 msgstr "奖励每周都会空投"
 
-#: src/components/TokenCard/TokenCard.js
-#: src/components/TokenCard/TokenCard.js
-msgid "SEPOLIA APR:"
-msgstr ""
-
 #: src/components/Referrals/JoinReferralCode.js
 msgid "Same as current active code"
 msgstr "与当前的有效代码相同"
@@ -2768,10 +2711,6 @@ msgstr "与当前的有效代码相同"
 #: src/App/App.js
 msgid "Save"
 msgstr "储存"
-
-#: src/pages/Home/Home.js
-msgid "Save on Costs"
-msgstr "节省成本"
 
 #: src/components/Glp/GlpSwap.js
 msgid "Save on Fees"
@@ -2901,10 +2840,6 @@ msgstr "做空{0}"
 #: src/components/Exchange/ConfirmationBox.js
 msgid "Shorting..."
 msgstr "做空中..."
-
-#: src/pages/Home/Home.js
-msgid "Simple Swaps"
-msgstr "简易交易"
 
 #: src/pages/Ecosystem/Ecosystem.js
 msgid "Simulate your hedge strategy"
@@ -3559,10 +3494,6 @@ msgstr "尝试增加 \"Allowed Slippage\", 在右上角设置下方"
 #: src/components/Exchange/PositionShare.js
 msgid "Tweet"
 msgstr "推特"
-
-#: src/pages/Home/Home.js
-msgid "Two tokens create our ecosystem"
-msgstr "两种代币创造了我们的生态系统"
 
 #: src/App/App.js
 msgid "Txn failed. <0>View</0>"

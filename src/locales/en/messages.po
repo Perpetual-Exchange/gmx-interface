@@ -240,10 +240,6 @@ msgstr "Amount should be greater than zero"
 msgid "Amount to claim"
 msgstr "Amount to claim"
 
-#: src/pages/Home/Home.js
-msgid "An aggregate of high-quality price feeds determine when liquidations occur. This keeps positions safe from temporary wicks."
-msgstr "An aggregate of high-quality price feeds determine when liquidations occur. This keeps positions safe from temporary wicks."
-
 #: src/components/Header/HomeHeaderLinks.tsx
 msgid "App"
 msgstr "App"
@@ -297,11 +293,6 @@ msgstr "Approving {stakingTokenSymbol}..."
 msgid "Approving..."
 msgstr "Approving..."
 
-#: src/components/TokenCard/TokenCard.js
-#: src/components/TokenCard/TokenCard.js
-msgid "Arbitrum APR:"
-msgstr "Arbitrum APR:"
-
 #: src/components/Exchange/NoLiquidityErrorModal.tsx
 msgid "As there is not enough liquidity in GLP to swap {0} to {swapTokenSymbol}, you can use the option below to do so:"
 msgstr "As there is not enough liquidity in GLP to swap {0} to {swapTokenSymbol}, you can use the option below to do so:"
@@ -336,10 +327,6 @@ msgstr "Available amount to deposit into GLP."
 #: src/components/Glp/GlpSwap.js
 msgid "Available amount to withdraw from GLP. Funds not utilized by current open positions."
 msgstr "Available amount to withdraw from GLP. Funds not utilized by current open positions."
-
-#: src/pages/Home/Home.js
-msgid "Available on your preferred network"
-msgstr "Available on your preferred network"
 
 #: src/components/Exchange/SwapBox.js
 #: src/components/Exchange/SwapBox.js
@@ -455,16 +442,6 @@ msgstr "Buy GMX using any token from any network:"
 #: src/components/Glp/GlpSwap.js
 msgid "Buy failed."
 msgstr "Buy failed."
-
-#: src/components/TokenCard/TokenCard.js
-#: src/components/TokenCard/TokenCard.js
-msgid "Buy on Arbitrum"
-msgstr "Buy on Arbitrum"
-
-#: src/components/TokenCard/TokenCard.js
-#: src/components/TokenCard/TokenCard.js
-msgid "Buy on SEPOLIA"
-msgstr "Buy on SEPOLIA"
 
 #: src/pages/BuyGMX/BuyGMX.tsx
 msgid "Buy or Transfer AVAX to Avalanche"
@@ -1243,10 +1220,6 @@ msgstr "Enter a price"
 msgid "Enter an amount"
 msgstr "Enter an amount"
 
-#: src/pages/Home/Home.js
-msgid "Enter and exit positions with minimal spread and zero price impact. Get the optimal price without incurring additional costs."
-msgstr "Enter and exit positions with minimal spread and zero price impact. Get the optimal price without incurring additional costs."
-
 #: src/components/Exchange/OrderEditor.js
 #: src/components/Exchange/OrderEditor.js
 msgid "Enter new Price"
@@ -1404,10 +1377,6 @@ msgstr "GLP autocompounding vaults"
 msgid "GLP buy disabled, pending {0} upgrade"
 msgstr "GLP buy disabled, pending {0} upgrade"
 
-#: src/components/TokenCard/TokenCard.js
-msgid "GLP is the liquidity provider token. Accrues 70% of the platform's generated fees."
-msgstr "GLP is the liquidity provider token. Accrues 70% of the platform's generated fees."
-
 #: src/components/Glp/GlpSwap.js
 msgid "GLP sell disabled, pending {0} upgrade"
 msgstr "GLP sell disabled, pending {0} upgrade"
@@ -1473,17 +1442,9 @@ msgstr "GMX explorer for stats and traders"
 msgid "GMX fundamentals"
 msgstr "GMX fundamentals"
 
-#: src/pages/Home/Home.js
-msgid "GMX is currently live on Arbitrum and Avalanche."
-msgstr "GMX is currently live on Arbitrum and Avalanche."
-
 #: src/pages/Jobs/Jobs.js
 msgid "GMX is not actively looking for new hires at the moment. However, if you think you can contribute to the project, please email <0>jobs@gmx.io</0>."
 msgstr "GMX is not actively looking for new hires at the moment. However, if you think you can contribute to the project, please email <0>jobs@gmx.io</0>."
-
-#: src/components/TokenCard/TokenCard.js
-msgid "GMX is the utility and governance token. Accrues 30% of the platform's generated fees."
-msgstr "GMX is the utility and governance token. Accrues 30% of the platform's generated fees."
 
 #: src/pages/Ecosystem/Ecosystem.js
 msgid "GMX staking calculator"
@@ -2241,10 +2202,6 @@ msgstr "Open in Coingecko"
 msgid "Open in Explorer"
 msgstr "Open in Explorer"
 
-#: src/pages/Home/Home.js
-msgid "Open positions through a simple swap interface. Conveniently swap from any supported asset into the position of your choice."
-msgstr "Open positions through a simple swap interface. Conveniently swap from any supported asset into the position of your choice."
-
 #: src/pages/PositionsOverview/PositionsOverview.js
 msgid "Open positions: {0}<0/>Under risk: {1}"
 msgstr "Open positions: {0}<0/>Under risk: {1}"
@@ -2560,11 +2517,6 @@ msgstr "Purchase <0>GLP tokens</0> to earn {nativeTokenSymbol} fees from swaps a
 msgid "Purchase Insurance"
 msgstr "Purchase Insurance"
 
-#: src/components/TokenCard/TokenCard.js
-#: src/components/TokenCard/TokenCard.js
-msgid "Read more"
-msgstr "Read more"
-
 #: src/components/Exchange/PositionSeller.js
 msgid "Realized PnL insufficient for Fees"
 msgstr "Realized PnL insufficient for Fees"
@@ -2630,10 +2582,6 @@ msgstr "Receiver has not staked GMX tokens before"
 #: src/components/Glp/GlpSwap.js
 msgid "Redemption time not yet reached"
 msgstr "Redemption time not yet reached"
-
-#: src/pages/Home/Home.js
-msgid "Reduce Liquidation Risks"
-msgstr "Reduce Liquidation Risks"
 
 #: src/components/Exchange/PositionSeller.js
 msgid "Reducing the position at the current price will forfeit a <0>pending profit</0> of {deltaStr}. <1/>"
@@ -2756,11 +2704,6 @@ msgstr "Rewards Distribution History"
 msgid "Rewards are airdropped weekly."
 msgstr "Rewards are airdropped weekly."
 
-#: src/components/TokenCard/TokenCard.js
-#: src/components/TokenCard/TokenCard.js
-msgid "SEPOLIA APR:"
-msgstr "SEPOLIA APR:"
-
 #: src/components/Referrals/JoinReferralCode.js
 msgid "Same as current active code"
 msgstr "Same as current active code"
@@ -2768,10 +2711,6 @@ msgstr "Same as current active code"
 #: src/App/App.js
 msgid "Save"
 msgstr "Save"
-
-#: src/pages/Home/Home.js
-msgid "Save on Costs"
-msgstr "Save on Costs"
 
 #: src/components/Glp/GlpSwap.js
 msgid "Save on Fees"
@@ -2901,10 +2840,6 @@ msgstr "Short {0}"
 #: src/components/Exchange/ConfirmationBox.js
 msgid "Shorting..."
 msgstr "Shorting..."
-
-#: src/pages/Home/Home.js
-msgid "Simple Swaps"
-msgstr "Simple Swaps"
 
 #: src/pages/Ecosystem/Ecosystem.js
 msgid "Simulate your hedge strategy"
@@ -3559,10 +3494,6 @@ msgstr "Try increasing the \"Allowed Slippage\", under the Settings menu on the 
 #: src/components/Exchange/PositionShare.js
 msgid "Tweet"
 msgstr "Tweet"
-
-#: src/pages/Home/Home.js
-msgid "Two tokens create our ecosystem"
-msgstr "Two tokens create our ecosystem"
 
 #: src/App/App.js
 msgid "Txn failed. <0>View</0>"
