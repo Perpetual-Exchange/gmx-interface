@@ -3331,6 +3331,7 @@ msgstr "Insgesamt gestakete Assets"
 
 #: src/pages/Dashboard/DashboardV2.js
 #: src/pages/Dashboard/DashboardV2.js
+#: src/pages/Home/Home.js
 msgid "Total Fees"
 msgstr "Gebühren insgesamt"
 
@@ -3378,9 +3379,12 @@ msgstr "Trading Volumen insgesamt"
 
 #: src/pages/Dashboard/DashboardV2.js
 #: src/pages/Dashboard/DashboardV2.js
-#: src/pages/Home/Home.js
 msgid "Total Users"
 msgstr "User insgesamt"
+
+#: src/pages/Home/Home.js
+msgid "Total Value Locked"
+msgstr ""
 
 #: src/components/Referrals/AffiliatesStats.js
 #: src/pages/Dashboard/DashboardV2.js

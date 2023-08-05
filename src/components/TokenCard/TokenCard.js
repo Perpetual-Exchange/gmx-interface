@@ -60,67 +60,41 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
   };
 
   return (
-    <div className="Home-token-card-options">
-      <div className="Home-token-card-option">
-        <div className="Home-token-card-option-icon">
-          <img src={gmxIcon} width="40" alt="GMX Icons" /> GMX
+    <>
+      <li>
+        <h3>RLX</h3>
+        <div>
+          $RLX is the utility token of Rollex. In addition to granting participation in the governance process of the
+          protocol, it also accrues value from the platform revenue.{" "}
+          <a href="https://gmxio.gitbook.io/gmx/tokenomics" target="_blank" rel="noreferrer" className=" read-more">
+            Learn more
+          </a>
         </div>
-        <div className="Home-token-card-option-info">
-          <div className="Home-token-card-option-title">
-            <Trans>GMX is the utility and governance token. Accrues 30% of the platform's generated fees.</Trans>
-          </div>
-          <div className="Home-token-card-option-apr">
-            <Trans>Arbitrum APR:</Trans> <APRLabel chainId={ARBITRUM} label="gmxAprTotal" />,{" "}
-            <Trans>SEPOLIA APR:</Trans> <APRLabel chainId={SEPOLIA} label="gmxAprTotal" key="SEPOLIA" />
-          </div>
-          <div className="Home-token-card-option-action">
-            <div className="buy">
-              <BuyLink to="/buy_gmx" className="default-btn" network={ARBITRUM}>
-                <Trans>Buy on Arbitrum</Trans>
-              </BuyLink>
-              <BuyLink to="/buy_gmx" className="default-btn" network={SEPOLIA}>
-                <Trans>Buy on SEPOLIA</Trans>
-              </BuyLink>
-            </div>
-            <ExternalLink href="https://gmxio.gitbook.io/gmx/tokenomics" className="default-btn read-more">
-              <Trans>Read more</Trans>
-            </ExternalLink>
+        <div className="Home-token-card-option-action">
+          <div className="buy">
+            <BuyLink to="/buy_gmx" className="default-btn custom-buy-btn" network={SEPOLIA}>
+              Buy RLX
+            </BuyLink>
           </div>
         </div>
-      </div>
-      <div className="Home-token-card-option">
-        <div className="Home-token-card-option-icon">
-          <img src={glpIcon} width="40" alt="GLP Icon" /> GLP
+      </li>
+      <li>
+        <h3>RLP</h3>
+        <div>
+          $RLP is a liquidity provider token. Accrues 70% of protocol revenue in the form of SYS and a portion of esRLX
+          token issuance emission.{" "}
         </div>
-        <div className="Home-token-card-option-info">
-          <div className="Home-token-card-option-title">
-            <Trans>GLP is the liquidity provider token. Accrues 70% of the platform's generated fees.</Trans>
-          </div>
-          <div className="Home-token-card-option-apr">
-            <Trans>Arbitrum APR:</Trans> <APRLabel chainId={ARBITRUM} label="glpAprTotal" key="ARBITRUM" />,{" "}
-            {/* <Trans>Avalanche APR:</Trans> <APRLabel chainId={AVALANCHE} label="glpAprTotal" key="AVALANCHE" />,{" "} */}
-            <Trans>SEPOLIA APR:</Trans> <APRLabel chainId={SEPOLIA} label="glpAprTotal" key="SEPOLIA" />
-          </div>
-          <div className="Home-token-card-option-action">
-            <div className="buy">
-              <BuyLink to="/buy_glp" className="default-btn" network={ARBITRUM}>
-                <Trans>Buy on Arbitrum</Trans>
-              </BuyLink>
-              <BuyLink to="/buy_glp" className="default-btn" network={SEPOLIA}>
-                <Trans>Buy on SEPOLIA</Trans>
-              </BuyLink>
-            </div>
-            <a
-              href="https://gmxio.gitbook.io/gmx/glp"
-              target="_blank"
-              rel="noreferrer"
-              className="default-btn read-more"
-            >
-              <Trans>Read more</Trans>
-            </a>
+        <a href="https://gmxio.gitbook.io/gmx/glp" target="_blank" rel="noreferrer" className=" read-more">
+          Learn more
+        </a>
+        <div className="Home-token-card-option-action">
+          <div className="buy">
+            <BuyLink to="/buy_glp" className="default-btn custom-buy-btn" network={SEPOLIA}>
+              Buy RLP
+            </BuyLink>
           </div>
         </div>
-      </div>
-    </div>
+      </li>
+    </>
   );
 }

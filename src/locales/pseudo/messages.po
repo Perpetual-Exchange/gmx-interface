@@ -3328,6 +3328,7 @@ msgstr ""
 
 #: src/pages/Dashboard/DashboardV2.js
 #: src/pages/Dashboard/DashboardV2.js
+#: src/pages/Home/Home.js
 msgid "Total Fees"
 msgstr ""
 
@@ -3375,8 +3376,11 @@ msgstr ""
 
 #: src/pages/Dashboard/DashboardV2.js
 #: src/pages/Dashboard/DashboardV2.js
-#: src/pages/Home/Home.js
 msgid "Total Users"
+msgstr ""
+
+#: src/pages/Home/Home.js
+msgid "Total Value Locked"
 msgstr ""
 
 #: src/components/Referrals/AffiliatesStats.js

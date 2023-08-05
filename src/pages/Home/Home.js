@@ -2,14 +2,6 @@ import React from "react";
 import Footer from "components/Footer/Footer";
 import "./Home.css";
 
-import simpleSwapIcon from "img/ic_simpleswaps.svg";
-import costIcon from "img/ic_cost.svg";
-import liquidityIcon from "img/ic_liquidity.svg";
-import totaluserIcon from "img/ic_totaluser.svg";
-
-import statsIcon from "img/ic_stats.svg";
-import tradingIcon from "img/ic_trading.svg";
-
 import featureIcon1 from "img/feature/f-1.png";
 import featureIcon2 from "img/feature/f-2.png";
 import featureIcon3 from "img/feature/f-3.png";
@@ -17,14 +9,32 @@ import featureIcon4 from "img/feature/f-4.png";
 import featureIcon5 from "img/feature/f-5.png";
 import featureIcon6 from "img/feature/f-6.png";
 
+import homeTrade1 from "img/home-trade/t1.png";
+import homeTrade2 from "img/home-trade/t2.png";
+import homeTrade3 from "img/home-trade/t3.png";
+import homeTrade4 from "img/home-trade/t4.png";
+
+import homeEarn1 from "img/home-earn/s1.png";
+import homeEarn2 from "img/home-earn/s2.png";
+import homeEarn3 from "img/home-earn/s3.png";
+import homeEarn4 from "img/home-earn/s4.png";
+
+import homeReward1 from "img/home-reward/r1.png";
+import homeReward2 from "img/home-reward/r2.png";
+import homeReward3 from "img/home-reward/r3.png";
+import homeReward4 from "img/home-reward/r4.png";
+
+import homeRollux from "img/home-partner/Rollux.png";
+import homeWEconomy from "img/home-partner/WEconomy.svg";
+import homeSyscoin from "img/home-partner/Syscoin.png";
+import homePegasys from "img/home-partner/Pegasys.svg";
+
 import useSWR from "swr";
 
 import { USD_DECIMALS, getTotalVolumeSum } from "lib/legacy";
 
 import { useUserStat } from "domain/legacy";
 
-import arbitrumIcon from "img/ic_arbitrum_96.svg";
-import avaxIcon from "img/ic_avalanche_96.svg";
 import linePic from "img/vector1.png";
 
 import TokenCard from "components/TokenCard/TokenCard";
@@ -169,7 +179,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
         <div className="Home-feature-wrap default-container">
           <div className="Home-feature">
             <h2>Features</h2>
-            <ul className="Home-feature-list grid grid-cols-3 divide-x divide-y divide-[#E0EE8D]">
+            <ul className="divide-x divide-y divide-[#E0EE8D] grid grid-cols-3 Home-feature-list">
               <li>
                 <h3>Leveraged Trading</h3>
                 <div>
@@ -197,7 +207,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
               <li>
                 <h3>Mutil Rewards Programma</h3>
                 <div>Rollex has the following incentive programs </div>
-                <div className="easy-list mt-sm">
+                <div className="mt-sm easy-list">
                   <div>Trader's loyalty and credit </div>
                   <div>Holding incentive rewards </div>
                   <div>Liquidity provider rewards </div>
@@ -224,8 +234,8 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
             </ul>
           </div>
         </div>
-        <div className="Home-latest-info-container default-container" style={{ marginTop: "40px" }}>
-          <div className="flex border border-1 !border-[#e0ee8d] divide-x divide-[#E0EE8D]">
+        <div className="Home-latest-info-container default-container" style={{ marginTop: "150px" }}>
+          <div className="divide-x border flex divide-[#E0EE8D] border-1 !border-[#e0ee8d]">
             <div className="flex-1 py-10">
               <div className="Home-latest-info__title">
                 <Trans>Total Trading Volume</Trans>
@@ -253,139 +263,141 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
           </div>
         </div>
       </div>
-      <div className="Home-benefits-section">
-        <div className="Home-benefits default-container">
-          <div className="Home-benefit">
-            <div className="Home-benefit-icon">
-              <img src={liquidityIcon} alt="Reduce Liquidation Risks Icon" className="Home-benefit-icon-symbol" />
-              <div className="Home-benefit-title">
-                <Trans>Reduce Liquidation Risks</Trans>
-              </div>
-            </div>
-            <div className="Home-benefit-description">
-              <Trans>
-                An aggregate of high-quality price feeds determine when liquidations occur. This keeps positions safe
-                from temporary wicks.
-              </Trans>
-            </div>
-          </div>
-          <div className="Home-benefit">
-            <div className="Home-benefit-icon">
-              <img src={costIcon} alt="Save on Costs Icon" className="Home-benefit-icon-symbol" />
-              <div className="Home-benefit-title">
-                <Trans>Save on Costs</Trans>
-              </div>
-            </div>
-            <div className="Home-benefit-description">
-              <Trans>
-                Enter and exit positions with minimal spread and zero price impact. Get the optimal price without
-                incurring additional costs.
-              </Trans>
-            </div>
-          </div>
-          <div className="Home-benefit">
-            <div className="Home-benefit-icon">
-              <img src={simpleSwapIcon} alt="Simple Swaps Icon" className="Home-benefit-icon-symbol" />
-              <div className="Home-benefit-title">
-                <Trans>Simple Swaps</Trans>
-              </div>
-            </div>
-            <div className="Home-benefit-description">
-              <Trans>
-                Open positions through a simple swap interface. Conveniently swap from any supported asset into the
-                position of your choice.
-              </Trans>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="Home-cta-section">
-        <div className="Home-cta-container default-container">
-          <div className="Home-cta-info">
-            <div className="Home-cta-info__title">
-              <Trans>Available on your preferred network</Trans>
-            </div>
-            <div className="Home-cta-info__description">
-              <Trans>GMX is currently live on Arbitrum and Avalanche.</Trans>
-            </div>
-          </div>
-          <div className="Home-cta-options">
-            <div className="Home-cta-option Home-cta-option-arbitrum">
-              <div className="Home-cta-option-icon">
-                <img src={arbitrumIcon} width="96" alt="Arbitrum Icon" />
-              </div>
-              <div className="Home-cta-option-info">
-                <div className="Home-cta-option-title">Arbitrum</div>
-                <div className="Home-cta-option-action">
-                  <LaunchExchangeButton />
-                </div>
-              </div>
-            </div>
-            <div className="Home-cta-option Home-cta-option-ava">
-              <div className="Home-cta-option-icon">
-                <img src={avaxIcon} width="96" alt="Avalanche Icon" />
-              </div>
-              <div className="Home-cta-option-info">
-                <div className="Home-cta-option-title">Avalanche</div>
-                <div className="Home-cta-option-action">
-                  <LaunchExchangeButton />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="Home-token-card-section">
-        <div className="Home-token-card-container default-container">
-          <div className="Home-token-card-info">
-            <div className="Home-token-card-info__title">
-              <Trans>Two tokens create our ecosystem</Trans>
-            </div>
-          </div>
-          <TokenCard showRedirectModal={showRedirectModal} redirectPopupTimestamp={redirectPopupTimestamp} />
+      <div className="Home-feature-wrap default-container">
+        <div className="Home-feature">
+          <h2>Tokenomics</h2>
+          <ul className="divide-x divide-y divide-[#E0EE8D] grid grid-cols-2 tokenomics-list">
+            <TokenCard showRedirectModal={showRedirectModal} redirectPopupTimestamp={redirectPopupTimestamp} />
+          </ul>
         </div>
       </div>
 
-      {/* <div className="Home-video-section">
-        <div className="Home-video-container default-container">
-          <div className="Home-video-block">
-            <img src={gmxBigIcon} alt="gmxbig" />
-          </div>
+      <div className="Home-feature-wrap default-container">
+        <div className="Home-feature">
+          <h2>Trade</h2>
+          <ul className="divide-x divide-y divide-[#E0EE8D] grid grid-cols-2 Home-tip-list">
+            <li className="relative even:text-right even:pr-60 odd:pl-60">
+              <h3>Zero price impact</h3>
+              <div>Swap tokens with lowest trading fees and zero price impact.</div>
+              <img src={homeTrade1} alt="" className="top-16 left-12 absolute" />
+            </li>
+            <li className="relative even:text-right even:pr-60 odd:pl-60">
+              <h3>50x Leverage</h3>
+              <div>Trade BTC, ETH, SYS, PSYS and other top cryptocurrencies with up to 50x leverage</div>
+              <img src={homeTrade2} alt="" className="top-16 right-12 absolute" />
+            </li>
+            <li className="relative even:text-right even:pr-60 odd:pl-60">
+              <h3>Robust price oracle</h3>
+              <div>
+                Rollex uses SuperOracle as a reliable price oracle to achieve accurate and stable pricing so that
+                traders can confidently execute trades with reliable pricing information.
+              </div>
+              <img src={homeTrade3} alt="" className="top-16 left-12 absolute" />
+            </li>
+            <li className="relative even:text-right even:pr-60 odd:pl-60">
+              <h3>Peer to Pool</h3>
+              <div>
+                Rollex leverages liquidity pools and peer-to-peer principles for permissionless automated trading,
+                eliminating centralized order books and traditional marketplaces.
+              </div>
+              <img src={homeTrade4} alt="" className="top-16 right-12 absolute" />
+            </li>
+          </ul>
         </div>
-      </div> */}
-      {/* <div className="Home-faqs-section">
-        <div className="Home-faqs-container default-container">
-          <div className="Home-faqs-introduction">
-            <div className="Home-faqs-introduction__title">FAQs</div>
-            <div className="Home-faqs-introduction__description">Most asked questions. If you wish to learn more, please head to our Documentation page.</div>
-            <a href="https://gmxio.gitbook.io/gmx/" className="default-btn Home-faqs-documentation">Documentation</a>
-          </div>
-          <div className="Home-faqs-content-block">
-            {
-              faqContent.map((content, index) => (
-                <div className="Home-faqs-content" key={index} onClick={() => toggleFAQContent(index)}>
-                  <div className="Home-faqs-content-header">
-                    <div className="Home-faqs-content-header__icon">
-                      {
-                        openedFAQIndex === index ? <FiMinus className="opened" /> : <FiPlus className="closed" />
-                      }
-                    </div>
-                    <div className="Home-faqs-content-header__text">
-                      { content.question }
-                    </div>
-                  </div>
-                  <div className={ openedFAQIndex === index ? "Home-faqs-content-main opened" : "Home-faqs-content-main" }>
-                    <div className="Home-faqs-content-main__text">
-                      <div dangerouslySetInnerHTML={{__html: content.answer}} >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))
-            }
-          </div>
+      </div>
+
+      <div className="Home-feature-wrap default-container">
+        <div className="Home-feature">
+          <h2>Earn</h2>
+          <ul className="divide-x divide-y divide-[#E0EE8D] grid grid-cols-2 Home-tip-list">
+            <li className="relative even:text-right even:pr-60 odd:pl-60">
+              <h3>Providing Liquidity</h3>
+              <div>Providing Liquidity earn esRLX rewards and 70% of platform fees</div>
+              <img src={homeEarn1} alt="" className="top-16 left-12 absolute" />
+            </li>
+            <li className="relative even:text-right even:pr-60 odd:pl-60">
+              <h3>Stake to earn</h3>
+              <div>
+                Staked RLX receives three types of rewards that includes Escrowed GMX, Multiplier Points and SYS Rewards
+              </div>
+              <img src={homeEarn2} alt="" className="top-16 right-12 absolute" />
+            </li>
+            <li className="relative even:text-right even:pr-60 odd:pl-60">
+              <h3>Trade to earn</h3>
+              <div>Earn RLX by trading volume, the bigger the trading volume, the more you earn</div>
+              <img src={homeEarn3} alt="" className="top-16 left-12 absolute" />
+            </li>
+            <li className="relative even:text-right even:pr-60 odd:pl-60">
+              <h3>Open Positions</h3>
+              <div>Traders will receive esRLX rewards for the period that their leveraged positions are active.</div>
+              <img src={homeEarn4} alt="" className="top-16 right-12 absolute" />
+            </li>
+          </ul>
         </div>
-      </div> */}
+      </div>
+
+      <div className="Home-feature-wrap default-container">
+        <div className="Home-feature">
+          <h2>Rewards</h2>
+          <ul className="divide-x divide-y divide-[#E0EE8D] grid grid-cols-2 Home-tip-list">
+            <li className="relative even:text-right even:pr-60 odd:pl-60">
+              <h3>Traders' Loyalty Credit</h3>
+              <div>
+                In accordance with trading volume, Traders will be awarded RLX token(the rate depends on which asset
+                users trade on) learn more
+              </div>
+              <img src={homeReward1} alt="" className="top-16 left-12 absolute" />
+            </li>
+            <li className="relative even:text-right even:pr-60 odd:pl-60">
+              <h3>Open Positions incentives</h3>
+              <div>
+                Rollex will allocate a portion of esRLX tokens to open positions. You will earn esRLX by just keeping
+                your positions opened. Learn more
+              </div>
+              <img src={homeReward2} alt="" className="top-16 right-12 absolute" />
+            </li>
+            <li className="relative even:text-right even:pr-60 odd:pl-60">
+              <h3>Liquidity Providers rewards</h3>
+              <div>
+                In addition to the protocol fees that liquidity providers will receive, Rollex will also provide esRLX
+                rewards as additional incentives to Liquidity Providers. learn more
+              </div>
+              <img src={homeReward3} alt="" className="top-16 left-12 absolute" />
+            </li>
+            <li className="relative even:text-right even:pr-60 odd:pl-60">
+              <h3>Referral Program</h3>
+              <div>
+                Reward referrals who help rollux attract new users. Referral users can get up to 10.0% discount on
+                transaction fees, and referrers can earn up to 15% of referral transaction fee income.Learn more
+              </div>
+              <img src={homeReward4} alt="" className="top-16 right-12 absolute" />
+            </li>
+          </ul>
+        </div>
+
+        <div className="Home-parnter-list">
+          <h3>Backed by the Best</h3>
+          <ul className="flex items-center">
+            <li className="flex flex-1 items-center justify-center">
+              <img src={homeRollux} alt="" className="mr-5" />
+              <div>Rollux</div>
+            </li>
+            <li className="flex flex-1 items-center justify-center">
+              <img src={homeWEconomy} alt="" className="mr-5" />
+              <div>WEconomy</div>
+            </li>
+            <li className="flex flex-1 items-center justify-center">
+              <img src={homeSyscoin} alt="" className="mr-5" />
+              <div>Syscoin</div>
+            </li>
+            <li className="flex flex-1 items-center justify-center">
+              <img src={homePegasys} alt="" className="mr-5" />
+              <div>Pegasys</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
       <Footer showRedirectModal={showRedirectModal} redirectPopupTimestamp={redirectPopupTimestamp} />
     </div>
   );

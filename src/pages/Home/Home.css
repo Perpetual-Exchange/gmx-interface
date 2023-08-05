@@ -1,6 +1,5 @@
 .Home {
   min-height: 100vh;
-  padding-bottom: calc(4.65rem + 20rem);
 }
 
 .Home-top {
@@ -568,7 +567,7 @@
 }
 .Home-feature-wrap {
   width: 100%;
-  margin-top: 10rem !important;
+  margin-top: 15rem !important;
 }
 .Home-feature {
   border: 1px solid #e0ee8d;
@@ -585,7 +584,7 @@
   color: #fff;
 }
 
-.Home-feature h3 {
+.Home-feature-list h3 {
   color: #fff;
   font-size: 2.4rem;
   padding: 30px 0;
@@ -625,4 +624,62 @@
   margin-top: -1px;
 
   background: #858585;
+}
+.tokenomics-list {
+  padding: 0;
+}
+.tokenomics-list > li {
+  padding: 0 0 20px 30px;
+}
+.tokenomics-list > li > h3 {
+  color: #fff;
+  font-size: 2.4rem;
+  padding: 30px 0;
+}
+
+.tokenomics-list .read-more {
+  color: #e0ee8d;
+}
+
+.tokenomics-list .custom-buy-btn {
+  font-size: 1.8rem;
+  height: 50px;
+  line-height: 50px;
+  padding-right: 70px !important;
+  background-image: url(../../img/RightArrow.png);
+  background-position: 90% center;
+  background-repeat: no-repeat;
+  margin-top: 20px;
+}
+
+.Home-tip-list h3 {
+  color: #fff;
+  font-size: 2.4rem;
+  padding: 30px 0;
+  text-transform: uppercase;
+}
+
+.Home-tip-list > li {
+  padding-bottom: 40px;
+}
+
+.Home-parnter-list {
+  margin-top: 100px;
+}
+.Home-parnter-list h3 {
+  font-size: 3.6rem;
+  text-align: center;
+  color: "#EAECEF";
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.Home-parnter-list > ul {
+  background: #1c1c1c;
+  border-radius: 100px;
+  padding: 10px 0;
+}
+.Home-parnter-list > ul > li {
+  padding: 0;
+  color: "#9E9E9E";
+  font-size: 2.4rem;
 }

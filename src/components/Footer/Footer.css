@@ -1,32 +1,38 @@
+.Footer {
+  margin-top: 150px;
+  color: #9e9e9e;
+}
+
+.Footer h3 {
+  font-size: 2.8rem;
+  margin-top: 3rem;
+}
 .Footer-wrapper {
   text-align: center;
-  padding-top: 4rem;
-  background: #16182e;
-  width: 100vw;
-  position: absolute;
-  transform: translateX(-50%);
-  left: 50%;
-  height: 20rem;
+  padding: 5rem 0;
   bottom: 0;
-  border-top: 1px solid #282b4c57;
+  position: relative;
 }
-
-.Footer-logo {
-  margin-bottom: 2.4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.Footer-logo img {
-  height: 2.65rem;
+.Footer-wrapper::after {
+  height: 1px;
+  width: 100%;
+  content: " ";
+  background: linear-gradient(
+    90deg,
+    rgba(251, 251, 251, 0) 0%,
+    rgba(251, 251, 251) 30%,
+    rgba(251, 251, 251) 70%,
+    rgba(251, 251, 251, 0) 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .Footer-social-link-block {
-  margin: 0 auto;
+  margin: 3rem auto;
   display: flex;
   justify-content: center;
-  margin-bottom: 2.4rem;
 }
 .Footer-link {
   color: #a0a3c4;
@@ -43,12 +49,16 @@
 .Footer-social-link-block .App-social-link {
   margin: 0 3.2rem;
   display: flex;
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 4rem;
+  height: 4rem;
   align-items: center;
   justify-content: center;
 }
 
+.Footer-social-link-block .App-social-link img {
+  width: 100%;
+  height: 100%;
+}
 .Footer-social-link-block .App-social-link:hover img {
   filter: brightness(0) invert(1);
 }
@@ -66,9 +76,9 @@
   display: block;
 }
 .Footer-links {
-  padding-bottom: 4rem;
-  display: flex;
-  justify-content: center;
+  margin-top: 8rem;
+  text-align: center;
+  color: #fff;
 }
 .Footer-links > a:not(:last-child),
 .Footer-links > .a:not(:last-child) {
