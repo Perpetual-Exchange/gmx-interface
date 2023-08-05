@@ -33,8 +33,6 @@ import useSWR from "swr";
 
 import { USD_DECIMALS, getTotalVolumeSum } from "lib/legacy";
 
-import { useUserStat } from "domain/legacy";
-
 import linePic from "img/vector1.png";
 
 import TokenCard from "components/TokenCard/TokenCard";
