@@ -439,124 +439,6 @@
   transition: all 0.3s ease-in-out 0s;
 }
 
-@media (max-width: 1000px) {
-  .Home-token-card-option-action {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-row-gap: 1.5rem;
-  }
-  .Home-token-card-option-action a,
-  .Home-token-card-option-action .a {
-    justify-content: center;
-    display: inline-block;
-  }
-  .Home-token-card-option-action a {
-    text-align: center;
-  }
-  .Home-token-card-option-action > .buy {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-row-gap: 1.5rem;
-  }
-  .Home-token-card-option-action > .read-more {
-    display: inline-block;
-  }
-  .Home-token-card-option-action > .buy a:first-child,
-  .Home-token-card-option-action > .buy .a:first-child {
-    margin-right: 0;
-  }
-}
-
-@media (max-width: 750px) {
-  .Home-token-card-options {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-row-gap: 1.5rem;
-  }
-}
-
-@media (max-width: 500px) {
-  .Home-title-section-container {
-    padding-top: 7.4rem;
-  }
-
-  .Home-title {
-    font-size: 4.34rem;
-    line-height: 5.58rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-    letter-spacing: 0;
-  }
-
-  .Home-cta-options {
-    width: calc(100% + 3.2rem);
-    margin-left: -1.6rem;
-    margin-right: -1.6rem;
-  }
-
-  .Home-cta-option-info {
-    width: 50%;
-  }
-
-  .Home-cta-option-subtitle {
-    margin-bottom: 0.4rem;
-  }
-
-  .Home-cta-option-title {
-    line-height: 2.4rem;
-  }
-
-  .Home-cta-option-action {
-    margin-top: 0.8rem;
-  }
-
-  .Home-latest-info-container {
-    padding-left: 1.6rem !important;
-    padding-right: 1.6rem !important;
-    padding-top: 7.4rem;
-  }
-
-  .Home-latest-info__icon {
-    margin-right: 2.95rem;
-  }
-
-  .Home-latest-info-block + .Home-latest-info-block {
-    margin-top: 1.6rem;
-  }
-
-  .Home-faqs-content {
-    padding-right: 1.5rem;
-  }
-}
-
-@media (max-width: 400px) {
-  .Home-description {
-    font-size: var(--font-base);
-    line-height: 2.17rem;
-    max-width: 44.4rem;
-    color: #a0a3c4;
-    margin-bottom: 2.6rem;
-  }
-
-  .Home-latest-info__value {
-    font-size: 2.7rem;
-  }
-}
-
-@media (max-width: 350px) {
-  .Home-title {
-    font-size: 3.875rem;
-    line-height: 4.65rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-    letter-spacing: 0;
-  }
-
-  .Home-latest-info__icon {
-    margin: 0 1.5rem;
-  }
-}
-
 /* custom css */
 .LaunchExchangeButton {
   font-weight: 700;
@@ -655,11 +537,12 @@
 .Home-tip-list h3 {
   color: #fff;
   font-size: 2.4rem;
-  padding: 30px 0;
+  padding: 10px 0;
   text-transform: uppercase;
 }
 
 .Home-tip-list > li {
+  padding-top: 40px;
   padding-bottom: 40px;
 }
 
@@ -682,4 +565,99 @@
   padding: 0;
   color: "#9E9E9E";
   font-size: 2.4rem;
+}
+
+@media (max-width: 750px) {
+  .Home-token-card-options {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .Home-top {
+    background-position: 50% -60px;
+    background-size: auto 700px;
+  }
+
+  .tokenomics-list .custom-buy-btn {
+    font-size: 2rem !important;
+    height: 4rem !important;
+    line-height: 4rem !important;
+  }
+
+  .Home-tip-list > li > img {
+    width: 6rem;
+  }
+
+  .Home-title-section-container {
+    padding-top: 7.4rem;
+  }
+
+  .Home-title {
+    font-size: 3.34rem;
+    line-height: 4.58rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0;
+  }
+  .default-btn.LaunchExchangeButton {
+    font-size: 2rem !important;
+    line-height: 4rem !important;
+  }
+  .Home-cta-options {
+    width: calc(100% + 3.2rem);
+    margin-left: -1.6rem;
+    margin-right: -1.6rem;
+  }
+
+  .Home-cta-option-info {
+    width: 50%;
+  }
+
+  .Home-cta-option-subtitle {
+    margin-bottom: 0.4rem;
+  }
+
+  .Home-cta-option-title {
+    line-height: 2.4rem;
+  }
+
+  .Home-cta-option-action {
+    margin-top: 0.8rem;
+  }
+
+  .Home-latest-info-container {
+    padding-left: 1.6rem !important;
+    padding-right: 1.6rem !important;
+    padding-top: 7.4rem;
+  }
+
+  .Home-latest-info__icon {
+    margin-right: 2.95rem;
+  }
+
+  .Home-latest-info-block + .Home-latest-info-block {
+    margin-top: 1.6rem;
+  }
+
+  .Home-faqs-content {
+    padding-right: 1.5rem;
+  }
+
+  .Home-parnter-list h3 {
+    font-size: 3rem;
+  }
+  .Home-parnter-list > ul {
+    border-radius: 8px;
+    padding-left: 20px;
+  }
+  .Home-parnter-list > ul > li {
+    font-size: 1.6rem;
+  }
+
+  .Home-parnter-list > ul > li img {
+    width: 4rem;
+  }
 }

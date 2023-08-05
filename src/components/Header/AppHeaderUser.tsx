@@ -10,7 +10,6 @@ import { isHomeSite, getAccountUrl } from "lib/legacy";
 import cx from "classnames";
 import { Trans } from "@lingui/macro";
 import NetworkDropdown from "../NetworkDropdown/NetworkDropdown";
-import LanguagePopupHome from "../NetworkDropdown/LanguagePopupHome";
 import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, getChainName, SEPOLIA } from "config/chains";
 import { switchNetwork } from "lib/wallets";
 import { useChainId } from "lib/chains";
@@ -96,7 +95,7 @@ export function AppHeaderUser({
             redirectPopupTimestamp={redirectPopupTimestamp}
             showRedirectModal={showRedirectModal}
           >
-            {isHomeSite() ? <Trans>Launch App</Trans> : <Trans>Trade</Trans>}
+            {isHomeSite() ? <Trans>Launch DApp</Trans> : <Trans>Trade</Trans>}
           </HeaderLink>
         </div>
 
@@ -136,25 +135,26 @@ export function AppHeaderUser({
         </HeaderLink>
       </div>
 
-      {showConnectionOptions ? (
-        <>
-          <div className="App-header-user-address">
-            <AddressDropdown
-              account={account}
-              accountUrl={accountUrl}
-              disconnectAccountAndCloseSettings={disconnectAccountAndCloseSettings}
+      {
+        showConnectionOptions ? (
+          <>
+            <div className="App-header-user-address">
+              <AddressDropdown
+                account={account}
+                accountUrl={accountUrl}
+                disconnectAccountAndCloseSettings={disconnectAccountAndCloseSettings}
+              />
+            </div>
+            <NetworkDropdown
+              small={small}
+              networkOptions={NETWORK_OPTIONS}
+              selectorLabel={selectorLabel}
+              onNetworkSelect={onNetworkSelect}
+              openSettings={openSettings}
             />
-          </div>
-          <NetworkDropdown
-            small={small}
-            networkOptions={NETWORK_OPTIONS}
-            selectorLabel={selectorLabel}
-            onNetworkSelect={onNetworkSelect}
-            openSettings={openSettings}
-          />
-        </>
-      ) : null
-      // <LanguagePopupHome />
+          </>
+        ) : null
+        // <LanguagePopupHome />
       }
     </div>
   );

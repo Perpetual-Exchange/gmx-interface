@@ -1,7 +1,7 @@
 import { t } from "@lingui/macro";
 import "./Footer.css";
 import twitterIcon from "img/ic_twitter.svg";
-import discordIcon from "img/ic_discord.svg";
+import discordIcon from "img/ic_discord.png";
 import telegramIcon from "img/ic_telegram.svg";
 
 type Link = {
