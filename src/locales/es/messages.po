@@ -1463,10 +1463,6 @@ msgstr "Actualizaciones e info adicional sobre las recompensas de stakear GMX"
 msgid "GMX transfers not yet enabled"
 msgstr "Las transferencias de GMX aún no están habilitadas"
 
-#: src/components/Common/SEO.js
-msgid "GMX | Decentralized Perpetual Exchange"
-msgstr ""
-
 #: src/components/Referrals/AddAffiliateCode.js
 msgid "Generate Referral Code"
 msgstr "Generar Código de Referido"
@@ -1677,7 +1673,7 @@ msgstr "Abrir App"
 
 #: src/components/Header/AppHeaderUser.tsx
 #: src/pages/Home/Home.js
-msgid "Launch DApp"
+msgid "Launch Dapp"
 msgstr ""
 
 #: src/components/Exchange/UsefulLinks.tsx
@@ -2706,6 +2702,10 @@ msgstr "Historial de Distribución de Recompensas"
 #: src/components/Referrals/AffiliatesStats.js
 msgid "Rewards are airdropped weekly."
 msgstr "Las recompensas son enviadas semanalmente."
+
+#: src/components/Common/SEO.js
+msgid "Rollex | Decentralized Perpetual Exchange"
+msgstr ""
 
 #: src/components/Referrals/JoinReferralCode.js
 msgid "Same as current active code"

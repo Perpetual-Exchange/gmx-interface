@@ -1463,10 +1463,6 @@ msgstr "GMXステーキング報酬の最新情報および見通し"
 msgid "GMX transfers not yet enabled"
 msgstr "GMX移転はまだ有効化されていません"
 
-#: src/components/Common/SEO.js
-msgid "GMX | Decentralized Perpetual Exchange"
-msgstr ""
-
 #: src/components/Referrals/AddAffiliateCode.js
 msgid "Generate Referral Code"
 msgstr "紹介コード作成"
@@ -1677,7 +1673,7 @@ msgstr "アプリ起動"
 
 #: src/components/Header/AppHeaderUser.tsx
 #: src/pages/Home/Home.js
-msgid "Launch DApp"
+msgid "Launch Dapp"
 msgstr ""
 
 #: src/components/Exchange/UsefulLinks.tsx
@@ -2706,6 +2702,10 @@ msgstr "報酬の分配履歴"
 #: src/components/Referrals/AffiliatesStats.js
 msgid "Rewards are airdropped weekly."
 msgstr "報酬は週1回エアドロップされます。"
+
+#: src/components/Common/SEO.js
+msgid "Rollex | Decentralized Perpetual Exchange"
+msgstr ""
 
 #: src/components/Referrals/JoinReferralCode.js
 msgid "Same as current active code"

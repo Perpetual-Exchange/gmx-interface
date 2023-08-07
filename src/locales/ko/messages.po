@@ -1463,10 +1463,6 @@ msgstr "GMX 스테이킹 보상 업데이트 및 인사이트"
 msgid "GMX transfers not yet enabled"
 msgstr "GMX 전송이 아직 불가능합니다."
 
-#: src/components/Common/SEO.js
-msgid "GMX | Decentralized Perpetual Exchange"
-msgstr ""
-
 #: src/components/Referrals/AddAffiliateCode.js
 msgid "Generate Referral Code"
 msgstr "추천인 코드 생성"
@@ -1677,7 +1673,7 @@ msgstr "앱 실행하기"
 
 #: src/components/Header/AppHeaderUser.tsx
 #: src/pages/Home/Home.js
-msgid "Launch DApp"
+msgid "Launch Dapp"
 msgstr ""
 
 #: src/components/Exchange/UsefulLinks.tsx
@@ -2706,6 +2702,10 @@ msgstr "보상 분배 내역"
 #: src/components/Referrals/AffiliatesStats.js
 msgid "Rewards are airdropped weekly."
 msgstr "보상은 매주 에어드랍됩니다."
+
+#: src/components/Common/SEO.js
+msgid "Rollex | Decentralized Perpetual Exchange"
+msgstr ""
 
 #: src/components/Referrals/JoinReferralCode.js
 msgid "Same as current active code"

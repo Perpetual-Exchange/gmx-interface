@@ -1463,10 +1463,6 @@ msgstr "GMX质押奖励更新和详解"
 msgid "GMX transfers not yet enabled"
 msgstr "尚未启用GMX转账功能"
 
-#: src/components/Common/SEO.js
-msgid "GMX | Decentralized Perpetual Exchange"
-msgstr ""
-
 #: src/components/Referrals/AddAffiliateCode.js
 msgid "Generate Referral Code"
 msgstr "生成推荐代码"
@@ -1677,7 +1673,7 @@ msgstr "启动应用程序"
 
 #: src/components/Header/AppHeaderUser.tsx
 #: src/pages/Home/Home.js
-msgid "Launch DApp"
+msgid "Launch Dapp"
 msgstr ""
 
 #: src/components/Exchange/UsefulLinks.tsx
@@ -2706,6 +2702,10 @@ msgstr "奖励分配历史"
 #: src/components/Referrals/AffiliatesStats.js
 msgid "Rewards are airdropped weekly."
 msgstr "奖励每周都会空投"
+
+#: src/components/Common/SEO.js
+msgid "Rollex | Decentralized Perpetual Exchange"
+msgstr ""
 
 #: src/components/Referrals/JoinReferralCode.js
 msgid "Same as current active code"

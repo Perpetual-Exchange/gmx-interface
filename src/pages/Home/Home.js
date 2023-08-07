@@ -154,7 +154,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
                 EXCHANGE
               </Trans>
             </div>
-            <img src={linePic} style={{ margin: "0 auto 40px" }} alt="line" />
+            <img src={linePic} className="mb-10 max-md:mb-5" style={{ maxWidth: "60vw" }} alt="line" />
             <div className="Home-description">
               <Trans>Trade cryptocurrencies with liquidity, leverage and low fees.</Trans>
             </div>
@@ -204,7 +204,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
                 <h3>Save on Costs</h3>
                 <div>
                   Enter and exit positions with minimal spread and zero price impact.
-                  <a href="###" target="_blank">
+                  <a href="https://docs.rollex.xyz/features" target="_blank" className="read-more" rel=" noreferrer">
                     learn more
                   </a>
                 </div>
@@ -223,25 +223,25 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
         </div>
         <div className="Home-latest-info-container default-container" style={{ marginTop: "150px" }}>
           <div className=" border max-md:text-center border-[0.5px] max-md:grid-cols-2 grid grid-cols-4 !border-[#e0ee8d]">
-            <div className="border-l-[0.5px] border-[#e0ee8d] py-10 sm:pl-5 first:border-0">
+            <div className="border-l-[0.5px] border-[#e0ee8d] py-10 sm:pl-10 first:border-0">
               <div className="Home-latest-info__title">
                 <Trans>Total Trading Volume</Trans>
               </div>
               <div className="Home-latest-info__value">${formatAmount(totalVolumeSum, USD_DECIMALS, 0, true)}</div>
             </div>
-            <div className=" border-l-[0.5px] border-[#e0ee8d] py-10 sm:pl-5">
+            <div className=" border-l-[0.5px] border-[#e0ee8d] py-10 sm:pl-10">
               <div className="Home-latest-info__title">
                 <Trans>Total Value Locked</Trans>
               </div>
               <div className="Home-latest-info__value">${0}</div>
             </div>
-            <div className=" border-l-[0.5px] border-[#e0ee8d] max-md:border-0 max-md:border-t-[0.5px] py-10 sm:pl-5">
+            <div className=" border-l-[0.5px] border-[#e0ee8d] max-md:border-0 max-md:border-t-[0.5px] py-10 sm:pl-10">
               <div className="Home-latest-info__title">
                 <Trans>Total Fees</Trans>
               </div>
               <div className="Home-latest-info__value">{0}</div>
             </div>
-            <div className="border-l-[0.5px] border-[#e0ee8d] max-md:border-t-[0.5px] py-10 sm:pl-5">
+            <div className="border-l-[0.5px] border-[#e0ee8d] max-md:border-t-[0.5px] py-10 sm:pl-10">
               <div className="Home-latest-info__title">
                 <Trans>Open Interest</Trans>
               </div>
@@ -331,7 +331,10 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
               <h3>Traders' Loyalty Credit</h3>
               <div>
                 In accordance with trading volume, Traders will be awarded RLX token(the rate depends on which asset
-                users trade on) learn more
+                users trade on){" "}
+                <a href="https://docs.rollex.xyz/rewrads" className="read-more" target="_blank" rel="noreferrer">
+                  Learn more
+                </a>
               </div>
               <img src={homeReward1} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
             </li>
@@ -339,7 +342,10 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
               <h3>Open Positions incentives</h3>
               <div>
                 Rollex will allocate a portion of esRLX tokens to open positions. You will earn esRLX by just keeping
-                your positions opened. Learn more
+                your positions opened.{" "}
+                <a href="https://docs.rollex.xyz/rewrads" className="read-more" target="_blank" rel="noreferrer">
+                  Learn more
+                </a>
               </div>
               <img src={homeReward2} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
             </li>
@@ -347,7 +353,10 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
               <h3>Liquidity Providers rewards</h3>
               <div>
                 In addition to the protocol fees that liquidity providers will receive, Rollex will also provide esRLX
-                rewards as additional incentives to Liquidity Providers. learn more
+                rewards as additional incentives to Liquidity Providers.{" "}
+                <a href="https://docs.rollex.xyz/rewrads" className="read-more" target="_blank" rel="noreferrer">
+                  Learn more
+                </a>
               </div>
               <img src={homeReward3} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
             </li>
@@ -355,7 +364,10 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
               <h3>Referral Program</h3>
               <div>
                 Reward referrals who help Rollex attract new users. Referral users can get up to 10.0% discount on
-                transaction fees, and referrers can earn up to 15% of referral transaction fee income.Learn more
+                transaction fees, and referrers can earn up to 15% of referral transaction fee income.
+                <a href="https://docs.rollex.xyz/rewrads" className="read-more" target="_blank" rel="noreferrer">
+                  Learn more
+                </a>
               </div>
               <img src={homeReward4} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
             </li>

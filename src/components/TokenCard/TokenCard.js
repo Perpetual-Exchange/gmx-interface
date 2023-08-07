@@ -59,7 +59,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
         <div>
           $RLX is the utility token of Rollex. In addition to granting participation in the governance process of the
           protocol, it also accrues value from the platform revenue.{" "}
-          <a href="https://gmxio.gitbook.io/gmx/tokenomics" target="_blank" rel="noreferrer" className=" read-more">
+          <a href="https://docs.rollex.xyz/tokenomics" target="_blank" rel="noreferrer" className=" read-more">
             Learn more
           </a>
         </div>
@@ -75,7 +75,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           $RLP is a liquidity provider token. Accrues 70% of protocol revenue in the form of SYS and a portion of esRLX
           token issuance emission.{" "}
         </div>
-        <a href="https://gmxio.gitbook.io/gmx/glp" target="_blank" rel="noreferrer" className=" read-more">
+        <a href="https://docs.rollex.xyz/tokenomics" target="_blank" rel="noreferrer" className=" read-more">
           Learn more
         </a>
         <div className="Home-token-card-option-action">
