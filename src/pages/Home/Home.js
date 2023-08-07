@@ -263,17 +263,17 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
         <div className="Home-feature">
           <h2>Trade</h2>
           <ul className=" max-md:grid-cols-1 grid grid-cols-2 Home-tip-list">
-            <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] border-l-0 max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 odd:pl-60">
+            <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] border-l-0 max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Zero price impact</h3>
               <div>Swap tokens with lowest trading fees and zero price impact.</div>
               <img src={homeTrade1} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
             </li>
-            <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 relative even:text-right even:pr-60 odd:pl-60">
+            <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>50x Leverage</h3>
               <div>Trade BTC, ETH, SYS, PSYS and other top cryptocurrencies with up to 50x leverage</div>
               <img src={homeTrade2} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
             </li>
-            <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] border-l-0 max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 odd:pl-60">
+            <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] border-l-0 max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Robust price oracle</h3>
               <div>
                 Rollex uses SuperOracle as a reliable price oracle to achieve accurate and stable pricing so that
@@ -281,7 +281,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
               </div>
               <img src={homeTrade3} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
             </li>
-            <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] border-b-0 max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 max-md:border-b-0 relative even:text-right even:pr-60 odd:pl-60">
+            <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] border-b-0 max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 max-md:border-b-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Peer to Pool</h3>
               <div>
                 Rollex leverages liquidity pools and peer-to-peer principles for permissionless automated trading,
@@ -297,24 +297,24 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
         <div className="Home-feature">
           <h2>Earn</h2>
           <ul className="max-md:grid-cols-1 grid grid-cols-2 Home-tip-list">
-            <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] border-l-0 max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 odd:pl-60">
+            <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] border-l-0 max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Providing Liquidity</h3>
               <div>Providing Liquidity earn esRLX rewards and 70% of platform fees</div>
               <img src={homeEarn1} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
             </li>
-            <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 relative even:text-right even:pr-60 odd:pl-60">
+            <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Stake to earn</h3>
               <div>
                 Staked RLX receives three types of rewards that includes Escrowed GMX, Multiplier Points and SYS Rewards
               </div>
               <img src={homeEarn2} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
             </li>
-            <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] border-l-0 max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 odd:pl-60">
+            <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] border-l-0 max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Trade to earn</h3>
               <div>Earn RLX by trading volume, the bigger the trading volume, the more you earn</div>
               <img src={homeEarn3} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
             </li>
-            <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 max-md:border-b-0 relative even:text-right even:pr-60 odd:pl-60">
+            <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 max-md:border-b-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Open Positions</h3>
               <div>Traders will receive esRLX rewards for the period that their leveraged positions are active.</div>
               <img src={homeEarn4} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
@@ -327,7 +327,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
         <div className="Home-feature">
           <h2>Rewards</h2>
           <ul className="max-md:grid-cols-1 grid grid-cols-2 Home-tip-list">
-            <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] border-l-0 max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 odd:pl-60">
+            <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] border-l-0 max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Traders' Loyalty Credit</h3>
               <div>
                 In accordance with trading volume, Traders will be awarded RLX token(the rate depends on which asset
@@ -335,7 +335,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
               </div>
               <img src={homeReward1} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
             </li>
-            <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 relative even:text-right even:pr-60 odd:pl-60">
+            <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Open Positions incentives</h3>
               <div>
                 Rollex will allocate a portion of esRLX tokens to open positions. You will earn esRLX by just keeping
@@ -343,7 +343,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
               </div>
               <img src={homeReward2} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
             </li>
-            <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] border-l-0 max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 odd:pl-60">
+            <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] border-l-0 max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Liquidity Providers rewards</h3>
               <div>
                 In addition to the protocol fees that liquidity providers will receive, Rollex will also provide esRLX
@@ -351,7 +351,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
               </div>
               <img src={homeReward3} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
             </li>
-            <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 max-md:border-b-0 relative even:text-right even:pr-60 odd:pl-60">
+            <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 max-md:border-b-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Referral Program</h3>
               <div>
                 Reward referrals who help rollux attract new users. Referral users can get up to 10.0% discount on
