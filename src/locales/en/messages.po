@@ -1671,11 +1671,14 @@ msgstr "Keep leverage at {0}x"
 msgid "Language"
 msgstr "Language"
 
-#: src/components/Header/AppHeaderUser.tsx
 #: src/components/ModalViews/RedirectModal.js
-#: src/pages/Home/Home.js
 msgid "Launch App"
 msgstr "Launch App"
+
+#: src/components/Header/AppHeaderUser.tsx
+#: src/pages/Home/Home.js
+msgid "Launch DApp"
+msgstr "Launch DApp"
 
 #: src/components/Exchange/UsefulLinks.tsx
 msgid "Leaderboard"

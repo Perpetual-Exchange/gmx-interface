@@ -1671,11 +1671,14 @@ msgstr ""
 msgid "Language"
 msgstr "Idioma"
 
-#: src/components/Header/AppHeaderUser.tsx
 #: src/components/ModalViews/RedirectModal.js
-#: src/pages/Home/Home.js
 msgid "Launch App"
 msgstr "Abrir App"
+
+#: src/components/Header/AppHeaderUser.tsx
+#: src/pages/Home/Home.js
+msgid "Launch DApp"
+msgstr ""
 
 #: src/components/Exchange/UsefulLinks.tsx
 msgid "Leaderboard"

@@ -95,7 +95,7 @@ export function AppHeaderUser({
             redirectPopupTimestamp={redirectPopupTimestamp}
             showRedirectModal={showRedirectModal}
           >
-            {isHomeSite() ? <Trans>Launch DApp</Trans> : <Trans>Trade</Trans>}
+            {isHomeSite() ? <Trans>Launch Dapp</Trans> : <Trans>Trade</Trans>}
           </HeaderLink>
         </div>
 

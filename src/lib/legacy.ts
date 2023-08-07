@@ -1233,7 +1233,7 @@ export function getHomeUrl() {
     return "http://localhost:3010";
   }
 
-  return "https://gmx.io";
+  return "https://d.rollex.finance";
 }
 
 export function getAppBaseUrl() {
@@ -1241,7 +1241,7 @@ export function getAppBaseUrl() {
     return "http://localhost:3011/#";
   }
 
-  return "https://app.gmx.io/#";
+  return "https://dapp.rollex.finance/#";
 }
 
 export function getRootShareApiUrl() {

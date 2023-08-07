@@ -40,9 +40,9 @@
 
 .Home-description {
   font-size: 2.4rem;
-  line-height: 2.5rem;
+  line-height: 3.2rem;
   max-width: 52rem;
-  color: #a0a3c4;
+  color: #9e9e9e;
   margin-bottom: 4rem;
 }
 
@@ -74,7 +74,7 @@
   font-size: 1.8rem;
   line-height: 2.3rem;
   max-width: 29rem;
-  color: #a0a3c4;
+  color: #9e9e9e;
   letter-spacing: 0;
 }
 
@@ -113,7 +113,7 @@
   font-size: 1.8rem;
   line-height: 2.3rem;
   letter-spacing: 0;
-  color: #a0a3c4;
+  color: #9e9e9e;
   margin-bottom: 5rem;
 }
 
@@ -135,7 +135,7 @@
   font-size: 1.8rem;
   line-height: 2.3rem;
   letter-spacing: 0px;
-  color: #a0a3c4;
+  color: #9e9e9e;
   margin-bottom: 0.3rem;
 }
 
@@ -256,7 +256,7 @@
   font-size: var(--font-base);
   line-height: 2.3rem;
   letter-spacing: 0px;
-  color: #a0a3c4;
+  color: #9e9e9e;
   margin-top: 1.9375rem;
 }
 
@@ -310,14 +310,13 @@
 }
 
 .Home-latest-info__title {
-  color: #a0a3c4;
+  color: #9e9e9e;
   font-size: var(--font-md);
   line-height: 2.5rem;
   letter-spacing: 0px;
 }
 
 .Home-latest-info__value {
-  font-family: "RelativeNumber";
   color: white;
   font-size: 2.9rem;
   line-height: 3.9rem;
@@ -327,7 +326,7 @@
 
 .Home-latest-info__description {
   letter-spacing: 0px;
-  color: #a0a3c4;
+  color: #9e9e9e;
   font-size: var(--font-sm);
   line-height: 2.5rem;
 }
@@ -372,7 +371,7 @@
 
 .Home-faqs-introduction__description {
   letter-spacing: 0px;
-  color: #a0a3c4;
+  color: #9e9e9e;
   font-size: 1.8rem;
   line-height: 2.3rem;
   margin-bottom: 3.7rem;
@@ -428,7 +427,7 @@
   visibility: hidden;
   padding: 0 0rem 0 3.1rem;
   letter-spacing: 0px;
-  color: #a0a3c4;
+  color: #9e9e9e;
   transition: all 0.3s ease-in-out 0s;
 }
 
@@ -452,7 +451,7 @@
   margin-top: 15rem !important;
 }
 .Home-feature {
-  border: 1px solid #e0ee8d;
+  border: 0.5px solid #e0ee8d;
   color: #858585;
 }
 .Home-feature h2 {
@@ -469,8 +468,7 @@
 .Home-feature-list h3 {
   color: #fff;
   font-size: 2.4rem;
-  padding: 30px 0;
-  text-align: center;
+  padding: 30px 0 20px;
 }
 .Home-feature-list {
   list-style: none;
@@ -479,10 +477,23 @@
 }
 .Home-feature-list > li {
   position: relative;
-  padding-left: 20px;
+  padding-left: 30px;
   padding-bottom: 30px;
+  padding-right: 20px;
   height: 265px;
+  border-bottom: 0.5px solid #e0ee8d;
+  border-left: 0.5px solid #e0ee8d;
 }
+.Home-feature-list > li:first-child,
+.Home-feature-list > li:nth-child(4) {
+  border-left: 0;
+}
+.Home-feature-list > li:nth-child(4),
+.Home-feature-list > li:nth-child(5),
+.Home-feature-list > li:nth-child(6) {
+  border-bottom: 0;
+}
+
 .Home-feature-list > li > img {
   position: absolute;
   max-width: 60%;
@@ -512,11 +523,15 @@
 }
 .tokenomics-list > li {
   padding: 0 0 20px 30px;
+  border-left: 0.5px solid #e0ee8d;
+}
+.tokenomics-list > li:first-child {
+  border-left: 0;
 }
 .tokenomics-list > li > h3 {
   color: #fff;
   font-size: 2.4rem;
-  padding: 30px 0;
+  padding: 30px 0 14px;
 }
 
 .tokenomics-list .read-more {
@@ -659,5 +674,24 @@
 
   .Home-parnter-list > ul > li img {
     width: 4rem;
+  }
+
+  .Home-feature-list > li {
+    border-left: 0;
+  }
+  .Home-feature-list > li:nth-child(4),
+  .Home-feature-list > li:nth-child(5) {
+    border-bottom: 0.5px solid #e0ee8d;
+  }
+
+  .Home-latest-info__value {
+    font-size: 1.6rem;
+  }
+
+  .tokenomics-list > li {
+    border-left: 0;
+  }
+  .tokenomics-list > li:last-child {
+    border-top: 0.5px solid #e0ee8d;
   }
 }

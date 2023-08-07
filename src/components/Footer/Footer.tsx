@@ -22,7 +22,12 @@ export default function Footer({ showRedirectModal, redirectPopupTimestamp }: Pr
             );
           })}
         </div>
-        <div className="Footer-links">Powered by @WEconomy</div>
+        <div className="Footer-links">
+          Powered by{" "}
+          <a href="https://twitter.com/WEconomyNetwork" target="_blank" rel="noreferrer">
+            @WEconomy
+          </a>
+        </div>
       </div>
     </div>
   );

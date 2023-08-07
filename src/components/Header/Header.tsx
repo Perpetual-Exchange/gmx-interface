@@ -89,7 +89,7 @@ export function Header({
           <div className="App-header-container-left">
             <Link className="App-header-link-main" to="/">
               <img src={logoImg} alt=" Logo" />
-              <strong>Rollux</strong>
+              <strong>Rollex</strong>
             </Link>
             {isHomeSite() ? null : ( // <HomeHeaderLinks redirectPopupTimestamp={redirectPopupTimestamp} showRedirectModal={showRedirectModal} />
               <AppHeaderLinks redirectPopupTimestamp={redirectPopupTimestamp} showRedirectModal={showRedirectModal} />
@@ -114,7 +114,7 @@ export function Header({
             <div className="App-header-container-left">
               <div className="App-header-link-main clickable" onClick={() => setIsDrawerVisible(!isDrawerVisible)}>
                 <img src={logoImg} alt="GMX Logo" />
-                <strong>Rollux</strong>
+                <strong>Rollex</strong>
               </div>
             </div>
             <div className="App-header-container-right">
