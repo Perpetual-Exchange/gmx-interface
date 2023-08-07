@@ -354,7 +354,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
             <li className="border-l-[0.5px] border-b-0 border-[#e0ee8d] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 max-md:border-b-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Referral Program</h3>
               <div>
-                Reward referrals who help rollux attract new users. Referral users can get up to 10.0% discount on
+                Reward referrals who help Rollex attract new users. Referral users can get up to 10.0% discount on
                 transaction fees, and referrers can earn up to 15% of referral transaction fee income.Learn more
               </div>
               <img src={homeReward4} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
