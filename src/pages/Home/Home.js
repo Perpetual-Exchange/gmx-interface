@@ -221,7 +221,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
             </ul>
           </div>
         </div>
-        <div className="Home-latest-info-container default-container" style={{ marginTop: "150px" }}>
+        <div className=" Home-latest-info-container default-container">
           <div className=" border max-md:text-center border-[0.5px] max-md:grid-cols-2 grid grid-cols-4 !border-[#e0ee8d]">
             <div className="border-l-[0.5px] border-[#e0ee8d] py-10 sm:pl-10 first:border-0">
               <div className="Home-latest-info__title">

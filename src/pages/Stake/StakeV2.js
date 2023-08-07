@@ -1609,7 +1609,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                 )}
               </div>
               <div className="App-card-divider" />
-              <div className="App-card-buttons m-0">
+              <div className="m-0 App-card-buttons">
                 <Button variant="secondary" to="/buy_gmx">
                   <Trans>Buy GMX</Trans>
                 </Button>
@@ -1631,6 +1631,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
               </div>
             </div>
           </div>
+          {/* StakeV2 Total Rewards */}
           <div className="App-card primary StakeV2-total-rewards-card">
             <div className="App-card-title">
               <Trans>Total Rewards</Trans>
@@ -1682,7 +1683,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
               </div>
               <div className="App-card-footer">
                 <div className="App-card-divider"></div>
-                <div className="App-card-buttons m-0">
+                <div className="m-0 App-card-buttons">
                   {active && (
                     <Button variant="secondary" onClick={() => setIsCompoundModalVisible(true)}>
                       <Trans>Compound</Trans>
@@ -1837,7 +1838,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                 </div>
               </div>
               <div className="App-card-divider"></div>
-              <div className="App-card-buttons m-0">
+              <div className="m-0 App-card-buttons">
                 <Button variant="secondary" to="/buy_glp">
                   <Trans>Buy GLP</Trans>
                 </Button>
@@ -1924,7 +1925,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                 </div>
               </div>
               <div className="App-card-divider"></div>
-              <div className="App-card-buttons m-0">
+              <div className="m-0 App-card-buttons">
                 {active && (
                   <Button variant="secondary" onClick={() => showStakeEsGmxModal()}>
                     <Trans>Stake</Trans>
@@ -2058,7 +2059,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   </div>
                 </div>
                 <div className="App-card-divider"></div>
-                <div className="App-card-buttons m-0">
+                <div className="m-0 App-card-buttons">
                   {!active && (
                     <Button variant="secondary" onClick={() => connectWallet()}>
                       <Trans>Connect Wallet</Trans>
@@ -2145,7 +2146,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   </div>
                 </div>
                 <div className="App-card-divider"></div>
-                <div className="App-card-buttons m-0">
+                <div className="m-0 App-card-buttons">
                   {!active && (
                     <Button variant="secondary" onClick={() => connectWallet()}>
                       <Trans>Connect Wallet</Trans>

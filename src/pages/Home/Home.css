@@ -273,10 +273,11 @@
   float: right;
 } */
 
-.Home-latest-info-container {
+.default-container.Home-latest-info-container {
   padding-bottom: 1.5rem;
   width: 100%;
   color: #979797;
+  margin-top: 150px;
 }
 
 .Home-latest-info-container .flex-1 {
@@ -443,9 +444,9 @@
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
-.Home-feature-wrap {
+.default-container.Home-feature-wrap {
   width: 100%;
-  margin-top: 15rem !important;
+  margin-top: 15rem;
 }
 .Home-feature {
   border: 0.5px solid #e0ee8d;
@@ -613,7 +614,9 @@
     height: 4rem !important;
     line-height: 4rem !important;
   }
-
+  .default-container.Home-feature-wrap {
+    margin-top: 75px;
+  }
   .Home-tip-list > li > img {
     width: 6rem;
   }
@@ -655,10 +658,10 @@
     margin-top: 0.8rem;
   }
 
-  .Home-latest-info-container {
+  .default-container.Home-latest-info-container {
     padding-left: 1.6rem !important;
     padding-right: 1.6rem !important;
-    padding-top: 7.4rem;
+    margin-top: 7.5rem;
   }
 
   .Home-latest-info__icon {
