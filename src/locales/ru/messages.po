@@ -240,10 +240,6 @@ msgstr ""
 msgid "Amount to claim"
 msgstr "Сумма к оплате"
 
-#: src/pages/Home/Home.js
-msgid "An aggregate of high-quality price feeds determine when liquidations occur. This keeps positions safe from temporary wicks."
-msgstr "Совокупность высококачественных ценовых сигналов определяет, когда происходит ликвидация. Это позволяет обезопасить позиции от временных колебаний."
-
 #: src/components/Header/HomeHeaderLinks.tsx
 msgid "App"
 msgstr ""
@@ -297,11 +293,6 @@ msgstr "Одобрение {stakingTokenSymbol}..."
 msgid "Approving..."
 msgstr "Одобрение..."
 
-#: src/components/TokenCard/TokenCard.js
-#: src/components/TokenCard/TokenCard.js
-msgid "Arbitrum APR:"
-msgstr "Arbitrum APR:"
-
 #: src/components/Exchange/NoLiquidityErrorModal.tsx
 msgid "As there is not enough liquidity in GLP to swap {0} to {swapTokenSymbol}, you can use the option below to do so:"
 msgstr "Поскольку в GLP недостаточно ликвидности для обмена {0} на {swapTokenSymbol}, вы можете воспользоваться приведенной ниже опцией, чтобы сделать это:"
@@ -336,15 +327,6 @@ msgstr "Доступная сумма для пополнения GLP."
 #: src/components/Glp/GlpSwap.js
 msgid "Available amount to withdraw from GLP. Funds not utilized by current open positions."
 msgstr "Доступная сумма для вывода средств из GLP. Средства, не использованные текущими открытыми позициями."
-
-#: src/pages/Home/Home.js
-msgid "Available on your preferred network"
-msgstr "Доступно в предпочитаемой сети"
-
-#: src/components/TokenCard/TokenCard.js
-#: src/components/TokenCard/TokenCard.js
-msgid "Avalanche APR:"
-msgstr "Avalanche APR:"
 
 #: src/components/Exchange/SwapBox.js
 #: src/components/Exchange/SwapBox.js
@@ -460,16 +442,6 @@ msgstr ""
 #: src/components/Glp/GlpSwap.js
 msgid "Buy failed."
 msgstr "Покупка не удалась."
-
-#: src/components/TokenCard/TokenCard.js
-#: src/components/TokenCard/TokenCard.js
-msgid "Buy on Arbitrum"
-msgstr "Купить на Arbitrum"
-
-#: src/components/TokenCard/TokenCard.js
-#: src/components/TokenCard/TokenCard.js
-msgid "Buy on Avalanche"
-msgstr "Купить на Avalanche"
 
 #: src/pages/BuyGMX/BuyGMX.tsx
 msgid "Buy or Transfer AVAX to Avalanche"
@@ -910,6 +882,10 @@ msgstr "Текущий {0} лонгшезам"
 msgid "Current {0} shorts"
 msgstr "Текущий {0} Шорт"
 
+#: src/pages/Home/Home.js
+msgid "DECENTRALIZED<0/><1>PERPETUAL</1><2/>EXCHANGE"
+msgstr ""
+
 #: src/pages/Ecosystem/Ecosystem.js
 #: src/pages/Ecosystem/Ecosystem.js
 #: src/pages/Ecosystem/Ecosystem.js
@@ -968,10 +944,6 @@ msgstr ""
 #: src/pages/Ecosystem/Ecosystem.js
 msgid "Decentralized Trading Protocol"
 msgstr "Децентрализованный Торговый Протокол"
-
-#: src/pages/Home/Home.js
-msgid "Decentralized<0/>Perpetual Exchange"
-msgstr "Децентрализованная<0/>Бессрочная Биржа"
 
 #: src/components/Exchange/ConfirmationBox.js
 #: src/components/Exchange/ConfirmationBox.js
@@ -1248,10 +1220,6 @@ msgstr "Введите цену"
 msgid "Enter an amount"
 msgstr "Введите сумму"
 
-#: src/pages/Home/Home.js
-msgid "Enter and exit positions with minimal spread and zero price impact. Get the optimal price without incurring additional costs."
-msgstr "Вход и выход из позиций с минимальным спредом и нулевым влиянием на цену. Получайте оптимальную цену без дополнительных затрат."
-
 #: src/components/Exchange/OrderEditor.js
 #: src/components/Exchange/OrderEditor.js
 msgid "Enter new Price"
@@ -1409,10 +1377,6 @@ msgstr ""
 msgid "GLP buy disabled, pending {0} upgrade"
 msgstr "Покупка GLP приостановлена, ожидается {0} обновление"
 
-#: src/components/TokenCard/TokenCard.js
-msgid "GLP is the liquidity provider token. Accrues 70% of the platform's generated fees."
-msgstr "GLP это токен предоставляющий ликвидность. Обеспечивает 70% генерируемых платформой комиссий."
-
 #: src/components/Glp/GlpSwap.js
 msgid "GLP sell disabled, pending {0} upgrade"
 msgstr "Продажа GLP приостановлена, ожидается {0} обновление"
@@ -1478,17 +1442,9 @@ msgstr "Проводник GMX для статистики и трейдеров
 msgid "GMX fundamentals"
 msgstr "Фундаментальные показатели GMX"
 
-#: src/pages/Home/Home.js
-msgid "GMX is currently live on Arbitrum and Avalanche."
-msgstr "В настоящее время GMX работает на Arbitrum и Avalanche."
-
 #: src/pages/Jobs/Jobs.js
 msgid "GMX is not actively looking for new hires at the moment. However, if you think you can contribute to the project, please email <0>jobs@gmx.io</0>."
 msgstr "В настоящее время GMX не ведет активного поиска новых сотрудников. Однако, если вы считаете, что можете внести свой вклад в проект, пожалуйста, напишите <0>jobs@gmx.io</0>."
-
-#: src/components/TokenCard/TokenCard.js
-msgid "GMX is the utility and governance token. Accrues 30% of the platform's generated fees."
-msgstr "GMX это токен утилиты и управления. Обеспечивает 30% генерируемых платформой комиссий."
 
 #: src/pages/Ecosystem/Ecosystem.js
 msgid "GMX staking calculator"
@@ -1506,10 +1462,6 @@ msgstr "Обновления и информация о вознагражден
 #: src/pages/Stake/StakeV2.js
 msgid "GMX transfers not yet enabled"
 msgstr "Перевод GMX еще не активирован"
-
-#: src/components/Common/SEO.js
-msgid "GMX | Decentralized Perpetual Exchange"
-msgstr ""
 
 #: src/components/Referrals/AddAffiliateCode.js
 msgid "Generate Referral Code"
@@ -1715,11 +1667,14 @@ msgstr ""
 msgid "Language"
 msgstr "Язык"
 
-#: src/components/Header/AppHeaderUser.tsx
 #: src/components/ModalViews/RedirectModal.js
-#: src/pages/Home/Home.js
 msgid "Launch App"
 msgstr "Запустить Приложение"
+
+#: src/components/Header/AppHeaderUser.tsx
+#: src/pages/Home/Home.js
+msgid "Launch Dapp"
+msgstr ""
 
 #: src/components/Exchange/UsefulLinks.tsx
 msgid "Leaderboard"
@@ -2246,10 +2201,6 @@ msgstr "Открыть на Coingecko"
 msgid "Open in Explorer"
 msgstr "Открыть в Explorer"
 
-#: src/pages/Home/Home.js
-msgid "Open positions through a simple swap interface. Conveniently swap from any supported asset into the position of your choice."
-msgstr "Открывайте позиции с помощью простого интерфейса обменник. Удобный обмен из любого поддерживаемого актива в выбранную вами позицию."
-
 #: src/pages/PositionsOverview/PositionsOverview.js
 msgid "Open positions: {0}<0/>Under risk: {1}"
 msgstr "Открытие позиций: {0}<0/>Под риском: {1}"
@@ -2565,11 +2516,6 @@ msgstr "Покупайте <0>токенов GLP</0>, чтобы получит�
 msgid "Purchase Insurance"
 msgstr "Приобрести Страховку"
 
-#: src/components/TokenCard/TokenCard.js
-#: src/components/TokenCard/TokenCard.js
-msgid "Read more"
-msgstr "Читать больше<<<<<<< HEAD"
-
 #: src/components/Exchange/PositionSeller.js
 msgid "Realized PnL insufficient for Fees"
 msgstr ""
@@ -2597,14 +2543,16 @@ msgstr "Рибейты, заработанные этим аккаунтом в 
 msgid "Rebates earned by this account as an affiliate."
 msgstr "Рибейты, заработанные этим аккаунтом в качестве аффилированного лица."
 
-#: src/components/Referrals/AffiliatesStats.js
 #: src/components/Referrals/TradersStats.js
 msgid "Rebates on Arbitrum"
 msgstr ""
 
-#: src/components/Referrals/AffiliatesStats.js
 #: src/components/Referrals/TradersStats.js
 msgid "Rebates on Avalanche"
+msgstr ""
+
+#: src/components/Referrals/AffiliatesStats.js
+msgid "Rebates on sepolia"
 msgstr ""
 
 #: src/components/Exchange/ConfirmationBox.js
@@ -2633,10 +2581,6 @@ msgstr "Получатель не размещал токены GLP ранее"
 #: src/components/Glp/GlpSwap.js
 msgid "Redemption time not yet reached"
 msgstr "Срок выкупа еще не наступил"
-
-#: src/pages/Home/Home.js
-msgid "Reduce Liquidation Risks"
-msgstr "Снизить Риски Ликвидации"
 
 #: src/components/Exchange/PositionSeller.js
 msgid "Reducing the position at the current price will forfeit a <0>pending profit</0> of {deltaStr}. <1/>"
@@ -2759,6 +2703,10 @@ msgstr "История Распределения Вознаграждений"
 msgid "Rewards are airdropped weekly."
 msgstr "Вознаграждения Рассылаются Еженедельно"
 
+#: src/components/Common/SEO.js
+msgid "Rollex | Decentralized Perpetual Exchange"
+msgstr ""
+
 #: src/components/Referrals/JoinReferralCode.js
 msgid "Same as current active code"
 msgstr "Такой же, как и текущий действующий код"
@@ -2766,10 +2714,6 @@ msgstr "Такой же, как и текущий действующий код"
 #: src/App/App.js
 msgid "Save"
 msgstr "Сохранить"
-
-#: src/pages/Home/Home.js
-msgid "Save on Costs"
-msgstr "Сэкономь на Расходах"
 
 #: src/components/Glp/GlpSwap.js
 msgid "Save on Fees"
@@ -2899,10 +2843,6 @@ msgstr "Шорт {0}"
 #: src/components/Exchange/ConfirmationBox.js
 msgid "Shorting..."
 msgstr "Шортинг..."
-
-#: src/pages/Home/Home.js
-msgid "Simple Swaps"
-msgstr "Простые Обмены"
 
 #: src/pages/Ecosystem/Ecosystem.js
 msgid "Simulate your hedge strategy"
@@ -3329,6 +3269,7 @@ msgstr "Общая сумма Размещенных Активов"
 
 #: src/pages/Dashboard/DashboardV2.js
 #: src/pages/Dashboard/DashboardV2.js
+#: src/pages/Home/Home.js
 msgid "Total Fees"
 msgstr "Общая сумма Комиссии"
 
@@ -3376,9 +3317,12 @@ msgstr "Общий Объем Торгов"
 
 #: src/pages/Dashboard/DashboardV2.js
 #: src/pages/Dashboard/DashboardV2.js
-#: src/pages/Home/Home.js
 msgid "Total Users"
 msgstr "Всего Пользователей"
+
+#: src/pages/Home/Home.js
+msgid "Total Value Locked"
+msgstr ""
 
 #: src/components/Referrals/AffiliatesStats.js
 #: src/pages/Dashboard/DashboardV2.js
@@ -3408,15 +3352,15 @@ msgid "Trade"
 msgstr "Торговля"
 
 #: src/pages/Home/Home.js
-msgid "Trade BTC, ETH, AVAX and other top cryptocurrencies with up to 50x leverage directly from your wallet"
-msgstr "Торгуйте BTC, ETH, AVAX и другими популярными криптовалютами с кредитным плечом до 50x прямо из вашего кошелька."
+msgid "Trade cryptocurrencies with liquidity, leverage and low fees."
+msgstr ""
 
 #: src/components/Exchange/ExchangeBanner.js
 msgid "Trade on GMX and win <0>$250.000</0> in prizes! Live until November 30th, <1>click here</1> to learn more."
 msgstr "Торгуйте на GMX и выиграйте <0>$250.000</0> в качестве призов! Действует до 30 ноября, <1> нажмите здесь</1>, чтобы узнать больше.\""
 
 #: src/components/Common/SEO.js
-msgid "Trade spot or perpetual BTC, ETH, AVAX and other top cryptocurrencies with up to 50x leverage directly from your wallet on Arbitrum and Avalanche."
+msgid "Trade spot or perpetual BTC, ETH, SYS, PSYS and other top cryptocurrencies with up to 50x leverage directly on Rollux"
 msgstr ""
 
 #: src/pages/Referrals/Referrals.js
@@ -3429,11 +3373,7 @@ msgid "Traders Referred"
 msgstr "Привлеченные Трейдеров"
 
 #: src/components/Referrals/AffiliatesStats.js
-msgid "Traders Referred on Arbitrum"
-msgstr ""
-
-#: src/components/Referrals/AffiliatesStats.js
-msgid "Traders Referred on Avalanche"
+msgid "Traders Referred on sepolia"
 msgstr ""
 
 #: src/pages/Exchange/Exchange.js
@@ -3445,14 +3385,16 @@ msgstr "Торги"
 msgid "Trading Volume"
 msgstr ""
 
-#: src/components/Referrals/AffiliatesStats.js
 #: src/components/Referrals/TradersStats.js
 msgid "Trading Volume on Arbitrum"
 msgstr ""
 
-#: src/components/Referrals/AffiliatesStats.js
 #: src/components/Referrals/TradersStats.js
 msgid "Trading Volume on Avalanche"
+msgstr ""
+
+#: src/components/Referrals/AffiliatesStats.js
+msgid "Trading Volume on sepolia"
 msgstr ""
 
 #: src/components/Exchange/UsefulLinks.tsx
@@ -3555,10 +3497,6 @@ msgstr "Попробуйте увеличить \" Допустимое Скол
 #: src/components/Exchange/PositionShare.js
 msgid "Tweet"
 msgstr "Твитнуть"
-
-#: src/pages/Home/Home.js
-msgid "Two tokens create our ecosystem"
-msgstr "Два токена создают нашу экосистему"
 
 #: src/App/App.js
 msgid "Txn failed. <0>View</0>"

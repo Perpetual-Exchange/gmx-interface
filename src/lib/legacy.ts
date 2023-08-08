@@ -1053,7 +1053,6 @@ export function getStakingData(stakingInfo) {
   if (!stakingInfo || stakingInfo.length === 0) {
     return;
   }
-
   const keys = ["stakedGmxTracker", "bonusGmxTracker", "feeGmxTracker", "stakedGlpTracker", "feeGlpTracker"];
   const data = {};
   const propsLength = 5;
@@ -1071,7 +1070,7 @@ export function getStakingData(stakingInfo) {
 
   return data;
 }
-
+// TODO
 export function getProcessedData(
   balanceData,
   supplyData,
@@ -1098,7 +1097,6 @@ export function getProcessedData(
   ) {
     return {};
   }
-
   const data: any = {};
 
   data.gmxBalance = balanceData.gmx;
@@ -1213,7 +1211,8 @@ export function getProcessedData(
   data.totalNativeTokenRewardsUsd = data.feeGmxTrackerRewardsUsd.add(data.feeGlpTrackerRewardsUsd);
 
   data.totalRewardsUsd = data.totalEsGmxRewardsUsd.add(data.totalNativeTokenRewardsUsd).add(data.totalVesterRewardsUsd);
-
+  // TODO find all data source
+  // stakingData.stakedGmxTracker.claimable   stakingData.feeGmxTracker.claimable    vestingData.gmxVester.claimable
   return data;
 }
 
@@ -1234,7 +1233,7 @@ export function getHomeUrl() {
     return "http://localhost:3010";
   }
 
-  return "https://gmx.io";
+  return "https://d.rollex.finance";
 }
 
 export function getAppBaseUrl() {
@@ -1242,7 +1241,7 @@ export function getAppBaseUrl() {
     return "http://localhost:3011/#";
   }
 
-  return "https://app.gmx.io/#";
+  return "https://dapp.rollex.finance/#";
 }
 
 export function getRootShareApiUrl() {

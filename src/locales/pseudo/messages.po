@@ -240,10 +240,6 @@ msgstr ""
 msgid "Amount to claim"
 msgstr ""
 
-#: src/pages/Home/Home.js
-msgid "An aggregate of high-quality price feeds determine when liquidations occur. This keeps positions safe from temporary wicks."
-msgstr ""
-
 #: src/components/Header/HomeHeaderLinks.tsx
 msgid "App"
 msgstr ""
@@ -297,11 +293,6 @@ msgstr ""
 msgid "Approving..."
 msgstr ""
 
-#: src/components/TokenCard/TokenCard.js
-#: src/components/TokenCard/TokenCard.js
-msgid "Arbitrum APR:"
-msgstr ""
-
 #: src/components/Exchange/NoLiquidityErrorModal.tsx
 msgid "As there is not enough liquidity in GLP to swap {0} to {swapTokenSymbol}, you can use the option below to do so:"
 msgstr ""
@@ -335,15 +326,6 @@ msgstr ""
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
 msgid "Available amount to withdraw from GLP. Funds not utilized by current open positions."
-msgstr ""
-
-#: src/pages/Home/Home.js
-msgid "Available on your preferred network"
-msgstr ""
-
-#: src/components/TokenCard/TokenCard.js
-#: src/components/TokenCard/TokenCard.js
-msgid "Avalanche APR:"
 msgstr ""
 
 #: src/components/Exchange/SwapBox.js
@@ -459,16 +441,6 @@ msgstr ""
 
 #: src/components/Glp/GlpSwap.js
 msgid "Buy failed."
-msgstr ""
-
-#: src/components/TokenCard/TokenCard.js
-#: src/components/TokenCard/TokenCard.js
-msgid "Buy on Arbitrum"
-msgstr ""
-
-#: src/components/TokenCard/TokenCard.js
-#: src/components/TokenCard/TokenCard.js
-msgid "Buy on Avalanche"
 msgstr ""
 
 #: src/pages/BuyGMX/BuyGMX.tsx
@@ -910,6 +882,10 @@ msgstr ""
 msgid "Current {0} shorts"
 msgstr ""
 
+#: src/pages/Home/Home.js
+msgid "DECENTRALIZED<0/><1>PERPETUAL</1><2/>EXCHANGE"
+msgstr ""
+
 #: src/pages/Ecosystem/Ecosystem.js
 #: src/pages/Ecosystem/Ecosystem.js
 #: src/pages/Ecosystem/Ecosystem.js
@@ -967,10 +943,6 @@ msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
 msgid "Decentralized Trading Protocol"
-msgstr ""
-
-#: src/pages/Home/Home.js
-msgid "Decentralized<0/>Perpetual Exchange"
 msgstr ""
 
 #: src/components/Exchange/ConfirmationBox.js
@@ -1248,10 +1220,6 @@ msgstr ""
 msgid "Enter an amount"
 msgstr ""
 
-#: src/pages/Home/Home.js
-msgid "Enter and exit positions with minimal spread and zero price impact. Get the optimal price without incurring additional costs."
-msgstr ""
-
 #: src/components/Exchange/OrderEditor.js
 #: src/components/Exchange/OrderEditor.js
 msgid "Enter new Price"
@@ -1409,10 +1377,6 @@ msgstr ""
 msgid "GLP buy disabled, pending {0} upgrade"
 msgstr ""
 
-#: src/components/TokenCard/TokenCard.js
-msgid "GLP is the liquidity provider token. Accrues 70% of the platform's generated fees."
-msgstr ""
-
 #: src/components/Glp/GlpSwap.js
 msgid "GLP sell disabled, pending {0} upgrade"
 msgstr ""
@@ -1478,16 +1442,8 @@ msgstr ""
 msgid "GMX fundamentals"
 msgstr ""
 
-#: src/pages/Home/Home.js
-msgid "GMX is currently live on Arbitrum and Avalanche."
-msgstr ""
-
 #: src/pages/Jobs/Jobs.js
 msgid "GMX is not actively looking for new hires at the moment. However, if you think you can contribute to the project, please email <0>jobs@gmx.io</0>."
-msgstr ""
-
-#: src/components/TokenCard/TokenCard.js
-msgid "GMX is the utility and governance token. Accrues 30% of the platform's generated fees."
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
@@ -1505,10 +1461,6 @@ msgstr ""
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
 msgid "GMX transfers not yet enabled"
-msgstr ""
-
-#: src/components/Common/SEO.js
-msgid "GMX | Decentralized Perpetual Exchange"
 msgstr ""
 
 #: src/components/Referrals/AddAffiliateCode.js
@@ -1715,10 +1667,13 @@ msgstr ""
 msgid "Language"
 msgstr ""
 
-#: src/components/Header/AppHeaderUser.tsx
 #: src/components/ModalViews/RedirectModal.js
-#: src/pages/Home/Home.js
 msgid "Launch App"
+msgstr ""
+
+#: src/components/Header/AppHeaderUser.tsx
+#: src/pages/Home/Home.js
+msgid "Launch Dapp"
 msgstr ""
 
 #: src/components/Exchange/UsefulLinks.tsx
@@ -2243,10 +2198,6 @@ msgstr ""
 msgid "Open in Explorer"
 msgstr ""
 
-#: src/pages/Home/Home.js
-msgid "Open positions through a simple swap interface. Conveniently swap from any supported asset into the position of your choice."
-msgstr ""
-
 #: src/pages/PositionsOverview/PositionsOverview.js
 msgid "Open positions: {0}<0/>Under risk: {1}"
 msgstr ""
@@ -2562,11 +2513,6 @@ msgstr ""
 msgid "Purchase Insurance"
 msgstr ""
 
-#: src/components/TokenCard/TokenCard.js
-#: src/components/TokenCard/TokenCard.js
-msgid "Read more"
-msgstr "<<<<<<< HEAD"
-
 #: src/components/Exchange/PositionSeller.js
 msgid "Realized PnL insufficient for Fees"
 msgstr ""
@@ -2594,14 +2540,16 @@ msgstr ""
 msgid "Rebates earned by this account as an affiliate."
 msgstr ""
 
-#: src/components/Referrals/AffiliatesStats.js
 #: src/components/Referrals/TradersStats.js
 msgid "Rebates on Arbitrum"
 msgstr ""
 
-#: src/components/Referrals/AffiliatesStats.js
 #: src/components/Referrals/TradersStats.js
 msgid "Rebates on Avalanche"
+msgstr ""
+
+#: src/components/Referrals/AffiliatesStats.js
+msgid "Rebates on sepolia"
 msgstr ""
 
 #: src/components/Exchange/ConfirmationBox.js
@@ -2629,10 +2577,6 @@ msgstr ""
 
 #: src/components/Glp/GlpSwap.js
 msgid "Redemption time not yet reached"
-msgstr ""
-
-#: src/pages/Home/Home.js
-msgid "Reduce Liquidation Risks"
 msgstr ""
 
 #: src/components/Exchange/PositionSeller.js
@@ -2756,16 +2700,16 @@ msgstr ""
 msgid "Rewards are airdropped weekly."
 msgstr ""
 
+#: src/components/Common/SEO.js
+msgid "Rollex | Decentralized Perpetual Exchange"
+msgstr ""
+
 #: src/components/Referrals/JoinReferralCode.js
 msgid "Same as current active code"
 msgstr ""
 
 #: src/App/App.js
 msgid "Save"
-msgstr ""
-
-#: src/pages/Home/Home.js
-msgid "Save on Costs"
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
@@ -2895,10 +2839,6 @@ msgstr ""
 
 #: src/components/Exchange/ConfirmationBox.js
 msgid "Shorting..."
-msgstr ""
-
-#: src/pages/Home/Home.js
-msgid "Simple Swaps"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
@@ -3326,6 +3266,7 @@ msgstr ""
 
 #: src/pages/Dashboard/DashboardV2.js
 #: src/pages/Dashboard/DashboardV2.js
+#: src/pages/Home/Home.js
 msgid "Total Fees"
 msgstr ""
 
@@ -3373,8 +3314,11 @@ msgstr ""
 
 #: src/pages/Dashboard/DashboardV2.js
 #: src/pages/Dashboard/DashboardV2.js
-#: src/pages/Home/Home.js
 msgid "Total Users"
+msgstr ""
+
+#: src/pages/Home/Home.js
+msgid "Total Value Locked"
 msgstr ""
 
 #: src/components/Referrals/AffiliatesStats.js
@@ -3405,7 +3349,7 @@ msgid "Trade"
 msgstr ""
 
 #: src/pages/Home/Home.js
-msgid "Trade BTC, ETH, AVAX and other top cryptocurrencies with up to 50x leverage directly from your wallet"
+msgid "Trade cryptocurrencies with liquidity, leverage and low fees."
 msgstr ""
 
 #: src/components/Exchange/ExchangeBanner.js
@@ -3413,7 +3357,7 @@ msgid "Trade on GMX and win <0>$250.000</0> in prizes! Live until November 30th,
 msgstr ""
 
 #: src/components/Common/SEO.js
-msgid "Trade spot or perpetual BTC, ETH, AVAX and other top cryptocurrencies with up to 50x leverage directly from your wallet on Arbitrum and Avalanche."
+msgid "Trade spot or perpetual BTC, ETH, SYS, PSYS and other top cryptocurrencies with up to 50x leverage directly on Rollux"
 msgstr ""
 
 #: src/pages/Referrals/Referrals.js
@@ -3426,11 +3370,7 @@ msgid "Traders Referred"
 msgstr ""
 
 #: src/components/Referrals/AffiliatesStats.js
-msgid "Traders Referred on Arbitrum"
-msgstr ""
-
-#: src/components/Referrals/AffiliatesStats.js
-msgid "Traders Referred on Avalanche"
+msgid "Traders Referred on sepolia"
 msgstr ""
 
 #: src/pages/Exchange/Exchange.js
@@ -3442,14 +3382,16 @@ msgstr ""
 msgid "Trading Volume"
 msgstr ""
 
-#: src/components/Referrals/AffiliatesStats.js
 #: src/components/Referrals/TradersStats.js
 msgid "Trading Volume on Arbitrum"
 msgstr ""
 
-#: src/components/Referrals/AffiliatesStats.js
 #: src/components/Referrals/TradersStats.js
 msgid "Trading Volume on Avalanche"
+msgstr ""
+
+#: src/components/Referrals/AffiliatesStats.js
+msgid "Trading Volume on sepolia"
 msgstr ""
 
 #: src/components/Exchange/UsefulLinks.tsx
@@ -3551,10 +3493,6 @@ msgstr ""
 
 #: src/components/Exchange/PositionShare.js
 msgid "Tweet"
-msgstr ""
-
-#: src/pages/Home/Home.js
-msgid "Two tokens create our ecosystem"
 msgstr ""
 
 #: src/App/App.js

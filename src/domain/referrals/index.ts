@@ -8,19 +8,19 @@ import Timelock from "abis/Timelock.json";
 import { MAX_REFERRAL_CODE_LENGTH, isAddressZero, isHashZero } from "lib/legacy";
 import { getContract } from "config/contracts";
 import { REGEX_VERIFY_BYTES32 } from "components/Referrals/referralsHelper";
-import { ARBITRUM, AVALANCHE } from "config/chains";
-import { arbitrumReferralsGraphClient, avalancheReferralsGraphClient } from "lib/subgraph/clients";
+import { ARBITRUM, SEPOLIA } from "config/chains";
+import { arbitrumReferralsGraphClient, sepoliaReferralsGraphClient } from "lib/subgraph/clients";
 import { callContract, contractFetcher } from "lib/contracts";
 import { helperToast } from "lib/helperToast";
 import { REFERRAL_CODE_KEY } from "config/localStorage";
 import { getProvider } from "lib/rpc";
 import { isAddress } from "ethers/lib/utils";
-
+//
 export function getGraphClient(chainId) {
   if (chainId === ARBITRUM) {
     return arbitrumReferralsGraphClient;
-  } else if (chainId === AVALANCHE) {
-    return avalancheReferralsGraphClient;
+  } else if (chainId === SEPOLIA) {
+    return sepoliaReferralsGraphClient;
   }
   throw new Error(`Unsupported chain ${chainId}`);
 }
@@ -91,7 +91,7 @@ export function useUserCodesOnAllChain(account) {
   useEffect(() => {
     async function main() {
       const [arbitrumCodes, avalancheCodes] = await Promise.all(
-        [ARBITRUM, AVALANCHE].map(async (chainId) => {
+        [ARBITRUM, SEPOLIA].map(async (chainId) => {
           try {
             const client = getGraphClient(chainId);
             const { data } = await client.query({ query, variables: { account: (account || "").toLowerCase() } });
@@ -104,7 +104,7 @@ export function useUserCodesOnAllChain(account) {
         })
       );
       const [codeOwnersOnAvax = [], codeOwnersOnArbitrum = []] = await Promise.all([
-        getCodeOwnersData(AVALANCHE, account, arbitrumCodes),
+        getCodeOwnersData(SEPOLIA, account, arbitrumCodes),
         getCodeOwnersData(ARBITRUM, account, avalancheCodes),
       ]);
 
@@ -113,7 +113,7 @@ export function useUserCodesOnAllChain(account) {
           acc[cv.code] = cv;
           return acc;
         }, {} as any),
-        [AVALANCHE]: codeOwnersOnArbitrum.reduce((acc, cv) => {
+        [SEPOLIA]: codeOwnersOnArbitrum.reduce((acc, cv) => {
           acc[cv.code] = cv;
           return acc;
         }, {} as any),

@@ -384,16 +384,41 @@ export const TOKENS: { [chainId: number]: Token[] } = {
     {
       name: "Ethereum (WETH.e)",
       symbol: "WETH",
-      address: "0x05a43eACB39cE876C9303417659c125Db3723d0A",
+      address: "0x7E160F7a1f90E3BfB380eA6Fba9cbD860d7Cd0D1",
+      decimals: 18,
+      isWrapped: true,
+      imageUrl: "https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880",
+    },
+    {
+      name: "Bitcoin (BTC.b)",
+      symbol: "BTC",
+      address: "0xdd9D0b2e8eE0552ee93AAEd6af62D386bF19b70E",
       decimals: 18,
       isShortable: true,
-      imageUrl: "https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880",
+      imageUrl: "https://assets.coingecko.com/coins/images/26115/thumb/btcb.png?1655921693",
+    },
+    {
+      name: "Chainlink",
+      symbol: "LINK",
+      decimals: 18,
+      address: "0x7E209F90c1D7238163947339b37ef34aaa86795D",
+      isStable: false,
+      isShortable: true,
+      imageUrl: "https://assets.coingecko.com/coins/images/877/thumb/chainlink-new-logo.png?1547034700",
+    },
+    {
+      name: "Dai",
+      symbol: "DAI",
+      decimals: 18,
+      address: "0x6530b1af3CdCe25574F44E3a284158f3AfF89Ed1",
+      isStable: true,
+      imageUrl: "https://assets.coingecko.com/coins/images/9956/thumb/4943.png?1636636734",
     },
     {
       name: "USD Coin",
       symbol: "USDC",
       address: "0xd41D4FeF58b8c008F6e4d9614f2Fa9ed2Aec8aAb",
-      decimals: 6,
+      decimals: 18,
       isStable: true,
       imageUrl: "https://assets.coingecko.com/coins/images/6319/thumb/USD_Coin_icon.png?1547042389",
     },
@@ -752,7 +777,7 @@ export function getNormalizedTokenSymbol(tokenSymbol) {
 const AVAILABLE_CHART_TOKENS = {
   [ARBITRUM]: ["ETH", "BTC", "LINK", "UNI"],
   [AVALANCHE]: ["AVAX", "ETH", "BTC"],
-  [SEPOLIA]: ["ETH", "BTC"],
+  [SEPOLIA]: ["ETH", "BTC", "LINK"],
 };
 
 export function isChartAvailabeForToken(chainId: number, tokenSymbol: string) {

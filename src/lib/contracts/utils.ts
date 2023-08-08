@@ -30,6 +30,7 @@ export async function setGasPrice(txnOpts: any, provider: Provider, chainId: num
 }
 
 export async function getGasLimit(contract: Contract, method, params = [], value) {
+  // console.log(33333333, "getGasLimit", contract, method, params, value);
   const defaultValue = bigNumberify(0);
 
   if (!value) {

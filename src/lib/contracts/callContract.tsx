@@ -40,7 +40,7 @@ export async function callContract(
     }
 
     txnOpts.gasLimit = opts.gasLimit ? opts.gasLimit : await getGasLimit(contract, method, params, opts.value);
-
+    // console.log(2222222, "callContract", contract, txnOpts);
     await setGasPrice(txnOpts, contract.provider, chainId);
 
     const res = await contract[method](...params, txnOpts);

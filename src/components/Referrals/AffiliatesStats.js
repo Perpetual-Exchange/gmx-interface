@@ -19,7 +19,7 @@ import {
 } from "./referralsHelper";
 import { AffiliateCodeForm } from "./AddAffiliateCode";
 import TooltipWithPortal from "../Tooltip/TooltipWithPortal";
-import { ARBITRUM, AVALANCHE, getExplorerUrl } from "config/chains";
+import { getExplorerUrl, SEPOLIA } from "config/chains";
 import { helperToast } from "lib/helperToast";
 import { bigNumberify, formatAmount } from "lib/numbers";
 import { getNativeToken, getToken } from "config/tokens";
@@ -42,13 +42,8 @@ function AffiliatesStats({
   const [, copyToClipboard] = useCopyToClipboard();
   const open = () => setIsAddReferralCodeModalOpen(true);
   const close = () => setIsAddReferralCodeModalOpen(false);
-
-  const {
-    [chainId]: currentReferralsData,
-    [ARBITRUM]: arbitrumData,
-    [AVALANCHE]: avalancheData,
-    total,
-  } = referralsData || {};
+  //
+  const { [chainId]: currentReferralsData, [SEPOLIA]: sepoliaData, total } = referralsData || {};
   const { affiliateTotalStats, rebateDistributions, affiliateTierInfo } = currentReferralsData;
   const {
     currentPage: currentRebatePage,
@@ -90,13 +85,8 @@ function AffiliatesStats({
           tooltipContent={
             <>
               <StatsTooltipRow
-                label={t`Traders Referred on Arbitrum`}
-                value={arbitrumData.cumulativeStats.registeredReferralsCount}
-                showDollar={false}
-              />
-              <StatsTooltipRow
-                label={t`Traders Referred on Avalanche`}
-                value={avalancheData.cumulativeStats.registeredReferralsCount}
+                label={t`Traders Referred on sepolia`}
+                value={sepoliaData.cumulativeStats.registeredReferralsCount}
                 showDollar={false}
               />
               <div className="Tooltip-divider" />
@@ -111,12 +101,8 @@ function AffiliatesStats({
           tooltipContent={
             <>
               <StatsTooltipRow
-                label={t`Trading Volume on Arbitrum`}
-                value={getUSDValue(arbitrumData?.cumulativeStats.volume)}
-              />
-              <StatsTooltipRow
-                label={t`Trading Volume on Avalanche`}
-                value={getUSDValue(avalancheData?.cumulativeStats.volume)}
+                label={t`Trading Volume on sepolia`}
+                value={getUSDValue(sepoliaData?.cumulativeStats.volume)}
               />
               <div className="Tooltip-divider" />
               <StatsTooltipRow label={t`Total`} value={getUSDValue(total?.affiliatesVolume)} />
@@ -130,12 +116,8 @@ function AffiliatesStats({
           tooltipContent={
             <>
               <StatsTooltipRow
-                label={t`Rebates on Arbitrum`}
-                value={getUSDValue(arbitrumData?.cumulativeStats.affiliateRebates)}
-              />
-              <StatsTooltipRow
-                label={t`Rebates on Avalanche`}
-                value={getUSDValue(avalancheData?.cumulativeStats.affiliateRebates)}
+                label={t`Rebates on sepolia`}
+                value={getUSDValue(sepoliaData?.cumulativeStats.affiliateRebates)}
               />
               <div className="Tooltip-divider" />
               <StatsTooltipRow label={t`Total`} value={getUSDValue(total?.affiliateRebates)} />
@@ -233,13 +215,12 @@ function AffiliatesStats({
                                 renderContent={() => (
                                   <div>
                                     <Trans>
-                                      This code is not yet registered on{" "}
-                                      {chainId === AVALANCHE ? "Arbitrum" : "Avalanche"}, you will not receive rebates
-                                      there.
+                                      This code is not yet registered on {chainId === SEPOLIA ? "Arbitrum" : "SEPOLIA"},
+                                      you will not receive rebates there.
                                       <br />
                                       <br />
                                       Switch your network to create this code on{" "}
-                                      {chainId === AVALANCHE ? "Arbitrum" : "Avalanche"}.
+                                      {chainId === SEPOLIA ? "Arbitrum" : "SEPOLIA"}.
                                     </Trans>
                                   </div>
                                 )}
@@ -255,9 +236,8 @@ function AffiliatesStats({
                                   <div>
                                     <Trans>
                                       This code has been taken by someone else on{" "}
-                                      {chainId === AVALANCHE ? "Arbitrum" : "Avalanche"}, you will not receive rebates
-                                      from traders using this code on {chainId === AVALANCHE ? "Arbitrum" : "Avalanche"}
-                                      .
+                                      {chainId === SEPOLIA ? "Arbitrum" : "SEPOLIA"}, you will not receive rebates from
+                                      traders using this code on {chainId === SEPOLIA ? "Arbitrum" : "SEPOLIA"}.
                                     </Trans>
                                   </div>
                                 )}

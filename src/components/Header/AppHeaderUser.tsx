@@ -10,8 +10,7 @@ import { isHomeSite, getAccountUrl } from "lib/legacy";
 import cx from "classnames";
 import { Trans } from "@lingui/macro";
 import NetworkDropdown from "../NetworkDropdown/NetworkDropdown";
-import LanguagePopupHome from "../NetworkDropdown/LanguagePopupHome";
-import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, AVALANCHE_FUJI, getChainName, SEPOLIA } from "config/chains";
+import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, getChainName, SEPOLIA } from "config/chains";
 import { switchNetwork } from "lib/wallets";
 import { useChainId } from "lib/chains";
 import { isDevelopment } from "config/env";
@@ -91,31 +90,32 @@ export function AppHeaderUser({
       <div className="App-header-user">
         <div className={cx("App-header-trade-link", { "homepage-header": isHomeSite() })}>
           <HeaderLink
-            className="default-btn"
+            className="default-btn strong pointer-events-none"
             to="/trade"
             redirectPopupTimestamp={redirectPopupTimestamp}
             showRedirectModal={showRedirectModal}
           >
-            {isHomeSite() ? <Trans>Launch App</Trans> : <Trans>Trade</Trans>}
+            {isHomeSite() ? <Trans>Launch Dapp</Trans> : <Trans>Trade</Trans>}
           </HeaderLink>
         </div>
 
-        {showConnectionOptions ? (
-          <>
-            <ConnectWalletButton onClick={() => setWalletModalVisible(true)} imgSrc={connectWalletImg}>
-              {small ? <Trans>Connect</Trans> : <Trans>Connect Wallet</Trans>}
-            </ConnectWalletButton>
-            <NetworkDropdown
-              small={small}
-              networkOptions={NETWORK_OPTIONS}
-              selectorLabel={selectorLabel}
-              onNetworkSelect={onNetworkSelect}
-              openSettings={openSettings}
-            />
-          </>
-        ) : (
-          <LanguagePopupHome />
-        )}
+        {
+          showConnectionOptions ? (
+            <>
+              <ConnectWalletButton onClick={() => setWalletModalVisible(true)} imgSrc={connectWalletImg}>
+                {small ? <Trans>Connect</Trans> : <Trans>Connect Wallet</Trans>}
+              </ConnectWalletButton>
+              <NetworkDropdown
+                small={small}
+                networkOptions={NETWORK_OPTIONS}
+                selectorLabel={selectorLabel}
+                onNetworkSelect={onNetworkSelect}
+                openSettings={openSettings}
+              />
+            </>
+          ) : null
+          // <LanguagePopupHome />
+        }
       </div>
     );
   }
@@ -126,7 +126,7 @@ export function AppHeaderUser({
     <div className="App-header-user">
       <div className="App-header-trade-link">
         <HeaderLink
-          className="default-btn"
+          className="default-btn strong"
           to="/trade"
           redirectPopupTimestamp={redirectPopupTimestamp}
           showRedirectModal={showRedirectModal}
@@ -135,26 +135,27 @@ export function AppHeaderUser({
         </HeaderLink>
       </div>
 
-      {showConnectionOptions ? (
-        <>
-          <div className="App-header-user-address">
-            <AddressDropdown
-              account={account}
-              accountUrl={accountUrl}
-              disconnectAccountAndCloseSettings={disconnectAccountAndCloseSettings}
+      {
+        showConnectionOptions ? (
+          <>
+            <div className="App-header-user-address">
+              <AddressDropdown
+                account={account}
+                accountUrl={accountUrl}
+                disconnectAccountAndCloseSettings={disconnectAccountAndCloseSettings}
+              />
+            </div>
+            <NetworkDropdown
+              small={small}
+              networkOptions={NETWORK_OPTIONS}
+              selectorLabel={selectorLabel}
+              onNetworkSelect={onNetworkSelect}
+              openSettings={openSettings}
             />
-          </div>
-          <NetworkDropdown
-            small={small}
-            networkOptions={NETWORK_OPTIONS}
-            selectorLabel={selectorLabel}
-            onNetworkSelect={onNetworkSelect}
-            openSettings={openSettings}
-          />
-        </>
-      ) : (
-        <LanguagePopupHome />
-      )}
+          </>
+        ) : null
+        // <LanguagePopupHome />
+      }
     </div>
   );
 }

@@ -155,10 +155,10 @@ export function getPositions(
     const indexToken = getTokenInfo(infoTokens, indexTokens[i], true, getContract(chainId, "NATIVE_TOKEN"));
     const key = getPositionKey(account, collateralTokens[i], indexTokens[i], isLong[i]);
     let contractKey;
+    //
     if (account) {
       contractKey = getPositionContractKey(account, collateralTokens[i], indexTokens[i], isLong[i]);
     }
-
     const position = {
       key,
       contractKey,
@@ -291,12 +291,10 @@ export function getPositions(
     positionsMap[key] = position;
 
     applyPendingChanges(position, pendingPositions);
-
     if (position.size.gt(0) || position.hasPendingChanges) {
       positions.push(position);
     }
   }
-
   return { positions, positionsMap };
 }
 
