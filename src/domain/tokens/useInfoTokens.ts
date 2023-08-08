@@ -57,7 +57,6 @@ export function useInfoTokens(
     refreshWhenHidden: true,
   });
 
-  console.log(indexPrices);
   return {
     infoTokens: getInfoTokens(
       tokens,

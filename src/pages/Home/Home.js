@@ -1,4 +1,3 @@
-import React from "react";
 import Footer from "components/Footer/Footer";
 import "./Home.css";
 
@@ -29,18 +28,11 @@ import homeWEconomy from "img/home-partner/WEconomy.svg";
 import homeSyscoin from "img/home-partner/Syscoin.png";
 import homePegasys from "img/home-partner/Pegasys.svg";
 
-import useSWR from "swr";
-
-import { USD_DECIMALS, getTotalVolumeSum } from "lib/legacy";
-
 import linePic from "img/vector1.png";
 
 import TokenCard from "components/TokenCard/TokenCard";
 import { Trans } from "@lingui/macro";
 import { HeaderLink } from "components/Header/HeaderLink";
-import { ARBITRUM, AVALANCHE } from "config/chains";
-import { getServerUrl } from "config/backend";
-import { bigNumberify, formatAmount } from "lib/numbers";
 
 export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
   // const [openedFAQIndex, setOpenedFAQIndex] = useState(null)
@@ -72,59 +64,59 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
 
   // ARBITRUM
 
-  const arbitrumPositionStatsUrl = getServerUrl(ARBITRUM, "/position_stats");
-  const { data: arbitrumPositionStats } = useSWR([arbitrumPositionStatsUrl], {
-    fetcher: (...args) => fetch(...args).then((res) => res.json()),
-  });
+  // const arbitrumPositionStatsUrl = getServerUrl(ARBITRUM, "/position_stats");
+  // const { data: arbitrumPositionStats } = useSWR([arbitrumPositionStatsUrl], {
+  //   fetcher: (...args) => fetch(...args).then((res) => res.json()),
+  // });
 
-  const arbitrumTotalVolumeUrl = getServerUrl(ARBITRUM, "/total_volume");
-  const { data: arbitrumTotalVolume } = useSWR([arbitrumTotalVolumeUrl], {
-    fetcher: (...args) => fetch(...args).then((res) => res.json()),
-  });
+  // const arbitrumTotalVolumeUrl = getServerUrl(ARBITRUM, "/total_volume");
+  // const { data: arbitrumTotalVolume } = useSWR([arbitrumTotalVolumeUrl], {
+  //   fetcher: (...args) => fetch(...args).then((res) => res.json()),
+  // });
 
-  // AVALANCHE
+  // // AVALANCHE
 
-  const avalanchePositionStatsUrl = getServerUrl(AVALANCHE, "/position_stats");
-  const { data: avalanchePositionStats } = useSWR([avalanchePositionStatsUrl], {
-    fetcher: (...args) => fetch(...args).then((res) => res.json()),
-  });
+  // const avalanchePositionStatsUrl = getServerUrl(AVALANCHE, "/position_stats");
+  // const { data: avalanchePositionStats } = useSWR([avalanchePositionStatsUrl], {
+  //   fetcher: (...args) => fetch(...args).then((res) => res.json()),
+  // });
 
-  const avalancheTotalVolumeUrl = getServerUrl(AVALANCHE, "/total_volume");
-  const { data: avalancheTotalVolume } = useSWR([avalancheTotalVolumeUrl], {
-    fetcher: (...args) => fetch(...args).then((res) => res.json()),
-  });
+  // const avalancheTotalVolumeUrl = getServerUrl(AVALANCHE, "/total_volume");
+  // const { data: avalancheTotalVolume } = useSWR([avalancheTotalVolumeUrl], {
+  //   fetcher: (...args) => fetch(...args).then((res) => res.json()),
+  // });
 
-  // Total Volume
+  // // Total Volume
 
-  const arbitrumTotalVolumeSum = getTotalVolumeSum(arbitrumTotalVolume);
-  const avalancheTotalVolumeSum = getTotalVolumeSum(avalancheTotalVolume);
+  // const arbitrumTotalVolumeSum = getTotalVolumeSum(arbitrumTotalVolume);
+  // const avalancheTotalVolumeSum = getTotalVolumeSum(avalancheTotalVolume);
 
-  let totalVolumeSum = bigNumberify(0);
-  if (arbitrumTotalVolumeSum && avalancheTotalVolumeSum) {
-    totalVolumeSum = totalVolumeSum.add(arbitrumTotalVolumeSum);
-    totalVolumeSum = totalVolumeSum.add(avalancheTotalVolumeSum);
-  }
+  // let totalVolumeSum = bigNumberify(0);
+  // if (arbitrumTotalVolumeSum && avalancheTotalVolumeSum) {
+  //   totalVolumeSum = totalVolumeSum.add(arbitrumTotalVolumeSum);
+  //   totalVolumeSum = totalVolumeSum.add(avalancheTotalVolumeSum);
+  // }
 
   // Open Interest
 
-  let openInterest = bigNumberify(0);
-  if (
-    arbitrumPositionStats &&
-    arbitrumPositionStats.totalLongPositionSizes &&
-    arbitrumPositionStats.totalShortPositionSizes
-  ) {
-    openInterest = openInterest.add(arbitrumPositionStats.totalLongPositionSizes);
-    openInterest = openInterest.add(arbitrumPositionStats.totalShortPositionSizes);
-  }
+  // let openInterest = bigNumberify(0);
+  // if (
+  //   arbitrumPositionStats &&
+  //   arbitrumPositionStats.totalLongPositionSizes &&
+  //   arbitrumPositionStats.totalShortPositionSizes
+  // ) {
+  //   openInterest = openInterest.add(arbitrumPositionStats.totalLongPositionSizes);
+  //   openInterest = openInterest.add(arbitrumPositionStats.totalShortPositionSizes);
+  // }
 
-  if (
-    avalanchePositionStats &&
-    avalanchePositionStats.totalLongPositionSizes &&
-    avalanchePositionStats.totalShortPositionSizes
-  ) {
-    openInterest = openInterest.add(avalanchePositionStats.totalLongPositionSizes);
-    openInterest = openInterest.add(avalanchePositionStats.totalShortPositionSizes);
-  }
+  // if (
+  //   avalanchePositionStats &&
+  //   avalanchePositionStats.totalLongPositionSizes &&
+  //   avalanchePositionStats.totalShortPositionSizes
+  // ) {
+  //   openInterest = openInterest.add(avalanchePositionStats.totalLongPositionSizes);
+  //   openInterest = openInterest.add(avalanchePositionStats.totalShortPositionSizes);
+  // }
 
   const LaunchExchangeButton = () => {
     return (
