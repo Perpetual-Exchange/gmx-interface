@@ -301,7 +301,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
           <ul className="max-md:grid-cols-1 grid grid-cols-2 Home-tip-list">
             <li className="border-b-[0.5px] border-[#e0ee8d] border-l-0 max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Providing Liquidity</h3>
-              <div>Providing Liquidity earn esRLX rewards and 70% of platform fees</div>
+              <div>Providing Liquidity earn esREX rewards and 70% of platform fees</div>
               <img src={homeEarn1} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
             </li>
             <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
@@ -318,7 +318,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
             </li>
             <li className="border-l-[0.5px] border-b-0 border-[#e0ee8d] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 max-md:border-b-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Open Positions</h3>
-              <div>Traders will receive esRLX rewards for the period that their leveraged positions are active.</div>
+              <div>Traders will receive esREX rewards for the period that their leveraged positions are active.</div>
               <img src={homeEarn4} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
             </li>
           </ul>
@@ -343,7 +343,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
             <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Open Positions incentives</h3>
               <div>
-                Rollex will allocate a portion of esRLX tokens to open positions. You will earn esRLX by just keeping
+                Rollex will allocate a portion of esREX tokens to open positions. You will earn esREX by just keeping
                 your positions opened.{" "}
                 <a href="https://docs.rollex.xyz/rewrads" className="read-more" target="_blank" rel="noreferrer">
                   Learn more
@@ -354,7 +354,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
             <li className="border-[#e0ee8d] border-l-0 max-md:border-b-[0.5px] max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Liquidity Providers rewards</h3>
               <div>
-                In addition to the protocol fees that liquidity providers will receive, Rollex will also provide esRLX
+                In addition to the protocol fees that liquidity providers will receive, Rollex will also provide esREX
                 rewards as additional incentives to Liquidity Providers.{" "}
                 <a href="https://docs.rollex.xyz/rewrads" className="read-more" target="_blank" rel="noreferrer">
                   Learn more
