@@ -72,7 +72,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
       <li>
         <h3>RLP</h3>
         <div>
-          $RLP is a liquidity provider token. Accrues 70% of protocol revenue in the form of SYS and a portion of esRLX
+          $RLP is a liquidity provider token. Accrues 70% of protocol revenue in the form of SYS and a portion of esREX
           token issuance emission.{" "}
         </div>
         <a href="https://docs.rollex.xyz/tokenomics" target="_blank" rel="noreferrer" className=" read-more">
