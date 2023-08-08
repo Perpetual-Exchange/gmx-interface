@@ -1073,6 +1073,7 @@ export default function GlpSwap(props) {
                 tokenFeeBps = feeBps;
               }
               const tokenInfo = getTokenInfo(infoTokens, token.address);
+              // console.log("tokenInfo=", tokenInfo);
               let managedUsd;
               if (tokenInfo && tokenInfo.managedUsd) {
                 managedUsd = tokenInfo.managedUsd;

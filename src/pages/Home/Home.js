@@ -227,7 +227,12 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
               <div className="Home-latest-info__title">
                 <Trans>Total Trading Volume</Trans>
               </div>
-              <div className="Home-latest-info__value">${formatAmount(totalVolumeSum, USD_DECIMALS, 0, true)}</div>
+              <div className="Home-latest-info__value">
+                $0
+                {
+                  // formatAmount(totalVolumeSum, USD_DECIMALS, 0, true)
+                }
+              </div>
             </div>
             <div className=" border-l-[0.5px] border-[#e0ee8d] py-10 sm:pl-10">
               <div className="Home-latest-info__title">
@@ -239,13 +244,18 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
               <div className="Home-latest-info__title">
                 <Trans>Total Fees</Trans>
               </div>
-              <div className="Home-latest-info__value">{0}</div>
+              <div className="Home-latest-info__value">${0}</div>
             </div>
             <div className="border-l-[0.5px] border-[#e0ee8d] max-md:border-t-[0.5px] py-10 sm:pl-10">
               <div className="Home-latest-info__title">
                 <Trans>Open Interest</Trans>
               </div>
-              <div className="Home-latest-info__value">${formatAmount(openInterest, USD_DECIMALS, 0, true)}</div>
+              <div className="Home-latest-info__value">
+                $0
+                {
+                  // formatAmount(openInterest, USD_DECIMALS, 0, true)
+                }
+              </div>
             </div>
           </div>
         </div>

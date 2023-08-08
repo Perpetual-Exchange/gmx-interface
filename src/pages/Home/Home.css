@@ -163,7 +163,7 @@
   max-width: 58.9rem;
   width: 100%;
   box-shadow: 0px 0.7rem 1.2rem #0000004d;
-  border: 1px solid #1e2136;
+  border: 0.5px solid #1e2136;
   padding: 1.6rem;
   background-position: center;
   background-repeat: no-repeat;
@@ -290,7 +290,7 @@
   box-shadow: 0px 1.2rem 1.7rem #00000024;
   box-shadow: 0px 0.7rem 0.8rem #00000033;
   /* mix-blend-mode: multiply; */
-  border: 1px solid #ffffff14;
+  border: 0.5px solid #ffffff14;
   border-radius: 4px;
   max-width: 38rem;
   width: 100%;
@@ -384,7 +384,7 @@
 
 .Home-faqs-content {
   background: #17182c;
-  border: 1px solid #1e2136;
+  border: 0.5px solid #1e2136;
   border-radius: 4px;
   cursor: pointer;
   padding: 3.7rem 7.75rem;
@@ -457,7 +457,7 @@
   height: 8rem;
   line-height: 8rem;
   text-align: center;
-  border-bottom: 1px solid #e0ee8d;
+  border-bottom: 0.5px solid #e0ee8d;
   padding: 0;
   margin: 0;
   color: #fff;

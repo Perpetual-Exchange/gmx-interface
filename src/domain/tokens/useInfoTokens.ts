@@ -17,6 +17,7 @@ import { getTokens, getWhitelistedTokens } from "config/tokens";
 import { Web3Provider } from "@ethersproject/providers";
 import { getSpread } from "./utils";
 
+//
 export function useInfoTokens(
   library: Web3Provider | undefined,
   chainId: number,
@@ -56,6 +57,7 @@ export function useInfoTokens(
     refreshWhenHidden: true,
   });
 
+  console.log(indexPrices);
   return {
     infoTokens: getInfoTokens(
       tokens,

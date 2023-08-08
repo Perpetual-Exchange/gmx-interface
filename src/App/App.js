@@ -338,7 +338,9 @@ function FullApp() {
   const [pendingTxns, setPendingTxns] = useState([]);
 
   const showRedirectModal = (to) => {
-    setRedirectModalVisible(true);
+    // no modal, just redirect
+    // setRedirectModalVisible(true);
+    window.location.href = appRedirectUrl;
     setSelectedToPage(to);
   };
 
@@ -647,7 +649,7 @@ function FullApp() {
           </div>
         )}
 
-        <Button variant="primary-action" className="w-full mt-md" onClick={saveAndCloseSettings}>
+        <Button variant="primary-action" className="mt-md w-full" onClick={saveAndCloseSettings}>
           <Trans>Save</Trans>
         </Button>
       </Modal>
