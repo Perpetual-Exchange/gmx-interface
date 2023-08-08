@@ -3360,7 +3360,7 @@ msgid "Trade on GMX and win <0>$250.000</0> in prizes! Live until November 30th,
 msgstr "在GMX上进行交易，赢取<0>$250.000</0> 美元的奖金! 活动至11月30h, <1>点击这里</1> 了解更多"
 
 #: src/components/Common/SEO.js
-msgid "Trade spot or perpetual BTC, ETH, AVAX and other top cryptocurrencies with up to 50x leverage directly from your wallet on Arbitrum and Avalanche."
+msgid "Trade spot or perpetual BTC, ETH, SYS, PSYS and other top cryptocurrencies with up to 50x leverage directly on Rollux"
 msgstr ""
 
 #: src/pages/Referrals/Referrals.js

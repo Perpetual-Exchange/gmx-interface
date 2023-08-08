@@ -121,7 +121,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
   const LaunchExchangeButton = () => {
     return (
       <HeaderLink
-        className="default-btn LaunchExchangeButton"
+        className="default-btn LaunchExchangeButton pointer-events-none"
         to="/trade"
         redirectPopupTimestamp={redirectPopupTimestamp}
         showRedirectModal={showRedirectModal}
@@ -206,7 +206,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
                 <h3>Insurance Funding</h3>
                 <div>
                   The Insurance Fund helps to ensure liquidity in RLP and provide a reliable stream of SYS rewards for
-                  all staked RLX.
+                  all staked REX.
                 </div>
                 <img src={featureIcon6} alt="" />
               </li>
@@ -307,13 +307,13 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
             <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Stake to earn</h3>
               <div>
-                Staked RLX receives three types of rewards that includes Escrowed GMX, Multiplier Points and SYS Rewards
+                Staked REX receives three types of rewards that includes Escrowed REX, Multiplier Points and SYS Rewards
               </div>
               <img src={homeEarn2} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
             </li>
             <li className="border-[#e0ee8d] border-l-0 max-md:border-b-[0.5px] max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Trade to earn</h3>
-              <div>Earn RLX by trading volume, the bigger the trading volume, the more you earn</div>
+              <div>Earn REX by trading volume, the bigger the trading volume, the more you earn</div>
               <img src={homeEarn3} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
             </li>
             <li className="border-l-[0.5px] border-b-0 border-[#e0ee8d] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 max-md:border-b-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
@@ -332,7 +332,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
             <li className="border-b-[0.5px] border-[#e0ee8d] border-l-0 max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Traders' Loyalty Credit</h3>
               <div>
-                In accordance with trading volume, Traders will be awarded RLX token(the rate depends on which asset
+                In accordance with trading volume, Traders will be awarded REX token(the rate depends on which asset
                 users trade on){" "}
                 <a href="https://docs.rollex.xyz/rewrads" className="read-more" target="_blank" rel="noreferrer">
                   Learn more
