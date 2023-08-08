@@ -55,9 +55,9 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
   return (
     <>
       <li>
-        <h3>RLX</h3>
+        <h3>REX</h3>
         <div>
-          $RLX is the utility token of Rollex. In addition to granting participation in the governance process of the
+          $REX is the utility token of Rollex. In addition to granting participation in the governance process of the
           protocol, it also accrues value from the platform revenue.{" "}
           <a href="https://docs.rollex.xyz/tokenomics" target="_blank" rel="noreferrer" className=" read-more">
             Learn more
@@ -65,7 +65,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
         </div>
         <div className="Home-token-card-option-action">
           <BuyLink to="/buy_gmx" className="default-btn custom-buy-btn" network={SEPOLIA}>
-            Buy RLX
+            Buy REX
           </BuyLink>
         </div>
       </li>

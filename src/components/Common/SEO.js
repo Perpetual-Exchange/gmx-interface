@@ -5,8 +5,8 @@ function SEO(props) {
   const { children, ...customMeta } = props;
   const meta = {
     title: t`Rollex | Decentralized Perpetual Exchange`,
-    description: t`Trade spot or perpetual BTC, ETH, AVAX and other top cryptocurrencies with up to 50x leverage directly from your wallet on Arbitrum and Avalanche.`,
-    image: "https://gmx.io/og.png",
+    description: t`Trade spot or perpetual BTC, ETH, SYS, PSYS and other top cryptocurrencies with up to 50x leverage directly on Rollux`,
+    image: "/og.png",
     type: "exchange",
     ...customMeta,
   };
