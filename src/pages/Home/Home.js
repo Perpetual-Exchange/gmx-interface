@@ -381,7 +381,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
           <ul className="max-md:grid-cols-2 max-md:gap-y-10 grid  grid-cols-4">
             <li className="flex  max-md:justify-start items-center justify-center">
               <img src={homeRollux} alt="" className="mr-5" />
-              <div>Rollex</div>
+              <div>Rollux</div>
             </li>
             <li className="flex max-md:justify-start items-center justify-center">
               <img src={homeWEconomy} alt="" className="mr-5" />
