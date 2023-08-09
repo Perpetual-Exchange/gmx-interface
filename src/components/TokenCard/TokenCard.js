@@ -64,7 +64,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           </a>
         </div>
         <div className="Home-token-card-option-action">
-          <BuyLink to="/buy_gmx" className="default-btn custom-buy-btn" network={SEPOLIA}>
+          <BuyLink to="/buy_gmx" className="default-btn custom-buy-btn pointer-events-none" network={SEPOLIA}>
             Buy REX
           </BuyLink>
         </div>
@@ -79,7 +79,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           Learn more
         </a>
         <div className="Home-token-card-option-action">
-          <BuyLink to="/buy_glp" className="default-btn custom-buy-btn" network={SEPOLIA}>
+          <BuyLink to="/buy_glp" className="default-btn custom-buy-btn pointer-events-none" network={SEPOLIA}>
             Buy RLP
           </BuyLink>
         </div>
