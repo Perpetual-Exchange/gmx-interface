@@ -172,10 +172,10 @@ export default function Ecosystem() {
       chainIds: [ARBITRUM, AVALANCHE],
     },
     {
-      title: "SNTL esODX Market",
+      title: "SNTL esREX Market",
       link: "https://sntl.market/",
       linkLabel: "sntl.market",
-      about: t`esODX OTC Market`,
+      about: t`esREX OTC Market`,
       creatorLabel: "@sntlai",
       creatorLink: "https://twitter.com/sntlai",
       chainIds: [ARBITRUM, AVALANCHE],

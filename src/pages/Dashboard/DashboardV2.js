@@ -479,7 +479,7 @@ export default function DashboardV2() {
                 {chainName} Total Stats start from {totalStatsStartDate}.<br /> To view detailed stats, please check the
               </Trans>{" "}
               {chainId === AVALANCHE_FUJI && (
-                <ExternalLink href="https://stats.odx.finance/">Analytics page</ExternalLink>
+                <ExternalLink href="https://stats.rollex.finance/">Analytics page</ExternalLink>
               )}
               .
             </div>

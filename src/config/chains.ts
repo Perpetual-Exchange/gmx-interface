@@ -125,7 +125,7 @@ const constants = {
   },
 };
 
-const ALCHEMY_WHITELISTED_DOMAINS = ["d.odx.finance", "dapptest.odx.finance"];
+const ALCHEMY_WHITELISTED_DOMAINS = ["d.rollex.finance", "dapptest.rollex.finance"];
 
 export const RPC_PROVIDERS = {
   [ETH_MAINNET]: ["https://rpc.ankr.com/eth"],

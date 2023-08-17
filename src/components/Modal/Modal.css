@@ -35,7 +35,7 @@
   max-height: 90vh;
   overflow: auto;
   background: #171717;
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 .divider {

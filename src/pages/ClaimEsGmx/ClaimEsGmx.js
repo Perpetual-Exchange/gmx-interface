@@ -262,7 +262,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
     }
 
     if (esGmxIouBalance && esGmxIouBalance.eq(0)) {
-      return t`No esODX to claim`;
+      return t`No esREX to claim`;
     }
 
     if (!amount || amount.eq(0)) {
@@ -332,7 +332,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
     <div className="ClaimEsGmx Page page-layout">
       <div className="mt-0 Page-title-section">
         <div className="Page-title">
-          <Trans>Claim esODX</Trans>
+          <Trans>Claim esREX</Trans>
         </div>
         {!isArbitrum && (
           <div className="Page-description">
@@ -344,13 +344,13 @@ export default function ClaimEsGmx({ setPendingTxns }) {
           <div>
             <div className="Page-description">
               <br />
-              <Trans>You have {formatAmount(esGmxIouBalance, 18, 2, true)} esODX (IOU) tokens.</Trans>
+              <Trans>You have {formatAmount(esGmxIouBalance, 18, 2, true)} esREX (IOU) tokens.</Trans>
               <br />
               <br />
-              <Trans>The address of the esODX (IOU) token is {esGmxIouAddress}.</Trans>
+              <Trans>The address of the esREX (IOU) token is {esGmxIouAddress}.</Trans>
               <br />
               <Trans>
-                The esODX (IOU) token is transferrable. You can add the token to your wallet and send it to another
+                The esREX (IOU) token is transferrable. You can add the token to your wallet and send it to another
                 address to claim if you'd like.
               </Trans>
               <br />
@@ -358,14 +358,14 @@ export default function ClaimEsGmx({ setPendingTxns }) {
               <Trans>Select your vesting option below then click "Claim".</Trans>
               <br />
               <Trans>
-                After claiming, the esODX tokens will be airdropped to your account on the selected network within 7
+                After claiming, the esREX tokens will be airdropped to your account on the selected network within 7
                 days.
               </Trans>
               <br />
-              <Trans>The esODX tokens can be staked or vested at any time.</Trans>
+              <Trans>The esREX tokens can be staked or vested at any time.</Trans>
               <br />
               <Trans>
-                Your esODX (IOU) balance will decrease by your claim amount after claiming, this is expected behaviour.
+                Your esREX (IOU) balance will decrease by your claim amount after claiming, this is expected behaviour.
               </Trans>
               <br />
               <Trans>
@@ -412,14 +412,14 @@ export default function ClaimEsGmx({ setPendingTxns }) {
             {!error && (
               <div className="muted">
                 <Trans>
-                  You can currently vest a maximum of {formatAmount(maxVestableAmount, 18, 2, true)} esODX tokens at a
-                  ratio of {formatAmount(currentRatio, 4, 2, true)} {stakingToken} to 1 esODX.
+                  You can currently vest a maximum of {formatAmount(maxVestableAmount, 18, 2, true)} esREX tokens at a
+                  ratio of {formatAmount(currentRatio, 4, 2, true)} {stakingToken} to 1 esREX.
                 </Trans>
                 {shouldShowStakingAmounts && `${formatAmount(initialStakingAmount, 18, 2, true)}.`}
                 <br />
                 <Trans>
                   After claiming you will be able to vest a maximum of {formatAmount(nextMaxVestableEsGmx, 18, 2, true)}{" "}
-                  esODX at a ratio of {formatAmount(nextRatio, 4, 2, true)} {stakingToken} to 1 esODX.
+                  esREX at a ratio of {formatAmount(nextRatio, 4, 2, true)} {stakingToken} to 1 esREX.
                 </Trans>
                 {shouldShowStakingAmounts && `${formatAmount(nextStakingAmount, 18, 2, true)}.`}
                 <br />

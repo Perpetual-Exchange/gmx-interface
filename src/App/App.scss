@@ -880,7 +880,7 @@ a.App-cta.option {
 a.App-button-option,
 button.App-button-option {
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 0;
   font-size: var(--font-sm);
   line-height: 2rem;
   font-weight: normal;
@@ -1276,6 +1276,13 @@ button.App-button {
 
 .chart-positions-settings {
   display: none;
+}
+
+.custom-buy-btn {
+  background-color: #e0ee8d;
+  background-position: 90% center !important;
+  background-repeat: no-repeat !important;
+  color: #171717 !important;
 }
 
 @media (max-width: 1100px) {

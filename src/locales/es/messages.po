@@ -66,7 +66,7 @@ msgid "<0>The price that orders can be executed at may differ slightly from the 
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "<0>This will withdraw and unreserve all tokens as well as pause vesting.<1/><2/>esODX tokens that have been converted to ODX will remain as ODX tokens.<3/><4/>To claim ODX tokens without withdrawing, use the \"Claim\" button under the Total Rewards section.<5/><6/></0>"
+msgid "<0>This will withdraw and unreserve all tokens as well as pause vesting.<1/><2/>esREX tokens that have been converted to ODX will remain as ODX tokens.<3/><4/>To claim ODX tokens without withdrawing, use the \"Claim\" button under the Total Rewards section.<5/><6/></0>"
 msgstr ""
 
 #: src/pages/Dashboard/DashboardV2.js
@@ -195,11 +195,11 @@ msgid "Affiliates"
 msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "After claiming you will be able to vest a maximum of {0} esODX at a ratio of {1} {stakingToken} to 1 esODX."
+msgid "After claiming you will be able to vest a maximum of {0} esREX at a ratio of {1} {stakingToken} to 1 esREX."
 msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "After claiming, the esODX tokens will be airdropped to your account on the selected network within 7 days."
+msgid "After claiming, the esREX tokens will be airdropped to your account on the selected network within 7 days."
 msgstr ""
 
 #: src/components/ModalViews/RedirectModal.js
@@ -537,12 +537,12 @@ msgid "Claim completed!"
 msgstr "¡Reclamación completada!"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "Claim esODX"
+msgid "Claim esREX"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "Claim esODX Rewards"
+msgid "Claim esREX Rewards"
 msgstr ""
 
 #: src/pages/Stake/StakeV1.js
@@ -1995,7 +1995,7 @@ msgid "No PnLs found"
 msgstr "No se han encontrado GyPs"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "No esODX to claim"
+msgid "No esREX to claim"
 msgstr ""
 
 #: src/components/Exchange/OrdersList.js
@@ -2331,7 +2331,7 @@ msgid "Please input a referral code to benefit from fee discounts."
 msgstr "Por favor, introduzca un código de referido para beneficiarse de los descuentos en las comisiones."
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Please only use this for full account transfers.<0/>This will transfer all your ODX, esODX, OLP and Multiplier Points to your new account.<1/>Transfers are only supported if the receiving account has not staked ODX or OLP tokens before.<2/>Transfers are one-way, you will not be able to transfer staked tokens back to the sending account."
+msgid "Please only use this for full account transfers.<0/>This will transfer all your ODX, esREX, OLP and Multiplier Points to your new account.<1/>Transfers are only supported if the receiving account has not staked ODX or OLP tokens before.<2/>Transfers are one-way, you will not be able to transfer staked tokens back to the sending account."
 msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
@@ -2855,11 +2855,11 @@ msgid "Stake ODX Rewards"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "Stake esODX"
+msgid "Stake esREX"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "Stake esODX Rewards"
+msgid "Stake esREX Rewards"
 msgstr ""
 
 #: src/pages/Stake/StakeV1.js
@@ -3086,7 +3086,7 @@ msgid "The Gambit protocol is in beta, please read the <0>staking details</0>be
 msgstr "El protocolo Gambit se encuentra en beta, por favor lea los <0>detalles de staking</0>antes de participar."
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "The address of the esODX (IOU) token is {esGmxIouAddress}."
+msgid "The address of the esREX (IOU) token is {esGmxIouAddress}."
 msgstr ""
 
 #: src/components/Exchange/SwapBox.js
@@ -3094,11 +3094,11 @@ msgid "The borrow fee is calculated as (assets borrowed) / (total assets in pool
 msgstr "La tasa de préstamo es calculada como (activos prestados) / (total de activos en la reserva) * 0.01% por hora."
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "The esODX (IOU) token is transferrable. You can add the token to your wallet and send it to another address to claim if you'd like."
+msgid "The esREX (IOU) token is transferrable. You can add the token to your wallet and send it to another address to claim if you'd like."
 msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "The esODX tokens can be staked or vested at any time."
+msgid "The esREX tokens can be staked or vested at any time."
 msgstr ""
 
 #: src/lib/contracts/callContract.tsx
@@ -3488,7 +3488,7 @@ msgid "Unstake completed!"
 msgstr "¡Destakeo completado!"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Unstake esODX"
+msgid "Unstake esREX"
 msgstr ""
 
 #: src/pages/Stake/StakeV1.js
@@ -3773,7 +3773,7 @@ msgid "You are earning {0}% more {nativeTokenSymbol} rewards using {1} Staked Mu
 msgstr "Estas ganando {0}% más {nativeTokenSymbol} recompensas usando {1} Puntos Multiplicadores Stakeados."
 
 #: src/components/ModalViews/RedirectModal.js
-msgid "You are leaving odx.finance and will be redirected to a third party, independent website."
+msgid "You are leaving rollex.finance and will be redirected to a third party, independent website."
 msgstr ""
 
 #: src/pages/BuyGMX/BuyGMX.tsx
@@ -3797,7 +3797,7 @@ msgid "You can check your claim history <0>here</0>."
 msgstr "Puede consultar su historial de reclamaciones <0>aquí</0>."
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "You can currently vest a maximum of {0} esODX tokens at a ratio of {1} {stakingToken} to 1 esODX."
+msgid "You can currently vest a maximum of {0} esREX tokens at a ratio of {1} {stakingToken} to 1 esREX."
 msgstr ""
 
 #: src/components/Exchange/ConfirmationBox.js
@@ -3838,11 +3838,11 @@ msgid "You have not deposited any tokens for vesting."
 msgstr "No has depositado ningún token para su adquisición."
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "You have {0} esODX (IOU) tokens."
+msgid "You have {0} esREX (IOU) tokens."
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "You need a total of at least {0} {stakeTokenLabel} to vest {1} esODX."
+msgid "You need a total of at least {0} {stakeTokenLabel} to vest {1} esREX."
 msgstr ""
 
 #: src/components/Exchange/NoLiquidityErrorModal.tsx
@@ -3866,7 +3866,7 @@ msgid "You will receive at least {0} {1} if this order is executed. The executio
 msgstr "Tu recibirás al menos {0} {1} si esta orden se ejecuta. El precio de ejecución puede variar dependiendo de las comisiones de intercambio en el momento en el que la orden es ejecutada."
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "Your esODX (IOU) balance will decrease by your claim amount after claiming, this is expected behaviour."
+msgid "Your esREX (IOU) balance will decrease by your claim amount after claiming, this is expected behaviour."
 msgstr ""
 
 #: src/components/Exchange/ConfirmationBox.js
@@ -3894,7 +3894,7 @@ msgid "collateral"
 msgstr "garantía"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "esODX OTC Market"
+msgid "esREX OTC Market"
 msgstr ""
 
 #: src/pages/PositionsOverview/PositionsOverview.js
@@ -4004,7 +4004,7 @@ msgstr "{0} seleccionado en el formulario de órden"
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "{0} tokens have been converted to ODX from the {1} esODX deposited for vesting."
+msgid "{0} tokens have been converted to ODX from the {1} esREX deposited for vesting."
 msgstr ""
 
 #: src/components/Exchange/SwapBox.js

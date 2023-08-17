@@ -277,7 +277,7 @@ a.plain {
 
 .secondary-btn {
   background: #03d1cf;
-  border-radius: 4px;
+  border-radius: 0;
   font-size: var(--font-sm);
   line-height: 2rem;
   font-weight: normal;

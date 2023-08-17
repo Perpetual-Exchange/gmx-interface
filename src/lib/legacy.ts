@@ -1241,7 +1241,7 @@ export function getAppBaseUrl() {
     return "http://localhost:3011/#";
   }
 
-  return "https://dapptest.odx.finance/#";
+  return "https://dapptest.rollex.finance/#";
 }
 
 export function getRootShareApiUrl() {

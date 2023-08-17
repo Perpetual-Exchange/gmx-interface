@@ -243,7 +243,7 @@ export default function BeginAccountTransfer(props) {
           <Trans>
             Please only use this for full account transfers.
             <br />
-            This will transfer all your REX, esODX, RLP and Multiplier Points to your new account.
+            This will transfer all your REX, esREX, RLP and Multiplier Points to your new account.
             <br />
             Transfers are only supported if the receiving account has not staked REX or RLP tokens before.
             <br />
