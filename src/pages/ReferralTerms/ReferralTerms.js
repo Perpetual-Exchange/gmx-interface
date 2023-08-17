@@ -12,25 +12,25 @@ export default function ReferralTerms() {
       <div className="default-container Page page-layout">
         <div>
           <div className="Page-title-section center">
-            <div className="Page-title">ODX Referral Program</div>
+            <div className="Page-title">REX Referral Program</div>
             <div className="Page-subtitle">Terms and Conditions</div>
             <div className="Page-description">Last modified: August 1st, 2022</div>
           </div>
           <div className="content">
             <div className="section">
               <p className="body-text">
-                Welcome to odx.finance ("we," "us," or "our"), the informational resource for ODX Protocol, as defined
+                Welcome to odx.finance ("we," "us," or "our"), the informational resource for REX Protocol, as defined
                 below.
               </p>
               <p className="body-text">
                 odx.finance provides information and resources about the fundamentals of the decentralized non-custodial
-                protocol called the ODX Protocol (the "ODX Protocol," "Protocol," or "ODX DApp"). odx.finance is not an
-                available access point to the ODX Protocol.
+                protocol called the REX Protocol (the "REX Protocol," "Protocol," or "REX DApp"). odx.finance is not an
+                available access point to the REX Protocol.
               </p>
               <p className="body-text">
                 These Terms and Conditions and any other documents incorporated herein by reference (collectively, these
                 "Terms") to you or the company or other legal entity you represent ("you," "your," "the Referrer," "the
-                Affiliate"), explains the terms and conditions by which you may use the ODX Referral Program ("Referral
+                Affiliate"), explains the terms and conditions by which you may use the REX Referral Program ("Referral
                 Program") as defined below.
               </p>
               <p className="body-text">
@@ -41,14 +41,14 @@ export default function ReferralTerms() {
               <h3 className="body-title">1. USE OF THE REFERRAL PROGRAM</h3>
               <p className="body-text">All this content is for informational purposes only.</p>
               <p className="body-text">
-                The Referral Program allows you to advertise the ODX DApp, thereby driving traffic to it, whereby you
+                The Referral Program allows you to advertise the REX DApp, thereby driving traffic to it, whereby you
                 may earn a portion of the fees generated ("Rebates") if a person that is not you ("Trader," "Referred
-                User") trades in the ODX DApp after being referred to it from a hyperlink ("Link") or manually input
+                User") trades in the REX DApp after being referred to it from a hyperlink ("Link") or manually input
                 code ("Referral Code"). The Trader will benefit from a fee discount ("Discount") associated with the
                 Referrer's tier.
               </p>
               <p className="body-text">
-                After being referred to the ODX DApp from a Link, the Trader's browser will save your Referral Code,
+                After being referred to the REX DApp from a Link, the Trader's browser will save your Referral Code,
                 which will be assigned to the Trader on his first trade.
               </p>
               <p className="body-text">
@@ -58,10 +58,10 @@ export default function ReferralTerms() {
             <div className="section">
               <h3 className="body-title">2. OBLIGATIONS</h3>
               <p className="body-text">
-                2.1 As an Affiliate, ODX DApp provides you with the Links and Referral Codes necessary to promote the
-                ODX Protocol. You acknowledge and agree it is your sole responsibility to indicate your correct Referral
-                Code. You may promote the ODX Protocol offers in any manner you choose unless it misleads someone about
-                the ODX Protocol.
+                2.1 As an Affiliate, REX DApp provides you with the Links and Referral Codes necessary to promote the
+                REX Protocol. You acknowledge and agree it is your sole responsibility to indicate your correct Referral
+                Code. You may promote the REX Protocol offers in any manner you choose unless it misleads someone about
+                the REX Protocol.
               </p>
               <p className="body-text">
                 2.2 odx.finance is not responsible for (i) lost sales or lost opportunity to earn Rebates due to any
@@ -70,7 +70,7 @@ export default function ReferralTerms() {
                 independent, smart contracts.
               </p>
               <p className="body-text">
-                2.3 You will be excluded from the Referral Program, following the directives of the ODX tokenholders:
+                2.3 You will be excluded from the Referral Program, following the directives of the REX tokenholders:
                 (i) if you use any language libelous, defamatory, profane, obscene, pornographic, sexually explicit,
                 indecent, lewd, vulgar, suggestive, harassing, stalking, hateful, threatening, offensive,
                 discriminatory, bigoted, abusive, inflammatory, fraudulent, deceptive, or otherwise objectionable or
@@ -86,7 +86,7 @@ export default function ReferralTerms() {
               </p>
               <p className="body-text">
                 odx.finance is under no obligation for Rebates or Discounts to any Referrer or Trader. Rebates and
-                Discounts are handled following the directives of the ODX tokenholders.
+                Discounts are handled following the directives of the REX tokenholders.
               </p>
               <p className="body-text">
                 The Rebates and Discounts percentages for the default tier Tier 1, and instructions to upgrade to Tier 2
@@ -135,7 +135,7 @@ export default function ReferralTerms() {
             <div className="section">
               <h3 className="body-title">6. MODIFICATION, SUSPENSION, AND TERMINATION</h3>
               <p className="body-text">
-                The Referral Program runs independently from odx.finance, which the token holders of ODX determine. Due
+                The Referral Program runs independently from odx.finance, which the token holders of REX determine. Due
                 to this, from time to time and with or without prior notice to you, the Referral Program could be
                 subject to modifications, suspensions, or disabilities, in whole or in part, for any reason whatsoever.
               </p>

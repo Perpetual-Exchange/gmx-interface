@@ -45,7 +45,7 @@ export function HomeHeaderLinks({ small, clickCloseIcon, redirectPopupTimestamp,
       {small && (
         <div className="App-header-links-header">
           <Link className="App-header-link-main" to="/">
-            <img src={logoImg} alt="ODX Logo" />
+            <img src={logoImg} alt="REX Logo" />
           </Link>
           <div
             className="App-header-menu-icon-block mobile-cross-menu"

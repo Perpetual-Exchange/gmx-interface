@@ -79,7 +79,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           Learn more
         </a>
         <div className="Home-token-card-option-action">
-          <BuyLink to="/buy_glp" className="default-btn custom-buy-btn pointer-events-none" network={AVALANCHE_FUJI}>
+          <BuyLink to="/buy_glp" className="default-btn custom-buy-btn" network={AVALANCHE_FUJI}>
             Buy RLP
           </BuyLink>
         </div>

@@ -117,7 +117,7 @@ function Referrals({ connectWallet, setPendingTxns, pendingTxns }) {
             </div>
             <div className="Page-description">
               <Trans>
-                Get fee discounts and earn rebates through the ODX referral program.
+                Get fee discounts and earn rebates through the REX referral program.
                 <br />
                 For more information, please read the{" "}
                 <ExternalLink href="https://docs.rollex.finance/referrals">referral program details</ExternalLink>.

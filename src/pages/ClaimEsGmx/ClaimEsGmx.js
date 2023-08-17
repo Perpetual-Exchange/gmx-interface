@@ -196,7 +196,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
   let initialStakingAmount;
   let nextStakingAmount;
 
-  let stakingToken = "staked ODX";
+  let stakingToken = "staked REX";
 
   const shouldShowStakingAmounts = false;
 
@@ -225,7 +225,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
         result);
     }
 
-    stakingToken = "OLP";
+    stakingToken = "RLP";
   }
 
   if (selectedOption === VEST_WITH_GMX_AVAX && avaxVestingData) {
@@ -253,7 +253,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
         result);
     }
 
-    stakingToken = "OLP";
+    stakingToken = "RLP";
   }
 
   const getError = () => {
@@ -380,7 +380,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
                 isChecked={selectedOption === VEST_WITH_GMX_ARB}
                 setIsChecked={() => setSelectedOption(VEST_WITH_GMX_ARB)}
               >
-                <Trans>Vest with ODX on Arbitrum</Trans>
+                <Trans>Vest with REX on Arbitrum</Trans>
                 <img src={arbitrumIcon} alt="Arbitrum" />
               </Checkbox>
               <Checkbox
@@ -388,7 +388,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
                 isChecked={selectedOption === VEST_WITH_GLP_ARB}
                 setIsChecked={() => setSelectedOption(VEST_WITH_GLP_ARB)}
               >
-                <Trans>Vest with OLP on Arbitrum</Trans>
+                <Trans>Vest with RLP on Arbitrum</Trans>
                 <img src={arbitrumIcon} alt="Arbitrum" />
               </Checkbox>
               <Checkbox
@@ -396,7 +396,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
                 isChecked={selectedOption === VEST_WITH_GMX_AVAX}
                 setIsChecked={() => setSelectedOption(VEST_WITH_GMX_AVAX)}
               >
-                <Trans>Vest with ODX on Avalanche</Trans>
+                <Trans>Vest with REX on Avalanche</Trans>
                 <img src={avaIcon} alt="Avalanche" />
               </Checkbox>
               <Checkbox
@@ -404,7 +404,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
                 isChecked={selectedOption === VEST_WITH_GLP_AVAX}
                 setIsChecked={() => setSelectedOption(VEST_WITH_GLP_AVAX)}
               >
-                <Trans>Vest with OLP on Avalanche</Trans>
+                <Trans>Vest with RLP on Avalanche</Trans>
                 <img src={avaIcon} alt="Avalanche" />
               </Checkbox>
             </div>

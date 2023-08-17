@@ -1217,7 +1217,7 @@ export function getProcessedData(
 }
 
 export function getPageTitle(data) {
-  const title = t`Decentralized Perpetual Exchange | ODX`;
+  const title = t`Decentralized Perpetual Exchange | REX`;
   return `${data} | ${title}`;
 }
 

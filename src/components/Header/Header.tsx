@@ -124,7 +124,7 @@ export function Header({
                 </div>
               )}
               <div className="App-header-link-main clickable" onClick={() => setIsDrawerVisible(!isDrawerVisible)}>
-                <img src={logoImg} alt="ODX Logo" />
+                <img src={logoImg} alt="REX Logo" />
               </div>
             </div>
             <div className="App-header-container-right">

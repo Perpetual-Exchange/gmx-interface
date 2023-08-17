@@ -256,7 +256,7 @@ function MigrationModal(props) {
             <div className="App-info-label">{token.bonus > 0 ? "Base Tokens" : "To Receive"}</div>
             <div className="align-right">
               {baseAmount &&
-                `${formatAmount(baseAmount, 18, 4, true)} ODX ($${formatAmount(
+                `${formatAmount(baseAmount, 18, 4, true)} REX ($${formatAmount(
                   baseAmountUsd,
                   18 + decimals,
                   2,
@@ -272,7 +272,7 @@ function MigrationModal(props) {
               </div>
               <div className="align-right">
                 {bonusAmount &&
-                  `${formatAmount(bonusAmount, 18, 4, true)} ODX ($${formatAmount(
+                  `${formatAmount(bonusAmount, 18, 4, true)} REX ($${formatAmount(
                     bonusAmountUsd,
                     18 + decimals,
                     2,
@@ -289,7 +289,7 @@ function MigrationModal(props) {
               </div>
               <div className="align-right">
                 {totalAmount &&
-                  `${formatAmount(totalAmount, 18, 4, true)} ODX ($${formatAmount(
+                  `${formatAmount(totalAmount, 18, 4, true)} REX ($${formatAmount(
                     totalAmountUsd,
                     18 + decimals,
                     2,
@@ -413,7 +413,7 @@ export default function Migration() {
         </div>
       </div>
       <div className="Migration-note">
-        <Trans>Your wallet: {formatAmount(gmxBalance, 18, 4, true)}</Trans> ODX
+        <Trans>Your wallet: {formatAmount(gmxBalance, 18, 4, true)}</Trans> REX
       </div>
       <div className="Migration-cards">
         {tokens.map((token, index) => {

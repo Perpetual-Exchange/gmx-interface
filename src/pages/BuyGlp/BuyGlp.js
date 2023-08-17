@@ -28,12 +28,12 @@ export default function BuyGlp(props) {
         <img src={b1} className="right-b-icon" alt="" />
         <div className="section-title-content">
           <div className="Page-title">
-            <Trans>Buy / Sell OLP</Trans>
+            <Trans>Buy / Sell RLP</Trans>
           </div>
           <div className="Page-description">
             <Trans>
               Purchase{" "}
-              <ExternalLink href="https://docs.rollex.finance/rewards#as-a-olp-staker">OLP tokens</ExternalLink> to earn{" "}
+              <ExternalLink href="https://docs.rollex.finance/rewards#as-a-olp-staker">RLP tokens</ExternalLink> to earn{" "}
               {nativeTokenSymbol} fees from swaps and leverages trading.
             </Trans>
             <br />

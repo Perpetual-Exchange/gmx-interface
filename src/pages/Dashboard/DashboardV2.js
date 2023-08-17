@@ -325,7 +325,7 @@ export default function DashboardV2() {
                     <br />
                     Get lower fees to{" "}
                     <Link to="/buy_glp" target="_blank" rel="noopener noreferrer">
-                      buy OLP
+                      buy RLP
                     </Link>{" "}
                     with {tokenInfo.symbol}, and to{" "}
                     <Link to="/trade" target="_blank" rel="noopener noreferrer">
@@ -502,14 +502,14 @@ export default function DashboardV2() {
                       handle={`$${formatAmount(tvl, USD_DECIMALS, 0, true)}`}
                       position="right-bottom"
                       renderContent={() => (
-                        <span>{t`Assets Under Management: ODX staked (All chains) + OLP pool (${chainName}).`}</span>
+                        <span>{t`Assets Under Management: REX staked (All chains) + RLP pool (${chainName}).`}</span>
                       )}
                     />
                   </div>
                 </div>
                 <div className="App-card-row">
                   <div className="label">
-                    <Trans>OLP Pool</Trans>
+                    <Trans>RLP Pool</Trans>
                   </div>
                   <div>
                     <TooltipComponent
@@ -517,9 +517,9 @@ export default function DashboardV2() {
                       position="right-bottom"
                       renderContent={() => (
                         <Trans>
-                          <p>Total value of tokens in OLP pool ({chainName}).</p>
+                          <p>Total value of tokens in RLP pool ({chainName}).</p>
                           <p>
-                            Other websites may show a higher value as they add positions' collaterals to the OLP pool.
+                            Other websites may show a higher value as they add positions' collaterals to the RLP pool.
                           </p>
                         </Trans>
                       )}
@@ -712,7 +712,7 @@ export default function DashboardV2() {
               <Trans>Tokens</Trans>
             </div>
             <div className="Page-description">
-              <Trans>Platform and OLP index tokens.</Trans>
+              <Trans>Platform and RLP index tokens.</Trans>
             </div>
           </div>
           <div className="DashboardV2-token-cards">
@@ -721,20 +721,20 @@ export default function DashboardV2() {
                 <div className="App-card-title">
                   <div className="App-card-title-mark">
                     <div className="App-card-title-mark-icon">
-                      <img src={currentIcons.gmx} width="30" alt="ODX Token Icon" />
+                      <img src={currentIcons.gmx} width="30" alt="REX Token Icon" />
                     </div>
                     <div className="App-card-title-mark-info">
-                      <div className="App-card-title-mark-title">ODX</div>
+                      <div className="App-card-title-mark-title">REX</div>
                     </div>
                     <div className="mt-2">
-                      <AssetDropdown assetSymbol="ODX" />
+                      <AssetDropdown assetSymbol="REX" />
                     </div>
                   </div>
                   <div className="flex-1"></div>
                   <a
                     href="https://docs.rollex.finance/tokenomics"
                     target="_blank"
-                    className="font-normal text-[18px] hover:text-[#80ae0e]"
+                    className="font-normal text-[18px] hover:text-[#e0ee8d]"
                     rel="noreferrer"
                   >
                     Read More
@@ -772,7 +772,7 @@ export default function DashboardV2() {
                         <div className="label">
                           <Trans>Supply</Trans>
                         </div>
-                        <div>{formatAmount(totalGmxSupply, GMX_DECIMALS, 0, true)} ODX</div>
+                        <div>{formatAmount(totalGmxSupply, GMX_DECIMALS, 0, true)} REX</div>
                       </div>
                       <div className="App-card-row">
                         <div className="label">
@@ -850,20 +850,20 @@ export default function DashboardV2() {
                 <div className="App-card-title">
                   <div className="App-card-title-mark">
                     <div className="App-card-title-mark-icon">
-                      <img src={currentIcons.glp} width="30" alt="OLP Icon" />
+                      <img src={currentIcons.glp} width="30" alt="RLP Icon" />
                     </div>
                     <div className="App-card-title-mark-info">
-                      <div className="App-card-title-mark-title">OLP</div>
+                      <div className="App-card-title-mark-title">RLP</div>
                     </div>
                     <div className="mt-2">
-                      <AssetDropdown assetSymbol="OLP" />
+                      <AssetDropdown assetSymbol="RLP" />
                     </div>
                   </div>
                   <div className="flex-1"></div>
                   <a
                     href="https://docs.rollex.finance/tokenomics"
                     target="_blank"
-                    className="font-normal text-[18px] hover:text-[#80ae0e]"
+                    className="font-normal text-[18px] hover:text-[#e0ee8d]"
                     rel="noreferrer"
                   >
                     Read More
@@ -883,7 +883,7 @@ export default function DashboardV2() {
                         <div className="label">
                           <Trans>Supply</Trans>
                         </div>
-                        <div>{formatAmount(glpSupply, GLP_DECIMALS, 0, true)} OLP</div>
+                        <div>{formatAmount(glpSupply, GLP_DECIMALS, 0, true)} RLP</div>
                       </div>
                       <div className="App-card-row">
                         <div className="label">
@@ -940,7 +940,7 @@ export default function DashboardV2() {
                           ))}
                         </Pie>
                         <text x={"50%"} y={"50%"} fill="white" textAnchor="middle" dominantBaseline="middle">
-                          OLP Pool
+                          RLP Pool
                         </text>
                         <Tooltip content={<CustomTooltip />} />
                       </PieChart>
@@ -952,7 +952,7 @@ export default function DashboardV2() {
             <div className="mt-40 token-table-wrapper App-card">
               <div className="App-card-title">
                 <img src={currentIcons.network} width="30" className="mr-4" alt="Network Icon" />
-                <Trans>OLP Index Composition</Trans>
+                <Trans>RLP Index Composition</Trans>
               </div>
               <div className="App-card-divider"></div>
               <table className="token-table">
@@ -1048,7 +1048,7 @@ export default function DashboardV2() {
               </table>
             </div>
             <div className="Page-title Tab-title-section glp-composition-small">
-              <Trans>OLP Index Composition</Trans>{" "}
+              <Trans>RLP Index Composition</Trans>{" "}
               <img className="Page-title-icon" src={currentIcons.network} width="24" alt="Network Icon" />
             </div>
             <div className="token-grid">

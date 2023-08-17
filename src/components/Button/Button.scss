@@ -23,7 +23,7 @@
   &.primary {
     background: var(--primary-btn-bg);
     color: #171717;
-    border-radius: 0.3rem;
+    border-radius: 0;
     padding: 1.65rem 1.6rem;
     line-height: 1;
 
@@ -39,7 +39,7 @@
   &.primary-action {
     background: var(--primary-btn-bg);
     color: #171717;
-    border-radius: 0.3rem;
+    border-radius: 0;
     padding: 1.65rem 1.6rem;
     line-height: 1;
     font-weight: 600;
@@ -56,7 +56,7 @@
   }
 
   &.secondary {
-    color: #80ae0e;
+    color: #e0ee8d;
     border-radius: 4px;
     padding: 1.1rem 1.25rem;
     font-weight: 700;
