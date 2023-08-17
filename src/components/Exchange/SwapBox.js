@@ -544,6 +544,8 @@ export default function SwapBox(props) {
         }
 
         const toTokenInfo = getTokenInfo(infoTokens, toTokenAddress);
+        // eslint-disable-next-line no-console
+        console.log("toTokenInfo=", toTokenInfo);
         if (toTokenInfo && toTokenInfo.maxPrice && fromUsdMin && fromUsdMin.gt(0)) {
           const leverageMultiplier = parseInt(leverageOption * BASIS_POINTS_DIVISOR);
           const toTokenPriceUsd =
@@ -1895,13 +1897,14 @@ export default function SwapBox(props) {
   return (
     <div className="Exchange-swap-box">
       <form
+        className="App-card overflow-hidden !p-0"
         onSubmit={(e) => {
           e.preventDefault();
           onClickPrimary();
         }}
       >
         <div className="Exchange-swap-box-inner App-box-highlight">
-          <div>
+          <div className="mb-6">
             <Tab
               icons={SWAP_ICONS}
               options={SWAP_OPTIONS}
@@ -1910,6 +1913,7 @@ export default function SwapBox(props) {
               onChange={onSwapOptionChange}
               className="Exchange-swap-option-tabs"
             />
+            <div className="App-card-divider"></div>
             {flagOrdersEnabled && (
               <Tab
                 options={orderOptions}
@@ -1921,6 +1925,7 @@ export default function SwapBox(props) {
               />
             )}
           </div>
+
           {showFromAndToSection && (
             <React.Fragment>
               <BuyInputSection
@@ -1946,9 +1951,9 @@ export default function SwapBox(props) {
                 />
               </BuyInputSection>
               <div className="Exchange-swap-ball-container">
-                <button type="button" className="Exchange-swap-ball" onClick={switchTokens}>
+                <div className="Exchange-swap-ball" onClick={switchTokens}>
                   <IoMdSwap className="Exchange-swap-ball-icon" />
-                </button>
+                </div>
               </div>
               <BuyInputSection
                 topLeftLabel={getToLabel()}
@@ -2175,10 +2180,7 @@ export default function SwapBox(props) {
                 trigger orders. <br />
                 <br />
                 For screenshots and more information, please see the{" "}
-                <ExternalLink href="https://gmxio.gitbook.io/gmx/trading#stop-loss-take-profit-orders">
-                  docs
-                </ExternalLink>
-                .
+                <ExternalLink href="https://docs.rollex.finance">docs</ExternalLink>.
               </Trans>
             </div>
           )}
@@ -2273,7 +2275,7 @@ export default function SwapBox(props) {
                           top right of the page after connecting your wallet.
                           <br />
                           <br />
-                          <ExternalLink href="https://gmxio.gitbook.io/gmx/trading#opening-a-position">
+                          <ExternalLink href="https://docs.rollex.finance/trade#opening-a-position">
                             More Info
                           </ExternalLink>
                         </Trans>
@@ -2302,7 +2304,7 @@ export default function SwapBox(props) {
                           This exit price will change with the price of the asset.
                           <br />
                           <br />
-                          <ExternalLink href="https://gmxio.gitbook.io/gmx/trading#opening-a-position">
+                          <ExternalLink href="https://docs.rollex.finance/trade#opening-a-position">
                             More Info
                           </ExternalLink>
                         </Trans>
@@ -2341,7 +2343,7 @@ export default function SwapBox(props) {
                           </div>
                         )}
                         <br />
-                        <ExternalLink href="https://gmxio.gitbook.io/gmx/trading#opening-a-position">
+                        <ExternalLink href="https://docs.rollex.finance/fee">
                           <Trans>More Info</Trans>
                         </ExternalLink>
                       </div>

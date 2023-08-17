@@ -1,7 +1,7 @@
-import { ethers } from "ethers";
-import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, AVALANCHE_FUJI, MAINNET, TESTNET, SEPOLIA } from "./chains";
+// import { ethers } from "ethers";
+import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, AVALANCHE_FUJI, MAINNET, TESTNET } from "./chains";
 
-const { AddressZero } = ethers.constants;
+// const { AddressZero } = ethers.constants;
 
 export const XGMT_EXCLUDED_ACCOUNTS = [
   "0x330eef6b9b1ea6edd620c825c9919dc8b611d5d5",
@@ -160,50 +160,6 @@ const CONTRACTS = {
 
     Multicall: "0xcA11bde05977b3631167028862bE2a173976CA11",
   },
-  [SEPOLIA]: {
-    // SEPOLIA testnet
-    Vault: "0x7531626E87BdA9B8511bea536136e5349EDacE89",
-    Router: "0xf6447de9988F36C0E74fb3991E1d001DB7A1bec8",
-    VaultReader: "0xdDC482DDA5694B932479AE31275ea799B0246E3b",
-    Reader: "0x7C4c161a923dF21b1dd1d62b8620Ea24d6E928c4",
-    GlpManager: "0x241F2d418f23d42f821cdf516F2E530cE2a57f01",
-    RewardRouter: "0x45ED224Ede7246b6f0104CaB9624194694e90F0B",
-    GlpRewardRouter: "0xA855150b836f6CD1De66581904103BD90e9B391C",
-    RewardReader: "0x3767e236D07969bAc6eF8EbFA46EB5dD8b4F3E69",
-    NATIVE_TOKEN: "0x7E160F7a1f90E3BfB380eA6Fba9cbD860d7Cd0D1",
-    GLP: "0x5339340f11789E38F2b4a00C7f29D9c112B3333F",
-    GMX: "0x0C038276cd0089e58C2fc5d7CB6e7565Ca14650a",
-    ES_GMX: "0xf7B8fFCFd556c2BBbb36535e97d24610a9fE79E1",
-    BN_GMX: "0x755E0007D9AA9ec5370802FEB12569469ec07e52",
-    USDG: "0x8D0851FA4c49336BDD2606C6C7B3783755ea8827",
-    ES_GMX_IOU: "0x1960604Af7E8BeA8D34393444E14b37945CB6553",
-    StakedGmxTracker: "0xfc05ab07893c88c2f19c94b664CC74884d4A6A33",
-    BonusGmxTracker: "0x35194cA778B4a2360770025bb3c52826523B25FE",
-    FeeGmxTracker: "0x00E07C7055F1D370C1241495a9fC010B07F47497",
-    StakedGlpTracker: "0xaF7BaE75c7D20CF53aE24bD6201ed3578C7e514b",
-    FeeGlpTracker: "0xb3de11a38D238acBDB22c99b99Ceb8895FCbc981",
-
-    StakedGmxDistributor: "0x01fF13B98356138ad71082F2F4Ed2Ad130fF5066",
-    StakedGlpDistributor: "0xa5d9C6F4517B1Fc200421fe62bB8411685DF3D7c",
-
-    GmxVester: "0xC4cE3c38a6d33173D62E69B359ae486bEFF4D10D",
-    GlpVester: "0x0Aa11CCf9241eD22F2AF9315DFe0615a77A3178C",
-
-    OrderBook: "0x759CEae223ddb16eE8494D7b4030650a0D40c360",
-    OrderExecutor: "0x759CEae223ddb16eE8494D7b4030650a0D40c360",
-    OrderBookReader: "0x0c4B8dbb899678d0DA9d7904FC4a834A028aE0Df",
-
-    PositionRouter: "0xFb0342D3cf1Ba81fc336195c4Ed6626eAb8e402B",
-    PositionManager: "0xf29BdD72076C28455273858df0DeA616A7bA7AD7",
-
-    TraderJoeGmxAvaxPool: "0x80A9ae39310abf666A87C743d6ebBD0E8C42158E", //
-    ReferralStorage: "0x9813eEC5CfBdC1F8E6c73492c8De1c0FDBa09CDB",
-    ReferralReader: "0x8D0Def0eAe1B5F0DCEAc99098118347fd64DBa4a",
-
-    Timelock: "0x5144CF1f6C14D0ec2099cE740bB45DD2286F172A",
-
-    Multicall: "0xcA11bde05977b3631167028862bE2a173976CA11 ",
-  },
   [AVALANCHE]: {
     // avalanche
     Vault: "0x9ab2De34A33fB459b538c43f251eB825645e8595",
@@ -251,43 +207,46 @@ const CONTRACTS = {
   },
 
   [AVALANCHE_FUJI]: {
-    Vault: AddressZero,
-    Router: AddressZero,
-    VaultReader: AddressZero,
-    Reader: AddressZero,
-    GlpManager: AddressZero,
-    RewardRouter: AddressZero,
-    RewardReader: AddressZero,
-    NATIVE_TOKEN: "0x1D308089a2D1Ced3f1Ce36B1FcaF815b07217be3",
-    GLP: AddressZero,
-    GMX: AddressZero,
-    ES_GMX: AddressZero,
-    BN_GMX: AddressZero,
-    USDG: AddressZero,
-    ES_GMX_IOU: AddressZero,
+    Vault: "0xAC6E2Ac93E2a1CFFadE96607fe2376F5f5952EDC",
+    Router: "0xa1792e2e73e3A890068D8094923fE8399D46d169",
+    VaultReader: "0xc5F10DB513339db248796268Fa4B7E7820150324",
+    Reader: "0xCf1058ad605A54e7be36A5075Ac1D17351b197D7",
+    GlpManager: "0x459aF0e66F49302DaE40Ba548FbBb16E3263C71F",
+    RewardRouter: "0x800db23793bBA846f378296E7b492F731D1eE464",
+    GlpRewardRouter: "0x800db23793bBA846f378296E7b492F731D1eE464",
+    RewardReader: "0x8F4e75dfc9387311Cc1e6b69C2919049b2a5D0C0",
+    NATIVE_TOKEN: "0x2E11Aad6Ffa2E7f4F3b75187BFDa0A3633b3711d",
+    GLP: "0x0F02098Bb29FAc827f2DA6b330dB9B423Bd07B84",
+    GMX: "0x2CbF0056E15f4Fe2e04691D280D89bA645D6D364",
+    ES_GMX: "0x51DdD94dd1A6DFbb115c4272b44E1dFDb8AaAe2B",
+    BN_GMX: "0xe10a4b30ED4943c0DD951309FFC056F83e233BfB",
+    USDG: "0x0A2627184A1AA8153A5660159B2762bCc85FF052",
+    ES_GMX_IOU: "0xd73df8E226B3A35d97225F9e85bc5cA31D96ce08",
 
-    StakedGmxTracker: AddressZero,
-    BonusGmxTracker: AddressZero,
-    FeeGmxTracker: AddressZero,
-    StakedGlpTracker: AddressZero,
-    FeeGlpTracker: AddressZero,
+    StakedGmxTracker: "0x897629A9F629C6629285AE864eB755be80dc200E",
+    BonusGmxTracker: "0x2f9555566f4d007E20462Fe54e1E38b0129A27f6",
+    FeeGmxTracker: "0xCF0b26553158e212C81532C69383eE15F5463b66",
+    StakedGlpTracker: "0x1dD38dee2fD5FEc859B0441Ef27e36C924085D0C",
+    FeeGlpTracker: "0xf41184904bE4F79D7bF047688F42eD774EC457E7",
 
-    StakedGmxDistributor: AddressZero,
-    StakedGlpDistributor: AddressZero,
+    StakedGmxDistributor: "0x87BBc6c33df7Cc0f1A6ECD533fD35223B3ec1AF9",
+    StakedGlpDistributor: "0xaf7e1F2C9ec4bFC1D229d6491646E6d3E3026fA1",
 
-    GmxVester: AddressZero,
-    GlpVester: AddressZero,
+    GmxVester: "0xCD3e0EB7e5e8A896fE584d5b8dB3E7F1Ed7c3D4C",
+    GlpVester: "0x6bdD661C46a710a1ad8624b8faD99B71D08d884e",
 
-    OrderBook: AddressZero,
-    OrderExecutor: AddressZero,
-    OrderBookReader: AddressZero,
+    OrderBook: "0x05C3c68b882f5f14878c3a763b6002D9E4DA7Da0",
+    OrderExecutor: "0x05C3c68b882f5f14878c3a763b6002D9E4DA7Da0",
+    OrderBookReader: "0x4FdD7F36aa14aa79C700059aB937E6E359E8c9eA",
 
-    PositionRouter: AddressZero,
-    PositionManager: AddressZero,
+    PositionRouter: "0x3cFF0ef03dF66b198E99AF2bF0d04bc537F06C00",
+    PositionManager: "0x3be98a77a22C954C2ffDf4c47daDa1ff39149889",
 
-    TraderJoeGmxAvaxPool: AddressZero,
-    ReferralStorage: AddressZero,
-    ReferralReader: AddressZero,
+    TraderJoeGmxAvaxPool: "0x0c91a070f862666bbcce281346be45766d874d98", //
+    ReferralStorage: "0x62a48203B39573CC0dc989fDca6d28D5EE9C1Cc2",
+    ReferralReader: "0x507f6e7f88E18F316A1b7f36a74e2ae6E6cEF8aA",
+
+    Timelock: "0x8657b3344E1a640159b1502bE292B86135A5810f",
   },
 };
 

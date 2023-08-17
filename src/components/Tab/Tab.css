@@ -2,11 +2,10 @@
   display: grid;
   grid-auto-flow: column;
   font-size: var(--font-sm);
-  border-radius: 3px;
+  border-radius: 6px;
   overflow: hidden;
   color: rgba(255, 255, 255, 0.7);
-  background: linear-gradient(90deg, rgba(30, 34, 61, 0.9) 0%, rgba(38, 43, 71, 0.9) 100%);
-  box-shadow: inset 0px 0px 30px 5px rgba(255, 255, 255, 0.01);
+  border: 0.5px solid #80ae0e;
 }
 
 .Tab-option-icon {
@@ -15,6 +14,7 @@
 }
 
 .Tab.block .Tab-option {
+  position: relative;
   text-align: center;
   padding: 0.8rem;
   padding-left: 1.5rem;
@@ -24,14 +24,14 @@
 
 .Tab.block .Tab-option:hover {
   color: rgba(255, 255, 255, 1);
-  background: #3a3f798f;
 }
 
 .Tab.block .Tab-option.active {
   opacity: 1;
   pointer-events: none;
   background: var(--primary-btn-bg);
-  color: rgba(255, 255, 255, 1);
+  color: #171717;
+  font-weight: 600;
 }
 
 .Tab.block .Tab-option.active .Tab-option-icon {
@@ -63,4 +63,5 @@
 .Tab.inline .Tab-option.active {
   opacity: 1;
   pointer-events: none;
+  color: #80ae0e;
 }

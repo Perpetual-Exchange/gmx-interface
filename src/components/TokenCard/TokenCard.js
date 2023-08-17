@@ -6,7 +6,7 @@ import { isHomeSite } from "lib/legacy";
 import { useWeb3React } from "@web3-react/core";
 
 import { HeaderLink } from "../Header/HeaderLink";
-import { SEPOLIA } from "config/chains";
+import { AVALANCHE_FUJI } from "config/chains";
 import { switchNetwork } from "lib/wallets";
 import { useChainId } from "lib/chains";
 
@@ -59,12 +59,12 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
         <div>
           $REX is the utility token of Rollex. In addition to granting participation in the governance process of the
           protocol, it also accrues value from the platform revenue.{" "}
-          <a href="https://docs.rollex.xyz/tokenomics" target="_blank" rel="noreferrer" className=" read-more">
+          <a href="https://docs.rollex.finance/tokenomics" target="_blank" rel="noreferrer" className=" read-more">
             Learn more
           </a>
         </div>
         <div className="Home-token-card-option-action">
-          <BuyLink to="/buy_gmx" className="default-btn custom-buy-btn pointer-events-none" network={SEPOLIA}>
+          <BuyLink to="/buy_gmx" className="default-btn custom-buy-btn pointer-events-none" network={AVALANCHE_FUJI}>
             Buy REX
           </BuyLink>
         </div>
@@ -75,11 +75,11 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           $RLP is a liquidity provider token. Accrues 70% of protocol revenue in the form of SYS and a portion of esREX
           token issuance emission.{" "}
         </div>
-        <a href="https://docs.rollex.xyz/tokenomics" target="_blank" rel="noreferrer" className=" read-more">
+        <a href="https://docs.rollex.finance/tokenomics" target="_blank" rel="noreferrer" className=" read-more">
           Learn more
         </a>
         <div className="Home-token-card-option-action">
-          <BuyLink to="/buy_glp" className="default-btn custom-buy-btn pointer-events-none" network={SEPOLIA}>
+          <BuyLink to="/buy_glp" className="default-btn custom-buy-btn pointer-events-none" network={AVALANCHE_FUJI}>
             Buy RLP
           </BuyLink>
         </div>

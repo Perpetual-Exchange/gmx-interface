@@ -9,6 +9,9 @@ import TooltipComponent from "components/Tooltip/Tooltip";
 import hexToRgba from "hex-to-rgba";
 import { ethers } from "ethers";
 
+import d1 from "../../img/app-dashboard/d1.png";
+import d2 from "../../img/app-dashboard/d2.png";
+
 import {
   USD_DECIMALS,
   GMX_DECIMALS,
@@ -36,7 +39,7 @@ import SEO from "components/Common/SEO";
 import { useTotalVolume, useVolumeInfo, useFeesSummary } from "domain/stats";
 import StatsTooltip from "components/StatsTooltip/StatsTooltip";
 import StatsTooltipRow from "components/StatsTooltip/StatsTooltipRow";
-import { ARBITRUM, AVALANCHE, getChainName } from "config/chains";
+import { AVALANCHE, AVALANCHE_FUJI, getChainName } from "config/chains";
 import { getServerUrl } from "config/backend";
 import { contractFetcher } from "lib/contracts";
 import { useInfoTokens } from "domain/tokens";
@@ -46,7 +49,7 @@ import { useChainId } from "lib/chains";
 import { formatDate } from "lib/dates";
 import { getIcons } from "config/icons";
 import useUniqueUsers from "domain/stats/useUniqueUsers";
-const ACTIVE_CHAIN_IDS = [ARBITRUM, AVALANCHE];
+const ACTIVE_CHAIN_IDS = [AVALANCHE_FUJI, AVALANCHE];
 
 const { AddressZero } = ethers.constants;
 
@@ -91,7 +94,7 @@ function getCurrentFeesUsd(tokenAddresses, fees, infoTokens) {
 
   return currentFeesUsd;
 }
-
+//
 export default function DashboardV2() {
   const { active, library } = useWeb3React();
   const { chainId } = useChainId();
@@ -150,11 +153,10 @@ export default function DashboardV2() {
   );
 
   const { infoTokens } = useInfoTokens(library, chainId, active, undefined, undefined);
-  const { infoTokens: infoTokensArbitrum } = useInfoTokens(null, ARBITRUM, active, undefined, undefined);
+  const { infoTokens: infoTokensFuji } = useInfoTokens(null, AVALANCHE_FUJI, active, undefined, undefined);
   const { infoTokens: infoTokensAvax } = useInfoTokens(null, AVALANCHE, active, undefined, undefined);
-
   const { data: currentFees } = useSWR(
-    infoTokensArbitrum[AddressZero].contractMinPrice && infoTokensAvax[AddressZero].contractMinPrice
+    infoTokensFuji[AddressZero].contractMinPrice && infoTokensAvax[AddressZero].contractMinPrice
       ? "Dashboard:currentFees"
       : null,
     {
@@ -170,12 +172,12 @@ export default function DashboardV2() {
             )
           )
         ).then((fees) => {
-          return fees.reduce(
+          const result = fees.reduce(
             (acc, cv, i) => {
               const feeUSD = getCurrentFeesUsd(
                 getWhitelistedTokenAddresses(ACTIVE_CHAIN_IDS[i]),
                 cv,
-                ACTIVE_CHAIN_IDS[i] === ARBITRUM ? infoTokensArbitrum : infoTokensAvax
+                ACTIVE_CHAIN_IDS[i] === AVALANCHE_FUJI ? infoTokensFuji : infoTokensAvax
               );
               acc[ACTIVE_CHAIN_IDS[i]] = feeUSD;
               acc.total = acc.total.add(feeUSD);
@@ -183,6 +185,7 @@ export default function DashboardV2() {
             },
             { total: bigNumberify(0) }
           );
+          return result;
         });
       },
     }
@@ -213,15 +216,11 @@ export default function DashboardV2() {
       { total: 0 }
     );
 
-  const { gmxPrice, gmxPriceFromArbitrum, gmxPriceFromAvalanche } = useGmxPrice(
-    chainId,
-    { arbitrum: chainId === ARBITRUM ? library : undefined },
-    active
-  );
+  const { gmxPrice, gmxPriceFromAvalanche } = useGmxPrice(chainId, undefined, active);
 
   let { total: totalGmxInLiquidity } = useTotalGmxInLiquidity(chainId, active);
 
-  let { avax: avaxStakedGmx, arbitrum: arbitrumStakedGmx, total: totalStakedGmx } = useTotalGmxStaked();
+  let { avax: avaxStakedGmx, total: totalStakedGmx } = useTotalGmxStaked();
 
   let gmxMarketCap;
   if (gmxPrice && totalGmxSupply) {
@@ -326,7 +325,7 @@ export default function DashboardV2() {
                     <br />
                     Get lower fees to{" "}
                     <Link to="/buy_glp" target="_blank" rel="noopener noreferrer">
-                      buy GLP
+                      buy OLP
                     </Link>{" "}
                     with {tokenInfo.symbol}, and to{" "}
                     <Link to="/trade" target="_blank" rel="noopener noreferrer">
@@ -352,7 +351,7 @@ export default function DashboardV2() {
               )}
               <br />
               <div>
-                <ExternalLink href="https://gmxio.gitbook.io/gmx/glp">
+                <ExternalLink href="https://docs.rollex.finance/liquidity-provider">
                   <Trans>More Info</Trans>
                 </ExternalLink>
               </div>
@@ -468,20 +467,19 @@ export default function DashboardV2() {
 
   return (
     <SEO title={getPageTitle(t`Dashboard`)}>
-      <div className="default-container DashboardV2 page-layout">
+      <div className="default-container page-layout DashboardV2">
         <div className="section-title-block">
-          <div className="section-title-icon"></div>
+          <img src={d1} className="right-b-icon" alt="" />
           <div className="section-title-content">
             <div className="Page-title">
-              <Trans>Stats</Trans> <img width="24" src={currentIcons.network} alt="Network Icon" />
+              <Trans>Stats</Trans>
             </div>
             <div className="Page-description">
               <Trans>
-                {chainName} Total Stats start from {totalStatsStartDate}.<br /> For detailed stats:
+                {chainName} Total Stats start from {totalStatsStartDate}.<br /> To view detailed stats, please check the
               </Trans>{" "}
-              {chainId === ARBITRUM && <ExternalLink href="https://stats.gmx.io">https://stats.gmx.io</ExternalLink>}
-              {chainId === AVALANCHE && (
-                <ExternalLink href="https://stats.gmx.io/avalanche">https://stats.gmx.io/avalanche</ExternalLink>
+              {chainId === AVALANCHE_FUJI && (
+                <ExternalLink href="https://stats.odx.finance/">Analytics page</ExternalLink>
               )}
               .
             </div>
@@ -504,14 +502,14 @@ export default function DashboardV2() {
                       handle={`$${formatAmount(tvl, USD_DECIMALS, 0, true)}`}
                       position="right-bottom"
                       renderContent={() => (
-                        <span>{t`Assets Under Management: GMX staked (All chains) + GLP pool (${chainName}).`}</span>
+                        <span>{t`Assets Under Management: ODX staked (All chains) + OLP pool (${chainName}).`}</span>
                       )}
                     />
                   </div>
                 </div>
                 <div className="App-card-row">
                   <div className="label">
-                    <Trans>GLP Pool</Trans>
+                    <Trans>OLP Pool</Trans>
                   </div>
                   <div>
                     <TooltipComponent
@@ -519,9 +517,9 @@ export default function DashboardV2() {
                       position="right-bottom"
                       renderContent={() => (
                         <Trans>
-                          <p>Total value of tokens in GLP pool ({chainName}).</p>
+                          <p>Total value of tokens in OLP pool ({chainName}).</p>
                           <p>
-                            Other websites may show a higher value as they add positions' collaterals to the GLP pool.
+                            Other websites may show a higher value as they add positions' collaterals to the OLP pool.
                           </p>
                         </Trans>
                       )}
@@ -540,8 +538,7 @@ export default function DashboardV2() {
                       renderContent={() => (
                         <StatsTooltip
                           title={t`Volume`}
-                          arbitrumValue={currentVolumeInfo?.[ARBITRUM]}
-                          avaxValue={currentVolumeInfo?.[AVALANCHE]}
+                          avaxValue={currentVolumeInfo?.[chainId]}
                           total={currentVolumeInfo?.total}
                         />
                       )}
@@ -560,8 +557,7 @@ export default function DashboardV2() {
                       renderContent={() => (
                         <StatsTooltip
                           title={t`Open Interest`}
-                          arbitrumValue={positionStatsInfo?.[ARBITRUM].openInterest}
-                          avaxValue={positionStatsInfo?.[AVALANCHE].openInterest}
+                          avaxValue={positionStatsInfo?.[chainId].openInterest}
                           total={positionStatsInfo?.totalOpenInterest}
                         />
                       )}
@@ -585,8 +581,7 @@ export default function DashboardV2() {
                       renderContent={() => (
                         <StatsTooltip
                           title={t`Long Positions`}
-                          arbitrumValue={positionStatsInfo?.[ARBITRUM].totalLongPositionSizes}
-                          avaxValue={positionStatsInfo?.[AVALANCHE].totalLongPositionSizes}
+                          avaxValue={positionStatsInfo?.[chainId].totalLongPositionSizes}
                           total={positionStatsInfo?.totalLongPositionSizes}
                         />
                       )}
@@ -610,8 +605,7 @@ export default function DashboardV2() {
                       renderContent={() => (
                         <StatsTooltip
                           title={t`Short Positions`}
-                          arbitrumValue={positionStatsInfo?.[ARBITRUM].totalShortPositionSizes}
-                          avaxValue={positionStatsInfo?.[AVALANCHE].totalShortPositionSizes}
+                          avaxValue={positionStatsInfo?.[chainId].totalShortPositionSizes}
                           total={positionStatsInfo?.totalShortPositionSizes}
                         />
                       )}
@@ -629,12 +623,7 @@ export default function DashboardV2() {
                         className="nowrap"
                         handle={`$${formatAmount(currentFees?.[chainId], USD_DECIMALS, 2, true)}`}
                         renderContent={() => (
-                          <StatsTooltip
-                            title={t`Fees`}
-                            arbitrumValue={currentFees?.[ARBITRUM]}
-                            avaxValue={currentFees?.[AVALANCHE]}
-                            total={currentFees?.total}
-                          />
+                          <StatsTooltip title={t`Fees`} avaxValue={currentFees?.[chainId]} total={currentFees?.total} />
                         )}
                       />
                     </div>
@@ -660,8 +649,7 @@ export default function DashboardV2() {
                       renderContent={() => (
                         <StatsTooltip
                           title={t`Total Fees`}
-                          arbitrumValue={totalFees?.[ARBITRUM]}
-                          avaxValue={totalFees?.[AVALANCHE]}
+                          avaxValue={totalFees?.[chainId]}
                           total={totalFees?.total}
                           decimalsForConversion={0}
                         />
@@ -681,8 +669,7 @@ export default function DashboardV2() {
                       renderContent={() => (
                         <StatsTooltip
                           title={t`Total Volume`}
-                          arbitrumValue={totalVolume?.[ARBITRUM]}
-                          avaxValue={totalVolume?.[AVALANCHE]}
+                          avaxValue={totalVolume?.[chainId]}
                           total={totalVolume?.total}
                         />
                       )}
@@ -701,8 +688,7 @@ export default function DashboardV2() {
                       renderContent={() => (
                         <StatsTooltip
                           title={t`Total Users`}
-                          arbitrumValue={uniqueUsers?.[ARBITRUM]}
-                          avaxValue={uniqueUsers?.[AVALANCHE]}
+                          avaxValue={uniqueUsers?.[chainId]}
                           total={uniqueUsers?.total}
                           showDollar={false}
                           shouldFormat={false}
@@ -720,237 +706,253 @@ export default function DashboardV2() {
               </div>
             </div>
           </div>
-          <div className="Tab-title-section">
+          <div className="mt-40 Tab-title-section">
+            <img src={d2} className="right-b-icon" alt="" />
             <div className="Page-title">
-              <Trans>Tokens</Trans> <img src={currentIcons.network} width="24" alt="Network Icon" />
+              <Trans>Tokens</Trans>
             </div>
             <div className="Page-description">
-              <Trans>Platform and GLP index tokens.</Trans>
+              <Trans>Platform and OLP index tokens.</Trans>
             </div>
           </div>
           <div className="DashboardV2-token-cards">
             <div className="stats-wrapper stats-wrapper--gmx">
               <div className="App-card">
-                <div className="stats-block">
-                  <div className="App-card-title">
-                    <div className="App-card-title-mark">
-                      <div className="App-card-title-mark-icon">
-                        <img src={currentIcons.gmx} width="40" alt="GMX Token Icon" />
-                      </div>
-                      <div className="App-card-title-mark-info">
-                        <div className="App-card-title-mark-title">GMX</div>
-                        <div className="App-card-title-mark-subtitle">GMX</div>
-                      </div>
-                      <div>
-                        <AssetDropdown assetSymbol="GMX" />
-                      </div>
+                <div className="App-card-title">
+                  <div className="App-card-title-mark">
+                    <div className="App-card-title-mark-icon">
+                      <img src={currentIcons.gmx} width="30" alt="ODX Token Icon" />
+                    </div>
+                    <div className="App-card-title-mark-info">
+                      <div className="App-card-title-mark-title">ODX</div>
+                    </div>
+                    <div className="mt-2">
+                      <AssetDropdown assetSymbol="ODX" />
                     </div>
                   </div>
-                  <div className="App-card-divider"></div>
-                  <div className="App-card-content">
-                    <div className="App-card-row">
-                      <div className="label">
-                        <Trans>Price</Trans>
+                  <div className="flex-1"></div>
+                  <a
+                    href="https://docs.rollex.finance/tokenomics"
+                    target="_blank"
+                    className="font-normal text-[18px] hover:text-[#80ae0e]"
+                    rel="noreferrer"
+                  >
+                    Read More
+                  </a>
+                </div>
+                <div className="App-card-divider"></div>
+                <div className="flex">
+                  <div className="stats-block">
+                    <div className="App-card-content">
+                      <div className="App-card-row">
+                        <div className="label">
+                          <Trans>Price</Trans>
+                        </div>
+                        <div>
+                          {!gmxPrice && "..."}
+                          {gmxPrice && (
+                            <TooltipComponent
+                              position="right-bottom"
+                              className="nowrap"
+                              handle={"$" + formatAmount(gmxPrice, USD_DECIMALS, 2, true)}
+                              renderContent={() => (
+                                <>
+                                  <StatsTooltipRow
+                                    label={t`Price on Avalanche`}
+                                    value={formatAmount(gmxPriceFromAvalanche, USD_DECIMALS, 2, true)}
+                                    showDollar={true}
+                                  />
+                                </>
+                              )}
+                            />
+                          )}
+                        </div>
                       </div>
-                      <div>
-                        {!gmxPrice && "..."}
-                        {gmxPrice && (
+                      <div className="App-card-row">
+                        <div className="label">
+                          <Trans>Supply</Trans>
+                        </div>
+                        <div>{formatAmount(totalGmxSupply, GMX_DECIMALS, 0, true)} ODX</div>
+                      </div>
+                      <div className="App-card-row">
+                        <div className="label">
+                          <Trans>Total Staked</Trans>
+                        </div>
+                        <div>
                           <TooltipComponent
                             position="right-bottom"
                             className="nowrap"
-                            handle={"$" + formatAmount(gmxPrice, USD_DECIMALS, 2, true)}
+                            handle={`$${formatAmount(stakedGmxSupplyUsd, USD_DECIMALS, 0, true)}`}
                             renderContent={() => (
-                              <>
-                                <StatsTooltipRow
-                                  label={t`Price on Arbitrum`}
-                                  value={formatAmount(gmxPriceFromArbitrum, USD_DECIMALS, 2, true)}
-                                  showDollar={true}
-                                />
-                                <StatsTooltipRow
-                                  label={t`Price on Avalanche`}
-                                  value={formatAmount(gmxPriceFromAvalanche, USD_DECIMALS, 2, true)}
-                                  showDollar={true}
-                                />
-                              </>
+                              <StatsTooltip
+                                title={t`Staked`}
+                                avaxValue={avaxStakedGmx}
+                                total={totalStakedGmx}
+                                decimalsForConversion={GMX_DECIMALS}
+                                showDollar={false}
+                              />
                             )}
                           />
-                        )}
+                        </div>
                       </div>
-                    </div>
-                    <div className="App-card-row">
-                      <div className="label">
-                        <Trans>Supply</Trans>
+                      <div className="App-card-row">
+                        <div className="label">
+                          <Trans>Market Cap</Trans>
+                        </div>
+                        <div>${formatAmount(gmxMarketCap, USD_DECIMALS, 0, true)}</div>
                       </div>
-                      <div>{formatAmount(totalGmxSupply, GMX_DECIMALS, 0, true)} GMX</div>
-                    </div>
-                    <div className="App-card-row">
-                      <div className="label">
-                        <Trans>Total Staked</Trans>
-                      </div>
-                      <div>
-                        <TooltipComponent
-                          position="right-bottom"
-                          className="nowrap"
-                          handle={`$${formatAmount(stakedGmxSupplyUsd, USD_DECIMALS, 0, true)}`}
-                          renderContent={() => (
-                            <StatsTooltip
-                              title={t`Staked`}
-                              arbitrumValue={arbitrumStakedGmx}
-                              avaxValue={avaxStakedGmx}
-                              total={totalStakedGmx}
-                              decimalsForConversion={GMX_DECIMALS}
-                              showDollar={false}
-                            />
-                          )}
-                        />
-                      </div>
-                    </div>
-                    <div className="App-card-row">
-                      <div className="label">
-                        <Trans>Market Cap</Trans>
-                      </div>
-                      <div>${formatAmount(gmxMarketCap, USD_DECIMALS, 0, true)}</div>
                     </div>
                   </div>
-                </div>
-                <div className="stats-piechart" onMouseLeave={onGMXDistributionChartLeave}>
-                  {gmxDistributionData.length > 0 && (
-                    <PieChart width={210} height={210}>
-                      <Pie
-                        data={gmxDistributionData}
-                        cx={100}
-                        cy={100}
-                        innerRadius={73}
-                        outerRadius={80}
-                        fill="#8884d8"
-                        dataKey="value"
-                        startAngle={90}
-                        endAngle={-270}
-                        paddingAngle={2}
-                        onMouseEnter={onGMXDistributionChartEnter}
-                        onMouseOut={onGMXDistributionChartLeave}
-                        onMouseLeave={onGMXDistributionChartLeave}
-                      >
-                        {gmxDistributionData.map((entry, index) => (
-                          <Cell
-                            key={`cell-${index}`}
-                            fill={entry.color}
-                            style={{
-                              filter:
-                                gmxActiveIndex === index
-                                  ? `drop-shadow(0px 0px 6px ${hexToRgba(entry.color, 0.7)})`
-                                  : "none",
-                              cursor: "pointer",
-                            }}
-                            stroke={entry.color}
-                            strokeWidth={gmxActiveIndex === index ? 1 : 1}
-                          />
-                        ))}
-                      </Pie>
-                      <text x={"50%"} y={"50%"} fill="white" textAnchor="middle" dominantBaseline="middle">
-                        <Trans>Distribution</Trans>
-                      </text>
-                      <Tooltip content={<CustomTooltip />} />
-                    </PieChart>
-                  )}
+                  <div className="stats-piechart" onMouseLeave={onGMXDistributionChartLeave}>
+                    {gmxDistributionData.length > 0 && (
+                      <PieChart width={170} height={170}>
+                        <Pie
+                          data={gmxDistributionData}
+                          cx={80}
+                          cy={80}
+                          innerRadius={53}
+                          outerRadius={60}
+                          fill="#8884d8"
+                          dataKey="value"
+                          startAngle={90}
+                          endAngle={-270}
+                          paddingAngle={2}
+                          onMouseEnter={onGMXDistributionChartEnter}
+                          onMouseOut={onGMXDistributionChartLeave}
+                          onMouseLeave={onGMXDistributionChartLeave}
+                        >
+                          {gmxDistributionData.map((entry, index) => (
+                            <Cell
+                              key={`cell-${index}`}
+                              fill={entry.color}
+                              style={{
+                                filter:
+                                  gmxActiveIndex === index
+                                    ? `drop-shadow(0px 0px 6px ${hexToRgba(entry.color, 0.7)})`
+                                    : "none",
+                                cursor: "pointer",
+                              }}
+                              stroke={entry.color}
+                              strokeWidth={gmxActiveIndex === index ? 1 : 1}
+                            />
+                          ))}
+                        </Pie>
+                        <text x={"50%"} y={"50%"} fill="white" textAnchor="middle" dominantBaseline="middle">
+                          <Trans>Distribution</Trans>
+                        </text>
+                        <Tooltip content={<CustomTooltip />} />
+                      </PieChart>
+                    )}
+                  </div>
                 </div>
               </div>
               <div className="App-card">
-                <div className="stats-block">
-                  <div className="App-card-title">
-                    <div className="App-card-title-mark">
-                      <div className="App-card-title-mark-icon">
-                        <img src={currentIcons.glp} width="40" alt="GLP Icon" />
-                      </div>
-                      <div className="App-card-title-mark-info">
-                        <div className="App-card-title-mark-title">GLP</div>
-                        <div className="App-card-title-mark-subtitle">GLP</div>
-                      </div>
-                      <div>
-                        <AssetDropdown assetSymbol="GLP" />
-                      </div>
+                <div className="App-card-title">
+                  <div className="App-card-title-mark">
+                    <div className="App-card-title-mark-icon">
+                      <img src={currentIcons.glp} width="30" alt="OLP Icon" />
+                    </div>
+                    <div className="App-card-title-mark-info">
+                      <div className="App-card-title-mark-title">OLP</div>
+                    </div>
+                    <div className="mt-2">
+                      <AssetDropdown assetSymbol="OLP" />
                     </div>
                   </div>
-                  <div className="App-card-divider"></div>
-                  <div className="App-card-content">
-                    <div className="App-card-row">
-                      <div className="label">
-                        <Trans>Price</Trans>
-                      </div>
-                      <div>${formatAmount(glpPrice, USD_DECIMALS, 3, true)}</div>
-                    </div>
-                    <div className="App-card-row">
-                      <div className="label">
-                        <Trans>Supply</Trans>
-                      </div>
-                      <div>{formatAmount(glpSupply, GLP_DECIMALS, 0, true)} GLP</div>
-                    </div>
-                    <div className="App-card-row">
-                      <div className="label">
-                        <Trans>Total Staked</Trans>
-                      </div>
-                      <div>${formatAmount(glpMarketCap, USD_DECIMALS, 0, true)}</div>
-                    </div>
-                    <div className="App-card-row">
-                      <div className="label">
-                        <Trans>Market Cap</Trans>
-                      </div>
-                      <div>${formatAmount(glpMarketCap, USD_DECIMALS, 0, true)}</div>
-                    </div>
-                    <div className="App-card-row">
-                      <div className="label">
-                        <Trans>Stablecoin Percentage</Trans>
-                      </div>
-                      <div>{stablePercentage}%</div>
-                    </div>
-                  </div>
+                  <div className="flex-1"></div>
+                  <a
+                    href="https://docs.rollex.finance/tokenomics"
+                    target="_blank"
+                    className="font-normal text-[18px] hover:text-[#80ae0e]"
+                    rel="noreferrer"
+                  >
+                    Read More
+                  </a>
                 </div>
-                <div className="stats-piechart" onMouseOut={onGLPPoolChartLeave}>
-                  {glpPool.length > 0 && (
-                    <PieChart width={210} height={210}>
-                      <Pie
-                        data={glpPool}
-                        cx={100}
-                        cy={100}
-                        innerRadius={73}
-                        outerRadius={80}
-                        fill="#8884d8"
-                        dataKey="value"
-                        startAngle={90}
-                        endAngle={-270}
-                        onMouseEnter={onGLPPoolChartEnter}
-                        onMouseOut={onGLPPoolChartLeave}
-                        onMouseLeave={onGLPPoolChartLeave}
-                        paddingAngle={2}
-                      >
-                        {glpPool.map((entry, index) => (
-                          <Cell
-                            key={`cell-${index}`}
-                            fill={GLP_POOL_COLORS[entry.name]}
-                            style={{
-                              filter:
-                                glpActiveIndex === index
-                                  ? `drop-shadow(0px 0px 6px ${hexToRgba(GLP_POOL_COLORS[entry.name], 0.7)})`
-                                  : "none",
-                              cursor: "pointer",
-                            }}
-                            stroke={GLP_POOL_COLORS[entry.name]}
-                            strokeWidth={glpActiveIndex === index ? 1 : 1}
-                          />
-                        ))}
-                      </Pie>
-                      <text x={"50%"} y={"50%"} fill="white" textAnchor="middle" dominantBaseline="middle">
-                        GLP Pool
-                      </text>
-                      <Tooltip content={<CustomTooltip />} />
-                    </PieChart>
-                  )}
+                <div className="App-card-divider"></div>
+                <div className="flex">
+                  <div className="stats-block">
+                    <div className="App-card-content">
+                      <div className="App-card-row">
+                        <div className="label">
+                          <Trans>Price</Trans>
+                        </div>
+                        <div>${formatAmount(glpPrice, USD_DECIMALS, 3, true)}</div>
+                      </div>
+                      <div className="App-card-row">
+                        <div className="label">
+                          <Trans>Supply</Trans>
+                        </div>
+                        <div>{formatAmount(glpSupply, GLP_DECIMALS, 0, true)} OLP</div>
+                      </div>
+                      <div className="App-card-row">
+                        <div className="label">
+                          <Trans>Total Staked</Trans>
+                        </div>
+                        <div>${formatAmount(glpMarketCap, USD_DECIMALS, 0, true)}</div>
+                      </div>
+                      <div className="App-card-row">
+                        <div className="label">
+                          <Trans>Market Cap</Trans>
+                        </div>
+                        <div>${formatAmount(glpMarketCap, USD_DECIMALS, 0, true)}</div>
+                      </div>
+                      <div className="App-card-row">
+                        <div className="label">
+                          <Trans>Stablecoin Percentage</Trans>
+                        </div>
+                        <div>{stablePercentage}%</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="stats-piechart" onMouseOut={onGLPPoolChartLeave}>
+                    {glpPool.length > 0 && (
+                      <PieChart width={170} height={170}>
+                        <Pie
+                          data={glpPool}
+                          cx={80}
+                          cy={80}
+                          innerRadius={53}
+                          outerRadius={60}
+                          fill="#8884d8"
+                          dataKey="value"
+                          startAngle={90}
+                          endAngle={-270}
+                          onMouseEnter={onGLPPoolChartEnter}
+                          onMouseOut={onGLPPoolChartLeave}
+                          onMouseLeave={onGLPPoolChartLeave}
+                          paddingAngle={2}
+                        >
+                          {glpPool.map((entry, index) => (
+                            <Cell
+                              key={`cell-${index}`}
+                              fill={GLP_POOL_COLORS[entry.name]}
+                              style={{
+                                filter:
+                                  glpActiveIndex === index
+                                    ? `drop-shadow(0px 0px 6px ${hexToRgba(GLP_POOL_COLORS[entry.name], 0.7)})`
+                                    : "none",
+                                cursor: "pointer",
+                              }}
+                              stroke={GLP_POOL_COLORS[entry.name]}
+                              strokeWidth={glpActiveIndex === index ? 1 : 1}
+                            />
+                          ))}
+                        </Pie>
+                        <text x={"50%"} y={"50%"} fill="white" textAnchor="middle" dominantBaseline="middle">
+                          OLP Pool
+                        </text>
+                        <Tooltip content={<CustomTooltip />} />
+                      </PieChart>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="token-table-wrapper App-card">
+            <div className="mt-40 token-table-wrapper App-card">
               <div className="App-card-title">
-                <Trans>GLP Index Composition</Trans> <img src={currentIcons.network} width="16" alt="Network Icon" />
+                <img src={currentIcons.network} width="30" className="mr-4" alt="Network Icon" />
+                <Trans>OLP Index Composition</Trans>
               </div>
               <div className="App-card-divider"></div>
               <table className="token-table">
@@ -992,7 +994,7 @@ export default function DashboardV2() {
                           <div className="token-symbol-wrapper">
                             <div className="App-card-title-info">
                               <div className="App-card-title-info-icon">
-                                <img src={tokenImage} alt={token.symbol} width="40" />
+                                <img src={tokenImage} alt={token.symbol} width="30" />
                               </div>
                               <div className="App-card-title-info-text">
                                 <div className="App-card-info-title">{token.name}</div>
@@ -1046,7 +1048,7 @@ export default function DashboardV2() {
               </table>
             </div>
             <div className="Page-title Tab-title-section glp-composition-small">
-              <Trans>GLP Index Composition</Trans>{" "}
+              <Trans>OLP Index Composition</Trans>{" "}
               <img className="Page-title-icon" src={currentIcons.network} width="24" alt="Network Icon" />
             </div>
             <div className="token-grid">

@@ -1,5 +1,4 @@
 import "./Referrals.css";
-import React from "react";
 import { useLocalStorage } from "react-use";
 import { Trans, t } from "@lingui/macro";
 import { useWeb3React } from "@web3-react/core";
@@ -20,8 +19,8 @@ import { useLocalStorageSerializeKey } from "lib/localStorage";
 import { REFERRALS_SELECTED_TAB_KEY } from "config/localStorage";
 import { useChainId } from "lib/chains";
 import ExternalLink from "components/ExternalLink/ExternalLink";
-import { getIcon } from "config/icons";
 import useReferralsData from "domain/referrals/useReferralsData";
+import r1 from "../../img/app-dashboard/r1.png";
 
 const TRADERS = "Traders";
 const AFFILIATES = "Affiliates";
@@ -45,7 +44,6 @@ function Referrals({ connectWallet, setPendingTxns, pendingTxns }) {
   const { userReferralCode, userReferralCodeString } = useUserReferralCode(library, chainId, account);
   const { codeOwner } = useCodeOwner(library, chainId, account, userReferralCode);
   const { referrerTier: traderTier } = useReferrerTier(library, chainId, codeOwner);
-  const networkIcon = getIcon(chainId, "network");
 
   function handleCreateReferralCode(referralCode) {
     return registerReferralCode(chainId, referralCode, library, {
@@ -112,19 +110,17 @@ function Referrals({ connectWallet, setPendingTxns, pendingTxns }) {
     <SEO title={getPageTitle(t`Referrals`)}>
       <div className="default-container page-layout Referrals">
         <div className="section-title-block">
-          <div className="section-title-icon" />
+          <img src={r1} className="right-b-icon" alt="" />
           <div className="section-title-content">
             <div className="Page-title">
-              <Trans>
-                Referrals <img width="24" src={networkIcon} alt="Network Icon" />
-              </Trans>
+              <Trans>Referrals</Trans>
             </div>
             <div className="Page-description">
               <Trans>
-                Get fee discounts and earn rebates through the GMX referral program.
+                Get fee discounts and earn rebates through the ODX referral program.
                 <br />
                 For more information, please read the{" "}
-                <ExternalLink href="https://gmxio.gitbook.io/gmx/referrals">referral program details</ExternalLink>.
+                <ExternalLink href="https://docs.rollex.finance/referrals">referral program details</ExternalLink>.
               </Trans>
             </div>
           </div>

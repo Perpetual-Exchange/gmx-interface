@@ -11,42 +11,43 @@ export default function TermsAndConditions() {
       <div className="default-container Page page-layout">
         <div>
           <div className="Page-title-section center">
-            <div className="Page-title">GMX</div>
+            <div className="Page-title">ODX</div>
             <div className="Page-subtitle">Terms and Conditions</div>
             <div className="Page-description">Last modified: August 1st, 2022</div>
           </div>
           <div className="content">
             <div className="section">
               <p className="body-text">
-                Welcome to GMX.io ("we," "us," or "our"), the informational resource for GMX Protocol, as defined below.
+                Welcome to ODX.finance ("we," "us," or "our"), the informational resource for ODX Protocol, as defined
+                below.
               </p>
               <p className="body-text">
-                GMX.io provides information and resources about the fundamentals of the decentralized non-custodial
-                protocol called the GMX Protocol (the "GMX Protocol," "Protocol," or "GMX DApp"). GMX.io is not an
-                available access point to the GMX Protocol.
+                ODX.finance provides information and resources about the fundamentals of the decentralized non-custodial
+                protocol called the ODX Protocol (the "ODX Protocol," "Protocol," or "ODX DApp"). ODX.finance is not an
+                available access point to the ODX Protocol.
               </p>
               <p className="body-text">
                 These Terms and Conditions and any other documents incorporated herein by reference (collectively, these
                 "Terms") to you or the company or other legal entity you represent ("you" or "your") explains the terms
-                and conditions by which you may access GMX.io ("the Site") and app.GMX.io ("the Interface"). Please do
-                not use the Site or Interface if you disagree with any of these Terms.
+                and conditions by which you may access ODX.finance ("the Site") and app.ODX.finance ("the Interface").
+                Please do not use the Site or Interface if you disagree with any of these Terms.
               </p>
             </div>
             <div className="section">
               <h3 className="body-title">1. USE OF THE SITE AND THE INTERFACE</h3>
-              <p className="body-text">The GMX.io site is for informational purposes only.</p>
+              <p className="body-text">The ODX.finance site is for informational purposes only.</p>
               <p className="body-text">
-                GMX.io is not part of any transaction on the blockchain networks underlying the GMX Protocol; we do not
-                have possession, custody, or control over any crypto assets appearing on the Interface; and we do not
-                have possession, custody, or control over any user's funds. Further, we do not store, send, or receive
-                any crypto assets. You understand that when you interact with any GMX Protocol smart contracts, you
-                always retain control over your crypto assets. We do not have access to your private keys.
+                ODX.finance is not part of any transaction on the blockchain networks underlying the ODX Protocol; we do
+                not have possession, custody, or control over any crypto assets appearing on the Interface; and we do
+                not have possession, custody, or control over any user's funds. Further, we do not store, send, or
+                receive any crypto assets. You understand that when you interact with any ODX Protocol smart contracts,
+                you always retain control over your crypto assets. We do not have access to your private keys.
               </p>
               <ul className="list-style-none">
                 <li>
                   <p className="body-text">
-                    1.1. As a condition to accessing or using the Site or Interface, you represent and warrant to GMX.io
-                    the following:
+                    1.1. As a condition to accessing or using the Site or Interface, you represent and warrant to
+                    ODX.finance the following:
                   </p>
                   <ul className="list-style-none">
                     <li>
@@ -103,7 +104,7 @@ export default function TermsAndConditions() {
                         transaction, activity, event or other matter, including any rule, letter, order, judgment,
                         directive or other requirements, guidance, or guideline issued by any domestic or foreign
                         federal, provincial or state, municipal, local or other governmental, regulatory, judicial or
-                        administrative authority having jurisdiction over GMX.io or you as otherwise duly enacted,
+                        administrative authority having jurisdiction over ODX.finance or you as otherwise duly enacted,
                         enforceable by law, the common law or equity (collectively, "Applicable Laws"); or (b)
                         contribute to or facilitate any illegal activity.
                       </p>
@@ -122,10 +123,11 @@ export default function TermsAndConditions() {
                       <p className="body-text">
                         1.2.1. From time to time, the Site or the Interface may be inaccessible or inoperable for any
                         reason, including, but not limited to: (a) equipment malfunctions; (b) periodic maintenance
-                        procedures or repairs that GMX.io or any of its suppliers or contractors may undertake from time
-                        to time; (c) causes beyond GMX.io's control or that GMX.io could not reasonably foresee; (d)
-                        disruptions and temporary or permanent unavailability of underlying blockchain infrastructure;
-                        or (e) unavailability of third-party service providers or external partners for any reason;
+                        procedures or repairs that ODX.finance or any of its suppliers or contractors may undertake from
+                        time to time; (c) causes beyond ODX.finance's control or that ODX.finance could not reasonably
+                        foresee; (d) disruptions and temporary or permanent unavailability of underlying blockchain
+                        infrastructure; or (e) unavailability of third-party service providers or external partners for
+                        any reason;
                       </p>
                     </li>
                     <li>
@@ -147,11 +149,11 @@ export default function TermsAndConditions() {
                       <p className="body-text">
                         1.2.4. The pricing information provided on the Site or the Interface does not represent an
                         offer, a solicitation of an offer, or any advice regarding, or recommendation to enter into, a
-                        transaction with GMX.io;
+                        transaction with ODX.finance;
                       </p>
                     </li>
                     <li>
-                      <p className="body-text">1.2.5. GMX.io does not act as a broker or advisor for you;</p>
+                      <p className="body-text">1.2.5. ODX.finance does not act as a broker or advisor for you;</p>
                     </li>
                     <li>
                       <p className="body-text">
@@ -191,7 +193,8 @@ export default function TermsAndConditions() {
               <p className="body-text">
                 You are required to pay all fees for transactions involving certain blockchain networks. These fees may
                 include gas costs and all other fees reflected on the Interface at your use, including trading-related
-                fees. GMX.io does not receive fees for any blockchain transactions or using the Site or the Interface.
+                fees. ODX.finance does not receive fees for any blockchain transactions or using the Site or the
+                Interface.
               </p>
             </div>
             <div className="section">
@@ -211,20 +214,20 @@ export default function TermsAndConditions() {
               <ul className="list-style-none">
                 <li>
                   <p className="body-text">
-                    4.1. GMX.io own all rights, names, logos, and other marks used on the Site and the Interface,
+                    4.1. ODX.finance own all rights, names, logos, and other marks used on the Site and the Interface,
                     including, without limitation, any copyrights in and to any content, code, data, or other materials
-                    that you may access or use on or through the Site or the Interface; however, the code for the GMX
-                    Protocol and the Interface (app.GMX.io) deployed on IPFS is open-sourced. Except as expressly set
-                    forth herein, your use of or access to the Site or the Interface does not grant you any ownership or
-                    other rights therein.
+                    that you may access or use on or through the Site or the Interface; however, the code for the ODX
+                    Protocol and the Interface (app.ODX.finance) deployed on IPFS is open-sourced. Except as expressly
+                    set forth herein, your use of or access to the Site or the Interface does not grant you any
+                    ownership or other rights therein.
                   </p>
                 </li>
                 <li>
                   <p className="body-text">
-                    4.2. GMX.io may use and share your comments, bug reports, ideas, or other feedback that you may
-                    provide, including suggestions about how we might improve. You agree that GMX.io is free to use or
-                    not use any feedback we receive from you as we see fit, including copying and sharing such feedback
-                    with third parties, without any obligation to you.
+                    4.2. ODX.finance may use and share your comments, bug reports, ideas, or other feedback that you may
+                    provide, including suggestions about how we might improve. You agree that ODX.finance is free to use
+                    or not use any feedback we receive from you as we see fit, including copying and sharing such
+                    feedback with third parties, without any obligation to you.
                   </p>
                 </li>
               </ul>
@@ -234,23 +237,23 @@ export default function TermsAndConditions() {
               <ul className="list-style-none">
                 <li>
                   <p className="body-text">
-                    5.1. GMX.io reserve the right, at our sole discretion, from time to time and with or without prior
-                    notice to you, to modify, suspend or disable (temporarily or permanently) the Site or our subdomain
-                    to the Interface, in whole or in part, for any reason whatsoever, including, without limitation.
-                    Upon termination of your access, your right to use the Site or the Interface from our subdomain will
-                    immediately cease. However, it would still be accessible via a third party since we do not host or
-                    own its code. GMX.io will not be liable for any losses suffered by you resulting from any
-                    modification to the Site or the Interface or from any modification, suspension, or termination, for
-                    any reason, of your access to all or any portion of the Site or the Interface.
+                    5.1. ODX.finance reserve the right, at our sole discretion, from time to time and with or without
+                    prior notice to you, to modify, suspend or disable (temporarily or permanently) the Site or our
+                    subdomain to the Interface, in whole or in part, for any reason whatsoever, including, without
+                    limitation. Upon termination of your access, your right to use the Site or the Interface from our
+                    subdomain will immediately cease. However, it would still be accessible via a third party since we
+                    do not host or own its code. ODX.finance will not be liable for any losses suffered by you resulting
+                    from any modification to the Site or the Interface or from any modification, suspension, or
+                    termination, for any reason, of your access to all or any portion of the Site or the Interface.
                   </p>
                 </li>
                 <li>
                   <p className="body-text">
-                    5.2. GMX.io may revise these Terms from time to time. We will notify you by updating the date at the
-                    top of the Terms and maintaining a current version. The most current version of the Terms will
-                    always be at https://gmx.io/#/terms-and-conditions. All modifications will be effective when they
-                    are posted. By continuing to access or use the Site or the Interface after those revisions become
-                    effective, you agree to be bound by the revised Terms.
+                    5.2. ODX.finance may revise these Terms from time to time. We will notify you by updating the date
+                    at the top of the Terms and maintaining a current version. The most current version of the Terms
+                    will always be at https://gmx.io/#/terms-and-conditions. All modifications will be effective when
+                    they are posted. By continuing to access or use the Site or the Interface after those revisions
+                    become effective, you agree to be bound by the revised Terms.
                   </p>
                 </li>
               </ul>
@@ -261,7 +264,7 @@ export default function TermsAndConditions() {
                 <li>
                   <p className="body-text">
                     6.1. The use of technology related to blockchain, smart contracts, and cryptocurrencies, among
-                    others, entails a risk that by accessing transactions, you are assuming. GMX.io does not own or
+                    others, entails a risk that by accessing transactions, you are assuming. ODX.finance does not own or
                     control any underlying software through which blockchain networks are formed. The software
                     underlying blockchain networks are open-source so anyone can use, copy, modify, and distribute it.
                     By using the Interface, you acknowledge and agree:
@@ -269,8 +272,8 @@ export default function TermsAndConditions() {
                   <ul className="list-style-none">
                     <li>
                       <p className="body-text">
-                        6.1.1. That GMX.io is not responsible for the operation of the open-source software and networks
-                        underlying the Interface;
+                        6.1.1. That ODX.finance is not responsible for the operation of the open-source software and
+                        networks underlying the Interface;
                       </p>
                     </li>
                     <li>
@@ -285,24 +288,24 @@ export default function TermsAndConditions() {
                         those commonly referred to as "forks," which may materially affect the Interface. You are
                         responsible for securing your private key(s). We do not have access to your private key(s);
                         losing control of your private key(s) will permanently and irreversibly deny you access to any
-                        blockchain-based network. Neither GMX.io nor any other person or entity will be able to retrieve
-                        or protect your digital assets. If your private key(s) are lost, you will not be able to
-                        transfer your digital assets to any blockchain address or wallet. If this occurs, you will not
-                        be able to realize any value or utility from the digital assets you may hold.
+                        blockchain-based network. Neither ODX.finance nor any other person or entity will be able to
+                        retrieve or protect your digital assets. If your private key(s) are lost, you will not be able
+                        to transfer your digital assets to any blockchain address or wallet. If this occurs, you will
+                        not be able to realize any value or utility from the digital assets you may hold.
                       </p>
                     </li>
                   </ul>
                 </li>
                 <li>
                   <p className="body-text">
-                    6.2. GMX.io is not responsible for the content of any third party, including, but not limited to,
-                    information, materials, products, or services that GMX.io does not own or control. In addition,
-                    third parties may offer promotions related to your access and use of the Interface. GMX.io does not
-                    endorse or assume any responsibility for such resources or promotions. Suppose you access any such
-                    resources or participate in any such promotions. In that case, you do so at your own risk and
-                    understand that these Terms do not apply to your dealings or relationships with any third parties.
-                    You expressly relieve GMX.io of all liability arising from using such resources or participating in
-                    such promotions.
+                    6.2. ODX.finance is not responsible for the content of any third party, including, but not limited
+                    to, information, materials, products, or services that ODX.finance does not own or control. In
+                    addition, third parties may offer promotions related to your access and use of the Interface.
+                    ODX.finance does not endorse or assume any responsibility for such resources or promotions. Suppose
+                    you access any such resources or participate in any such promotions. In that case, you do so at your
+                    own risk and understand that these Terms do not apply to your dealings or relationships with any
+                    third parties. You expressly relieve ODX.finance of all liability arising from using such resources
+                    or participating in such promotions.
                   </p>
                 </li>
                 <li>
@@ -330,9 +333,9 @@ export default function TermsAndConditions() {
                 </li>
                 <li>
                   <p className="body-text">
-                    6.6. You hereby assume and agree that GMX.io will have no responsibility or liability for the risks
-                    in Section 9. You hereby irrevocably waive, release and discharge all claims, whether known or
-                    unknown to you, against GMX.io, its affiliates, and their respective shareholders, members,
+                    6.6. You hereby assume and agree that ODX.finance will have no responsibility or liability for the
+                    risks in Section 9. You hereby irrevocably waive, release and discharge all claims, whether known or
+                    unknown to you, against ODX.finance, its affiliates, and their respective shareholders, members,
                     directors, officers, employees, agents, representatives, suppliers, and contractors related to any
                     of the risks set forth in this Section 6.
                   </p>
@@ -359,7 +362,7 @@ export default function TermsAndConditions() {
                     <li>
                       <p className="body-text">
                         7.1.2. Engage in transactions involving items that infringe or violate any copyright, trademark,
-                        right of publicity, privacy, or any other proprietary right of GMX.io;
+                        right of publicity, privacy, or any other proprietary right of ODX.finance;
                       </p>
                     </li>
                     <li>
@@ -390,7 +393,7 @@ export default function TermsAndConditions() {
                     </li>
                     <li>
                       <p className="body-text">
-                        7.1.6. Harass, abuse, or harm another person or entity, including GMX.io's collaborator and
+                        7.1.6. Harass, abuse, or harm another person or entity, including ODX.finance's collaborator and
                         service providers;
                       </p>
                     </li>
@@ -414,10 +417,10 @@ export default function TermsAndConditions() {
             <div className="section">
               <h3 className="body-title">8. DISCLOSURES; DISCLAIMERS</h3>
               <p className="body-text">
-                GMX.io is an informational site for the GMX Protocol. GMX.io does not operate an exchange platform or
-                offer trade execution or clearing services and has no oversight, involvement, or control concerning your
-                transactions using the Interface. All transactions between users of the Interface are executed
-                peer-to-peer directly between the users' blockchain addresses through a third-party developed
+                ODX.finance is an informational site for the ODX Protocol. ODX.finance does not operate an exchange
+                platform or offer trade execution or clearing services and has no oversight, involvement, or control
+                concerning your transactions using the Interface. All transactions between users of the Interface are
+                executed peer-to-peer directly between the users' blockchain addresses through a third-party developed
                 open-source smart contract.
               </p>
               <p className="body-text">
@@ -427,39 +430,39 @@ export default function TermsAndConditions() {
                 Contracts using the Interface.
               </p>
               <p className="body-text">
-                You understand that GMX.io is not registered or licensed by any regulatory agency or authority. No such
-                agency or authority has reviewed or approved the use of the Site or the Interface.
+                You understand that ODX.finance is not registered or licensed by any regulatory agency or authority. No
+                such agency or authority has reviewed or approved the use of the Site or the Interface.
               </p>
               <p className="body-text">
-                You agree that the Site and the Interface are provided on an "AS IS" and "AS AVAILABLE" basis. GMX.io
-                makes no guarantees of any kind or connection with the Site or the Interface.
+                You agree that the Site and the Interface are provided on an "AS IS" and "AS AVAILABLE" basis.
+                ODX.finance makes no guarantees of any kind or connection with the Site or the Interface.
               </p>
             </div>
             <div className="section">
               <h3 className="body-title">9. LIMITATION OF LIABILITY</h3>
               <p className="body-text">
-                In no event shall GMX.io, its affiliates, its suppliers and contractors, and its affiliates', suppliers'
-                and contractors' respective stockholders, members, directors, officers, managers, employees, attorneys,
-                agents, representatives, suppliers, and contractors shall be liable for any direct, indirect,
+                In no event shall ODX.finance, its affiliates, its suppliers and contractors, and its affiliates',
+                suppliers' and contractors' respective stockholders, members, directors, officers, managers, employees,
+                attorneys, agents, representatives, suppliers, and contractors shall be liable for any direct, indirect,
                 incidental, special, punitive, consequential or similar damages or liabilities whatsoever (including,
                 without limitation, damages for loss of fiat, assets, data, information, revenue, opportunities, use,
                 goodwill, profits or other business or financial benefit) arising out of or in connection with the Site
-                or the Interface, or other item provided by or on behalf of GMX.io, whether under contract, tort
+                or the Interface, or other item provided by or on behalf of ODX.finance, whether under contract, tort
                 (including negligence), civil liability, statute, strict liability, breach of warranties, or under any
                 other theory of liability, and whether or not we have been advised of, knew of or should have known of
                 the possibility of such damages and notwithstanding any failure of the essential purpose of these Terms
-                or any limited remedy hereunder nor is GMX.io in any way responsible for the execution or settlement of
-                transactions between users of the Interface.
+                or any limited remedy hereunder nor is ODX.finance in any way responsible for the execution or
+                settlement of transactions between users of the Interface.
               </p>
               <p className="body-text">
-                In no event shall GMX.io's aggregate liability arising out of or in connection with the Site or
+                In no event shall ODX.finance's aggregate liability arising out of or in connection with the Site or
                 Interface exceed one thousand Singapore Dollars (1,000.00 SGD).
               </p>
             </div>
             <div className="section">
               <h3 className="body-title">10. INDEMNIFICATION</h3>
               <p className="body-text">
-                You will defend, indemnify, and hold harmless GMX.io, its affiliates, members, member, managers,
+                You will defend, indemnify, and hold harmless ODX.finance, its affiliates, members, member, managers,
                 employees, attorneys, representatives, suppliers, and contractors from any claim, demand, lawsuit,
                 action, proceeding, investigation, liability, damage, loss, cost or expense, including without
                 limitation reasonable attorneys' fees, arising out of or relating to (a) your use of or conduct in
@@ -477,13 +480,13 @@ export default function TermsAndConditions() {
             <div className="section">
               <h3 className="body-title">11. DISPUTE RESOLUTION & ARBITRATION</h3>
               <p className="body-text">
-                GMX.io will use its best efforts to resolve potential disputes through informal, good faith
+                ODX.finance will use its best efforts to resolve potential disputes through informal, good faith
                 negotiations. If a potential dispute arises, you must contact us by sending a written notice of your
-                claim ("Notice") to GMX.io on any of our official channels. The notice must (a) describe the nature and
-                basis of the claim and (b) set forth the specific relief sought. Our notice to you will be similar in
-                form to that described above. If you and GMX.io cannot reach an agreement to resolve the claim within
-                sixty (60) days of your email, then you and GMX.io agree to resolve the potential dispute according to
-                the process set forth below.
+                claim ("Notice") to ODX.finance on any of our official channels. The notice must (a) describe the nature
+                and basis of the claim and (b) set forth the specific relief sought. Our notice to you will be similar
+                in form to that described above. If you and ODX.finance cannot reach an agreement to resolve the claim
+                within sixty (60) days of your email, then you and ODX.finance agree to resolve the potential dispute
+                according to the process set forth below.
               </p>
               <p className="body-text">
                 Any claim or controversy arising out of or relating to the Site, the Interface, or these Terms, or any
@@ -498,8 +501,8 @@ export default function TermsAndConditions() {
               </p>
               <p className="body-text">
                 Any claim arising out of or related to these Terms or the Site or the Interface must be filed within one
-                year after such claim arose; otherwise, the claim is permanently barred, which means that you and GMX.io
-                will not have the right to assert the claim.
+                year after such claim arose; otherwise, the claim is permanently barred, which means that you and
+                ODX.finance will not have the right to assert the claim.
               </p>
             </div>
             <div className="section">
@@ -515,9 +518,9 @@ export default function TermsAndConditions() {
               <ul className="list-style-none">
                 <li>
                   <p className="body-text">
-                    13.1. Any right or remedy of GMX.io set forth in these Terms is in addition to, and not in lieu of,
-                    any other right or remedy whether described in these Terms, under Applicable Law, at law, or in
-                    equity. The failure or delay of GMX.io in exercising any right, power, or privilege under these
+                    13.1. Any right or remedy of ODX.finance set forth in these Terms is in addition to, and not in lieu
+                    of, any other right or remedy whether described in these Terms, under Applicable Law, at law, or in
+                    equity. The failure or delay of ODX.finance in exercising any right, power, or privilege under these
                     Terms shall not operate as a waiver thereof.
                   </p>
                 </li>
@@ -536,9 +539,9 @@ export default function TermsAndConditions() {
                 </li>
                 <li>
                   <p className="body-text">
-                    13.4. GMX.io will have no responsibility or liability for any failure or delay in performance of the
-                    Site or the Interface, or any loss or damage that you may incur, due to any circumstance or event
-                    beyond our control, including without limitation any flood, extraordinary weather conditions,
+                    13.4. ODX.finance will have no responsibility or liability for any failure or delay in performance
+                    of the Site or the Interface, or any loss or damage that you may incur, due to any circumstance or
+                    event beyond our control, including without limitation any flood, extraordinary weather conditions,
                     earthquake, or other act of God, fire, war, insurrection, riot, labor dispute, accident, any law,
                     order regulation, direction, action or request of the government, communications, power failure, or
                     equipment or software malfunction.
@@ -555,8 +558,8 @@ export default function TermsAndConditions() {
                 </li>
                 <li>
                   <p className="body-text">
-                    13.6. These Terms contain the entire agreement between you and GMX.io and supersede all prior and
-                    contemporaneous understandings between the parties regarding the Interface and the Site or the
+                    13.6. These Terms contain the entire agreement between you and ODX.finance and supersede all prior
+                    and contemporaneous understandings between the parties regarding the Interface and the Site or the
                     Interface.
                   </p>
                 </li>
@@ -578,8 +581,8 @@ export default function TermsAndConditions() {
             <div className="section">
               <h3 className="body-title">CONTACT INFORMATION</h3>
               <p className="body-text">
-                If you have any questions about these Terms, the Site, or the Interface, please get in touch with GMX.io
-                on any of our official channels.
+                If you have any questions about these Terms, the Site, or the Interface, please get in touch with
+                ODX.finance on any of our official channels.
               </p>
             </div>
           </div>

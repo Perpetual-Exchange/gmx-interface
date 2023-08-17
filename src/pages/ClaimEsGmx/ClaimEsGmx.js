@@ -196,7 +196,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
   let initialStakingAmount;
   let nextStakingAmount;
 
-  let stakingToken = "staked GMX";
+  let stakingToken = "staked ODX";
 
   const shouldShowStakingAmounts = false;
 
@@ -225,7 +225,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
         result);
     }
 
-    stakingToken = "GLP";
+    stakingToken = "OLP";
   }
 
   if (selectedOption === VEST_WITH_GMX_AVAX && avaxVestingData) {
@@ -253,7 +253,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
         result);
     }
 
-    stakingToken = "GLP";
+    stakingToken = "OLP";
   }
 
   const getError = () => {
@@ -262,7 +262,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
     }
 
     if (esGmxIouBalance && esGmxIouBalance.eq(0)) {
-      return t`No esGMX to claim`;
+      return t`No esODX to claim`;
     }
 
     if (!amount || amount.eq(0)) {
@@ -330,9 +330,9 @@ export default function ClaimEsGmx({ setPendingTxns }) {
 
   return (
     <div className="ClaimEsGmx Page page-layout">
-      <div className="Page-title-section mt-0">
+      <div className="mt-0 Page-title-section">
         <div className="Page-title">
-          <Trans>Claim esGMX</Trans>
+          <Trans>Claim esODX</Trans>
         </div>
         {!isArbitrum && (
           <div className="Page-description">
@@ -344,13 +344,13 @@ export default function ClaimEsGmx({ setPendingTxns }) {
           <div>
             <div className="Page-description">
               <br />
-              <Trans>You have {formatAmount(esGmxIouBalance, 18, 2, true)} esGMX (IOU) tokens.</Trans>
+              <Trans>You have {formatAmount(esGmxIouBalance, 18, 2, true)} esODX (IOU) tokens.</Trans>
               <br />
               <br />
-              <Trans>The address of the esGMX (IOU) token is {esGmxIouAddress}.</Trans>
+              <Trans>The address of the esODX (IOU) token is {esGmxIouAddress}.</Trans>
               <br />
               <Trans>
-                The esGMX (IOU) token is transferrable. You can add the token to your wallet and send it to another
+                The esODX (IOU) token is transferrable. You can add the token to your wallet and send it to another
                 address to claim if you'd like.
               </Trans>
               <br />
@@ -358,14 +358,14 @@ export default function ClaimEsGmx({ setPendingTxns }) {
               <Trans>Select your vesting option below then click "Claim".</Trans>
               <br />
               <Trans>
-                After claiming, the esGMX tokens will be airdropped to your account on the selected network within 7
+                After claiming, the esODX tokens will be airdropped to your account on the selected network within 7
                 days.
               </Trans>
               <br />
-              <Trans>The esGMX tokens can be staked or vested at any time.</Trans>
+              <Trans>The esODX tokens can be staked or vested at any time.</Trans>
               <br />
               <Trans>
-                Your esGMX (IOU) balance will decrease by your claim amount after claiming, this is expected behaviour.
+                Your esODX (IOU) balance will decrease by your claim amount after claiming, this is expected behaviour.
               </Trans>
               <br />
               <Trans>
@@ -380,7 +380,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
                 isChecked={selectedOption === VEST_WITH_GMX_ARB}
                 setIsChecked={() => setSelectedOption(VEST_WITH_GMX_ARB)}
               >
-                <Trans>Vest with GMX on Arbitrum</Trans>
+                <Trans>Vest with ODX on Arbitrum</Trans>
                 <img src={arbitrumIcon} alt="Arbitrum" />
               </Checkbox>
               <Checkbox
@@ -388,7 +388,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
                 isChecked={selectedOption === VEST_WITH_GLP_ARB}
                 setIsChecked={() => setSelectedOption(VEST_WITH_GLP_ARB)}
               >
-                <Trans>Vest with GLP on Arbitrum</Trans>
+                <Trans>Vest with OLP on Arbitrum</Trans>
                 <img src={arbitrumIcon} alt="Arbitrum" />
               </Checkbox>
               <Checkbox
@@ -396,7 +396,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
                 isChecked={selectedOption === VEST_WITH_GMX_AVAX}
                 setIsChecked={() => setSelectedOption(VEST_WITH_GMX_AVAX)}
               >
-                <Trans>Vest with GMX on Avalanche</Trans>
+                <Trans>Vest with ODX on Avalanche</Trans>
                 <img src={avaIcon} alt="Avalanche" />
               </Checkbox>
               <Checkbox
@@ -404,7 +404,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
                 isChecked={selectedOption === VEST_WITH_GLP_AVAX}
                 setIsChecked={() => setSelectedOption(VEST_WITH_GLP_AVAX)}
               >
-                <Trans>Vest with GLP on Avalanche</Trans>
+                <Trans>Vest with OLP on Avalanche</Trans>
                 <img src={avaIcon} alt="Avalanche" />
               </Checkbox>
             </div>
@@ -412,14 +412,14 @@ export default function ClaimEsGmx({ setPendingTxns }) {
             {!error && (
               <div className="muted">
                 <Trans>
-                  You can currently vest a maximum of {formatAmount(maxVestableAmount, 18, 2, true)} esGMX tokens at a
-                  ratio of {formatAmount(currentRatio, 4, 2, true)} {stakingToken} to 1 esGMX.
+                  You can currently vest a maximum of {formatAmount(maxVestableAmount, 18, 2, true)} esODX tokens at a
+                  ratio of {formatAmount(currentRatio, 4, 2, true)} {stakingToken} to 1 esODX.
                 </Trans>
                 {shouldShowStakingAmounts && `${formatAmount(initialStakingAmount, 18, 2, true)}.`}
                 <br />
                 <Trans>
                   After claiming you will be able to vest a maximum of {formatAmount(nextMaxVestableEsGmx, 18, 2, true)}{" "}
-                  esGMX at a ratio of {formatAmount(nextRatio, 4, 2, true)} {stakingToken} to 1 esGMX.
+                  esODX at a ratio of {formatAmount(nextRatio, 4, 2, true)} {stakingToken} to 1 esODX.
                 </Trans>
                 {shouldShowStakingAmounts && `${formatAmount(nextStakingAmount, 18, 2, true)}.`}
                 <br />

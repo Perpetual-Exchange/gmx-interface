@@ -99,15 +99,15 @@ function PositionShare({ setIsPositionShareModalOpen, isPositionShareModalOpen, 
       {uploadedImageError && <span className="error">{uploadedImageError}</span>}
 
       <div className="actions">
-        <Button variant="secondary" disabled={!uploadedImageInfo} className="mr-base" onClick={handleCopy}>
+        <Button disabled={!uploadedImageInfo} className="mr-base default-btn" onClick={handleCopy}>
           <BiCopy className="icon" />
           <Trans>Copy</Trans>
         </Button>
-        <Button variant="secondary" disabled={!uploadedImageInfo} className="mr-base" onClick={handleDownload}>
+        <Button disabled={!uploadedImageInfo} className="mr-base default-btn" onClick={handleDownload}>
           <RiFileDownloadLine className="icon" />
           <Trans>Download</Trans>
         </Button>
-        <Button newTab variant="secondary" disabled={!uploadedImageInfo} className="mr-base" to={tweetLink}>
+        <Button newTab disabled={!uploadedImageInfo} className="mr-base default-btn" to={tweetLink}>
           <FiTwitter className="icon" />
           <Trans>Tweet</Trans>
         </Button>
@@ -132,13 +132,15 @@ function PositionShareCard({
   return (
     <div className="relative">
       <div ref={positionRef} className="position-share" style={{ backgroundImage: `url(${sharePositionBgImg})` }}>
-        <img className="logo" src={gmxLogo} alt="GMX Logo" />
+        <img className="logo" src={gmxLogo} alt="ODX Logo" />
         <ul className="info">
-          <li className="side">{isLong ? "LONG" : "SHORT"}</li>
+          <li className={"side " + (isLong ? "side-long" : "side-short")}>{isLong ? "LONG" : "SHORT"}</li>
           <li>{formatAmount(leverage, 4, 2, true)}x&nbsp;</li>
           <li>{indexToken.symbol} USD</li>
         </ul>
-        <h3 className="pnl">{deltaAfterFeesPercentageStr}</h3>
+        <h3 className={"pnl " + (deltaAfterFeesPercentageStr.indexOf("-") === 0 ? "pnl-red" : "pnl-green")}>
+          {deltaAfterFeesPercentageStr}
+        </h3>
         <div className="prices">
           <div>
             <p>Entry Price</p>
@@ -151,7 +153,7 @@ function PositionShareCard({
         </div>
         <div className="referral-code">
           <div>
-            <QRCodeSVG size={isMobile ? 24 : 32} value={success && code ? `${homeURL}/#/?ref=${code}` : `${homeURL}`} />
+            <QRCodeSVG size={isMobile ? 34 : 52} value={success && code ? `${homeURL}/#/?ref=${code}` : `${homeURL}`} />
           </div>
           <div className="referral-code-info">
             {success && code ? (

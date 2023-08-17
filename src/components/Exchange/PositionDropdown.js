@@ -3,7 +3,7 @@ import { Trans } from "@lingui/macro";
 import { HiDotsVertical } from "react-icons/hi";
 import { AiOutlineEdit } from "react-icons/ai";
 import { BiSelectMultiple } from "react-icons/bi";
-import { RiShareBoxFill } from "react-icons/ri";
+// import { RiShareBoxFill } from "react-icons/ri";
 import "./PositionDropdown.css";
 
 function PositionDropdown({ handleEditCollateral, handleShare, handleMarketSelect }) {
@@ -32,14 +32,14 @@ function PositionDropdown({ handleEditCollateral, handleShare, handleMarketSelec
               </p>
             </div>
           </Menu.Item>
-          <Menu.Item>
+          {/* <Menu.Item>
             <div className="menu-item" onClick={handleShare}>
               <RiShareBoxFill fontSize={16} />
               <p>
                 <Trans>Share Position</Trans>
               </p>
             </div>
-          </Menu.Item>
+          </Menu.Item> */}
         </Menu.Items>
       </div>
     </Menu>

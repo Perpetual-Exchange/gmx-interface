@@ -438,263 +438,266 @@ export default function PositionsList(props) {
           </div>
         </>
       )}
-      <table className="Exchange-list large App-box">
-        <tbody>
-          <tr className="Exchange-list-header">
-            <th>
-              <Trans>Position</Trans>
-            </th>
-            <th>
-              <Trans>Net Value</Trans>
-            </th>
-            <th>
-              <Trans>Size</Trans>
-            </th>
-            <th>
-              <Trans>Collateral</Trans>
-            </th>
-            <th>
-              <Trans>Entry Price</Trans>
-            </th>
-            <th>
-              <Trans>Mark Price</Trans>
-            </th>
-            <th>
-              <Trans>Liq. Price</Trans>
-            </th>
-            {!hideActions && (
-              <>
-                <th></th>
-                <th></th>
-              </>
-            )}
-          </tr>
-          {positions.length === 0 && (
-            <tr>
-              <td colSpan="15">
-                <div className="Exchange-empty-positions-list-note">
-                  {positionsDataIsLoading ? <Trans>Loading...</Trans> : <Trans>No open positions</Trans>}
-                </div>
-              </td>
+      <div className="App-card !p-0">
+        <table className="Exchange-list large ">
+          <tbody>
+            <tr className="Exchange-list-header">
+              <th>
+                <Trans>Position</Trans>
+              </th>
+              <th>
+                <Trans>Net Value</Trans>
+              </th>
+              <th>
+                <Trans>Size</Trans>
+              </th>
+              <th>
+                <Trans>Collateral</Trans>
+              </th>
+              <th>
+                <Trans>Entry Price</Trans>
+              </th>
+              <th>
+                <Trans>Mark Price</Trans>
+              </th>
+              <th>
+                <Trans>Liq. Price</Trans>
+              </th>
+              {!hideActions && (
+                <>
+                  <th></th>
+                  <th></th>
+                </>
+              )}
             </tr>
-          )}
-
-          {positions.map((position) => {
-            const liquidationPrice =
-              getLiquidationPrice({
-                size: position.size,
-                collateral: position.collateral,
-                averagePrice: position.averagePrice,
-                isLong: position.isLong,
-                fundingFee: position.fundingFee,
-              }) || bigNumberify(0);
-
-            const positionOrders = getOrdersForPosition(account, position, orders, nativeTokenAddress);
-            const hasOrderError = !!positionOrders.find((order) => order.error);
-            const hasPositionProfit = position[showPnlAfterFees ? "hasProfitAfterFees" : "hasProfit"];
-            const positionDelta =
-              position[showPnlAfterFees ? "pendingDeltaAfterFees" : "pendingDelta"] || bigNumberify(0);
-            let borrowFeeUSD;
-            if (position.collateralToken && position.collateralToken.fundingRate) {
-              const borrowFeeRate = position.collateralToken.fundingRate
-                .mul(position.size)
-                .mul(24)
-                .div(FUNDING_RATE_PRECISION);
-              borrowFeeUSD = formatAmount(borrowFeeRate, USD_DECIMALS, 2, true);
-            }
-
-            return (
-              <tr key={position.key}>
-                <td className="clickable" onClick={() => onPositionClick(position)}>
-                  <div className="Exchange-list-title">
-                    {!hideActions ? (
-                      <Tooltip
-                        handle={position.indexToken.symbol}
-                        position="left-bottom"
-                        handleClassName="plain clickable"
-                        renderContent={() => {
-                          return (
-                            <div>
-                              <Trans>
-                                Click on a row to select the position's market, then use the trade box to increase your
-                                position size if needed.
-                              </Trans>
-                              <br />
-                              <br />
-                              <Trans>
-                                Use the "Close" button to reduce your position size, or to set stop-loss / take-profit
-                                orders.
-                              </Trans>
-                            </div>
-                          );
-                        }}
-                      />
-                    ) : (
-                      position.indexToken.symbol
-                    )}
-                    {position.hasPendingChanges && <ImSpinner2 className="spin position-loading-icon" />}
-                  </div>
-                  <div className="Exchange-list-info-label">
-                    {position.leverageStr && (
-                      <span
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          openSettings();
-                        }}
-                        className="muted Position-leverage"
-                      >
-                        {position.leverageStr}
-                      </span>
-                    )}
-                    <span className={cx({ positive: position.isLong, negative: !position.isLong })}>
-                      {position.isLong ? t`Long` : t`Short`}
-                    </span>
+            {positions.length === 0 && (
+              <tr>
+                <td colSpan="15">
+                  <div className="Exchange-empty-positions-list-note">
+                    {positionsDataIsLoading ? <Trans>Loading...</Trans> : <Trans>No open positions</Trans>}
                   </div>
                 </td>
-                <td>
-                  <div>{position.netValue ? <NetValueTooltip position={position} /> : t`Opening...`}</div>
+              </tr>
+            )}
 
-                  {position.deltaStr && (
-                    <div
-                      className={cx("Exchange-list-info-label cursor-pointer Position-pnl", {
-                        positive: hasPositionProfit && positionDelta.gt(0),
-                        negative: !hasPositionProfit && positionDelta.gt(0),
-                        muted: positionDelta.eq(0),
-                      })}
-                      onClick={openSettings}
-                    >
-                      {position.deltaStr} ({position.deltaPercentageStr})
+            {positions.map((position) => {
+              const liquidationPrice =
+                getLiquidationPrice({
+                  size: position.size,
+                  collateral: position.collateral,
+                  averagePrice: position.averagePrice,
+                  isLong: position.isLong,
+                  fundingFee: position.fundingFee,
+                }) || bigNumberify(0);
+
+              const positionOrders = getOrdersForPosition(account, position, orders, nativeTokenAddress);
+              const hasOrderError = !!positionOrders.find((order) => order.error);
+              const hasPositionProfit = position[showPnlAfterFees ? "hasProfitAfterFees" : "hasProfit"];
+              const positionDelta =
+                position[showPnlAfterFees ? "pendingDeltaAfterFees" : "pendingDelta"] || bigNumberify(0);
+              let borrowFeeUSD;
+              if (position.collateralToken && position.collateralToken.fundingRate) {
+                const borrowFeeRate = position.collateralToken.fundingRate
+                  .mul(position.size)
+                  .mul(24)
+                  .div(FUNDING_RATE_PRECISION);
+                borrowFeeUSD = formatAmount(borrowFeeRate, USD_DECIMALS, 2, true);
+              }
+
+              return (
+                <tr key={position.key}>
+                  <td className="clickable" onClick={() => onPositionClick(position)}>
+                    <div className="Exchange-list-title">
+                      {!hideActions ? (
+                        <Tooltip
+                          handle={position.indexToken.symbol}
+                          position="left-bottom"
+                          handleClassName="plain clickable"
+                          renderContent={() => {
+                            return (
+                              <div>
+                                <Trans>
+                                  Click on a row to select the position's market, then use the trade box to increase
+                                  your position size if needed.
+                                </Trans>
+                                <br />
+                                <br />
+                                <Trans>
+                                  Use the "Close" button to reduce your position size, or to set stop-loss / take-profit
+                                  orders.
+                                </Trans>
+                              </div>
+                            );
+                          }}
+                        />
+                      ) : (
+                        position.indexToken.symbol
+                      )}
+                      {position.hasPendingChanges && <ImSpinner2 className="spin position-loading-icon" />}
                     </div>
-                  )}
-                </td>
-                <td>
-                  <div>${formatAmount(position.size, USD_DECIMALS, 2, true)}</div>
-                  {positionOrders.length > 0 && (
-                    <div onClick={() => setListSection && setListSection("Orders")}>
+                    <div className="Exchange-list-info-label">
+                      {position.leverageStr && (
+                        <span
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            openSettings();
+                          }}
+                          className="muted Position-leverage"
+                        >
+                          {position.leverageStr}
+                        </span>
+                      )}
+                      <span className={cx({ positive: position.isLong, negative: !position.isLong })}>
+                        {position.isLong ? t`Long` : t`Short`}
+                      </span>
+                    </div>
+                  </td>
+                  <td>
+                    <div>{position.netValue ? <NetValueTooltip position={position} /> : t`Opening...`}</div>
+
+                    {position.deltaStr && (
+                      <div
+                        className={cx("Exchange-list-info-label cursor-pointer Position-pnl", {
+                          positive: hasPositionProfit && positionDelta.gt(0),
+                          negative: !hasPositionProfit && positionDelta.gt(0),
+                          muted: positionDelta.eq(0),
+                        })}
+                        onClick={openSettings}
+                      >
+                        {position.deltaStr} ({position.deltaPercentageStr})
+                      </div>
+                    )}
+                  </td>
+                  <td>
+                    <div>${formatAmount(position.size, USD_DECIMALS, 2, true)}</div>
+                    {positionOrders.length > 0 && (
+                      <div onClick={() => setListSection && setListSection("Orders")}>
+                        <Tooltip
+                          handle={t`Orders (${positionOrders.length})`}
+                          position="left-bottom"
+                          handleClassName={cx(
+                            ["Exchange-list-info-label", "Exchange-position-list-orders", "plain", "clickable"],
+                            { muted: !hasOrderError, negative: hasOrderError }
+                          )}
+                          renderContent={() => {
+                            return (
+                              <>
+                                <strong>
+                                  <Trans>Active Orders</Trans>
+                                </strong>
+                                {positionOrders.map((order) => {
+                                  return (
+                                    <div
+                                      key={`${order.isLong}-${order.type}-${order.index}`}
+                                      className="Position-list-order active-order-tooltip"
+                                    >
+                                      {order.triggerAboveThreshold ? ">" : "<"}{" "}
+                                      {formatAmount(order.triggerPrice, 30, 2, true)}:
+                                      {order.type === INCREASE ? " +" : " -"}$
+                                      {formatAmount(order.sizeDelta, 30, 2, true)}
+                                      {order.error && <div className="negative active-oredr-error">{order.error}</div>}
+                                    </div>
+                                  );
+                                })}
+                              </>
+                            );
+                          }}
+                        />
+                      </div>
+                    )}
+                  </td>
+                  <td>
+                    <div className="position-list-collateral">
                       <Tooltip
-                        handle={t`Orders (${positionOrders.length})`}
+                        handle={`$${formatAmount(position.collateralAfterFee, USD_DECIMALS, 2, true)}`}
                         position="left-bottom"
-                        handleClassName={cx(
-                          ["Exchange-list-info-label", "Exchange-position-list-orders", "plain", "clickable"],
-                          { muted: !hasOrderError, negative: hasOrderError }
-                        )}
+                        handleClassName={cx("plain", { negative: position.hasLowCollateral })}
                         renderContent={() => {
                           return (
                             <>
-                              <strong>
-                                <Trans>Active Orders</Trans>
-                              </strong>
-                              {positionOrders.map((order) => {
-                                return (
-                                  <div
-                                    key={`${order.isLong}-${order.type}-${order.index}`}
-                                    className="Position-list-order active-order-tooltip"
-                                  >
-                                    {order.triggerAboveThreshold ? ">" : "<"}{" "}
-                                    {formatAmount(order.triggerPrice, 30, 2, true)}:
-                                    {order.type === INCREASE ? " +" : " -"}${formatAmount(order.sizeDelta, 30, 2, true)}
-                                    {order.error && <div className="negative active-oredr-error">{order.error}</div>}
-                                  </div>
-                                );
-                              })}
+                              {position.hasLowCollateral && (
+                                <div>
+                                  <Trans>
+                                    WARNING: This position has a low amount of collateral after deducting borrowing
+                                    fees, deposit more collateral to reduce the position's liquidation risk.
+                                  </Trans>
+                                  <br />
+                                  <br />
+                                </div>
+                              )}
+
+                              <StatsTooltipRow
+                                label={t`Initial Collateral`}
+                                value={formatAmount(position.collateral, USD_DECIMALS, 2, true)}
+                              />
+                              <StatsTooltipRow
+                                label={t`Borrow Fee`}
+                                showDollar={false}
+                                value={`-$${formatAmount(position.fundingFee, USD_DECIMALS, 2, true)}`}
+                              />
+                              <StatsTooltipRow
+                                showDollar={false}
+                                label={t`Borrow Fee / Day`}
+                                value={`-$${borrowFeeUSD}`}
+                              />
+                              {!hideActions && (
+                                <>
+                                  <br />
+                                  <Trans>Use the Edit Collateral icon to deposit or withdraw collateral.</Trans>
+                                </>
+                              )}
                             </>
                           );
                         }}
                       />
+                      {!hideActions && (
+                        <span className="edit-icon" onClick={() => editPosition(position)}>
+                          <AiOutlineEdit fontSize={16} />
+                        </span>
+                      )}
                     </div>
-                  )}
-                </td>
-                <td>
-                  <div className="position-list-collateral">
-                    <Tooltip
-                      handle={`$${formatAmount(position.collateralAfterFee, USD_DECIMALS, 2, true)}`}
-                      position="left-bottom"
-                      handleClassName={cx("plain", { negative: position.hasLowCollateral })}
-                      renderContent={() => {
-                        return (
-                          <>
-                            {position.hasLowCollateral && (
-                              <div>
-                                <Trans>
-                                  WARNING: This position has a low amount of collateral after deducting borrowing fees,
-                                  deposit more collateral to reduce the position's liquidation risk.
-                                </Trans>
-                                <br />
-                                <br />
-                              </div>
-                            )}
-
-                            <StatsTooltipRow
-                              label={t`Initial Collateral`}
-                              value={formatAmount(position.collateral, USD_DECIMALS, 2, true)}
-                            />
-                            <StatsTooltipRow
-                              label={t`Borrow Fee`}
-                              showDollar={false}
-                              value={`-$${formatAmount(position.fundingFee, USD_DECIMALS, 2, true)}`}
-                            />
-                            <StatsTooltipRow
-                              showDollar={false}
-                              label={t`Borrow Fee / Day`}
-                              value={`-$${borrowFeeUSD}`}
-                            />
-                            {!hideActions && (
-                              <>
-                                <br />
-                                <Trans>Use the Edit Collateral icon to deposit or withdraw collateral.</Trans>
-                              </>
-                            )}
-                          </>
-                        );
-                      }}
-                    />
-                    {!hideActions && (
-                      <span className="edit-icon" onClick={() => editPosition(position)}>
-                        <AiOutlineEdit fontSize={16} />
-                      </span>
-                    )}
-                  </div>
-                </td>
-                <td className="clickable" onClick={() => onPositionClick(position)}>
-                  ${formatAmount(position.averagePrice, USD_DECIMALS, 2, true)}
-                </td>
-                <td className="clickable" onClick={() => onPositionClick(position)}>
-                  ${formatAmount(position.markPrice, USD_DECIMALS, 2, true)}
-                </td>
-                <td className="clickable" onClick={() => onPositionClick(position)}>
-                  ${formatAmount(liquidationPrice, USD_DECIMALS, 2, true)}
-                </td>
-
-                <td>
-                  <button
-                    className="Exchange-list-action"
-                    onClick={() => sellPosition(position)}
-                    disabled={position.size.eq(0)}
-                  >
-                    <Trans>Close</Trans>
-                  </button>
-                </td>
-                {!hideActions && (
-                  <td>
-                    <PositionDropdown
-                      handleEditCollateral={() => {
-                        editPosition(position);
-                      }}
-                      handleShare={() => {
-                        setPositionToShare(position);
-                        setIsPositionShareModalOpen(true);
-                      }}
-                      handleMarketSelect={() => {
-                        onPositionClick(position);
-                      }}
-                    />
                   </td>
-                )}
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+                  <td className="clickable" onClick={() => onPositionClick(position)}>
+                    ${formatAmount(position.averagePrice, USD_DECIMALS, 2, true)}
+                  </td>
+                  <td className="clickable" onClick={() => onPositionClick(position)}>
+                    ${formatAmount(position.markPrice, USD_DECIMALS, 2, true)}
+                  </td>
+                  <td className="clickable" onClick={() => onPositionClick(position)}>
+                    ${formatAmount(liquidationPrice, USD_DECIMALS, 2, true)}
+                  </td>
+
+                  <td>
+                    <button
+                      className="Exchange-list-action"
+                      onClick={() => sellPosition(position)}
+                      disabled={position.size.eq(0)}
+                    >
+                      <Trans>Close</Trans>
+                    </button>
+                  </td>
+                  {!hideActions && (
+                    <td>
+                      <PositionDropdown
+                        handleEditCollateral={() => {
+                          editPosition(position);
+                        }}
+                        handleShare={() => {
+                          setPositionToShare(position);
+                          setIsPositionShareModalOpen(true);
+                        }}
+                        handleMarketSelect={() => {
+                          onPositionClick(position);
+                        }}
+                      />
+                    </td>
+                  )}
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

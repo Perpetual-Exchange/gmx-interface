@@ -3,7 +3,7 @@ import { Trans, t } from "@lingui/macro";
 import cx from "classnames";
 import { getCodeError, getReferralCodeTakenStatus, getSampleReferrarStat } from "./referralsHelper";
 import { useWeb3React } from "@web3-react/core";
-import { ARBITRUM } from "config/chains";
+import { AVALANCHE_FUJI } from "config/chains";
 import { helperToast } from "lib/helperToast";
 import { useDebounce } from "lib/useDebounce";
 import Button from "components/Button/Button";
@@ -16,7 +16,7 @@ function AddAffiliateCode({
   recentlyAddedCodes,
 }) {
   return (
-    <div className="referral-card section-center mt-medium">
+    <div className="mt-medium referral-card section-center">
       <h2 className="title">
         <Trans>Generate Referral Code</Trans>
       </h2>
@@ -130,7 +130,7 @@ export function AffiliateCodeForm({
     }
 
     if (takenStatus === "none" || takenStatus === "other") {
-      const ownerOnOtherNetwork = takenInfo[chainId === ARBITRUM ? "ownerAvax" : "ownerArbitrum"];
+      const ownerOnOtherNetwork = takenInfo[chainId !== AVALANCHE_FUJI ? "ownerAvax" : "ownerArbitrum"];
       try {
         const tx = await handleCreateReferralCode(referralCode);
         if (callAfterSuccess) {
