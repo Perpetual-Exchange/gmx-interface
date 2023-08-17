@@ -213,12 +213,12 @@ function FullApp() {
           <br />
           {userOnMobileDevice ? (
             <Trans>
-              <ExternalLink href="https://metamask.io">Install MetaMask</ExternalLink>, and use GMX with its built-in
+              <ExternalLink href="https://metamask.io">Install MetaMask</ExternalLink>, and use REX with its built-in
               browser.
             </Trans>
           ) : (
             <Trans>
-              <ExternalLink href="https://metamask.io">Install MetaMask</ExternalLink> to start using GMX.
+              <ExternalLink href="https://metamask.io">Install MetaMask</ExternalLink> to start using REX.
             </Trans>
           )}
         </div>
@@ -236,13 +236,13 @@ function FullApp() {
           <br />
           {userOnMobileDevice ? (
             <Trans>
-              <ExternalLink href="https://www.coinbase.com/wallet">Install Coinbase Wallet</ExternalLink>, and use GMX
+              <ExternalLink href="https://www.coinbase.com/wallet">Install Coinbase Wallet</ExternalLink>, and use REX
               with its built-in browser.
             </Trans>
           ) : (
             <Trans>
               <ExternalLink href="https://www.coinbase.com/wallet">Install Coinbase Wallet</ExternalLink> to start using
-              GMX.
+              REX.
             </Trans>
           )}
         </div>
@@ -338,7 +338,6 @@ function FullApp() {
   const [pendingTxns, setPendingTxns] = useState([]);
 
   const showRedirectModal = (to) => {
-    // no modal, just redirect
     // setRedirectModalVisible(true);
     window.location.href = appRedirectUrl;
     setSelectedToPage(to);

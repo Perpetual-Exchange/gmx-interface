@@ -1,8 +1,13 @@
 import useSWR from "swr";
 import { arrayURLFetcher } from "lib/legacy";
-import { ARBITRUM, AVALANCHE } from "config/chains";
+import { AVALANCHE, AVALANCHE_FUJI, ARBITRUM } from "config/chains";
 import { getServerUrl } from "config/backend";
-const ACTIVE_CHAIN_IDS = [ARBITRUM, AVALANCHE];
+const ACTIVE_CHAIN_IDS = [AVALANCHE, AVALANCHE_FUJI, ARBITRUM];
+
+// [
+//   "https://gmx-server-mainnet.uw.r.appspot.com/fees_summary",
+//   "https://gmx-server-mainnet.uw.r.appspot.com/fees_summary",
+// ],
 
 export function useFeesSummary() {
   const { data: feesSummary } = useSWR(

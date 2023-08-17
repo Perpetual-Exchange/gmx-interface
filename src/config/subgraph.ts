@@ -1,4 +1,4 @@
-import { ARBITRUM, AVALANCHE, ETH_MAINNET, SEPOLIA } from "./chains";
+import { ARBITRUM, AVALANCHE, ETH_MAINNET, AVALANCHE_FUJI } from "./chains";
 import { isDevelopment } from "./env";
 import { getSubgraphUrlKey } from "./localStorage";
 
@@ -13,10 +13,10 @@ const SUBGRAPH_URLS = {
     stats: "https://subgraph.satsuma-prod.com/3b2ced13c8d9/gmx/gmx-avalanche-stats/api",
     referrals: "https://subgraph.satsuma-prod.com/3b2ced13c8d9/gmx/gmx-avalanche-referrals/api",
   },
-  // TODO
-  [SEPOLIA]: {
-    stats: "https://subgraph.satsuma-prod.com/3b2ced13c8d9/gmx/gmx-avalanche-stats/api",
-    referrals: "https://subgraph.satsuma-prod.com/3b2ced13c8d9/gmx/gmx-avalanche-referrals/api",
+  // TODO need config
+  [AVALANCHE_FUJI]: {
+    stats: "https://api.thegraph.com/subgraphs/name/6xiaowu9/odx-fuji-stats", // "https://subgraph.satsuma-prod.com/3b2ced13c8d9/gmx/gmx-arbitrum-stats/api",
+    referrals: "https://api.thegraph.com/subgraphs/name/6xiaowu9/odx-fuji-referrals", //"https://subgraph.satsuma-prod.com/3b2ced13c8d9/gmx/gmx-arbitrum-referrals/api",
   },
 
   [ETH_MAINNET]: {

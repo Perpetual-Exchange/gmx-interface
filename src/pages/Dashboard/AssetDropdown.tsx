@@ -41,7 +41,7 @@ function AssetDropdown({ assetSymbol, assetInfo }: Props) {
       <Menu.Items as="div" className="asset-menu-items">
         <Menu.Item>
           <>
-            {reserves && assetSymbol === "GLP" && (
+            {reserves && assetSymbol === "RLP" && (
               <ExternalLink href={reserves} className="asset-item">
                 <img className="asset-item-icon" src={nansenPortfolioIcon} alt="Proof of Reserves" />
                 <p>

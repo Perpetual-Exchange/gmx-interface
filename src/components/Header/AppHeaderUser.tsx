@@ -10,7 +10,7 @@ import { isHomeSite, getAccountUrl } from "lib/legacy";
 import cx from "classnames";
 import { Trans } from "@lingui/macro";
 import NetworkDropdown from "../NetworkDropdown/NetworkDropdown";
-import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, getChainName, SEPOLIA } from "config/chains";
+import { ARBITRUM_TESTNET, getChainName, AVALANCHE_FUJI } from "config/chains";
 import { switchNetwork } from "lib/wallets";
 import { useChainId } from "lib/chains";
 import { isDevelopment } from "config/env";
@@ -27,16 +27,10 @@ type Props = {
 
 const NETWORK_OPTIONS = [
   {
-    label: getChainName(ARBITRUM),
-    value: ARBITRUM,
-    icon: getIcon(ARBITRUM, "network"),
-    color: "#264f79",
-  },
-  {
-    label: getChainName(AVALANCHE),
-    value: AVALANCHE,
-    icon: getIcon(AVALANCHE, "network"),
-    color: "#E841424D",
+    label: getChainName(AVALANCHE_FUJI),
+    value: AVALANCHE_FUJI,
+    icon: getIcon(AVALANCHE_FUJI, "network"),
+    color: "#AVALANCHE_FUJI",
   },
 ];
 
@@ -46,12 +40,6 @@ if (isDevelopment()) {
     value: ARBITRUM_TESTNET,
     icon: getIcon(ARBITRUM_TESTNET, "network"),
     color: "#264f79",
-  });
-  NETWORK_OPTIONS.push({
-    label: getChainName(SEPOLIA),
-    value: SEPOLIA,
-    icon: getIcon(SEPOLIA, "network"),
-    color: "#E841424D",
   });
 }
 
@@ -90,7 +78,7 @@ export function AppHeaderUser({
       <div className="App-header-user">
         <div className={cx("App-header-trade-link", { "homepage-header": isHomeSite() })}>
           <HeaderLink
-            className="default-btn strong pointer-events-none"
+            className="default-btn strong"
             to="/trade"
             redirectPopupTimestamp={redirectPopupTimestamp}
             showRedirectModal={showRedirectModal}

@@ -30,19 +30,19 @@ msgid "<0/>Profit price: {0} ${1}. This rule applies for the next {2}, until {3}
 msgstr ""
 
 #: src/App/App.js
-msgid "<0>Install Coinbase Wallet</0> to start using GMX."
+msgid "<0>Install Coinbase Wallet</0> to start using ODX."
 msgstr ""
 
 #: src/App/App.js
-msgid "<0>Install Coinbase Wallet</0>, and use GMX with its built-in browser."
+msgid "<0>Install Coinbase Wallet</0>, and use ODX with its built-in browser."
 msgstr ""
 
 #: src/App/App.js
-msgid "<0>Install MetaMask</0> to start using GMX."
+msgid "<0>Install MetaMask</0> to start using ODX."
 msgstr ""
 
 #: src/App/App.js
-msgid "<0>Install MetaMask</0>, and use GMX with its built-in browser."
+msgid "<0>Install MetaMask</0>, and use ODX with its built-in browser."
 msgstr ""
 
 #: src/components/Exchange/OrdersToa.js
@@ -58,19 +58,19 @@ msgid "<0>Return to </0><1>Homepage</1> <2>or </2> <3>Trade</3>"
 msgstr "<0>Retourner à </0><1>la page d'accueil</1> <2>ou </2> <3>échanger</3>"
 
 #: src/components/Glp/SwapErrorModal.tsx
-msgid "<0>The pool's capacity has been reached for {0}. Please use another token to buy GLP.</0><1>Check the \"Save on Fees\" section for tokens with the lowest fees.</1>"
-msgstr "<0>La capacité du pool a été atteinte pour {0}. Veuillez utiliser un autre token pour acheter GLP.</0><1>Vérifier la section \"économiser sur les frais\" pour les tokens ayant les meilleur frais.</1>"
+msgid "<0>The pool's capacity has been reached for {0}. Please use another token to buy OLP.</0><1>Check the \"Save on Fees\" section for tokens with the lowest fees.</1>"
+msgstr ""
 
 #: src/components/Exchange/OrdersList.js
 msgid "<0>The price that orders can be executed at may differ slightly from the chart price, as market orders update oracle prices, while limit/trigger orders do not.</0><1>This can also cause limit/triggers to not be executed if the price is not reached for long enough. <2>Read more</2>.</1>"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "<0>This will withdraw and unreserve all tokens as well as pause vesting.<1/><2/>esGMX tokens that have been converted to GMX will remain as GMX tokens.<3/><4/>To claim GMX tokens without withdrawing, use the \"Claim\" button under the Total Rewards section.<5/><6/></0>"
-msgstr "<0>Cela retirera et libérera tous les tokens et mettra en pause l'acquisition par vesting.<1/><2/>Les tokens esGMX qui ont été convertis en GMX resteront des tokens GMX.<3/><4/>Pour réclamer les tokens GMX sans effectuer de retrait, utilisez le bouton \"Réclamer\" dans la section Récompenses totales.<5/><6/></0>\""
+msgid "<0>This will withdraw and unreserve all tokens as well as pause vesting.<1/><2/>esODX tokens that have been converted to ODX will remain as ODX tokens.<3/><4/>To claim ODX tokens without withdrawing, use the \"Claim\" button under the Total Rewards section.<5/><6/></0>"
+msgstr ""
 
 #: src/pages/Dashboard/DashboardV2.js
-msgid "<0>Total value of tokens in GLP pool ({chainName}).</0><1>Other websites may show a higher value as they add positions' collaterals to the GLP pool.</1>"
+msgid "<0>Total value of tokens in OLP pool ({chainName}).</0><1>Other websites may show a higher value as they add positions' collaterals to the OLP pool.</1>"
 msgstr ""
 
 #: src/lib/contracts/callContract.tsx
@@ -111,12 +111,9 @@ msgid "APR"
 msgstr "Taux de rendement annuel"
 
 #: src/components/Stake/GMXAprTooltip.tsx
+#: src/pages/Stake/StakeV2.js
 msgid "APRs are updated weekly on Wednesday and will depend on the fees collected for the week."
 msgstr "Les taux de rendement annuels sont mis à jour chaque semaine le mercredi et dépendront des frais perçus pour la semaine."
-
-#: src/pages/Stake/StakeV2.js
-msgid "APRs are updated weekly on Wednesday and will depend on the fees collected for the week. <0/><1/>Historical GLP APRs can be checked in this <2>community dashboard</2>."
-msgstr ""
 
 #: src/pages/Dashboard/DashboardV2.js
 msgid "AUM"
@@ -198,12 +195,12 @@ msgid "Affiliates"
 msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "After claiming you will be able to vest a maximum of {0} esGMX at a ratio of {1} {stakingToken} to 1 esGMX."
-msgstr "Après avoir réclamé, vous pourrez vester un maximum de {0} esGMX à un ratio de {1} {stakingToken} pour 1 esGMX."
+msgid "After claiming you will be able to vest a maximum of {0} esODX at a ratio of {1} {stakingToken} to 1 esODX."
+msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "After claiming, the esGMX tokens will be airdropped to your account on the selected network within 7 days."
-msgstr "Après la réclamation, les tokens esGMX seront déposés sur votre compte sur le réseau sélectionné dans les 7 jours."
+msgid "After claiming, the esODX tokens will be airdropped to your account on the selected network within 7 days."
+msgstr ""
 
 #: src/components/ModalViews/RedirectModal.js
 msgid "Agree"
@@ -258,8 +255,8 @@ msgstr "L'approbation a été annulée"
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
 #: src/pages/Stake/StakeV2.js
-msgid "Approve GMX"
-msgstr "Approuver GMX"
+msgid "Approve ODX"
+msgstr ""
 
 #: src/components/Exchange/PositionEditor.js
 #: src/components/Exchange/SwapBox.js
@@ -274,8 +271,8 @@ msgid "Approve {stakingTokenSymbol}"
 msgstr "Approuver {stakingTokenSymbol}"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Approving GMX..."
-msgstr "Approbation de GMX..."
+msgid "Approving ODX..."
+msgstr ""
 
 #: src/components/Exchange/PositionEditor.js
 #: src/components/Exchange/SwapBox.js
@@ -294,15 +291,15 @@ msgid "Approving..."
 msgstr "Approbation..."
 
 #: src/components/Exchange/NoLiquidityErrorModal.tsx
-msgid "As there is not enough liquidity in GLP to swap {0} to {swapTokenSymbol}, you can use the option below to do so:"
-msgstr "Comme il n'y a pas assez de liquidité dans GLP pour échanger {0} vers {swapTokenSymbol}, vous pouvez utiliser l'option ci-dessous pour le faire :"
+msgid "As there is not enough liquidity in OLP to swap {0} to {swapTokenSymbol}, you can use the option below to do so:"
+msgstr ""
 
 #: src/pages/Dashboard/DashboardV1.js
 msgid "Assets Under Management"
 msgstr "Actifs sous gestion"
 
 #: src/pages/Dashboard/DashboardV2.js
-msgid "Assets Under Management: GMX staked (All chains) + GLP pool ({chainName})."
+msgid "Assets Under Management: ODX staked (All chains) + OLP pool ({chainName})."
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
@@ -320,13 +317,13 @@ msgstr "Liquidité Disponible"
 
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
-msgid "Available amount to deposit into GLP."
-msgstr "Somme disponible à déposer dans GLP."
+msgid "Available amount to deposit into OLP."
+msgstr ""
 
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
-msgid "Available amount to withdraw from GLP. Funds not utilized by current open positions."
-msgstr "Somme disponible pour retirer de GLP. Montant non utilisé par les postes actuellement ouverts."
+msgid "Available amount to withdraw from OLP. Funds not utilized by current open positions."
+msgstr ""
 
 #: src/components/Exchange/SwapBox.js
 #: src/components/Exchange/SwapBox.js
@@ -373,8 +370,8 @@ msgid "Buy"
 msgstr "Acheter"
 
 #: src/pages/BuyGlp/BuyGlp.js
-msgid "Buy / Sell GLP"
-msgstr "Acheter / Vendre GLP"
+msgid "Buy / Sell OLP"
+msgstr ""
 
 #: src/pages/BuyGMX/BuyGMX.tsx
 msgid "Buy AVAX directly to Avalanche or transfer it there."
@@ -384,59 +381,51 @@ msgstr ""
 msgid "Buy ETH directly on Arbitrum or transfer it there."
 msgstr ""
 
+#: src/pages/BuyGMX/BuyGMX.tsx
+msgid "Buy ODX from Traderjoe:"
+msgstr ""
+
+#: src/pages/BuyGMX/BuyGMX.tsx
+msgid "Buy ODX from Uniswap (make sure to select Arbitrum):"
+msgstr ""
+
+#: src/pages/BuyGMX/BuyGMX.tsx
+msgid "Buy ODX from centralized exchanges:"
+msgstr ""
+
+#: src/pages/BuyGMX/BuyGMX.tsx
+msgid "Buy ODX from centralized services"
+msgstr ""
+
+#: src/pages/BuyGMX/BuyGMX.tsx
+msgid "Buy ODX from decentralized exchanges"
+msgstr ""
+
+#: src/pages/BuyGMX/BuyGMX.tsx
+msgid "Buy ODX on {0}"
+msgstr ""
+
+#: src/pages/BuyGMX/BuyGMX.tsx
+msgid "Buy ODX using Decentralized Exchange Aggregators:"
+msgstr ""
+
+#: src/pages/BuyGMX/BuyGMX.tsx
+msgid "Buy ODX using FIAT gateways:"
+msgstr ""
+
+#: src/pages/BuyGMX/BuyGMX.tsx
+msgid "Buy ODX using any token from any network:"
+msgstr ""
+
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
 #: src/pages/Stake/StakeV2.js
-msgid "Buy GLP"
-msgstr "Acheter GLP"
-
-#: src/pages/Buy/Buy.js
-msgid "Buy GLP or GMX"
-msgstr ""
-
-#: src/pages/Stake/StakeV2.js
-msgid "Buy GMX"
-msgstr "Acheter GMX"
-
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy GMX from Traderjoe:"
-msgstr ""
-
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy GMX from Uniswap (make sure to select Arbitrum):"
-msgstr ""
-
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy GMX from centralized exchanges:"
-msgstr ""
-
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy GMX from centralized services"
-msgstr ""
-
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy GMX from decentralized exchanges"
-msgstr ""
-
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy GMX on {0}"
+msgid "Buy OLP"
 msgstr ""
 
 #: src/pages/Buy/Buy.js
-msgid "Buy GMX or GLP"
-msgstr "Acheter GMX ou GLP"
-
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy GMX using Decentralized Exchange Aggregators:"
-msgstr ""
-
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy GMX using FIAT gateways:"
-msgstr ""
-
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy GMX using any token from any network:"
+msgid "Buy OLP or ODX"
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
@@ -535,8 +524,8 @@ msgstr "Réclamer"
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "Claim GMX Rewards"
-msgstr "Réclamer les récompenses GMX"
+msgid "Claim ODX Rewards"
+msgstr ""
 
 #: src/pages/Stake/StakeV2.js
 msgid "Claim Rewards"
@@ -548,13 +537,13 @@ msgid "Claim completed!"
 msgstr "Réclamation complétée !"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "Claim esGMX"
-msgstr "Réclamer esGMX"
+msgid "Claim esODX"
+msgstr ""
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "Claim esGMX Rewards"
-msgstr "Réclamer les récompenses esGMX"
+msgid "Claim esODX Rewards"
+msgstr ""
 
 #: src/pages/Stake/StakeV1.js
 msgid "Claim failed"
@@ -773,10 +762,6 @@ msgid "Continue"
 msgstr "Continuer"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Convert esGMX tokens to GMX tokens.<0/>Please read the <1>vesting details</1> before using the vaults."
-msgstr "Convertir les tokens esGMX en tokens GMX.<0/>Veuillez lire les  <1>détails sur le vesting</1> avant d'utiliser les coffres."
-
-#: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
 msgid "Convert {wrappedTokenSymbol} to {nativeTokenSymbol}"
 msgstr "Convertir {wrappedTokenSymbol} vers {nativeTokenSymbol}"
@@ -820,7 +805,6 @@ msgstr "Impossible d'augmenter  {tokenSymbol} {longOrShortText} dans les limites
 
 #: src/components/Exchange/TradeHistory.js
 #: src/components/Referrals/AddAffiliateCode.js
-#: src/components/Referrals/AffiliatesStats.js
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
@@ -901,8 +885,8 @@ msgid "Dashboard"
 msgstr "Tableau de bord"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Dashboard for GMX referral stats"
-msgstr "Tableau de bord pour les statistiques de parrainage GMX"
+msgid "Dashboard for ODX referral stats"
+msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
 msgid "Dashboards"
@@ -938,7 +922,7 @@ msgid "Decentralized Options Strategies"
 msgstr "Stratégies d'options décentralisées"
 
 #: src/lib/legacy.ts
-msgid "Decentralized Perpetual Exchange | GMX"
+msgid "Decentralized Perpetual Exchange | ODX"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
@@ -1068,10 +1052,6 @@ msgstr "Télécharger"
 #: src/pages/Stake/StakeV2.js
 msgid "Earn"
 msgstr "Gagner"
-
-#: src/components/Header/AppHeaderLinks.tsx
-msgid "Ecosystem"
-msgstr "Écosystème"
 
 #: src/pages/Ecosystem/Ecosystem.js
 msgid "Ecosystem Projects"
@@ -1237,13 +1217,13 @@ msgstr "Prix d'entrée"
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "Escrowed GMX"
-msgstr "GMX sous séquestre"
+msgid "Escrowed ODX"
+msgstr ""
 
 #: src/components/Glp/GlpSwap.js
 #: src/components/Stake/GMXAprTooltip.tsx
-msgid "Escrowed GMX APR"
-msgstr "Taux de rendement annuels GMX sous séquestre"
+msgid "Escrowed ODX APR"
+msgstr ""
 
 #: src/pages/OrdersOverview/OrdersOverview.js
 msgid "Execute"
@@ -1297,16 +1277,16 @@ msgid "Fees are higher than Collateral"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Fees generated by GMX"
-msgstr "Commissions générées par GMX"
+msgid "Fees generated by ODX"
+msgstr ""
 
 #: src/components/Glp/GlpSwap.js
-msgid "Fees may vary depending on which asset you sell GLP for. <0/>Enter the amount of GLP you want to redeem in the order form, then check here to compare fees."
-msgstr "Les frais peuvent varier selon quel actif vous vendez pour du GLP. <0/>Indiquer la somme que vous souhaitez rembourser, puis vérifiez ici pour comparer les frais."
+msgid "Fees may vary depending on which asset you sell OLP for. <0/>Enter the amount of OLP you want to redeem in the order form, then check here to compare fees."
+msgstr ""
 
 #: src/components/Glp/GlpSwap.js
-msgid "Fees may vary depending on which asset you use to buy GLP. <0/>Enter the amount of GLP you want to purchase in the order form, then check here to compare fees."
-msgstr "Les frais peuvent varier selon quel actif vous vendez pour du GLP. <0/>Indiquer la somme que vous souhaitez acheter, puis vérifiez ici pour comparer les frais."
+msgid "Fees may vary depending on which asset you use to buy OLP. <0/>Enter the amount of OLP you want to purchase in the order form, then check here to compare fees."
+msgstr ""
 
 #: src/pages/Dashboard/DashboardV2.js
 msgid "Fees since"
@@ -1351,118 +1331,6 @@ msgstr "Renoncer aux profits non vérifiés"
 msgid "GBC NFTs APR tracker and rewards"
 msgstr "Tracker de taux de rendement annuels des NFTs GBC et récompenses"
 
-#: src/pages/Dashboard/DashboardV2.js
-#: src/pages/Dashboard/DashboardV2.js
-msgid "GLP Index Composition"
-msgstr "Composition de l'indice GLP"
-
-#: src/pages/Dashboard/DashboardV2.js
-msgid "GLP Pool"
-msgstr "Pool de GLP"
-
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
-msgid "GLP Vault"
-msgstr "Coffre GLP"
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "GLP and GMX autocompounding vaults"
-msgstr ""
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "GLP autocompounding vaults"
-msgstr ""
-
-#: src/components/Glp/GlpSwap.js
-msgid "GLP buy disabled, pending {0} upgrade"
-msgstr "Achat GLP désactivé, en attente de {0} actualisations"
-
-#: src/components/Glp/GlpSwap.js
-msgid "GLP sell disabled, pending {0} upgrade"
-msgstr "Vente GLP désactivé, en attente de {0} actualisations"
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "GMX Announcements and Updates"
-msgstr "Annonces et mises à jour concernant GMX"
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "GMX Blueberry NFTs"
-msgstr "NFT Bleuets GMX"
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "GMX Governance Page"
-msgstr "Page de gouvernance GMX"
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "GMX Pages"
-msgstr "Pages GMX"
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "GMX Perpetuals Data"
-msgstr "Données sur les Perpetuals de GMX"
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "GMX Proposals Voting page"
-msgstr "Page de vote pour les propositions sur GMX"
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "GMX Stats Page"
-msgstr "Page des statistiques GMX"
-
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
-msgid "GMX Vault"
-msgstr "Coffre GMX"
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "GMX Weekly Updates"
-msgstr "Mises à jour hebdomadaires GMX"
-
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "GMX bonds can be bought on Bond Protocol with a discount and a small vesting period:"
-msgstr ""
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "GMX community discussion"
-msgstr "Discussion de la communauté GMX"
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "GMX dashboards and analytics."
-msgstr "Tableaux de bord et analyses GMX."
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "GMX ecosystem pages."
-msgstr "Pages de l'écosystème GMX."
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "GMX explorer for stats and traders"
-msgstr "Explorateur GMX pour les statistiques et les traders"
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "GMX fundamentals"
-msgstr "Principes fondamentaux de GMX"
-
-#: src/pages/Jobs/Jobs.js
-msgid "GMX is not actively looking for new hires at the moment. However, if you think you can contribute to the project, please email <0>jobs@gmx.io</0>."
-msgstr "GMX ne recherche pas activement de nouveaux recrutements pour le moment. Toutefois, si vous pensez pouvoir contribuer au projet, veuillez envoyer un courriel à l'adresse suivante <0>jobs@gmx.io</0>."
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "GMX staking calculator"
-msgstr "Calculateur de staking GMX"
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "GMX staking calculator and guide"
-msgstr ""
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "GMX staking rewards updates and insights"
-msgstr "Mises à jour et aperçu des récompenses du staking de GMX"
-
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
-msgid "GMX transfers not yet enabled"
-msgstr "Les transferts GMX ne sont pas encore activés"
-
 #: src/components/Referrals/AddAffiliateCode.js
 msgid "Generate Referral Code"
 msgstr "Générer un code de parrainage"
@@ -1472,7 +1340,7 @@ msgid "Generating shareable image..."
 msgstr "Création d'une image partageable..."
 
 #: src/pages/Referrals/Referrals.js
-msgid "Get fee discounts and earn rebates through the GMX referral program.<0/>For more information, please read the <1>referral program details</1>."
+msgid "Get fee discounts and earn rebates through the ODX referral program.<0/>For more information, please read the <1>referral program details</1>."
 msgstr ""
 
 #: src/components/Header/HomeHeaderLinks.tsx
@@ -1563,10 +1431,6 @@ msgstr "Collatéral initial"
 msgid "Insufficient Available Liquidity to swap to {0}:"
 msgstr ""
 
-#: src/components/Glp/GlpSwap.js
-msgid "Insufficient GLP balance"
-msgstr "Équilibre insuffisant de GLP"
-
 #: src/components/Exchange/PositionSeller.js
 #: src/components/Exchange/PositionSeller.js
 #: src/components/Exchange/SwapBox.js
@@ -1580,6 +1444,10 @@ msgstr "Équilibre insuffisant de GLP"
 #: src/components/Exchange/SwapBox.js
 #: src/components/Exchange/SwapBox.js
 msgid "Insufficient Liquidity"
+msgstr ""
+
+#: src/components/Glp/GlpSwap.js
+msgid "Insufficient OLP balance"
 msgstr ""
 
 #: src/components/Exchange/SwapBox.js
@@ -1648,8 +1516,8 @@ msgid "Job Openings"
 msgstr ""
 
 #: src/pages/Jobs/Jobs.js
-msgid "Job openings at GMX."
-msgstr "Offres d'emploi chez GMX."
+msgid "Job openings at ODX."
+msgstr ""
 
 #: src/pages/Jobs/Jobs.js
 msgid "Jobs"
@@ -1676,13 +1544,9 @@ msgstr "Lancer l'application"
 msgid "Launch Dapp"
 msgstr ""
 
-#: src/components/Exchange/UsefulLinks.tsx
-msgid "Leaderboard"
-msgstr "Tableau des leaders"
-
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Leaderboard for GMX traders"
-msgstr "Tableau d'affichage pour les traders GMX"
+msgid "Leaderboard for ODX traders"
+msgstr ""
 
 #: src/components/Exchange/PositionEditor.js
 msgid "Leave at least {0} ETH for gas"
@@ -1951,12 +1815,12 @@ msgid "Max leverage: {0}x"
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
-msgid "Max pool capacity reached for {0}. Please mint GLP using another token"
-msgstr "Capacité maximale du pool atteinte pour {0}. Veuillez minter GLP avec un autre token"
+msgid "Max pool capacity reached for {0}. Please mint OLP using another token"
+msgstr ""
 
 #: src/components/Glp/GlpSwap.js
-msgid "Max pool capacity reached for {0}<0/><1/>Please mint GLP using another token"
-msgstr "Capacité maximale du pool atteinte pour {0}<0/><1/> Veuillez minter GLP avec un autre token"
+msgid "Max pool capacity reached for {0}<0/><1/>Please mint OLP using another token"
+msgstr ""
 
 #: src/App/App.js
 msgid "Max slippage precision is 0.01%"
@@ -2131,8 +1995,8 @@ msgid "No PnLs found"
 msgstr "Aucun PnLs trouvés"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "No esGMX to claim"
-msgstr "Pas d'esGMX à réclamer"
+msgid "No esODX to claim"
+msgstr ""
 
 #: src/components/Exchange/OrdersList.js
 #: src/components/Exchange/OrdersList.js
@@ -2149,8 +2013,8 @@ msgid "No open positions"
 msgstr "Pas de position ouverte"
 
 #: src/pages/Jobs/Jobs.js
-msgid "No open positions at GMX currently"
-msgstr "Aucune position ouverte actuellement chez GMX"
+msgid "No open positions at ODX currently"
+msgstr ""
 
 #: src/pages/OrdersOverview/OrdersOverview.js
 msgid "No position"
@@ -2172,6 +2036,122 @@ msgstr "Pas encore d'échanges"
 #: src/components/Exchange/OrdersToa.js
 msgid "Note that orders are not guaranteed to be executed.<0/><1/>This can occur in a few situations including but not exclusive to:"
 msgstr "Notez que l'exécution des ordres n'est pas garantie d'être exécutée.<0/><1/>Cela peut se produire dans plusieurs situations, notamment, mais pas exclusivement:"
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "ODX Announcements and Updates"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "ODX Blueberry NFTs"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "ODX Governance Page"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "ODX Pages"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "ODX Perpetuals Data"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "ODX Proposals Voting page"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "ODX Stats Page"
+msgstr ""
+
+#: src/pages/Stake/StakeV2.js
+#: src/pages/Stake/StakeV2.js
+msgid "ODX Vault"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "ODX Weekly Updates"
+msgstr ""
+
+#: src/pages/BuyGMX/BuyGMX.tsx
+msgid "ODX bonds can be bought on Bond Protocol with a discount and a small vesting period:"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "ODX community discussion"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "ODX dashboards and analytics."
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "ODX ecosystem pages."
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "ODX explorer for stats and traders"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "ODX fundamentals"
+msgstr ""
+
+#: src/pages/Jobs/Jobs.js
+msgid "ODX is not actively looking for new hires at the moment. However, if you think you can contribute to the project, please email <0>jobs@gmx.io</0>."
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "ODX staking calculator"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "ODX staking calculator and guide"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "ODX staking rewards updates and insights"
+msgstr ""
+
+#: src/pages/Stake/StakeV2.js
+#: src/pages/Stake/StakeV2.js
+msgid "ODX transfers not yet enabled"
+msgstr ""
+
+#: src/components/Common/SEO.js
+msgid "ODX | Decentralized Perpetual Exchange"
+msgstr ""
+
+#: src/pages/Dashboard/DashboardV2.js
+#: src/pages/Dashboard/DashboardV2.js
+msgid "OLP Index Composition"
+msgstr ""
+
+#: src/pages/Dashboard/DashboardV2.js
+msgid "OLP Pool"
+msgstr ""
+
+#: src/pages/Stake/StakeV2.js
+#: src/pages/Stake/StakeV2.js
+msgid "OLP Vault"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "OLP and ODX autocompounding vaults"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "OLP autocompounding vaults"
+msgstr ""
+
+#: src/components/Glp/GlpSwap.js
+msgid "OLP buy disabled, pending {0} upgrade"
+msgstr ""
+
+#: src/components/Glp/GlpSwap.js
+msgid "OLP sell disabled, pending {0} upgrade"
+msgstr ""
 
 #: src/components/Referrals/referralsHelper.js
 msgid "Only letters, numbers and underscores are allowed."
@@ -2343,16 +2323,16 @@ msgid "Pay Amount"
 msgstr "Somme à payer"
 
 #: src/pages/Dashboard/DashboardV2.js
-msgid "Platform and GLP index tokens."
-msgstr "Tokens de la plate-forme et de l'indice GLP."
+msgid "Platform and OLP index tokens."
+msgstr ""
 
 #: src/components/Referrals/JoinReferralCode.js
 msgid "Please input a referral code to benefit from fee discounts."
 msgstr "Veuillez saisir un code de parrainage pour bénéficier des réductions de frais."
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Please only use this for full account transfers.<0/>This will transfer all your GMX, esGMX, GLP and Multiplier Points to your new account.<1/>Transfers are only supported if the receiving account has not staked GMX or GLP tokens before.<2/>Transfers are one-way, you will not be able to transfer staked tokens back to the sending account."
-msgstr "Veuillez utiliser ceci uniquement pour les transferts de comptes complets.<0/>Cela permettra de transférer tous vos GMX, esGMX, GLP et points multiplicateurs vers votre nouveau compte.<1/>Les transferts ne sont pris en charge que si le compte destinataire n'a pas encore staké de tokens GMX ou GLP.<2/>Les transferts sont à sens unique, vous ne pourrez pas retransférer les tokens mis en jeu vers le compte émetteur."
+msgid "Please only use this for full account transfers.<0/>This will transfer all your ODX, esODX, OLP and Multiplier Points to your new account.<1/>Transfers are only supported if the receiving account has not staked ODX or OLP tokens before.<2/>Transfers are one-way, you will not be able to transfer staked tokens back to the sending account."
+msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
 msgid "Please switch your network to Arbitrum."
@@ -2467,11 +2447,6 @@ msgstr "Le prix est inférieur à celui de la marque"
 
 #: src/pages/Dashboard/DashboardV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "Price on Arbitrum"
-msgstr "Prix sur Arbitrum"
-
-#: src/pages/Dashboard/DashboardV2.js
-#: src/pages/Stake/StakeV2.js
 msgid "Price on Avalanche"
 msgstr "Prix sur Avalanche"
 
@@ -2484,12 +2459,12 @@ msgid "Profit price: {0} ${1}. This rule applies for the next {2}, until {3}."
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Projects developed by the GMX community. <0/>Please exercise caution when interacting with any app, apps are fully maintained by community developers."
+msgid "Projects developed by the ODX community. <0/>Please exercise caution when interacting with any app, apps are fully maintained by community developers."
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Projects integrated with GMX."
-msgstr "Projets intégrés à GMX\"."
+msgid "Projects integrated with ODX."
+msgstr ""
 
 #: src/pages/Dashboard/AssetDropdown.tsx
 msgid "Proof of Reserves"
@@ -2509,12 +2484,8 @@ msgid "Protocol risk explorer and stats"
 msgstr ""
 
 #: src/pages/BuyGlp/BuyGlp.js
-msgid "Purchase <0>GLP tokens</0> to earn {nativeTokenSymbol} fees from swaps and leverages trading."
-msgstr "Achetez des <0>tokens de GLP</0>, pour gagner les frais de {nativeTokenSymbol} provenant des opérations d'échange et de levier."
-
-#: src/pages/Stake/StakeV2.js
-msgid "Purchase Insurance"
-msgstr "Acheter l'assurance"
+msgid "Purchase <0>OLP tokens</0> to earn {nativeTokenSymbol} fees from swaps and leverages trading."
+msgstr ""
 
 #: src/components/Exchange/PositionSeller.js
 msgid "Realized PnL insufficient for Fees"
@@ -2543,6 +2514,7 @@ msgstr "Remises obtenues par ce compte en tant que trader."
 msgid "Rebates earned by this account as an affiliate."
 msgstr "Remises obtenues par ce compte en tant qu'affilié. "
 
+#: src/components/Referrals/AffiliatesStats.js
 #: src/components/Referrals/TradersStats.js
 msgid "Rebates on Arbitrum"
 msgstr ""
@@ -2571,12 +2543,12 @@ msgid "Receiver Address"
 msgstr "Adresse du destinataire"
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Receiver has not staked GLP tokens before"
-msgstr "Le destinataire n'a jamais staké de tokens GLP auparavant"
+msgid "Receiver has not staked ODX tokens before"
+msgstr ""
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Receiver has not staked GMX tokens before"
-msgstr "Le destinataire n'a jamais staké de tokens GLP auparavant"
+msgid "Receiver has not staked OLP tokens before"
+msgstr ""
 
 #: src/components/Glp/GlpSwap.js
 msgid "Redemption time not yet reached"
@@ -2593,10 +2565,6 @@ msgstr "Code de parrainage"
 #: src/components/Referrals/JoinReferralCode.js
 msgid "Referral Code does not exist"
 msgstr "Ce code de parrainage n'existe pas"
-
-#: src/components/Referrals/AffiliatesStats.js
-msgid "Referral Codes"
-msgstr "Codes de parrainage"
 
 #: src/components/Footer/constants.ts
 #: src/pages/ReferralTerms/ReferralTerms.js
@@ -2629,12 +2597,9 @@ msgstr "Code de parrainage actualisé !"
 
 #: src/components/Header/AppHeaderLinks.tsx
 #: src/pages/Referrals/Referrals.js
+#: src/pages/Referrals/Referrals.js
 msgid "Referrals"
 msgstr "Affiliés"
-
-#: src/pages/Referrals/Referrals.js
-msgid "Referrals <0/>"
-msgstr ""
 
 #: src/components/Exchange/TradeHistory.js
 msgid "Request decrease {0} {longOrShortText}, -{1} USD, Acceptable Price: {2} {3} USD"
@@ -2682,8 +2647,8 @@ msgid "Reserved for Vesting"
 msgstr "Réservé pour le vesting"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Returns calculator for GMX and GLP"
-msgstr "Calculatrice de rendements pour GMX et GLP"
+msgid "Returns calculator for ODX and OLP"
+msgstr ""
 
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
@@ -2702,10 +2667,6 @@ msgstr "Historique de distribution des récompenses"
 #: src/components/Referrals/AffiliatesStats.js
 msgid "Rewards are airdropped weekly."
 msgstr "Les récompenses sont AirDroppées chaque semaine."
-
-#: src/components/Common/SEO.js
-msgid "Rollex | Decentralized Perpetual Exchange"
-msgstr ""
 
 #: src/components/Referrals/JoinReferralCode.js
 msgid "Same as current active code"
@@ -2756,8 +2717,8 @@ msgstr "Auto-transfert non supporté"
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
 #: src/pages/Stake/StakeV2.js
-msgid "Sell GLP"
-msgstr "Vendre GLP"
+msgid "Sell OLP"
+msgstr ""
 
 #: src/components/Glp/GlpSwap.js
 msgid "Sell failed."
@@ -2777,12 +2738,12 @@ msgid "Selling..."
 msgstr "Vente en cours..."
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Sender has withdrawn all tokens from GLP Vesting Vault"
-msgstr "L'expéditeur a retiré tous les tokens du coffre de Vesting GLP."
+msgid "Sender has withdrawn all tokens from ODX Vesting Vault"
+msgstr ""
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Sender has withdrawn all tokens from GMX Vesting Vault"
-msgstr "L'expéditeur a retiré tous les tokens du coffre de Vesting GLP."
+msgid "Sender has withdrawn all tokens from OLP Vesting Vault"
+msgstr ""
 
 #: src/App/App.js
 #: src/components/Header/AppHeaderLinks.tsx
@@ -2795,7 +2756,6 @@ msgstr "Paramètres"
 msgid "Share"
 msgstr "Partager"
 
-#: src/components/Exchange/PositionDropdown.js
 #: src/components/Exchange/PositionShare.js
 msgid "Share Position"
 msgstr "Partager la Position"
@@ -2859,10 +2819,6 @@ msgstr "Montant"
 msgid "Slippage should be less than 5%"
 msgstr "Le glissement doit être de moins de 5%."
 
-#: src/components/Exchange/UsefulLinks.tsx
-msgid "Speed up page loading"
-msgstr "Accélérer le chargement de la page"
-
 #: src/components/Exchange/ConfirmationBox.js
 #: src/components/Exchange/PositionSeller.js
 msgid "Spread"
@@ -2887,28 +2843,24 @@ msgid "Stake"
 msgstr "Staker"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Stake <0>GMX</0> and <1>GLP</1> to earn rewards."
-msgstr "Staker <0>GMX</0> et <1>GLP</1> pour gagner des récompenses."
-
-#: src/pages/Stake/StakeV2.js
-msgid "Stake GMX"
-msgstr "Staker GMX"
-
-#: src/pages/Stake/StakeV2.js
-msgid "Stake GMX Rewards"
-msgstr "Staker les récompenses de GMX"
-
-#: src/pages/Stake/StakeV2.js
 msgid "Stake Multiplier Points"
 msgstr "Staker les points multiplicateurs"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Stake esGMX"
-msgstr "Staker esGMX"
+msgid "Stake ODX"
+msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "Stake esGMX Rewards"
-msgstr "Staker les récompenses en esGMX"
+msgid "Stake ODX Rewards"
+msgstr ""
+
+#: src/pages/Stake/StakeV2.js
+msgid "Stake esODX"
+msgstr ""
+
+#: src/pages/Stake/StakeV2.js
+msgid "Stake esODX Rewards"
+msgstr ""
 
 #: src/pages/Stake/StakeV1.js
 msgid "Stake failed"
@@ -3105,16 +3057,16 @@ msgid "Telegram Groups"
 msgstr "Groupes Telegram"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Telegram bot for GMX Swaps monitoring"
+msgid "Telegram bot for ODX Swaps monitoring"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Telegram bot for GMX position updates"
-msgstr "Bot telegram pour les mises à jour des positions sur GMX"
+msgid "Telegram bot for ODX position updates"
+msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Telegram bot for Open Interest on GMX"
-msgstr "Bot Telegram pour l'intérêt ouvert sur GMX"
+msgid "Telegram bot for Open Interest on ODX"
+msgstr ""
 
 #: src/components/Footer/constants.ts
 #: src/pages/TermsAndConditions/TermsAndConditions.js
@@ -3122,8 +3074,8 @@ msgid "Terms and Conditions"
 msgstr "Termes et conditions"
 
 #: src/pages/Stake/StakeV1.js
-msgid "The <0>GMX migration</0> is in progress, please migrate your GMT, xGMT, GMT-USDG and xGMT-USDG tokens.<1/>USDG tokens will continue to function as before and do not need to be migrated."
-msgstr "La <0>migration GMX</0>est en cours, veuillez migrer vos tokens GMT, xGMT, GMT-USDG et xGMT-USDG.<1/>Les tokens USDG continueront à fonctionner comme avant et ne doivent pas être transférés."
+msgid "The <0>ODX migration</0> is in progress, please migrate your GMT, xGMT, GMT-USDG and xGMT-USDG tokens.<1/>USDG tokens will continue to function as before and do not need to be migrated."
+msgstr ""
 
 #: src/components/Stake/GMXAprTooltip.tsx
 msgid "The Boosted APR is from your staked Multiplier Points."
@@ -3134,20 +3086,20 @@ msgid "The Gambit protocol is in beta, please read the <0>staking details</0>be
 msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "The address of the esGMX (IOU) token is {esGmxIouAddress}."
-msgstr "L'adresse du token esGMX (IOU - reconnaissance de dette) est {esGmxIouAddress}."
+msgid "The address of the esODX (IOU) token is {esGmxIouAddress}."
+msgstr ""
 
 #: src/components/Exchange/SwapBox.js
 msgid "The borrow fee is calculated as (assets borrowed) / (total assets in pool) * 0.01% per hour."
 msgstr "La commission d'emprunt est calculée comme (actifs empruntés) / (actifs totaux dans le pool) * 0,01% par heure."
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "The esGMX (IOU) token is transferrable. You can add the token to your wallet and send it to another address to claim if you'd like."
-msgstr "Le jeton esGMX (IOU - reconnaissance de dette) est transférable.  Vous pouvez ajouter le token à votre portefeuille et l'envoyer à une autre adresse pour le réclamer si vous le souhaitez."
+msgid "The esODX (IOU) token is transferrable. You can add the token to your wallet and send it to another address to claim if you'd like."
+msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "The esGMX tokens can be staked or vested at any time."
-msgstr "Les tokens esGMX peuvent être échangés ou acquis à tout moment."
+msgid "The esODX tokens can be staked or vested at any time."
+msgstr ""
 
 #: src/lib/contracts/callContract.tsx
 msgid "The mark price has changed, consider increasing your Allowed Slippage by clicking on the \"...\" icon next to your address."
@@ -3178,8 +3130,8 @@ msgid "The spread is > 1%, please ensure the trade details are acceptable before
 msgstr ""
 
 #: src/components/ModalViews/RedirectModal.js
-msgid "The website is a community deployed and maintained instance of the open source <0>GMX front end</0>, hosted and served on the distributed, peer-to-peer <1>IPFS network</1>."
-msgstr "Le site web est une instance open source du <0>GMX front-end</0>, déployée et maintenue par la communauté, hébergé et servi sur le réseau distribué, pair-à-pair <1>Réseau IPFS</1>."
+msgid "The website is a community deployed and maintained instance of the open source <0>ODX front end</0>, hosted and served on the distributed, peer-to-peer <1>IPFS network</1>."
+msgstr ""
 
 #: src/components/Exchange/SwapBox.js
 msgid "There are more longs than shorts, borrow fees for shorting is currently zero"
@@ -3218,13 +3170,13 @@ msgstr ""
 msgid "This position was liquidated as the max leverage of 100x was exceeded."
 msgstr "Cette position a été liquidée car le levier maximal de 100x a été dépassé."
 
+#: src/components/Referrals/AffiliatesStats.js
+msgid "Tier {0}"
+msgstr ""
+
 #: src/components/Referrals/TradersStats.js
 msgid "Tier {0} ({1}% discount)"
 msgstr "Niveau {0} (réduction {1}%)"
-
-#: src/components/Referrals/AffiliatesStats.js
-msgid "Tier {0} ({1}% rebate)"
-msgstr "Niveau {0} (Remise {1}%)"
 
 #: src/components/Migration/Migration.js
 msgid "To Receive"
@@ -3235,7 +3187,7 @@ msgid "To complete the transfer, you must switch your connected account to {rece
 msgstr "Pour effectuer le transfert, vous devez passer votre compte connecté à {receiver}."
 
 #: src/pages/BuyGMX/BuyGMX.tsx
-msgid "To purchase GMX on the {0} blockchain, please <0>change your network</0>."
+msgid "To purchase ODX on the {0} blockchain, please <0>change your network</0>."
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
@@ -3255,7 +3207,6 @@ msgstr "Tokens"
 #: src/components/Referrals/AffiliatesStats.js
 #: src/components/Referrals/TradersStats.js
 #: src/components/Referrals/TradersStats.js
-#: src/pages/Stake/StakeV2.js
 msgid "Total"
 msgstr "Total"
 
@@ -3342,10 +3293,6 @@ msgstr "Actif total: {openTotal}, exécuté: {executedTotal}, annulé: {cancelle
 msgid "Total fees earned since {0}: {1} USD<0/>Fee assets: {feeText}"
 msgstr "Total des frais gagnés depuis {0}: {1} USD<0/>Actifs de frais: {feeText}"
 
-#: src/components/StatsTooltip/StatsTooltip.tsx
-msgid "Total:"
-msgstr "Total:"
-
 #: src/components/Header/AppHeaderUser.tsx
 #: src/components/Header/AppHeaderUser.tsx
 msgid "Trade"
@@ -3356,11 +3303,11 @@ msgid "Trade cryptocurrencies with liquidity, leverage and low fees."
 msgstr ""
 
 #: src/components/Exchange/ExchangeBanner.js
-msgid "Trade on GMX and win <0>$250.000</0> in prizes! Live until November 30th, <1>click here</1> to learn more."
-msgstr "Échanger sur GMX et gagner <0>$250.000</0> de prix ! Jusqu'au 30 novembre, <1> cliquer ici</1>, pour en savoir plus.\""
+msgid "Trade on ODX and win <0>$250.000</0> in prizes! Live until November 30th, <1>click here</1> to learn more."
+msgstr ""
 
 #: src/components/Common/SEO.js
-msgid "Trade spot or perpetual BTC, ETH, SYS, PSYS and other top cryptocurrencies with up to 50x leverage directly on Rollux"
+msgid "Trade spot or perpetual BTC, ETH, USDT, USDC and other top cryptocurrencies with up to 50x leverage directly on Ethereum"
 msgstr ""
 
 #: src/pages/Referrals/Referrals.js
@@ -3373,18 +3320,23 @@ msgid "Traders Referred"
 msgstr "Traders parrainés"
 
 #: src/components/Referrals/AffiliatesStats.js
+msgid "Traders Referred on Arbitrum"
+msgstr ""
+
+#: src/components/Referrals/AffiliatesStats.js
 msgid "Traders Referred on sepolia"
 msgstr ""
 
 #: src/pages/Exchange/Exchange.js
-msgid "Trades"
-msgstr "Opérations"
+msgid "Trades History"
+msgstr ""
 
 #: src/components/Referrals/AffiliatesStats.js
 #: src/components/Referrals/TradersStats.js
 msgid "Trading Volume"
 msgstr ""
 
+#: src/components/Referrals/AffiliatesStats.js
 #: src/components/Referrals/TradersStats.js
 msgid "Trading Volume on Arbitrum"
 msgstr ""
@@ -3528,16 +3480,16 @@ msgid "Unstake"
 msgstr "Arrêter le Staking"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Unstake GMX"
-msgstr "Arrêter le staking de GMX"
+msgid "Unstake ODX"
+msgstr ""
 
 #: src/pages/Stake/StakeV2.js
 msgid "Unstake completed!"
 msgstr "Arrêt du staking complété !"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Unstake esGMX"
-msgstr "Arrêter le staking de esGMX"
+msgid "Unstake esODX"
+msgstr ""
 
 #: src/pages/Stake/StakeV1.js
 msgid "Unstake failed"
@@ -3620,28 +3572,28 @@ msgid "Vest"
 msgstr "Vester"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "Vest with GLP on Arbitrum"
-msgstr "Vester avec GLP sur Arbitrum"
+msgid "Vest with ODX on Arbitrum"
+msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "Vest with GLP on Avalanche"
-msgstr "Vester avec GLP sur Avalanche"
+msgid "Vest with ODX on Avalanche"
+msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "Vest with GMX on Arbitrum"
-msgstr "Vester avec GMX sur Arbitrum"
+msgid "Vest with OLP on Arbitrum"
+msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "Vest with GMX on Avalanche"
-msgstr "Vester avec GMX sur Avalanche"
+msgid "Vest with OLP on Avalanche"
+msgstr ""
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Vested GLP not withdrawn"
-msgstr "GLP vesté non retiré"
+msgid "Vested ODX not withdrawn"
+msgstr ""
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Vested GMX not withdrawn"
-msgstr "GMX vesté non retiré"
+msgid "Vested OLP not withdrawn"
+msgstr ""
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
@@ -3765,12 +3717,12 @@ msgid "Withdraw failed."
 msgstr "Retrait échoué."
 
 #: src/pages/Stake/StakeV2.js
-msgid "Withdraw from GLP Vault"
-msgstr "Retirer du coffre GLP"
+msgid "Withdraw from ODX Vault"
+msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "Withdraw from GMX Vault"
-msgstr "Retirer du coffre GMX"
+msgid "Withdraw from OLP Vault"
+msgstr ""
 
 #: src/pages/Stake/StakeV2.js
 msgid "Withdraw submitted."
@@ -3813,20 +3765,16 @@ msgid "Yield Vaults"
 msgstr "Coffres de Rendements"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Yield simulator for GMX"
-msgstr "Simulateur de rendement GMX"
+msgid "Yield simulator for ODX"
+msgstr ""
 
 #: src/pages/Stake/StakeV2.js
 msgid "You are earning {0}% more {nativeTokenSymbol} rewards using {1} Staked Multiplier Points."
 msgstr "Vous gagnez {0}% de plus de récompenses {nativeTokenSymbol}, en utilisant {1} Points multiplicateurs sakés."
 
-#: src/pages/Stake/StakeV2.js
-msgid "You are earning {nativeTokenSymbol} rewards with {0} tokens.<0/>Tokens: {amountStr}."
-msgstr "Vous gagnez des récompenses {nativeTokenSymbol} avec {0} tokens.<0/> Tokens: {amountStr}."
-
 #: src/components/ModalViews/RedirectModal.js
-msgid "You are leaving GMX.io and will be redirected to a third party, independent website."
-msgstr "Vous quittez GMX.io et serez redirigé vers un site Web tiers et indépendant."
+msgid "You are leaving odx.finance and will be redirected to a third party, independent website."
+msgstr ""
 
 #: src/pages/BuyGMX/BuyGMX.tsx
 msgid "You can buy AVAX directly on <0>Avalanche</0> using these options:"
@@ -3849,8 +3797,8 @@ msgid "You can check your claim history <0>here</0>."
 msgstr "Vous pouvez vérifier l'historique de vos réclamations <0>ici</0>."
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "You can currently vest a maximum of {0} esGMX tokens at a ratio of {1} {stakingToken} to 1 esGMX."
-msgstr "Vous pouvez vester un maximum de {0} tokens esGMX à un ratio de {1} {stakingToken} vers 1 esGMX."
+msgid "You can currently vest a maximum of {0} esODX tokens at a ratio of {1} {stakingToken} to 1 esODX."
+msgstr ""
 
 #: src/components/Exchange/ConfirmationBox.js
 msgid "You can edit the default Allowed Slippage in the settings menu on the top right of the page.<0/><1/>Note that a low allowed slippage, e.g. less than 0.5%, may result in failed orders if prices are volatile."
@@ -3890,12 +3838,12 @@ msgid "You have not deposited any tokens for vesting."
 msgstr "Vous n'avez pas déposé de tokens pour vester."
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "You have {0} esGMX (IOU) tokens."
-msgstr "Vous avez {0} tokens esGMX (IOU - reconnaissance de dette)."
+msgid "You have {0} esODX (IOU) tokens."
+msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "You need a total of at least {0} {stakeTokenLabel} to vest {1} esGMX."
-msgstr "Vous devez avoir un total d'au moins {0} {stakeTokenLabel} pour vester {1} esGMX."
+msgid "You need a total of at least {0} {stakeTokenLabel} to vest {1} esODX."
+msgstr ""
 
 #: src/components/Exchange/NoLiquidityErrorModal.tsx
 msgid "You need to select {swapTokenSymbol} as the \"Pay\" token to use it for collateral to initiate this trade."
@@ -3918,8 +3866,8 @@ msgid "You will receive at least {0} {1} if this order is executed. The executio
 msgstr "Vous recevrez au moins {0} {1}, si cet ordre est exécuté. Le prix d'exécution peut varier en fonction des frais d'échange au moment de l'exécution de l'ordre."
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "Your esGMX (IOU) balance will decrease by your claim amount after claiming, this is expected behaviour."
-msgstr "Le montant de vos esGMX (IOU - reconnaissance de dette) diminuera du montant total après la réclamation, c'est un comportement prévu."
+msgid "Your esODX (IOU) balance will decrease by your claim amount after claiming, this is expected behaviour."
+msgstr ""
 
 #: src/components/Exchange/ConfirmationBox.js
 msgid "Your position's collateral after deducting fees."
@@ -3946,7 +3894,7 @@ msgid "collateral"
 msgstr "collatéral"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "esGMX OTC Market"
+msgid "esODX OTC Market"
 msgstr ""
 
 #: src/pages/PositionsOverview/PositionsOverview.js
@@ -3993,26 +3941,26 @@ msgstr "{0} Approuvé!"
 msgid "{0} Capacity Reached"
 msgstr "{0} Capacité atteinte"
 
-#: src/components/Glp/GlpSwap.js
-msgid "{0} GLP (${1})"
-msgstr "{0} GLP (${1})"
-
-#: src/components/Glp/GlpSwap.js
-msgid "{0} GLP bought with {1} {2}!"
-msgstr "{0} GLP acheté avec {1} {2} !"
-
-#: src/components/Glp/GlpSwap.js
-msgid "{0} GLP have been reserved for vesting."
-msgstr "{0} GLP ont été réservés pour le vesting."
-
-#: src/components/Glp/GlpSwap.js
-msgid "{0} GLP sold for {1} {2}!"
-msgstr "{0} GLP a été vendu pour {1} {2}!"
-
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "{0} GMX tokens can be claimed, use the options under the Total Rewards section to claim them."
-msgstr "{0} Les tokens GMX peuvent être réclamés, utilisez les options de la section Récompenses Totales pour les réclamer."
+msgid "{0} ODX tokens can be claimed, use the options under the Total Rewards section to claim them."
+msgstr ""
+
+#: src/components/Glp/GlpSwap.js
+msgid "{0} OLP (${1})"
+msgstr ""
+
+#: src/components/Glp/GlpSwap.js
+msgid "{0} OLP bought with {1} {2}!"
+msgstr ""
+
+#: src/components/Glp/GlpSwap.js
+msgid "{0} OLP have been reserved for vesting."
+msgstr ""
+
+#: src/components/Glp/GlpSwap.js
+msgid "{0} OLP sold for {1} {2}!"
+msgstr ""
 
 #: src/components/Exchange/NoLiquidityErrorModal.tsx
 msgid "{0} Pool Capacity Reached"
@@ -4034,8 +3982,8 @@ msgid "{0} is above its target weight.<0/><1/>Get lower fees to <2>swap</2> toke
 msgstr "{0} est au-dessus de son poids cible.<0/><1/>Obtenez une réduction des frais pour <2>échanger</2> les tokens pour {1}."
 
 #: src/pages/Dashboard/DashboardV2.js
-msgid "{0} is below its target weight.<0/><1/>Get lower fees to <2>buy GLP</2> with {1}, and to <3>swap</3> {2} for other tokens."
-msgstr "{0} est en dessous de son poids cible.<0/><1/>Obtenez une réduction des frais pour <2>acheter GLP</2> avec {1} et d'<3>échanger</3> {2} pour d'autres tokens."
+msgid "{0} is below its target weight.<0/><1/>Get lower fees to <2>buy OLP</2> with {1}, and to <3>swap</3> {2} for other tokens."
+msgstr ""
 
 #: src/components/Exchange/SwapBox.js
 msgid "{0} is required for collateral."
@@ -4056,11 +4004,15 @@ msgstr "{0} sélectionné dans le formulaire d'ordre"
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "{0} tokens have been converted to GMX from the {1} esGMX deposited for vesting."
-msgstr "Les tokens {0} ont été convertis en GMX depuis les {1} esGMX déposés pour le vesting."
+msgid "{0} tokens have been converted to ODX from the {1} esODX deposited for vesting."
+msgstr ""
 
 #: src/components/Exchange/SwapBox.js
 msgid "{0} {1} not supported"
+msgstr ""
+
+#: src/components/Referrals/AffiliatesStats.js
+msgid "{0}%"
 msgstr ""
 
 #: src/components/Exchange/TradeHistory.js
@@ -4099,8 +4051,8 @@ msgstr ""
 "{2} Prix: {3} USD"
 
 #: src/pages/Dashboard/DashboardV2.js
-msgid "{chainName} Total Stats start from {totalStatsStartDate}.<0/> For detailed stats:"
-msgstr "{chainName} Stats totales à partir de {totalStatsStartDate}.<0/> Pour des stats détaillées:"
+msgid "{chainName} Total Stats start from {totalStatsStartDate}.<0/> To view detailed stats, please check the"
+msgstr ""
 
 #: src/components/Exchange/ConfirmationBox.js
 msgid "{existingTriggerOrderLength, plural, one {You have an active trigger order that could impact this position.} other {You have # active trigger orders that could impact this position.}}"
@@ -4139,12 +4091,8 @@ msgid "{nativeTokenSymbol} can not be sent to smart contract addresses. Select a
 msgstr ""
 
 #: src/components/StatsTooltip/StatsTooltip.tsx
-msgid "{title} on Arbitrum:"
-msgstr "{title} sur Arbitrum:"
-
-#: src/components/StatsTooltip/StatsTooltip.tsx
-msgid "{title} on Avalanche:"
-msgstr "{title} sur Avalanche:"
+msgid "{title} on AvalancheFuji:"
+msgstr ""
 
 #: src/pages/Dashboard/DashboardV1.js
 msgid "{volumeLabel} Volume"

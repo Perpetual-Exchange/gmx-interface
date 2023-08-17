@@ -1070,7 +1070,7 @@ export function getStakingData(stakingInfo) {
 
   return data;
 }
-// TODO
+//
 export function getProcessedData(
   balanceData,
   supplyData,
@@ -1217,7 +1217,7 @@ export function getProcessedData(
 }
 
 export function getPageTitle(data) {
-  const title = t`Decentralized Perpetual Exchange | GMX`;
+  const title = t`Decentralized Perpetual Exchange | REX`;
   return `${data} | ${title}`;
 }
 
@@ -1241,7 +1241,7 @@ export function getAppBaseUrl() {
     return "http://localhost:3011/#";
   }
 
-  return "https://dapp.rollex.finance/#";
+  return "https://dapptest.odx.finance/#";
 }
 
 export function getRootShareApiUrl() {
@@ -1321,6 +1321,7 @@ export function getOrderError(account, order, positionsMap, position) {
 
 export function arrayURLFetcher(...urlArr) {
   const fetcher = (url) => fetch(url).then((res) => res.json());
+
   return Promise.all(urlArr.map(fetcher));
 }
 

@@ -8,8 +8,12 @@ import Timelock from "abis/Timelock.json";
 import { MAX_REFERRAL_CODE_LENGTH, isAddressZero, isHashZero } from "lib/legacy";
 import { getContract } from "config/contracts";
 import { REGEX_VERIFY_BYTES32 } from "components/Referrals/referralsHelper";
-import { ARBITRUM, SEPOLIA } from "config/chains";
-import { arbitrumReferralsGraphClient, sepoliaReferralsGraphClient } from "lib/subgraph/clients";
+import { ARBITRUM, AVALANCHE_FUJI, AVALANCHE } from "config/chains";
+import {
+  arbitrumReferralsGraphClient,
+  fujiReferralsGraphClient,
+  avalancheReferralsGraphClient,
+} from "lib/subgraph/clients";
 import { callContract, contractFetcher } from "lib/contracts";
 import { helperToast } from "lib/helperToast";
 import { REFERRAL_CODE_KEY } from "config/localStorage";
@@ -19,8 +23,10 @@ import { isAddress } from "ethers/lib/utils";
 export function getGraphClient(chainId) {
   if (chainId === ARBITRUM) {
     return arbitrumReferralsGraphClient;
-  } else if (chainId === SEPOLIA) {
-    return sepoliaReferralsGraphClient;
+  } else if (chainId === AVALANCHE) {
+    return avalancheReferralsGraphClient;
+  } else if (chainId === AVALANCHE_FUJI) {
+    return fujiReferralsGraphClient;
   }
   throw new Error(`Unsupported chain ${chainId}`);
 }
@@ -91,7 +97,7 @@ export function useUserCodesOnAllChain(account) {
   useEffect(() => {
     async function main() {
       const [arbitrumCodes, avalancheCodes] = await Promise.all(
-        [ARBITRUM, SEPOLIA].map(async (chainId) => {
+        [ARBITRUM, AVALANCHE_FUJI].map(async (chainId) => {
           try {
             const client = getGraphClient(chainId);
             const { data } = await client.query({ query, variables: { account: (account || "").toLowerCase() } });
@@ -104,16 +110,16 @@ export function useUserCodesOnAllChain(account) {
         })
       );
       const [codeOwnersOnAvax = [], codeOwnersOnArbitrum = []] = await Promise.all([
-        getCodeOwnersData(SEPOLIA, account, arbitrumCodes),
+        getCodeOwnersData(AVALANCHE_FUJI, account, arbitrumCodes),
         getCodeOwnersData(ARBITRUM, account, avalancheCodes),
       ]);
 
       setData({
-        [ARBITRUM]: codeOwnersOnAvax.reduce((acc, cv) => {
+        [AVALANCHE_FUJI]: codeOwnersOnAvax.reduce((acc, cv) => {
           acc[cv.code] = cv;
           return acc;
         }, {} as any),
-        [SEPOLIA]: codeOwnersOnArbitrum.reduce((acc, cv) => {
+        [ARBITRUM]: codeOwnersOnArbitrum.reduce((acc, cv) => {
           acc[cv.code] = cv;
           return acc;
         }, {} as any),
