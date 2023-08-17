@@ -438,38 +438,38 @@ export const ADDITIONAL_TOKENS: { [chainId: number]: Token[] } = {
 };
 
 export const PLATFORM_TOKENS: { [chainId: number]: { [symbol: string]: Token } } = {
-  [ARBITRUM]: {
+  [AVALANCHE_FUJI]: {
     // arbitrum
-    GMX: {
-      name: "GMX",
-      symbol: "GMX",
+    REX: {
+      name: "REX",
+      symbol: "REX",
       decimals: 18,
-      address: getContract(ARBITRUM, "GMX"),
-      imageUrl: "https://assets.coingecko.com/coins/images/18323/small/arbit.png?1631532468",
+      address: getContract(AVALANCHE_FUJI, "GMX"),
+      imageUrl: "https://dapp.rollex.finance/static/ic_gmx_40.svg",
     },
-    GLP: {
-      name: "GMX LP",
-      symbol: "GLP",
+    RLP: {
+      name: "RLP",
+      symbol: "RLP",
       decimals: 18,
-      address: getContract(ARBITRUM, "StakedGlpTracker"), // address of fsGLP token because user only holds fsGLP
-      imageUrl: "https://github.com/gmx-io/gmx-assets/blob/main/GMX-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",
+      address: getContract(AVALANCHE_FUJI, "StakedGlpTracker"), // address of fsGLP token because user only holds fsGLP
+      imageUrl: "https://dapp.rollex.finance/static/ic_glp_40.svg",
     },
   },
   [AVALANCHE]: {
     // avalanche
-    GMX: {
-      name: "GMX",
-      symbol: "GMX",
+    REX: {
+      name: "REX",
+      symbol: "REX",
       decimals: 18,
       address: getContract(AVALANCHE, "GMX"),
-      imageUrl: "https://assets.coingecko.com/coins/images/18323/small/arbit.png?1631532468",
+      imageUrl: "https://dapp.rollex.finance/static/ic_gmx_40.svg",
     },
-    GLP: {
-      name: "GMX LP",
-      symbol: "GLP",
+    RLP: {
+      name: "RLP",
+      symbol: "RLP",
       decimals: 18,
       address: getContract(AVALANCHE, "StakedGlpTracker"), // address of fsGLP token because user only holds fsGLP
-      imageUrl: "https://github.com/gmx-io/gmx-assets/blob/main/GMX-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",
+      imageUrl: "https://dapp.rollex.finance/static/ic_glp_40.svg",
     },
   },
 };
