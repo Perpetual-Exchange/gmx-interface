@@ -121,7 +121,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
   const LaunchExchangeButton = () => {
     return (
       <HeaderLink
-        className="default-btn LaunchExchangeButton pointer-events-none"
+        className="default-btn LaunchExchangeButton"
         to="/trade"
         redirectPopupTimestamp={redirectPopupTimestamp}
         showRedirectModal={showRedirectModal}
