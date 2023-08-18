@@ -239,7 +239,7 @@ const CONTRACTS = {
     OrderExecutor: "0x05C3c68b882f5f14878c3a763b6002D9E4DA7Da0",
     OrderBookReader: "0x4FdD7F36aa14aa79C700059aB937E6E359E8c9eA",
 
-    PositionRouter: "0x3cFF0ef03dF66b198E99AF2bF0d04bc537F06C00",
+    PositionRouter: "0xC940Df5Ea4f80f50Ef7eb6d484dc50Fa66FcA210",
     PositionManager: "0x3be98a77a22C954C2ffDf4c47daDa1ff39149889",
 
     TraderJoeGmxAvaxPool: "0x0c91a070f862666bbcce281346be45766d874d98", //
