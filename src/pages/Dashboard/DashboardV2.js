@@ -766,7 +766,7 @@ export default function DashboardV2() {
                               renderContent={() => (
                                 <>
                                   <StatsTooltipRow
-                                    label={t`Price on ODX Testnet`}
+                                    label={t`Price on ROLLEX Testnet`}
                                     value={formatAmount(gmxPriceFromAvalanche, USD_DECIMALS, 2, true)}
                                     showDollar={true}
                                   />

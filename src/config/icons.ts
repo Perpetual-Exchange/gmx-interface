@@ -2,8 +2,8 @@ import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, AVALANCHE_FUJI, ROLLEX_TESTNET }
 import arbitrum from "img/ic_arbitrum_24.svg";
 import avalanche from "img/ic_avalanche_24.svg";
 import avalancheTestnet from "img/ic_avalanche_testnet_24.svg";
-// import odxTestnet from "img/ic_odx_testnet.png";
-import odxTestnet from "img/odx_testnet.png";
+// import rollexTestnet from "img/ic_odx_testnet.png";
+import rollexTestnet from "img/network_logo.svg";
 
 import gmxIcon from "img/ic_gmx_40.svg";
 import glpIcon from "img/ic_glp_40.svg";
@@ -32,7 +32,7 @@ const ICONS = {
     glp: glpIcon,
   },
   [ROLLEX_TESTNET]: {
-    network: odxTestnet,
+    network: rollexTestnet,
     gmx: gmxIcon,
     glp: glpIcon,
   },

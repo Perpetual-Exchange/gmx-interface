@@ -649,16 +649,16 @@ export const ICONLINKS = {
   [ROLLEX_TESTNET]: {
     ETH: {
       // coingecko: "https://www.coingecko.com/en/coins/weth",
-      odxTestnet: "https://odx-zkevm-testnet.zkevm.opside.info/address/0xc7a1bAe0Db6203F3Ee3C721909B3b959a1b437Ca",
+      rollexTestnet: "https://odx-zkevm-testnet.zkevm.opside.info/address/0xc7a1bAe0Db6203F3Ee3C721909B3b959a1b437Ca",
     },
     USDC: {
-      odxTestnet: "https://odx-zkevm-testnet.zkevm.opside.info/address/0x6187f53e7AC4cfB95ea1c4E906e777d0d2f6763E",
+      rollexTestnet: "https://odx-zkevm-testnet.zkevm.opside.info/address/0x6187f53e7AC4cfB95ea1c4E906e777d0d2f6763E",
     },
     USDT: {
-      odxTestnet: "https://odx-zkevm-testnet.zkevm.opside.info/address/0xFefEab21A1CddBAda7c1077FBc1cC92e07B5ce78",
+      rollexTestnet: "https://odx-zkevm-testnet.zkevm.opside.info/address/0xFefEab21A1CddBAda7c1077FBc1cC92e07B5ce78",
     },
     BTC: {
-      odxTestnet: "https://odx-zkevm-testnet.zkevm.opside.info/address/0xAAb8FCD8DD22a5de73550F8e67fF9Ca970d1257E",
+      rollexTestnet: "https://odx-zkevm-testnet.zkevm.opside.info/address/0xAAb8FCD8DD22a5de73550F8e67fF9Ca970d1257E",
     },
   },
 };

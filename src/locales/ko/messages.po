@@ -2445,7 +2445,7 @@ msgid "Price is below Mark Price"
 msgstr "가격이 시장 평군가보다 낮습니다"
 
 #: src/pages/Dashboard/DashboardV2.js
-msgid "Price on ODX Testnet"
+msgid "Price on ROLLEX Testnet"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js

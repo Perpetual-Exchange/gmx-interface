@@ -390,7 +390,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
             <div className="_year">2023</div>
             <div className="_q">2023 - Q3:</div>
             <div className="_list">
-              <div className="_item">Introduce ODX Testnet</div>
+              <div className="_item">Introduce ROLLEX Testnet</div>
               <div className="_item">Release ODX Tokenomics</div>
             </div>
             <img src={homeRoadMapO} className="_water" alt="o" />

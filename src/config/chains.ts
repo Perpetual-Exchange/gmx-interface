@@ -33,7 +33,7 @@ export const IS_NETWORK_DISABLED = {
 };
 
 export const CHAIN_NAMES_MAP = {
-  [ROLLEX_TESTNET]: "ODX Testnet",
+  [ROLLEX_TESTNET]: "ROLLEX Testnet",
   [MAINNET]: "BSC",
   [TESTNET]: "BSC Testnet",
   [ARBITRUM_TESTNET]: "ArbRinkeby",

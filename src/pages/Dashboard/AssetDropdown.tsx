@@ -27,7 +27,7 @@ type Props = {
 function AssetDropdown({ assetSymbol, assetInfo }: Props) {
   const { active } = useWeb3React();
   const { chainId } = useChainId();
-  let { coingecko, arbitrum, avalanche, reserves, odxTestnet } = ICONLINKS[chainId][assetSymbol] || {};
+  let { coingecko, arbitrum, avalanche, reserves, rollexTestnet } = ICONLINKS[chainId][assetSymbol] || {};
   const unavailableTokenSymbols =
     {
       42161: ["ETH"],
@@ -82,8 +82,8 @@ function AssetDropdown({ assetSymbol, assetInfo }: Props) {
                 </p>
               </ExternalLink>
             )}
-            {odxTestnet && (
-              <ExternalLink href={odxTestnet} className="asset-item">
+            {rollexTestnet && (
+              <ExternalLink href={rollexTestnet} className="asset-item">
                 <img className="asset-item-icon" src={odexTestnetIcon} alt="Open in explorer" />
                 <p>
                   <Trans>Open in Explorer</Trans>
