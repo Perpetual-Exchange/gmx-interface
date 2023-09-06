@@ -32,7 +32,7 @@ import {
   getPageTitle,
 } from "lib/legacy";
 import { useGmxPrice, useTotalGmxStaked, useTotalGmxSupply } from "domain/legacy";
-import { getChainName, getConstant, ODX_ZKEVM_TESTNET } from "config/chains";
+import { getChainName, getConstant, ROLLEX_TESTNET } from "config/chains";
 
 import useSWR from "swr";
 
@@ -1057,9 +1057,9 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
   
   const { data: gmxSupply } = useSWR(
     [
-      `StakeV2:totalSupply:${ODX_ZKEVM_TESTNET}`,
-      ODX_ZKEVM_TESTNET,
-      getContract(ODX_ZKEVM_TESTNET, "GMX"),
+      `StakeV2:totalSupply:${ROLLEX_TESTNET}`,
+      ROLLEX_TESTNET,
+      getContract(ROLLEX_TESTNET, "GMX"),
       "totalSupply"
     ],
     {

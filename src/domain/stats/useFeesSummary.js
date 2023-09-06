@@ -1,10 +1,10 @@
 import useSWR from "swr";
 import { arrayURLFetcher } from "lib/legacy";
-// import { AVALANCHE, AVALANCHE_FUJI, ARBITRUM, ODX_ZKEVM_TESTNET} from "config/chains";
-import { ODX_ZKEVM_TESTNET } from "config/chains";
+// import { AVALANCHE, AVALANCHE_FUJI, ARBITRUM, ROLLEX_TESTNET} from "config/chains";
+import { ROLLEX_TESTNET } from "config/chains";
 import { getServerUrl } from "config/backend";
 // const ACTIVE_CHAIN_IDS = [AVALANCHE, AVALANCHE_FUJI, ARBITRUM];
-const ACTIVE_CHAIN_IDS = [ODX_ZKEVM_TESTNET];
+const ACTIVE_CHAIN_IDS = [ROLLEX_TESTNET];
 // const ACTIVE_CHAIN_IDS = [AVALANCHE_FUJI];
 
 // [

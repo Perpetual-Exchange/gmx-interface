@@ -39,7 +39,7 @@ import SEO from "components/Common/SEO";
 import { useTotalVolume, useVolumeInfo, useFeesSummary } from "domain/stats";
 import StatsTooltip from "components/StatsTooltip/StatsTooltip";
 import StatsTooltipRow from "components/StatsTooltip/StatsTooltipRow";
-import { AVALANCHE, getChainName, ODX_ZKEVM_TESTNET } from "config/chains";
+import { AVALANCHE, getChainName, ROLLEX_TESTNET } from "config/chains";
 import { getServerUrl } from "config/backend";
 import { contractFetcher } from "lib/contracts";
 import { useInfoTokens } from "domain/tokens";
@@ -50,8 +50,8 @@ import { formatDate } from "lib/dates";
 import { getIcons } from "config/icons";
 import useUniqueUsers from "domain/stats/useUniqueUsers";
 // const ACTIVE_CHAIN_IDS = [AVALANCHE_FUJI, AVALANCHE];
-// const ACTIVE_CHAIN_IDS = [AVALANCHE_FUJI, ODX_ZKEVM_TESTNET];
-const ACTIVE_CHAIN_IDS = [ODX_ZKEVM_TESTNET];
+// const ACTIVE_CHAIN_IDS = [AVALANCHE_FUJI, ROLLEX_TESTNET];
+const ACTIVE_CHAIN_IDS = [ROLLEX_TESTNET];
 
 const { AddressZero } = ethers.constants;
 
@@ -158,7 +158,7 @@ export default function DashboardV2() {
   const { infoTokens } = useInfoTokens(library, chainId, active, undefined, undefined);
   // const { infoTokens: infoTokensFuji } = useInfoTokens(null, AVALANCHE_FUJI, active, undefined, undefined);
   // const { infoTokens: infoTokensAvax } = useInfoTokens(null, AVALANCHE, active, undefined, undefined);
-  const { infoTokens: infoTokensOdx } = useInfoTokens(null, ODX_ZKEVM_TESTNET, active, undefined, undefined);
+  const { infoTokens: infoTokensOdx } = useInfoTokens(null, ROLLEX_TESTNET, active, undefined, undefined);
   const { data: currentFees } = useSWR(
     // infoTokensFuji[AddressZero].contractMinPrice && infoTokensAvax[AddressZero].contractMinPrice && 
     infoTokensOdx[AddressZero].contractMinPrice
@@ -182,7 +182,7 @@ export default function DashboardV2() {
               const feeUSD = getCurrentFeesUsd(
                 getWhitelistedTokenAddresses(ACTIVE_CHAIN_IDS[i]),
                 cv,
-                // ACTIVE_CHAIN_IDS[i] === ODX_ZKEVM_TESTNET ? infoTokensOdx : infoTokensAvax
+                // ACTIVE_CHAIN_IDS[i] === ROLLEX_TESTNET ? infoTokensOdx : infoTokensAvax
                 infoTokensOdx
               );
               acc[ACTIVE_CHAIN_IDS[i]] = feeUSD;
@@ -484,7 +484,7 @@ export default function DashboardV2() {
               <Trans>
                 {chainName} Total Stats start from {totalStatsStartDate}.<br /> To view detailed stats, please check the
               </Trans>{" "}
-              {chainId === ODX_ZKEVM_TESTNET && (
+              {chainId === ROLLEX_TESTNET && (
                 // <ExternalLink href="https://stats.odx.finance/">Analytics page</ExternalLink>
                 <span>Analytics page</span>
               )}

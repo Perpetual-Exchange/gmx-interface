@@ -12,12 +12,12 @@ import { ICONLINKS, PLATFORM_TOKENS } from "config/tokens";
 import { addTokenToMetamask } from "lib/wallets";
 import { useChainId } from "lib/chains";
 import { Token } from "domain/tokens";
-import { ARBITRUM, AVALANCHE, ODX_ZKEVM_TESTNET } from "config/chains";
+import { ARBITRUM, AVALANCHE, ROLLEX_TESTNET } from "config/chains";
 import { getIcon } from "config/icons";
 
 const avalancheIcon = getIcon(AVALANCHE, "network");
 const arbitrumIcon = getIcon(ARBITRUM, "network");
-const odexTestnetIcon = getIcon(ODX_ZKEVM_TESTNET, "network");
+const odexTestnetIcon = getIcon(ROLLEX_TESTNET, "network");
 
 type Props = {
   assetSymbol: string;

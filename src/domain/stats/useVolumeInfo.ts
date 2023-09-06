@@ -1,5 +1,5 @@
 import { GMX_STATS_API_URL } from "config/backend";
-import { ODX_ZKEVM_TESTNET } from "config/chains";
+import { ROLLEX_TESTNET } from "config/chains";
 import { bigNumberify } from "lib/numbers";
 import useSWR from "swr";
 
@@ -15,7 +15,7 @@ export function useVolumeInfo() {
         // [ARBITRUM]: bigNumberify(json[ARBITRUM]),
         // [AVALANCHE]: bigNumberify(json[AVALANCHE]),
         // [AVALANCHE_FUJI]: bigNumberify(json[AVALANCHE_FUJI]),
-        [ODX_ZKEVM_TESTNET]: bigNumberify(json[ODX_ZKEVM_TESTNET]),
+        [ROLLEX_TESTNET]: bigNumberify(json[ROLLEX_TESTNET]),
         total: bigNumberify(json.total),
       };
     },

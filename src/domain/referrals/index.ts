@@ -9,7 +9,7 @@ import Timelock from "abis/Timelock.json";
 import { MAX_REFERRAL_CODE_LENGTH, isAddressZero, isHashZero } from "lib/legacy";
 import { getContract } from "config/contracts";
 import { REGEX_VERIFY_BYTES32 } from "components/Referrals/referralsHelper";
-import { ARBITRUM, AVALANCHE_FUJI, AVALANCHE, ODX_ZKEVM_TESTNET } from "config/chains";
+import { ARBITRUM, AVALANCHE_FUJI, AVALANCHE, ROLLEX_TESTNET } from "config/chains";
 import {
   arbitrumReferralsGraphClient,
   fujiReferralsGraphClient,
@@ -29,7 +29,7 @@ export function getGraphClient(chainId) {
     return avalancheReferralsGraphClient;
   } else if (chainId === AVALANCHE_FUJI) {
     return fujiReferralsGraphClient;
-  } else if (chainId === ODX_ZKEVM_TESTNET) {
+  } else if (chainId === ROLLEX_TESTNET) {
     return odxTestGraphClient;
   }
   throw new Error(`Unsupported chain ${chainId}`);
@@ -101,7 +101,7 @@ export function useUserCodesOnAllChain(account) {
   useEffect(() => {
     async function main() {
       const [arbitrumCodes, avalancheCodes] = await Promise.all(
-        [ARBITRUM, AVALANCHE_FUJI, ODX_ZKEVM_TESTNET].map(async (chainId) => {
+        [ARBITRUM, AVALANCHE_FUJI, ROLLEX_TESTNET].map(async (chainId) => {
           try {
             const client = getGraphClient(chainId);
             const { data } = await client.query({ query, variables: { account: (account || "").toLowerCase() } });
@@ -116,11 +116,11 @@ export function useUserCodesOnAllChain(account) {
       const [codeOwnersOnAvax = [], codeOwnersOnArbitrum = []] = await Promise.all([
         getCodeOwnersData(AVALANCHE_FUJI, account, arbitrumCodes),
         getCodeOwnersData(ARBITRUM, account, avalancheCodes),
-        getCodeOwnersData(ODX_ZKEVM_TESTNET, account, avalancheCodes),
+        getCodeOwnersData(ROLLEX_TESTNET, account, avalancheCodes),
       ]);
 
       setData({
-        [ODX_ZKEVM_TESTNET]: codeOwnersOnAvax.reduce((acc, cv) => {
+        [ROLLEX_TESTNET]: codeOwnersOnAvax.reduce((acc, cv) => {
           acc[cv.code] = cv;
           return acc;
         }, {} as any),

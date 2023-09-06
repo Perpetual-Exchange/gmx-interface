@@ -13,27 +13,27 @@ export const AVALANCHE_FUJI = 43113;
 export const ARBITRUM = 42161;
 export const ARBITRUM_TESTNET = 421611;
 export const FEES_HIGH_BPS = 50;
-export const ODX_ZKEVM_TESTNET = 12020;
+export const ROLLEX_TESTNET = 12020;
 
 
 // TODO take it from web3
-export const DEFAULT_CHAIN_ID = ODX_ZKEVM_TESTNET;
+export const DEFAULT_CHAIN_ID = ROLLEX_TESTNET;
 export const CHAIN_ID = DEFAULT_CHAIN_ID;
 
-export const SUPPORTED_CHAIN_IDS = [ODX_ZKEVM_TESTNET];
+export const SUPPORTED_CHAIN_IDS = [ROLLEX_TESTNET];
 
 // if (isDevelopment()) {
 //   SUPPORTED_CHAIN_IDS.push(AVALANCHE_FUJI);
 // }
 
 export const IS_NETWORK_DISABLED = {
-  [ODX_ZKEVM_TESTNET]: false,
+  [ROLLEX_TESTNET]: false,
   [AVALANCHE_FUJI]: false,
   [AVALANCHE]: false
 };
 
 export const CHAIN_NAMES_MAP = {
-  [ODX_ZKEVM_TESTNET]: "ODX Testnet",
+  [ROLLEX_TESTNET]: "ODX Testnet",
   [MAINNET]: "BSC",
   [TESTNET]: "BSC Testnet",
   [ARBITRUM_TESTNET]: "ArbRinkeby",
@@ -44,7 +44,7 @@ export const CHAIN_NAMES_MAP = {
 
 export const GAS_PRICE_ADJUSTMENT_MAP = {
   [AVALANCHE_FUJI]: "0",
-  [ODX_ZKEVM_TESTNET]: "0",
+  [ROLLEX_TESTNET]: "0",
   [AVALANCHE]: "3000000000", // 3 gwei
 };
 
@@ -54,7 +54,7 @@ export const MAX_GAS_PRICE_MAP = {
 
 export const HIGH_EXECUTION_FEES_MAP = {
   [AVALANCHE_FUJI]: 3, // 3 USD
-  [ODX_ZKEVM_TESTNET]: 3, // 3 USD
+  [ROLLEX_TESTNET]: 3, // 3 USD
   [AVALANCHE]: 3, // 3 USD
 };
 
@@ -131,7 +131,7 @@ const constants = {
   },
 
   // config refer to AVALANCHE_FUJI
-  [ODX_ZKEVM_TESTNET]: {
+  [ROLLEX_TESTNET]: {
     nativeTokenSymbol: "ETH",
     wrappedTokenSymbol: "WETH",
     defaultCollateralSymbol: "USDT",
@@ -170,7 +170,7 @@ export const RPC_PROVIDERS = {
   [ARBITRUM_TESTNET]: ["https://rinkeby.arbitrum.io/rpc"],
   [AVALANCHE]: ["https://api.avax.network/ext/bc/C/rpc"],
   [AVALANCHE_FUJI]: ["https://api.avax-test.network/ext/bc/C/rpc"],
-  [ODX_ZKEVM_TESTNET]: ["https://pre-alpha-zkrollup-rpc.opside.network/odx-zkevm-testnet"]
+  [ROLLEX_TESTNET]: ["https://pre-alpha-zkrollup-rpc.opside.network/odx-zkevm-testnet"]
 };
 
 export const FALLBACK_PROVIDERS = {
@@ -245,16 +245,16 @@ export const NETWORK_METADATA: { [chainId: number]: NetworkMetadata } = {
     rpcUrls: RPC_PROVIDERS[AVALANCHE_FUJI],
     blockExplorerUrls: [getExplorerUrl(AVALANCHE_FUJI)],
   },
-  [ODX_ZKEVM_TESTNET]: {
-    chainId: "0x" + ODX_ZKEVM_TESTNET.toString(16),
+  [ROLLEX_TESTNET]: {
+    chainId: "0x" + ROLLEX_TESTNET.toString(16),
     chainName: "ODX zkEVM Testnet",
     nativeCurrency: {
       name: "ETH",
       symbol: "ETH",
       decimals: 18,
     },
-    rpcUrls: RPC_PROVIDERS[ODX_ZKEVM_TESTNET],
-    blockExplorerUrls: [getExplorerUrl(ODX_ZKEVM_TESTNET)],
+    rpcUrls: RPC_PROVIDERS[ROLLEX_TESTNET],
+    blockExplorerUrls: [getExplorerUrl(ROLLEX_TESTNET)],
   },
 };
 
@@ -317,7 +317,7 @@ export function getExplorerUrl(chainId) {
     return "https://snowtrace.io/";
   } else if (chainId === AVALANCHE_FUJI) {
     return "https://testnet.snowtrace.io/";
-  } else if (chainId === ODX_ZKEVM_TESTNET) {
+  } else if (chainId === ROLLEX_TESTNET) {
     return "https://odx-zkevm-testnet.zkevm.opside.info/";
   }
   return "https://etherscan.io/";

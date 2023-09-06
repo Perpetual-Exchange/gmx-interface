@@ -6,7 +6,7 @@ import { isHomeSite } from "lib/legacy";
 import { useWeb3React } from "@web3-react/core";
 import APRLabel from "../APRLabel/APRLabel";
 import { HeaderLink } from "../Header/HeaderLink";
-import { ODX_ZKEVM_TESTNET } from "config/chains";
+import { ROLLEX_TESTNET } from "config/chains";
 import { switchNetwork } from "lib/wallets";
 import { useChainId } from "lib/chains";
 import { getIcon } from "config/icons";
@@ -63,7 +63,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           <h3 className="flex-1 font-[22px]">ODX</h3>
           APR:
           <span className="text-[#80AE0E]">
-            <APRLabel chainId={ODX_ZKEVM_TESTNET} label="gmxAprTotal" key="ODX_ZKEVM_TESTNET" />
+            <APRLabel chainId={ROLLEX_TESTNET} label="gmxAprTotal" key="ROLLEX_TESTNET" />
           </span>
         </div>
         <div>
@@ -74,11 +74,11 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           </a>
         </div>
         <div className="Home-token-card-option-action">
-          {/* <BuyLink to="/buy_odx" className="default-btn custom-buy-btn pointer-events-none" network={ODX_ZKEVM_TESTNET}>
+          {/* <BuyLink to="/buy_odx" className="default-btn custom-buy-btn pointer-events-none" network={ROLLEX_TESTNET}>
             Buy ODX
           </BuyLink> */}
 
-          <BuyLink className="default-btn custom-buy-btn pointer-events-none" network={ODX_ZKEVM_TESTNET}>
+          <BuyLink className="default-btn custom-buy-btn pointer-events-none" network={ROLLEX_TESTNET}>
             Coming Soon
           </BuyLink>
 
@@ -90,7 +90,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           <h3 className="flex-1 font-[22px]">OLP</h3>
           APR:
           <span className="text-[#80AE0E]">
-            <APRLabel chainId={ODX_ZKEVM_TESTNET} label="glpAprTotal" key="ODX_ZKEVM_TESTNET" />
+            <APRLabel chainId={ROLLEX_TESTNET} label="glpAprTotal" key="ROLLEX_TESTNET" />
           </span>
         </div>
 
@@ -102,7 +102,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           Learn more
         </a>
         <div className="Home-token-card-option-action">
-          <BuyLink to="/buy_olp" className="default-btn custom-buy-btn" network={ODX_ZKEVM_TESTNET}>
+          <BuyLink to="/buy_olp" className="default-btn custom-buy-btn" network={ROLLEX_TESTNET}>
             Buy OLP
           </BuyLink>
         </div>

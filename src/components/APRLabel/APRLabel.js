@@ -25,7 +25,7 @@ import { getContract } from "config/contracts";
 // import { getServerUrl } from "config/backend";
 import { contractFetcher } from "lib/contracts";
 import { formatKeyAmount } from "lib/numbers";
-import { ODX_ZKEVM_TESTNET } from "config/chains";
+import { ROLLEX_TESTNET } from "config/chains";
 
 export default function APRLabel({ chainId, label }) {
   let { active } = useWeb3React();
@@ -135,9 +135,9 @@ export default function APRLabel({ chainId, label }) {
 
   const { data: gmxSupply } = useSWR(
     [
-      `StakeV2:totalSupply:${ODX_ZKEVM_TESTNET}`,
-      ODX_ZKEVM_TESTNET,
-      getContract(ODX_ZKEVM_TESTNET, "GMX"),
+      `StakeV2:totalSupply:${ROLLEX_TESTNET}`,
+      ROLLEX_TESTNET,
+      getContract(ROLLEX_TESTNET, "GMX"),
       "totalSupply"
     ],
     {

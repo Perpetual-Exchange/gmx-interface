@@ -1,6 +1,6 @@
 import { ethers } from "ethers";
 import { getContract } from "./contracts";
-import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, AVALANCHE_FUJI, MAINNET, TESTNET, ODX_ZKEVM_TESTNET } from "./chains";
+import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, AVALANCHE_FUJI, MAINNET, TESTNET, ROLLEX_TESTNET } from "./chains";
 import { Token } from "domain/tokens";
 
 export const TOKENS: { [chainId: number]: Token[] } = {
@@ -388,7 +388,7 @@ export const TOKENS: { [chainId: number]: Token[] } = {
       imageUrl: "https://assets.coingecko.com/coins/images/877/thumb/chainlink-new-logo.png?1547034700",
     },
   ],
-  [ODX_ZKEVM_TESTNET]: [
+  [ROLLEX_TESTNET]: [
     {
       name: "Ethereum",
       symbol: "ETH",
@@ -518,20 +518,20 @@ export const PLATFORM_TOKENS: { [chainId: number]: { [symbol: string]: Token } }
       imageUrl: "https://dapptest.odx.finance/static/ic_glp_40.svg",
     },
   },
-  [ODX_ZKEVM_TESTNET]: {
+  [ROLLEX_TESTNET]: {
     // arbitrum
     ODX: {
       name: "ODX",
       symbol: "ODX",
       decimals: 18,
-      address: getContract(ODX_ZKEVM_TESTNET, "GMX"),
+      address: getContract(ROLLEX_TESTNET, "GMX"),
       imageUrl: "https://dapptest.odx.finance/static/ic_gmx_40.svg",
     },
     OLP: {
       name: "OLP",
       symbol: "OLP",
       decimals: 18,
-      address: getContract(ODX_ZKEVM_TESTNET, "StakedGlpTracker"), // address of fsGLP token because user only holds fsGLP
+      address: getContract(ROLLEX_TESTNET, "StakedGlpTracker"), // address of fsGLP token because user only holds fsGLP
       imageUrl: "https://dapptest.odx.finance/static/ic_glp_40.svg",
     },
   },
@@ -646,7 +646,7 @@ export const ICONLINKS = {
       avalanche: "https://testnet.snowtrace.io/address/0xC492c8d82DC576Ad870707bb40EDb63E2026111E",
     },
   },
-  [ODX_ZKEVM_TESTNET]: {
+  [ROLLEX_TESTNET]: {
     ETH: {
       // coingecko: "https://www.coingecko.com/en/coins/weth",
       odxTestnet: "https://odx-zkevm-testnet.zkevm.opside.info/address/0xc7a1bAe0Db6203F3Ee3C721909B3b959a1b437Ca",
@@ -683,7 +683,7 @@ export const TOKENS_BY_SYMBOL_MAP: { [chainId: number]: { [symbol: string]: Toke
 export const WRAPPED_TOKENS_MAP: { [chainId: number]: Token } = {};
 export const NATIVE_TOKENS_MAP: { [chainId: number]: Token } = {};
 
-const CHAIN_IDS = [MAINNET, TESTNET, ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, AVALANCHE_FUJI, ODX_ZKEVM_TESTNET];
+const CHAIN_IDS = [MAINNET, TESTNET, ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, AVALANCHE_FUJI, ROLLEX_TESTNET];
 
 for (let j = 0; j < CHAIN_IDS.length; j++) {
   const chainId = CHAIN_IDS[j];
@@ -772,7 +772,7 @@ const AVAILABLE_CHART_TOKENS = {
   [AVALANCHE]: ["AVAX", "ETH", "BTC"],
   [AVALANCHE_FUJI]: ["AVAX", "ETH", "BTC"],
   //待定
-  [ODX_ZKEVM_TESTNET]: ["ETH", "BTC", "LINK", "UNI"],
+  [ROLLEX_TESTNET]: ["ETH", "BTC", "LINK", "UNI"],
 };
 
 export function isChartAvailabeForToken(chainId: number, tokenSymbol: string) {

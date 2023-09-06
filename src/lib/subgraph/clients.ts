@@ -1,5 +1,5 @@
 import { createClient } from "./utils";
-import { ARBITRUM, AVALANCHE, ETH_MAINNET, AVALANCHE_FUJI,ODX_ZKEVM_TESTNET } from "config/chains";
+import { ARBITRUM, AVALANCHE, ETH_MAINNET, AVALANCHE_FUJI,ROLLEX_TESTNET } from "config/chains";
 
 export const chainlinkClient = createClient(ETH_MAINNET, "chainLink");
 
@@ -13,8 +13,8 @@ export const avalancheReferralsGraphClient = createClient(AVALANCHE, "referrals"
 export const fujiGraphClient = createClient(AVALANCHE_FUJI, "stats");
 export const fujiReferralsGraphClient = createClient(AVALANCHE_FUJI, "referrals");
 
-export const odxTestGraphClient = createClient(ODX_ZKEVM_TESTNET, "stats");
-export const odxTestReferralsGraphClient = createClient(ODX_ZKEVM_TESTNET, "referrals");
+export const odxTestGraphClient = createClient(ROLLEX_TESTNET, "stats");
+export const odxTestReferralsGraphClient = createClient(ROLLEX_TESTNET, "referrals");
 
 export function getGmxGraphClient(chainId: number) {
   if (chainId === ARBITRUM) {
@@ -23,7 +23,7 @@ export function getGmxGraphClient(chainId: number) {
     return fujiGraphClient;
   } else if (chainId === AVALANCHE) {
     return avalancheGraphClient;
-  } else if (chainId === ODX_ZKEVM_TESTNET) {
+  } else if (chainId === ROLLEX_TESTNET) {
     return odxTestGraphClient;
   }
 

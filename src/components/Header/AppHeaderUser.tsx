@@ -10,7 +10,7 @@ import { isHomeSite, getAccountUrl } from "lib/legacy";
 import cx from "classnames";
 import { Trans } from "@lingui/macro";
 import NetworkDropdown from "../NetworkDropdown/NetworkDropdown";
-import { getChainName, ODX_ZKEVM_TESTNET } from "config/chains";
+import { getChainName, ROLLEX_TESTNET } from "config/chains";
 // ARBITRUM_TESTNET
 import { switchNetwork } from "lib/wallets";
 import { useChainId } from "lib/chains";
@@ -28,10 +28,10 @@ type Props = {
 
 const NETWORK_OPTIONS = [
   {
-    label: getChainName(ODX_ZKEVM_TESTNET),
-    value: ODX_ZKEVM_TESTNET,
-    icon: getIcon(ODX_ZKEVM_TESTNET, "network"),
-    color: "#ODX_ZKEVM_TESTNET",
+    label: getChainName(ROLLEX_TESTNET),
+    value: ROLLEX_TESTNET,
+    icon: getIcon(ROLLEX_TESTNET, "network"),
+    color: "#ROLLEX_TESTNET",
   }
 ];
 

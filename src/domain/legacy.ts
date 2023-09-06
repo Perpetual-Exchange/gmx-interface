@@ -12,7 +12,7 @@ import Token from "abis/Token.json";
 import PositionRouter from "abis/PositionRouter.json";
 
 import { getContract } from "config/contracts";
-import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, getConstant, getHighExecutionFee, AVALANCHE_FUJI, ODX_ZKEVM_TESTNET } from "config/chains";
+import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, getConstant, getHighExecutionFee, AVALANCHE_FUJI, ROLLEX_TESTNET } from "config/chains";
 import { DECREASE, getOrderKey, INCREASE, SWAP, USD_DECIMALS } from "lib/legacy";
 
 import { groupBy } from "lodash";
@@ -394,7 +394,7 @@ export function useExecutionFee(library, active, chainId, infoTokens) {
     multiplier = 700000;
   }
 
-  if (chainId === ODX_ZKEVM_TESTNET) {
+  if (chainId === ROLLEX_TESTNET) {
     multiplier = 700000;
   }
 
@@ -507,9 +507,9 @@ export function useTotalGmxSupply() {
 
   const { data: gmxSupply, mutate: updateGmxSupply } = useSWR<BigNumber>(
     [
-      `StakeV2:totalSupply:${ODX_ZKEVM_TESTNET}`,
-      ODX_ZKEVM_TESTNET,
-      getContract(ODX_ZKEVM_TESTNET, "GMX"),
+      `StakeV2:totalSupply:${ROLLEX_TESTNET}`,
+      ROLLEX_TESTNET,
+      getContract(ROLLEX_TESTNET, "GMX"),
       "totalSupply"
     ],
     {
@@ -528,14 +528,14 @@ export function useTotalGmxSupply() {
 }
 
 export function useTotalGmxStaked() {
-  const stakedGmxTrackerAddressAvax = getContract(ODX_ZKEVM_TESTNET, "StakedGmxTracker");
+  const stakedGmxTrackerAddressAvax = getContract(ROLLEX_TESTNET, "StakedGmxTracker");
   let totalStakedGmx = useRef(bigNumberify(0));
 
   const { data: stakedGmxSupplyAvax, mutate: updateStakedGmxSupplyAvax } = useSWR<BigNumber>(
     [
-      `StakeV2:stakedGmxSupply:${ODX_ZKEVM_TESTNET}`,
-      ODX_ZKEVM_TESTNET,
-      getContract(ODX_ZKEVM_TESTNET, "GMX"),
+      `StakeV2:stakedGmxSupply:${ROLLEX_TESTNET}`,
+      ROLLEX_TESTNET,
+      getContract(ROLLEX_TESTNET, "GMX"),
       "balanceOf",
       stakedGmxTrackerAddressAvax,
     ],

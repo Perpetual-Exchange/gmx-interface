@@ -2,11 +2,11 @@ import useSWR from "swr";
 // import { arrayURLFetcher, getTotalVolumeSum } from "lib/legacy";
 import { arrayURLFetcher } from "lib/legacy";
 // import { AVALANCHE_FUJI, AVALANCHE } from "config/chains";
-import { ODX_ZKEVM_TESTNET } from "config/chains";
+import { ROLLEX_TESTNET } from "config/chains";
 import { getServerUrl } from "config/backend";
 // import { bigNumberify } from "lib/numbers";
 // const ACTIVE_CHAIN_IDS = [AVALANCHE_FUJI, AVALANCHE];
-const ACTIVE_CHAIN_IDS = [ODX_ZKEVM_TESTNET];
+const ACTIVE_CHAIN_IDS = [ROLLEX_TESTNET];
 
 export function useTotalVolume() {
   const { data: totalVolume } = useSWR<any>(
