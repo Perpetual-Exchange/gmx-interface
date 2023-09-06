@@ -23,7 +23,7 @@ import ReferralsTier from "pages/ReferralsTier/ReferralsTier";
 import Ecosystem from "pages/Ecosystem/Ecosystem";
 import Stake from "pages/Stake/Stake";
 import { Exchange } from "pages/Exchange/Exchange";
-import Actions from "pages/Actions/Actions";
+// import Actions from "pages/Actions/Actions";
 import OrdersOverview from "pages/OrdersOverview/OrdersOverview";
 import PositionsOverview from "pages/PositionsOverview/PositionsOverview";
 import Referrals from "pages/Referrals/Referrals";
@@ -213,12 +213,12 @@ function FullApp() {
           <br />
           {userOnMobileDevice ? (
             <Trans>
-              <ExternalLink href="https://metamask.io">Install MetaMask</ExternalLink>, and use REX with its built-in
+              <ExternalLink href="https://metamask.io">Install MetaMask</ExternalLink>, and use ODX with its built-in
               browser.
             </Trans>
           ) : (
             <Trans>
-              <ExternalLink href="https://metamask.io">Install MetaMask</ExternalLink> to start using REX.
+              <ExternalLink href="https://metamask.io">Install MetaMask</ExternalLink> to start using ODX.
             </Trans>
           )}
         </div>
@@ -236,13 +236,13 @@ function FullApp() {
           <br />
           {userOnMobileDevice ? (
             <Trans>
-              <ExternalLink href="https://www.coinbase.com/wallet">Install Coinbase Wallet</ExternalLink>, and use REX
+              <ExternalLink href="https://www.coinbase.com/wallet">Install Coinbase Wallet</ExternalLink>, and use ODX
               with its built-in browser.
             </Trans>
           ) : (
             <Trans>
               <ExternalLink href="https://www.coinbase.com/wallet">Install Coinbase Wallet</ExternalLink> to start using
-              REX.
+              ODX.
             </Trans>
           )}
         </div>
@@ -497,7 +497,7 @@ function FullApp() {
                   connectWallet={connectWallet}
                 />
               </Route>
-              <Route exact path="/buy_glp">
+              <Route exact path="/buy_olp">
                 <BuyGlp
                   savedSlippageAmount={savedSlippageAmount}
                   setPendingTxns={setPendingTxns}
@@ -508,7 +508,7 @@ function FullApp() {
               <Route exact path="/jobs">
                 <Jobs />
               </Route>
-              <Route exact path="/buy_gmx">
+              <Route exact path="/buy_odx">
                 <BuyGMX />
               </Route>
               <Route exact path="/ecosystem">
@@ -526,12 +526,12 @@ function FullApp() {
               <Route exact path="/claim_es_gmx">
                 <ClaimEsGmx setPendingTxns={setPendingTxns} />
               </Route>
-              <Route exact path="/actions">
+              {/* <Route exact path="/actions">
                 <Actions />
               </Route>
               <Route exact path="/actions/:account">
                 <Actions savedIsPnlInLeverage={savedIsPnlInLeverage} savedShowPnlAfterFees={savedShowPnlAfterFees} />
-              </Route>
+              </Route> */}
               <Route exact path="/referrals-tier">
                 <ReferralsTier />
               </Route>

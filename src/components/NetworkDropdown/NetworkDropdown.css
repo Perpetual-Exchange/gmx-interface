@@ -179,6 +179,9 @@
 .active-dot.Avalanche {
   background-color: #e84142;
 }
+.active-dot.ODX {
+  background-color: #80ae0e;
+}
 .network-dropdown-label {
   font-size: 1.25rem;
   margin-bottom: 0.8rem;

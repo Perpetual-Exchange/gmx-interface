@@ -1,5 +1,6 @@
 .Home {
   min-height: 100vh;
+  padding-top: 60px;
 }
 
 .Home-top {
@@ -7,11 +8,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+  padding-top: 6.2rem;
   position: relative;
   background: url("img/shapes2.png");
   background-repeat: no-repeat;
-  background-size: auto 1300px;
-  background-position: right -160px;
+  background-size: auto 1200px;
+  background-position: right -60px;
 }
 
 .Home-title {
@@ -147,7 +149,7 @@
   padding: 1.5rem;
   text-decoration: none;
   background: rgba(0, 0, 0, 0.3);
-  border-radius: 0;
+  border-radius: 0.3rem;
   margin-top: 3.1rem;
 }
 
@@ -168,7 +170,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 0;
+  border-radius: 0.6rem;
   display: flex;
   justify-content: space-between;
 }
@@ -224,7 +226,7 @@
   max-width: 59.2rem;
   background: #16182e;
   box-shadow: 0px 0.5rem 1.3rem #00000085;
-  border-radius: 0;
+  border-radius: 4px;
 }
 
 .Home-token-card-option-icon {
@@ -273,11 +275,10 @@
   float: right;
 } */
 
-.default-container.Home-latest-info-container {
+.Home-latest-info-container {
   padding-bottom: 1.5rem;
   width: 100%;
   color: #979797;
-  margin-top: 150px;
 }
 
 .Home-latest-info-container .flex-1 {
@@ -291,7 +292,7 @@
   box-shadow: 0px 0.7rem 0.8rem #00000033;
   /* mix-blend-mode: multiply; */
   border: 0.5px solid #ffffff14;
-  border-radius: 0;
+  border-radius: 4px;
   max-width: 38rem;
   width: 100%;
   display: flex;
@@ -316,7 +317,7 @@
 
 .Home-latest-info__value {
   color: white;
-  font-size: 2.6rem;
+  font-size: 2.9rem;
   line-height: 3.9rem;
   letter-spacing: 0px;
   font-weight: 700;
@@ -385,7 +386,7 @@
 .Home-faqs-content {
   background: #17182c;
   border: 0.5px solid #1e2136;
-  border-radius: 0;
+  border-radius: 4px;
   cursor: pointer;
   padding: 3.7rem 7.75rem;
   width: 100%;
@@ -438,30 +439,49 @@
 
 /* custom css */
 .LaunchExchangeButton {
+  position: relative;
   font-weight: 700;
   font-size: 2.6rem !important;
   line-height: 6rem !important;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding-left: 3rem !important;
+  padding-right: 3rem !important;
+  overflow: hidden;
+  border-radius: 10px !important;
+}
+.LaunchExchangeButton::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  top: 15%;
+  left: 4%;
+  border: 0.5px solid #c2d88c;
+  border-radius: 10px;
 }
 .default-container.Home-feature-wrap {
   width: 100%;
   margin-top: 15rem;
 }
 .Home-feature {
-  border: 0.5px solid #e0ee8d;
+  border: 0.5px solid rgba(128, 174, 14, 0.6);
   color: #858585;
+  border-radius: 5px;
 }
 .Home-feature h2 {
   font-size: 3rem;
   height: 8rem;
   line-height: 8rem;
   text-align: center;
-  border-bottom: 0.5px solid #e0ee8d;
+  border-bottom: 0.5px solid rgba(128, 174, 14, 0.6);
   padding: 0;
   margin: 0;
   color: #fff;
   font-weight: 700;
+}
+
+.Home-feature ._cont {
+  border-bottom: 0.5px solid rgba(128, 174, 14, 0.6);
+  padding: 30px 40px;
 }
 
 .Home-feature-list h3 {
@@ -481,9 +501,8 @@
   padding-bottom: 30px;
   padding-right: 20px;
   height: 265px;
-  border-bottom: 0.5px solid #e0ee8d;
-  border-left: 0.5px solid #e0ee8d;
-  font-size: 1.7rem;
+  border-bottom: 0.5px solid rgba(128, 174, 14, 0.6);
+  border-left: 0.5px solid rgba(128, 174, 14, 0.6);
 }
 .Home-feature-list > li:first-child,
 .Home-feature-list > li:nth-child(4) {
@@ -494,6 +513,7 @@
 .Home-feature-list > li:nth-child(6) {
   border-bottom: 0;
 }
+
 .Home-feature-list > li > div {
   position: relative;
   z-index: 1;
@@ -518,7 +538,7 @@
   top: 50%;
   width: 4px;
   height: 4px;
-  border-radius: 0;
+  border-radius: 4px;
   margin-top: -1px;
 
   background: #858585;
@@ -527,8 +547,8 @@
   padding: 0;
 }
 .tokenomics-list > li {
-  padding: 0 0 20px 30px;
-  border-left: 0.5px solid #e0ee8d;
+  padding: 30px 30px 20px 30px;
+  border-left: 0.5px solid rgba(128, 174, 14, 0.6);
 }
 .tokenomics-list > li:first-child {
   border-left: 0;
@@ -537,51 +557,120 @@
   color: #fff;
   font-size: 2.2rem;
   padding: 30px 0 14px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .tokenomics-list .custom-buy-btn {
   font-size: 1.8rem;
-  height: 50px;
-  line-height: 50px;
-  padding-right: 70px !important;
+  height: 42px;
+  line-height: 42px;
+  padding-right: 40px !important;
   background-image: url(../../img/RightArrow.png);
   background-position: 90% center;
   background-repeat: no-repeat;
   margin-top: 20px;
+  color: #171717 !important;
+  font-weight: 600;
 }
 
 .Home-tip-list h3 {
   color: #fff;
   font-size: 2.2rem;
   padding: 10px 0;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .Home-tip-list > li {
   padding-top: 40px;
   padding-bottom: 40px;
+  min-height: 180px;
+}
+
+.Home-roadmap {
+  margin-top: 15rem;
+}
+.Home-roadmap h3 {
+  font-size: 3.6rem;
+  text-align: center;
+  color: #8dc010;
+  margin-bottom: 40px;
+}
+.Home-roadmap-list li {
+  position: relative;
+  border: 0.5px solid #8dc010;
+  border-radius: 5px;
+  padding: 80px 30px 190px;
+  overflow: hidden;
+  color: #fff;
+}
+
+.Home-roadmap-list ._year {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  font-size: 36px;
+  color: #273110;
+}
+.Home-roadmap-list ._q {
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.Home-roadmap-list ._item {
+  position: relative;
+  padding-left: 20px;
+}
+.Home-roadmap-list ._item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  top: 50%;
+  margin-top: -6px;
+}
+.Home-roadmap-list ._water {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+}
+.Home-roadmap-list ._start {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+}
+.Home-roadmap-list ._end {
+  position: absolute;
+  right: 30px;
+  bottom: 60px;
 }
 
 .Home-parnter-list {
   margin-top: 100px;
+  border: 1px solid #8dc010;
+  border-bottom: 0;
+  border-radius: 5px 5px 0 0;
+  padding: 80px 0;
 }
 .Home-parnter-list h3 {
-  font-size: 3rem;
+  font-size: 3.6rem;
   text-align: center;
-  color: "#EAECEF";
-  font-weight: 700;
+  color: #8dc010;
   margin-bottom: 40px;
 }
 .Home-parnter-list > ul {
   background: #1c1c1c;
   border-radius: 100px;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 .Home-parnter-list > ul > li {
   padding: 0;
-  font-size: 2.2rem;
-  color: #9e9e9e;
+  color: "#9E9E9E";
+  font-size: 2.4rem;
 }
 
 .read-more {
@@ -591,7 +680,6 @@
 .read-more:hover {
   color: #fff !important;
 }
-
 @media (max-width: 750px) {
   .Home-token-card-options {
     display: grid;
@@ -601,37 +689,31 @@
 }
 
 @media (max-width: 500px) {
-  .Home {
-    background: url(../../img/m/b.png) 0 0 repeat-x;
-    background-size: 600px auto;
-  }
   .Home-top {
     background-image: url(../../img/m/shapes.png);
     background-position: right 0;
-    background-size: auto 300px;
+    background-size: auto 500px;
   }
-  .Home-description {
-    font-size: 1.6rem;
+  .default-container.Home-feature-wrap {
+    margin-top: 7.5rem;
   }
   .tokenomics-list .custom-buy-btn {
     font-size: 2rem !important;
     height: 4rem !important;
     line-height: 4rem !important;
   }
-  .default-container.Home-feature-wrap {
-    margin-top: 75px;
-  }
+
   .Home-tip-list > li > img {
     width: 6rem;
   }
 
   .Home-title-section-container {
-    padding-top: 4.4rem;
+    padding-top: 3.4rem;
   }
 
   .Home-title {
-    font-size: 2.4rem;
-    line-height: 3.58rem;
+    font-size: 3.34rem;
+    line-height: 4.58rem;
     font-weight: bold;
     margin-bottom: 1.5rem;
     letter-spacing: 0;
@@ -660,10 +742,6 @@
 
   .Home-cta-option-action {
     margin-top: 0.8rem;
-  }
-
-  .default-container.Home-latest-info-container {
-    margin-top: 7.5rem;
   }
 
   .Home-latest-info__icon {
@@ -698,7 +776,7 @@
   }
   .Home-feature-list > li:nth-child(4),
   .Home-feature-list > li:nth-child(5) {
-    border-bottom: 0.5px solid #e0ee8d;
+    border-bottom: 0.5px solid rgba(128, 174, 14, 0.6);
   }
 
   .Home-latest-info__value {
@@ -709,6 +787,6 @@
     border-left: 0;
   }
   .tokenomics-list > li:last-child {
-    border-top: 0.5px solid #e0ee8d;
+    border-top: 0.5px solid rgba(128, 174, 14, 0.6);
   }
 }

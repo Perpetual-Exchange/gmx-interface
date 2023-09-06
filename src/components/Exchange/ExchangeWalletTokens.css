@@ -10,7 +10,7 @@
 .ExchangeWalletTokens-box {
   display: block;
   cursor: pointer;
-  border-radius: 0;
+  border-radius: 0.6rem;
   text-align: right;
   white-space: nowrap;
 }

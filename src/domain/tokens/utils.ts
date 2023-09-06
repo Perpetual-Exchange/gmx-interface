@@ -1,4 +1,4 @@
-import { BigNumber, ethers } from "ethers";
+import { BigNumber, ethers, utils } from "ethers";
 import {
   adjustForDecimals,
   DUST_BNB,
@@ -114,8 +114,11 @@ export function getTokenInfo(
   if (replaceNative && tokenAddress === nativeTokenAddress) {
     return infoTokens[AddressZero];
   }
-
-  return infoTokens[tokenAddress];
+  if(tokenAddress){
+    return infoTokens[tokenAddress] ? infoTokens[tokenAddress] : infoTokens[utils.getAddress(tokenAddress)];
+  }else{
+    return infoTokens[tokenAddress];
+  }
 }
 
 export function getLowestFeeTokenForBuyGlp(

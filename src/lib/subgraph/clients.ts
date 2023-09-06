@@ -1,5 +1,5 @@
 import { createClient } from "./utils";
-import { ARBITRUM, AVALANCHE, ETH_MAINNET, AVALANCHE_FUJI } from "config/chains";
+import { ARBITRUM, AVALANCHE, ETH_MAINNET, AVALANCHE_FUJI,ODX_ZKEVM_TESTNET } from "config/chains";
 
 export const chainlinkClient = createClient(ETH_MAINNET, "chainLink");
 
@@ -13,6 +13,9 @@ export const avalancheReferralsGraphClient = createClient(AVALANCHE, "referrals"
 export const fujiGraphClient = createClient(AVALANCHE_FUJI, "stats");
 export const fujiReferralsGraphClient = createClient(AVALANCHE_FUJI, "referrals");
 
+export const odxTestGraphClient = createClient(ODX_ZKEVM_TESTNET, "stats");
+export const odxTestReferralsGraphClient = createClient(ODX_ZKEVM_TESTNET, "referrals");
+
 export function getGmxGraphClient(chainId: number) {
   if (chainId === ARBITRUM) {
     return arbitrumGraphClient;
@@ -20,6 +23,8 @@ export function getGmxGraphClient(chainId: number) {
     return fujiGraphClient;
   } else if (chainId === AVALANCHE) {
     return avalancheGraphClient;
+  } else if (chainId === ODX_ZKEVM_TESTNET) {
+    return odxTestGraphClient;
   }
 
   throw new Error(`Unsupported chain ${chainId}`);

@@ -23,7 +23,7 @@
   &.primary {
     background: var(--primary-btn-bg);
     color: #171717;
-    border-radius: 0;
+    border-radius: 0.3rem;
     padding: 1.65rem 1.6rem;
     line-height: 1;
 
@@ -39,10 +39,14 @@
   &.primary-action {
     background: var(--primary-btn-bg);
     color: #171717;
-    border-radius: 0;
+    border-radius: 0.3rem;
     padding: 1.65rem 1.6rem;
     line-height: 1;
     font-weight: 600;
+    text-decoration: none;
+    &:hover{
+      text-decoration: none;
+    }
 
     &:not([disabled]):hover {
       background: var(--primary-btn-hover);
@@ -56,8 +60,8 @@
   }
 
   &.secondary {
-    color: #e0ee8d;
-    border-radius: 0;
+    color: #80ae0e;
+    border-radius: 4px;
     padding: 1.1rem 1.25rem;
     font-weight: 700;
     position: relative;
@@ -81,7 +85,7 @@
     }
 
     &:not([disabled]):hover {
-      background: #444a36;
+      background: rgba(80, 87, 126, 0.6);
     }
 
     &:not([disabled]):active {

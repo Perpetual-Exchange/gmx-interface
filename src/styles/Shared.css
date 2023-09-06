@@ -54,23 +54,23 @@ input {
 }
 
 :root {
-  --dark-blue: #17182c;
+  --dark-blue: #3d3d3d;
   --dark-blue-bg: #16182e;
   --dark-blue-accent: #a0a3c4;
-  --primary-btn-bg: #e0ee8d;
-  --primary-btn-hover: #e0ee8d;
+  --primary-btn-bg: #80ae0e;
+  --primary-btn-hover: #80ae0e;
   --primary-btn-active: rgba(224, 238, 141, 0.8);
-  --dark-blue-hover: #808aff14;
+  --dark-blue-hover: #444a36;
   --dark-blue-border: #ffffff29;
-  --dark-blue-active: #818cef33;
+  --dark-blue-active: #17182c;
   --text-gray: rgba(255, 255, 255, 0.7);
   --avax-red: #e84143;
   --arbitrum-blue: #28a0f0;
-  --border-radius-sm: 0;
+  --border-radius-sm: 0.6rem;
   --error-red: #fa3c58;
   --font-sm: 1.4rem;
   --font-base: 1.5rem;
-  --font-md: 1.6rem;
+  --font-md: 2.2rem;
   --font-lg: 2.4rem;
   --font-xl: 3.4rem;
 }
@@ -208,11 +208,12 @@ a.plain {
 }
 
 .default-btn {
-  background: #e0ee8d;
+  background: rgba(128, 174, 14, 0.6);
+  border-radius: 6px;
   font-size: var(--font-sm);
   line-height: 2rem;
   letter-spacing: 0px;
-  color: #171717 !important;
+  color: #fff;
   padding-left: 1.6rem;
   padding-right: 1.6rem;
   /* padding: 9px 16px!important; */
@@ -272,12 +273,13 @@ a.plain {
   max-width: 126.4rem;
   padding-left: 3.2rem;
   padding-right: 3.2rem;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .secondary-btn {
   background: #03d1cf;
-  border-radius: 0;
+  border-radius: 4px;
   font-size: var(--font-sm);
   line-height: 2rem;
   font-weight: normal;

@@ -1,8 +1,11 @@
 import useSWR from "swr";
 import { arrayURLFetcher } from "lib/legacy";
-import { AVALANCHE, AVALANCHE_FUJI, ARBITRUM } from "config/chains";
+// import { AVALANCHE, AVALANCHE_FUJI, ARBITRUM, ODX_ZKEVM_TESTNET} from "config/chains";
+import { ODX_ZKEVM_TESTNET } from "config/chains";
 import { getServerUrl } from "config/backend";
-const ACTIVE_CHAIN_IDS = [AVALANCHE, AVALANCHE_FUJI, ARBITRUM];
+// const ACTIVE_CHAIN_IDS = [AVALANCHE, AVALANCHE_FUJI, ARBITRUM];
+const ACTIVE_CHAIN_IDS = [ODX_ZKEVM_TESTNET];
+// const ACTIVE_CHAIN_IDS = [AVALANCHE_FUJI];
 
 // [
 //   "https://gmx-server-mainnet.uw.r.appspot.com/fees_summary",
@@ -11,7 +14,7 @@ const ACTIVE_CHAIN_IDS = [AVALANCHE, AVALANCHE_FUJI, ARBITRUM];
 
 export function useFeesSummary() {
   const { data: feesSummary } = useSWR(
-    ACTIVE_CHAIN_IDS.map((chainId) => getServerUrl(chainId, "/fees_summary")),
+    ACTIVE_CHAIN_IDS.map((chainId) => getServerUrl(chainId, `/${chainId}/fees_summary`)),
     {
       fetcher: arrayURLFetcher,
     }

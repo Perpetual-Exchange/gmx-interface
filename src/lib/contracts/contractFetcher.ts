@@ -5,8 +5,10 @@ import { getFallbackProvider, getProvider } from "../rpc";
 export const contractFetcher =
   <T>(library: Web3Provider | undefined, contractInfo: any, additionalArgs?: any[]) =>
   (...args: any): Promise<T> => {
-    // eslint-disable-next-line
+    // console.log("args====>",args);
+     // eslint-disable-next-line
     const [id, chainId, arg0, arg1, ...params] = args;
+    // const [ chainId, arg0, arg1, ...params] = args;
     const provider = getProvider(library, chainId);
 
     const method = ethers.utils.isAddress(arg0) ? arg1 : arg0;
@@ -20,6 +22,7 @@ export const contractFetcher =
       params,
       additionalArgs,
     });
+
     let shouldCallFallback = true;
 
     const handleFallback = async (resolve, reject, error) => {
@@ -51,7 +54,15 @@ export const contractFetcher =
         .then((result) => resolve(result))
         .catch((e) => {
           // eslint-disable-next-line no-console
-          console.error("fallback fetcher error", contractInfo.contractName, method, e);
+          console.error("fallback fetcher error===>", {
+            provider: fallbackProvider,
+            contractInfo,
+            arg0,
+            arg1,
+            method,
+            params,
+            additionalArgs,
+          });
           reject(e);
         });
     };
@@ -60,12 +71,30 @@ export const contractFetcher =
       contractCall
         .then((result) => {
           shouldCallFallback = false;
-          // console.log("contractCall return", contractInfo.contractName, method, result);
+          // eslint-disable-next-line no-console
+          console.log("contractCall return", {
+            contractInfo,
+            arg0,
+            arg1,
+            method,
+            params,
+            additionalArgs,
+            result
+          });
           resolve(result);
         })
         .catch((e) => {
+          // console.error("fetcher error", contractInfo.contractName, method, e);
           // eslint-disable-next-line no-console
-          console.error("fetcher error", contractInfo.contractName, method, e);
+          console.error("fallback fetcher error2===>", {
+            contractInfo,
+            arg0,
+            arg1,
+            method,
+            params,
+            additionalArgs,
+            e
+          });
           handleFallback(resolve, reject, e);
         });
 
@@ -77,7 +106,7 @@ export const contractFetcher =
 
 function getContractCall({ provider, contractInfo, arg0, arg1, method, params, additionalArgs }) {
   // console.warn(111111111111111, "contractFetcher", contractInfo.contractName, method, params, additionalArgs);
-
+  // console.log('getContractCall===>',`${arg0}-${method}`,{...params.concat(additionalArgs)});
   if (ethers.utils.isAddress(arg0)) {
     const address = arg0;
     const contract = new ethers.Contract(address, contractInfo.abi, provider);

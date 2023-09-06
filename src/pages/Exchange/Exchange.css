@@ -126,7 +126,7 @@
 
 .Exchange-swap-connect-wallet:hover {
   background: #272e33;
-  border-radius: 0;
+  border-radius: 0.6rem;
 }
 
 .Exchange-swap-settings.Exchange-swap-txns-status {
@@ -312,7 +312,7 @@
   position: relative;
   padding: 0.9rem 0.31rem;
   z-index: 2;
-  border: 0.5px solid #e0ee8d;
+  border: 0.5px solid rgba(128, 174, 14, 0.6);
 }
 
 .ExchangeChart.tv .ExchangeChart-bottom {
@@ -322,6 +322,7 @@
   right: 0;
   top: 7.975rem;
   z-index: 1;
+  overflow: hidden;
 }
 .ExchangeChart-bottom-controls {
   display: inline-block;
@@ -509,7 +510,7 @@ table.Exchange-list.Orders td {
 }
 
 table.Exchange-list tr {
-  border-bottom: 1px solid #e0ee8d;
+  border-bottom: 0.5px solid rgba(128, 174, 14, 0.6);
 }
 
 table.Exchange-list tr:last-child {
@@ -644,8 +645,8 @@ table.Exchange-list th {
 .Exchange-swap-section {
   padding: 1.5rem;
   margin-bottom: 1.05rem;
-  border-radius: 0;
-  border: 0.5px solid #e0ee8d;
+  border-radius: 0.8rem;
+  border: 0.5px solid rgba(128, 174, 14, 0.6);
 }
 
 .Exchange-swap-section:hover,
@@ -655,6 +656,7 @@ table.Exchange-list th {
 
 .Exchange-swap-option-tabs.Tab.block .Tab-option {
   padding: 1.05rem;
+  color: #fff;
 }
 
 .Exchange-swap-order-type-tabs {
@@ -734,6 +736,10 @@ input.Exchange-swap-input.small {
 
 .Exchange-swap-button-container {
   padding-top: 0.31rem;
+}
+
+.Exchange-swap-button-container  .Tooltip-handle{
+  text-decoration: none;
 }
 
 .Exchange-swap-button {

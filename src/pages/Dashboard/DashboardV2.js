@@ -39,7 +39,7 @@ import SEO from "components/Common/SEO";
 import { useTotalVolume, useVolumeInfo, useFeesSummary } from "domain/stats";
 import StatsTooltip from "components/StatsTooltip/StatsTooltip";
 import StatsTooltipRow from "components/StatsTooltip/StatsTooltipRow";
-import { AVALANCHE, AVALANCHE_FUJI, getChainName } from "config/chains";
+import { AVALANCHE, getChainName, ODX_ZKEVM_TESTNET } from "config/chains";
 import { getServerUrl } from "config/backend";
 import { contractFetcher } from "lib/contracts";
 import { useInfoTokens } from "domain/tokens";
@@ -49,7 +49,9 @@ import { useChainId } from "lib/chains";
 import { formatDate } from "lib/dates";
 import { getIcons } from "config/icons";
 import useUniqueUsers from "domain/stats/useUniqueUsers";
-const ACTIVE_CHAIN_IDS = [AVALANCHE_FUJI, AVALANCHE];
+// const ACTIVE_CHAIN_IDS = [AVALANCHE_FUJI, AVALANCHE];
+// const ACTIVE_CHAIN_IDS = [AVALANCHE_FUJI, ODX_ZKEVM_TESTNET];
+const ACTIVE_CHAIN_IDS = [ODX_ZKEVM_TESTNET];
 
 const { AddressZero } = ethers.constants;
 
@@ -99,11 +101,12 @@ export default function DashboardV2() {
   const { active, library } = useWeb3React();
   const { chainId } = useChainId();
   const totalVolume = useTotalVolume();
+  // console.log('totalVolu==>',totalVolume)
   const uniqueUsers = useUniqueUsers();
   const chainName = getChainName(chainId);
   const currentIcons = getIcons(chainId);
   const { data: positionStats } = useSWR(
-    ACTIVE_CHAIN_IDS.map((chainId) => getServerUrl(chainId, "/position_stats")),
+    ACTIVE_CHAIN_IDS.map((chainId) => getServerUrl(chainId, `/${chainId}/position_stats`)),
     {
       fetcher: arrayURLFetcher,
     }
@@ -153,10 +156,12 @@ export default function DashboardV2() {
   );
 
   const { infoTokens } = useInfoTokens(library, chainId, active, undefined, undefined);
-  const { infoTokens: infoTokensFuji } = useInfoTokens(null, AVALANCHE_FUJI, active, undefined, undefined);
-  const { infoTokens: infoTokensAvax } = useInfoTokens(null, AVALANCHE, active, undefined, undefined);
+  // const { infoTokens: infoTokensFuji } = useInfoTokens(null, AVALANCHE_FUJI, active, undefined, undefined);
+  // const { infoTokens: infoTokensAvax } = useInfoTokens(null, AVALANCHE, active, undefined, undefined);
+  const { infoTokens: infoTokensOdx } = useInfoTokens(null, ODX_ZKEVM_TESTNET, active, undefined, undefined);
   const { data: currentFees } = useSWR(
-    infoTokensFuji[AddressZero].contractMinPrice && infoTokensAvax[AddressZero].contractMinPrice
+    // infoTokensFuji[AddressZero].contractMinPrice && infoTokensAvax[AddressZero].contractMinPrice && 
+    infoTokensOdx[AddressZero].contractMinPrice
       ? "Dashboard:currentFees"
       : null,
     {
@@ -177,7 +182,8 @@ export default function DashboardV2() {
               const feeUSD = getCurrentFeesUsd(
                 getWhitelistedTokenAddresses(ACTIVE_CHAIN_IDS[i]),
                 cv,
-                ACTIVE_CHAIN_IDS[i] === AVALANCHE_FUJI ? infoTokensFuji : infoTokensAvax
+                // ACTIVE_CHAIN_IDS[i] === ODX_ZKEVM_TESTNET ? infoTokensOdx : infoTokensAvax
+                infoTokensOdx
               );
               acc[ACTIVE_CHAIN_IDS[i]] = feeUSD;
               acc.total = acc.total.add(feeUSD);
@@ -324,8 +330,8 @@ export default function DashboardV2() {
                     <br />
                     <br />
                     Get lower fees to{" "}
-                    <Link to="/buy_glp" target="_blank" rel="noopener noreferrer">
-                      buy RLP
+                    <Link to="/buy_olp" target="_blank" rel="noopener noreferrer">
+                      buy OLP
                     </Link>{" "}
                     with {tokenInfo.symbol}, and to{" "}
                     <Link to="/trade" target="_blank" rel="noopener noreferrer">
@@ -351,7 +357,7 @@ export default function DashboardV2() {
               )}
               <br />
               <div>
-                <ExternalLink href="https://docs.rollex.finance/liquidity-provider">
+                <ExternalLink href="https://docs.odx.finance/liquidity-provider">
                   <Trans>More Info</Trans>
                 </ExternalLink>
               </div>
@@ -394,7 +400,7 @@ export default function DashboardV2() {
     },
   ];
 
-  const totalStatsStartDate = chainId === AVALANCHE ? t`06 Jan 2022` : t`01 Sep 2021`;
+  const totalStatsStartDate = chainId === AVALANCHE ? t`06 Jan 2022` : t`20th Aug 2023`;
 
   let stableGlp = 0;
   let totalGlp = 0;
@@ -478,8 +484,9 @@ export default function DashboardV2() {
               <Trans>
                 {chainName} Total Stats start from {totalStatsStartDate}.<br /> To view detailed stats, please check the
               </Trans>{" "}
-              {chainId === AVALANCHE_FUJI && (
-                <ExternalLink href="https://stats.rollex.finance/">Analytics page</ExternalLink>
+              {chainId === ODX_ZKEVM_TESTNET && (
+                // <ExternalLink href="https://stats.odx.finance/">Analytics page</ExternalLink>
+                <span>Analytics page</span>
               )}
               .
             </div>
@@ -502,14 +509,14 @@ export default function DashboardV2() {
                       handle={`$${formatAmount(tvl, USD_DECIMALS, 0, true)}`}
                       position="right-bottom"
                       renderContent={() => (
-                        <span>{t`Assets Under Management: REX staked (All chains) + RLP pool (${chainName}).`}</span>
+                        <span>{t`Assets Under Management: ODX staked (All chains) + OLP pool (${chainName}).`}</span>
                       )}
                     />
                   </div>
                 </div>
                 <div className="App-card-row">
                   <div className="label">
-                    <Trans>RLP Pool</Trans>
+                    <Trans>OLP Pool</Trans>
                   </div>
                   <div>
                     <TooltipComponent
@@ -517,9 +524,9 @@ export default function DashboardV2() {
                       position="right-bottom"
                       renderContent={() => (
                         <Trans>
-                          <p>Total value of tokens in RLP pool ({chainName}).</p>
+                          <p>Total value of tokens in OLP pool ({chainName}).</p>
                           <p>
-                            Other websites may show a higher value as they add positions' collaterals to the RLP pool.
+                            Other websites may show a higher value as they add positions' collaterals to the OLP pool.
                           </p>
                         </Trans>
                       )}
@@ -531,6 +538,7 @@ export default function DashboardV2() {
                     <Trans>24h Volume</Trans>
                   </div>
                   <div>
+                    {/* {console.log('currentVolumeInfo==>',currentVolumeInfo)} */}
                     <TooltipComponent
                       position="right-bottom"
                       className="nowrap"
@@ -712,29 +720,29 @@ export default function DashboardV2() {
               <Trans>Tokens</Trans>
             </div>
             <div className="Page-description">
-              <Trans>Platform and RLP index tokens.</Trans>
+              <Trans>Platform and OLP index tokens.</Trans>
             </div>
           </div>
           <div className="DashboardV2-token-cards">
             <div className="stats-wrapper stats-wrapper--gmx">
-              <div className="App-card">
+              <div className="App-card Comingsoon-card">
                 <div className="App-card-title">
                   <div className="App-card-title-mark">
                     <div className="App-card-title-mark-icon">
-                      <img src={currentIcons.gmx} width="30" alt="REX Token Icon" />
+                      <img src={currentIcons.gmx} width="30" alt="ODX Token Icon" />
                     </div>
                     <div className="App-card-title-mark-info">
-                      <div className="App-card-title-mark-title">REX</div>
+                      <div className="App-card-title-mark-title">ODX</div>
                     </div>
                     <div className="mt-2">
-                      <AssetDropdown assetSymbol="REX" />
+                      <AssetDropdown assetSymbol="ODX" />
                     </div>
                   </div>
                   <div className="flex-1"></div>
                   <a
-                    href="https://docs.rollex.finance/tokenomics"
+                    href="https://docs.odx.finance/liquidity-provider"
                     target="_blank"
-                    className="font-normal text-[18px] hover:text-[#e0ee8d]"
+                    className="font-normal text-[18px] hover:text-[#80ae0e]"
                     rel="noreferrer"
                   >
                     Read More
@@ -758,7 +766,7 @@ export default function DashboardV2() {
                               renderContent={() => (
                                 <>
                                   <StatsTooltipRow
-                                    label={t`Price on Avalanche`}
+                                    label={t`Price on ODX Testnet`}
                                     value={formatAmount(gmxPriceFromAvalanche, USD_DECIMALS, 2, true)}
                                     showDollar={true}
                                   />
@@ -772,7 +780,7 @@ export default function DashboardV2() {
                         <div className="label">
                           <Trans>Supply</Trans>
                         </div>
-                        <div>{formatAmount(totalGmxSupply, GMX_DECIMALS, 0, true)} REX</div>
+                        <div>{formatAmount(totalGmxSupply, GMX_DECIMALS, 0, true)} ODX</div>
                       </div>
                       <div className="App-card-row">
                         <div className="label">
@@ -850,20 +858,20 @@ export default function DashboardV2() {
                 <div className="App-card-title">
                   <div className="App-card-title-mark">
                     <div className="App-card-title-mark-icon">
-                      <img src={currentIcons.glp} width="30" alt="RLP Icon" />
+                      <img src={currentIcons.glp} width="30" alt="OLP Icon" />
                     </div>
                     <div className="App-card-title-mark-info">
-                      <div className="App-card-title-mark-title">RLP</div>
+                      <div className="App-card-title-mark-title">OLP</div>
                     </div>
                     <div className="mt-2">
-                      <AssetDropdown assetSymbol="RLP" />
+                      <AssetDropdown assetSymbol="OLP" />
                     </div>
                   </div>
                   <div className="flex-1"></div>
                   <a
-                    href="https://docs.rollex.finance/tokenomics"
+                    href="https://docs.odx.finance/liquidity-provider"
                     target="_blank"
-                    className="font-normal text-[18px] hover:text-[#e0ee8d]"
+                    className="font-normal text-[18px] hover:text-[#80ae0e]"
                     rel="noreferrer"
                   >
                     Read More
@@ -883,7 +891,7 @@ export default function DashboardV2() {
                         <div className="label">
                           <Trans>Supply</Trans>
                         </div>
-                        <div>{formatAmount(glpSupply, GLP_DECIMALS, 0, true)} RLP</div>
+                        <div>{formatAmount(glpSupply, GLP_DECIMALS, 0, true)} OLP</div>
                       </div>
                       <div className="App-card-row">
                         <div className="label">
@@ -940,7 +948,7 @@ export default function DashboardV2() {
                           ))}
                         </Pie>
                         <text x={"50%"} y={"50%"} fill="white" textAnchor="middle" dominantBaseline="middle">
-                          RLP Pool
+                          OLP Pool
                         </text>
                         <Tooltip content={<CustomTooltip />} />
                       </PieChart>
@@ -952,7 +960,7 @@ export default function DashboardV2() {
             <div className="mt-40 token-table-wrapper App-card">
               <div className="App-card-title">
                 <img src={currentIcons.network} width="30" className="mr-4" alt="Network Icon" />
-                <Trans>RLP Index Composition</Trans>
+                <Trans>OLP Index Composition</Trans>
               </div>
               <div className="App-card-divider"></div>
               <table className="token-table">
@@ -1048,7 +1056,7 @@ export default function DashboardV2() {
               </table>
             </div>
             <div className="Page-title Tab-title-section glp-composition-small">
-              <Trans>RLP Index Composition</Trans>{" "}
+              <Trans>OLP Index Composition</Trans>{" "}
               <img className="Page-title-icon" src={currentIcons.network} width="24" alt="Network Icon" />
             </div>
             <div className="token-grid">

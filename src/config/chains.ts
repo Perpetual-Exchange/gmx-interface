@@ -13,23 +13,27 @@ export const AVALANCHE_FUJI = 43113;
 export const ARBITRUM = 42161;
 export const ARBITRUM_TESTNET = 421611;
 export const FEES_HIGH_BPS = 50;
+export const ODX_ZKEVM_TESTNET = 12020;
+
 
 // TODO take it from web3
-export const DEFAULT_CHAIN_ID = AVALANCHE_FUJI;
+export const DEFAULT_CHAIN_ID = ODX_ZKEVM_TESTNET;
 export const CHAIN_ID = DEFAULT_CHAIN_ID;
 
-export const SUPPORTED_CHAIN_IDS = [AVALANCHE, AVALANCHE_FUJI];
+export const SUPPORTED_CHAIN_IDS = [ODX_ZKEVM_TESTNET];
 
 // if (isDevelopment()) {
 //   SUPPORTED_CHAIN_IDS.push(AVALANCHE_FUJI);
 // }
 
 export const IS_NETWORK_DISABLED = {
+  [ODX_ZKEVM_TESTNET]: false,
   [AVALANCHE_FUJI]: false,
-  [AVALANCHE]: false,
+  [AVALANCHE]: false
 };
 
 export const CHAIN_NAMES_MAP = {
+  [ODX_ZKEVM_TESTNET]: "ODX Testnet",
   [MAINNET]: "BSC",
   [TESTNET]: "BSC Testnet",
   [ARBITRUM_TESTNET]: "ArbRinkeby",
@@ -40,6 +44,7 @@ export const CHAIN_NAMES_MAP = {
 
 export const GAS_PRICE_ADJUSTMENT_MAP = {
   [AVALANCHE_FUJI]: "0",
+  [ODX_ZKEVM_TESTNET]: "0",
   [AVALANCHE]: "3000000000", // 3 gwei
 };
 
@@ -49,6 +54,7 @@ export const MAX_GAS_PRICE_MAP = {
 
 export const HIGH_EXECUTION_FEES_MAP = {
   [AVALANCHE_FUJI]: 3, // 3 USD
+  [ODX_ZKEVM_TESTNET]: 3, // 3 USD
   [AVALANCHE]: 3, // 3 USD
 };
 
@@ -123,9 +129,24 @@ const constants = {
     // contract requires that execution fee be strictly greater than instead of gte
     DECREASE_ORDER_EXECUTION_GAS_FEE: parseEther("0.0100001"),
   },
+
+  // config refer to AVALANCHE_FUJI
+  [ODX_ZKEVM_TESTNET]: {
+    nativeTokenSymbol: "ETH",
+    wrappedTokenSymbol: "WETH",
+    defaultCollateralSymbol: "USDT",
+    defaultFlagOrdersEnabled: true,
+    positionReaderPropsLength: 9,
+    v2: true,
+
+    SWAP_ORDER_EXECUTION_GAS_FEE: parseEther("0.01"),
+    INCREASE_ORDER_EXECUTION_GAS_FEE: parseEther("0.01"),
+    // contract requires that execution fee be strictly greater than instead of gte
+    DECREASE_ORDER_EXECUTION_GAS_FEE: parseEther("0.0100001"),
+  },
 };
 
-const ALCHEMY_WHITELISTED_DOMAINS = ["d.rollex.finance", "dapp.rollex.finance"];
+const ALCHEMY_WHITELISTED_DOMAINS = ["d.odx.finance", "dapptest.odx.finance"];
 
 export const RPC_PROVIDERS = {
   [ETH_MAINNET]: ["https://rpc.ankr.com/eth"],
@@ -149,6 +170,7 @@ export const RPC_PROVIDERS = {
   [ARBITRUM_TESTNET]: ["https://rinkeby.arbitrum.io/rpc"],
   [AVALANCHE]: ["https://api.avax.network/ext/bc/C/rpc"],
   [AVALANCHE_FUJI]: ["https://api.avax-test.network/ext/bc/C/rpc"],
+  [ODX_ZKEVM_TESTNET]: ["https://pre-alpha-zkrollup-rpc.opside.network/odx-zkevm-testnet"]
 };
 
 export const FALLBACK_PROVIDERS = {
@@ -223,6 +245,17 @@ export const NETWORK_METADATA: { [chainId: number]: NetworkMetadata } = {
     rpcUrls: RPC_PROVIDERS[AVALANCHE_FUJI],
     blockExplorerUrls: [getExplorerUrl(AVALANCHE_FUJI)],
   },
+  [ODX_ZKEVM_TESTNET]: {
+    chainId: "0x" + ODX_ZKEVM_TESTNET.toString(16),
+    chainName: "ODX zkEVM Testnet",
+    nativeCurrency: {
+      name: "ETH",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    rpcUrls: RPC_PROVIDERS[ODX_ZKEVM_TESTNET],
+    blockExplorerUrls: [getExplorerUrl(ODX_ZKEVM_TESTNET)],
+  },
 };
 
 export const getConstant = (chainId: number, key: string) => {
@@ -284,6 +317,8 @@ export function getExplorerUrl(chainId) {
     return "https://snowtrace.io/";
   } else if (chainId === AVALANCHE_FUJI) {
     return "https://testnet.snowtrace.io/";
+  } else if (chainId === ODX_ZKEVM_TESTNET) {
+    return "https://odx-zkevm-testnet.zkevm.opside.info/";
   }
   return "https://etherscan.io/";
 }

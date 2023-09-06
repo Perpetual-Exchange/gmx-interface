@@ -22,9 +22,10 @@ import { useWeb3React } from "@web3-react/core";
 import { useGmxPrice } from "domain/legacy";
 
 import { getContract } from "config/contracts";
-import { getServerUrl } from "config/backend";
+// import { getServerUrl } from "config/backend";
 import { contractFetcher } from "lib/contracts";
 import { formatKeyAmount } from "lib/numbers";
+import { ODX_ZKEVM_TESTNET } from "config/chains";
 
 export default function APRLabel({ chainId, label }) {
   let { active } = useWeb3React();
@@ -126,10 +127,24 @@ export default function APRLabel({ chainId, label }) {
 
   const { gmxPrice } = useGmxPrice(chainId, {}, active);
 
-  const gmxSupplyUrl = getServerUrl(chainId, "/gmx_supply");
-  const { data: gmxSupply } = useSWR([gmxSupplyUrl], {
-    fetcher: (...args) => fetch(...args).then((res) => res.text()),
-  });
+  // const gmxSupplyUrl = getServerUrl(chainId, "/gmx_supply");
+  // const { data: gmxSupply } = useSWR([gmxSupplyUrl], {
+  //   fetcher: (...args) => fetch(...args).then((res) => res.text()),
+  // });
+
+
+  const { data: gmxSupply } = useSWR(
+    [
+      `StakeV2:totalSupply:${ODX_ZKEVM_TESTNET}`,
+      ODX_ZKEVM_TESTNET,
+      getContract(ODX_ZKEVM_TESTNET, "GMX"),
+      "totalSupply"
+    ],
+    {
+      fetcher: contractFetcher(undefined, Token),
+    }
+  );
+  
 
   let aum;
   if (aums && aums.length > 0) {

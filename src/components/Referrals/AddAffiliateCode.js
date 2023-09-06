@@ -130,6 +130,7 @@ export function AffiliateCodeForm({
     }
 
     if (takenStatus === "none" || takenStatus === "other") {
+      // 待定
       const ownerOnOtherNetwork = takenInfo[chainId !== AVALANCHE_FUJI ? "ownerAvax" : "ownerArbitrum"];
       try {
         const tx = await handleCreateReferralCode(referralCode);

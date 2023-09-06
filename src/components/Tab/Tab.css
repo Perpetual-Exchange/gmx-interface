@@ -2,10 +2,10 @@
   display: grid;
   grid-auto-flow: column;
   font-size: var(--font-sm);
-  border-radius: 0;
+  border-radius: 6px;
   overflow: hidden;
   color: rgba(255, 255, 255, 0.7);
-  border: 0.5px solid #e0ee8d;
+  border: 0.5px solid rgba(128, 174, 14, 0.6);
 }
 
 .Tab-option-icon {
@@ -63,5 +63,5 @@
 .Tab.inline .Tab-option.active {
   opacity: 1;
   pointer-events: none;
-  color: #e0ee8d;
+  color: #80ae0e;
 }

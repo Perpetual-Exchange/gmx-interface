@@ -14,6 +14,7 @@ const BigNumber = ethers.BigNumber;
 
 // Ethereum network, Chainlink Aggregator contracts
 const FEED_ID_MAP = {
+  /*
   BTC_USD: "0x31CF013A08c6Ac228C94551d535d5BAfE19c602a", //"0xae74faa92cb67a95ebcab07358bc222e33a34da7",
   ETH_USD: "0x86d67c3D38D2bCeE722E601025C25a575021c6EA", //"0x37bc7498f4ff12c19678ee8fe19d713b87f6a9e6",
   BNB_USD: "0xc45ebd0f901ba6b2b8c7e70b717778f055ef5e6d",
@@ -24,6 +25,9 @@ const FEED_ID_MAP = {
   AAVE_USD: "0xe3f0dede4b499c07e12475087ab1a084b5f93bc0",
   YFI_USD: "0x8a4d74003870064d41d4f84940550911fbfccf04",
   SPELL_USD: "0x8640b23468815902e011948f3ab173e1e83f9879",
+  */
+  BTC_USD: "0x15EAE259a17292355E93Ea5893f6d2cb10Da5a80",
+  ETH_USD: "0xb8A863b9e3B3155d5c4Bc19331ff750c8718ce42",
 };
 export const timezoneOffset = -new Date().getTimezoneOffset() * 60;
 

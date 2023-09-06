@@ -1,6 +1,6 @@
 import { ethers } from "ethers";
 import { getContract } from "./contracts";
-import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, AVALANCHE_FUJI, MAINNET, TESTNET } from "./chains";
+import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, AVALANCHE_FUJI, MAINNET, TESTNET, ODX_ZKEVM_TESTNET } from "./chains";
 import { Token } from "domain/tokens";
 
 export const TOKENS: { [chainId: number]: Token[] } = {
@@ -388,6 +388,52 @@ export const TOKENS: { [chainId: number]: Token[] } = {
       imageUrl: "https://assets.coingecko.com/coins/images/877/thumb/chainlink-new-logo.png?1547034700",
     },
   ],
+  [ODX_ZKEVM_TESTNET]: [
+    {
+      name: "Ethereum",
+      symbol: "ETH",
+      decimals: 18,
+      address: ethers.constants.AddressZero,
+      isNative: true,
+      isShortable: true,
+      imageUrl: "https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880",
+    },
+    {
+      name: "Ethereum (WETH)",
+      symbol: "WETH",
+      address: "0xc7a1bAe0Db6203F3Ee3C721909B3b959a1b437Ca",
+      decimals: 18,
+      isWrapped: true,// 名称待定
+      isTempHidden: true,
+      isShortable: true,
+      baseSymbol: "ETH",
+      imageUrl: "https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880",
+    },
+    {
+      name: "USDT",
+      symbol: "USDT",
+      address: "0xFefEab21A1CddBAda7c1077FBc1cC92e07B5ce78",
+      decimals: 18,
+      isStable: true,
+      imageUrl: "https://assets.coingecko.com/coins/images/325/thumb/Tether.png?1668148663",
+    },
+    {
+      name: "Bitcoin (BTC)",
+      symbol: "BTC",
+      decimals: 18,
+      address: "0xAAb8FCD8DD22a5de73550F8e67fF9Ca970d1257E",
+      isShortable: true,
+      imageUrl: "https://assets.coingecko.com/coins/images/7598/thumb/wrapped_bitcoin_wbtc.png?1548822744",
+    },
+    {
+      name: "USDC",
+      symbol: "USDC",
+      decimals: 18,
+      address: "0x6187f53e7AC4cfB95ea1c4E906e777d0d2f6763E",
+      isStable: true,
+      imageUrl: "https://assets.coingecko.com/coins/images/6319/thumb/USD_Coin_icon.png?1547042389",
+    }
+  ],
 };
 
 export const ADDITIONAL_TOKENS: { [chainId: number]: Token[] } = {
@@ -440,36 +486,53 @@ export const ADDITIONAL_TOKENS: { [chainId: number]: Token[] } = {
 export const PLATFORM_TOKENS: { [chainId: number]: { [symbol: string]: Token } } = {
   [AVALANCHE_FUJI]: {
     // arbitrum
-    REX: {
-      name: "REX",
-      symbol: "REX",
+    ODX: {
+      name: "ODX",
+      symbol: "ODX",
       decimals: 18,
       address: getContract(AVALANCHE_FUJI, "GMX"),
-      imageUrl: "https://dapp.rollex.finance/static/ic_gmx_40.svg",
+      imageUrl: "https://dapptest.odx.finance/static/ic_gmx_40.svg",
     },
-    RLP: {
-      name: "RLP",
-      symbol: "RLP",
+    OLP: {
+      name: "OLP",
+      symbol: "OLP",
       decimals: 18,
       address: getContract(AVALANCHE_FUJI, "StakedGlpTracker"), // address of fsGLP token because user only holds fsGLP
-      imageUrl: "https://dapp.rollex.finance/static/ic_glp_40.svg",
+      imageUrl: "https://dapptest.odx.finance/static/ic_glp_40.svg",
     },
   },
   [AVALANCHE]: {
     // avalanche
-    REX: {
-      name: "REX",
-      symbol: "REX",
+    ODX: {
+      name: "ODX",
+      symbol: "ODX",
       decimals: 18,
       address: getContract(AVALANCHE, "GMX"),
-      imageUrl: "https://dapp.rollex.finance/static/ic_gmx_40.svg",
+      imageUrl: "https://dapptest.odx.finance/static/ic_gmx_40.svg",
     },
-    RLP: {
-      name: "RLP",
-      symbol: "RLP",
+    OLP: {
+      name: "OLP",
+      symbol: "OLP",
       decimals: 18,
       address: getContract(AVALANCHE, "StakedGlpTracker"), // address of fsGLP token because user only holds fsGLP
-      imageUrl: "https://dapp.rollex.finance/static/ic_glp_40.svg",
+      imageUrl: "https://dapptest.odx.finance/static/ic_glp_40.svg",
+    },
+  },
+  [ODX_ZKEVM_TESTNET]: {
+    // arbitrum
+    ODX: {
+      name: "ODX",
+      symbol: "ODX",
+      decimals: 18,
+      address: getContract(ODX_ZKEVM_TESTNET, "GMX"),
+      imageUrl: "https://dapptest.odx.finance/static/ic_gmx_40.svg",
+    },
+    OLP: {
+      name: "OLP",
+      symbol: "OLP",
+      decimals: 18,
+      address: getContract(ODX_ZKEVM_TESTNET, "StakedGlpTracker"), // address of fsGLP token because user only holds fsGLP
+      imageUrl: "https://dapptest.odx.finance/static/ic_glp_40.svg",
     },
   },
 };
@@ -583,6 +646,21 @@ export const ICONLINKS = {
       avalanche: "https://testnet.snowtrace.io/address/0xC492c8d82DC576Ad870707bb40EDb63E2026111E",
     },
   },
+  [ODX_ZKEVM_TESTNET]: {
+    ETH: {
+      // coingecko: "https://www.coingecko.com/en/coins/weth",
+      odxTestnet: "https://odx-zkevm-testnet.zkevm.opside.info/address/0xc7a1bAe0Db6203F3Ee3C721909B3b959a1b437Ca",
+    },
+    USDC: {
+      odxTestnet: "https://odx-zkevm-testnet.zkevm.opside.info/address/0x6187f53e7AC4cfB95ea1c4E906e777d0d2f6763E",
+    },
+    USDT: {
+      odxTestnet: "https://odx-zkevm-testnet.zkevm.opside.info/address/0xFefEab21A1CddBAda7c1077FBc1cC92e07B5ce78",
+    },
+    BTC: {
+      odxTestnet: "https://odx-zkevm-testnet.zkevm.opside.info/address/0xAAb8FCD8DD22a5de73550F8e67fF9Ca970d1257E",
+    },
+  },
 };
 
 export const GLP_POOL_COLORS = {
@@ -605,7 +683,7 @@ export const TOKENS_BY_SYMBOL_MAP: { [chainId: number]: { [symbol: string]: Toke
 export const WRAPPED_TOKENS_MAP: { [chainId: number]: Token } = {};
 export const NATIVE_TOKENS_MAP: { [chainId: number]: Token } = {};
 
-const CHAIN_IDS = [MAINNET, TESTNET, ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, AVALANCHE_FUJI];
+const CHAIN_IDS = [MAINNET, TESTNET, ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, AVALANCHE_FUJI, ODX_ZKEVM_TESTNET];
 
 for (let j = 0; j < CHAIN_IDS.length; j++) {
   const chainId = CHAIN_IDS[j];
@@ -663,7 +741,9 @@ export function getToken(chainId: number, address: string) {
 }
 
 export function getTokenBySymbol(chainId: number, symbol: string) {
+  // console.log('getTokenBySymbol=====>',chainId,symbol,TOKENS_BY_SYMBOL_MAP);
   const token = TOKENS_BY_SYMBOL_MAP[chainId][symbol];
+  // console.log('token=====>',token);
   if (!token) {
     throw new Error(`Incorrect symbol "${symbol}" for chainId ${chainId}`);
   }
@@ -691,6 +771,8 @@ const AVAILABLE_CHART_TOKENS = {
   [ARBITRUM]: ["ETH", "BTC", "LINK", "UNI"],
   [AVALANCHE]: ["AVAX", "ETH", "BTC"],
   [AVALANCHE_FUJI]: ["AVAX", "ETH", "BTC"],
+  //待定
+  [ODX_ZKEVM_TESTNET]: ["ETH", "BTC", "LINK", "UNI"],
 };
 
 export function isChartAvailabeForToken(chainId: number, tokenSymbol: string) {

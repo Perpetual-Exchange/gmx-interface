@@ -10,10 +10,11 @@ import { isHomeSite, getAccountUrl } from "lib/legacy";
 import cx from "classnames";
 import { Trans } from "@lingui/macro";
 import NetworkDropdown from "../NetworkDropdown/NetworkDropdown";
-import { ARBITRUM_TESTNET, getChainName, AVALANCHE_FUJI } from "config/chains";
+import { getChainName, ODX_ZKEVM_TESTNET } from "config/chains";
+// ARBITRUM_TESTNET
 import { switchNetwork } from "lib/wallets";
 import { useChainId } from "lib/chains";
-import { isDevelopment } from "config/env";
+// import { isDevelopment } from "config/env";
 import { getIcon } from "config/icons";
 
 type Props = {
@@ -27,21 +28,30 @@ type Props = {
 
 const NETWORK_OPTIONS = [
   {
+    label: getChainName(ODX_ZKEVM_TESTNET),
+    value: ODX_ZKEVM_TESTNET,
+    icon: getIcon(ODX_ZKEVM_TESTNET, "network"),
+    color: "#ODX_ZKEVM_TESTNET",
+  }
+];
+
+/**
+ * {
     label: getChainName(AVALANCHE_FUJI),
     value: AVALANCHE_FUJI,
     icon: getIcon(AVALANCHE_FUJI, "network"),
     color: "#AVALANCHE_FUJI",
   },
-];
+ */
 
-if (isDevelopment()) {
-  NETWORK_OPTIONS.push({
-    label: getChainName(ARBITRUM_TESTNET),
-    value: ARBITRUM_TESTNET,
-    icon: getIcon(ARBITRUM_TESTNET, "network"),
-    color: "#264f79",
-  });
-}
+// if (isDevelopment()) {
+//   NETWORK_OPTIONS.push({
+//     label: getChainName(ARBITRUM_TESTNET),
+//     value: ARBITRUM_TESTNET,
+//     icon: getIcon(ARBITRUM_TESTNET, "network"),
+//     color: "#264f79",
+//   });
+// }
 
 export function AppHeaderUser({
   openSettings,
@@ -83,7 +93,7 @@ export function AppHeaderUser({
             redirectPopupTimestamp={redirectPopupTimestamp}
             showRedirectModal={showRedirectModal}
           >
-            {isHomeSite() ? <Trans>Launch Dapp</Trans> : <Trans>Trade</Trans>}
+            {isHomeSite() ? <Trans>Launch App</Trans> : <Trans>Trade</Trans>}
           </HeaderLink>
         </div>
 

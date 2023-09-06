@@ -1,4 +1,4 @@
-import { ARBITRUM, AVALANCHE } from "config/chains";
+import { ODX_ZKEVM_TESTNET } from "config/chains";
 import { formatTVDate, formatTVTime } from "lib/dates";
 
 const RED = "#fa3c58";
@@ -84,4 +84,6 @@ export const defaultChartProps = {
   },
 };
 
-export const availableNetworksForChart = [ARBITRUM, AVALANCHE];
+// ARBITRUM, AVALANCHE, AVALANCHE_FUJI, 
+
+export const availableNetworksForChart = [ODX_ZKEVM_TESTNET];

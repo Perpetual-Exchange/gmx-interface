@@ -9,13 +9,13 @@ import b1 from "../../img/app-dashboard/b1.png";
 
 export default function BuyGMXGLP() {
   return (
-    <SEO title={getPageTitle(t`Buy RLP or REX`)}>
+    <SEO title={getPageTitle(t`Buy OLP or ODX`)}>
       <div className="BuyGMXGLP page-layout Buy-page">
         <div className="BuyGMXGLP-container default-container">
           <div className="section-title-block">
             <img src={b1} className="right-b-icon" alt="" />
             <div className="section-title-content">
-              <div className="Page-title">Buy REX or RLP</div>
+              <div className="Page-title">Buy ODX or OLP</div>
             </div>
           </div>
           <ul className="max-md:grid-cols-1 grid grid-cols-2 App-card tokenomics-list">

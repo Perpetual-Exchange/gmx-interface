@@ -28,12 +28,13 @@ export const getTokenChartPrice = async (chainId: number, symbol: string, period
 
 export async function getCurrentPriceOfToken(chainId: number, symbol: string) {
   try {
-    const indexPricesUrl = getServerUrl(chainId, "/prices");
+    const indexPricesUrl = getServerUrl(chainId, `/${chainId}/prices`);
     const response = await fetch(indexPricesUrl);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const indexPrices = await response.json();
+
     let symbolInfo = getTokenBySymbol(chainId, symbol);
     if (symbolInfo.isNative) {
       symbolInfo = getWrappedToken(chainId);

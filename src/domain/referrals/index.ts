@@ -1,3 +1,4 @@
+// 待定替换
 import { BigNumber, ethers } from "ethers";
 import { gql } from "@apollo/client";
 import { useState, useEffect, useMemo } from "react";
@@ -8,11 +9,12 @@ import Timelock from "abis/Timelock.json";
 import { MAX_REFERRAL_CODE_LENGTH, isAddressZero, isHashZero } from "lib/legacy";
 import { getContract } from "config/contracts";
 import { REGEX_VERIFY_BYTES32 } from "components/Referrals/referralsHelper";
-import { ARBITRUM, AVALANCHE_FUJI, AVALANCHE } from "config/chains";
+import { ARBITRUM, AVALANCHE_FUJI, AVALANCHE, ODX_ZKEVM_TESTNET } from "config/chains";
 import {
   arbitrumReferralsGraphClient,
   fujiReferralsGraphClient,
   avalancheReferralsGraphClient,
+  odxTestGraphClient
 } from "lib/subgraph/clients";
 import { callContract, contractFetcher } from "lib/contracts";
 import { helperToast } from "lib/helperToast";
@@ -27,6 +29,8 @@ export function getGraphClient(chainId) {
     return avalancheReferralsGraphClient;
   } else if (chainId === AVALANCHE_FUJI) {
     return fujiReferralsGraphClient;
+  } else if (chainId === ODX_ZKEVM_TESTNET) {
+    return odxTestGraphClient;
   }
   throw new Error(`Unsupported chain ${chainId}`);
 }
@@ -97,7 +101,7 @@ export function useUserCodesOnAllChain(account) {
   useEffect(() => {
     async function main() {
       const [arbitrumCodes, avalancheCodes] = await Promise.all(
-        [ARBITRUM, AVALANCHE_FUJI].map(async (chainId) => {
+        [ARBITRUM, AVALANCHE_FUJI, ODX_ZKEVM_TESTNET].map(async (chainId) => {
           try {
             const client = getGraphClient(chainId);
             const { data } = await client.query({ query, variables: { account: (account || "").toLowerCase() } });
@@ -112,9 +116,14 @@ export function useUserCodesOnAllChain(account) {
       const [codeOwnersOnAvax = [], codeOwnersOnArbitrum = []] = await Promise.all([
         getCodeOwnersData(AVALANCHE_FUJI, account, arbitrumCodes),
         getCodeOwnersData(ARBITRUM, account, avalancheCodes),
+        getCodeOwnersData(ODX_ZKEVM_TESTNET, account, avalancheCodes),
       ]);
 
       setData({
+        [ODX_ZKEVM_TESTNET]: codeOwnersOnAvax.reduce((acc, cv) => {
+          acc[cv.code] = cv;
+          return acc;
+        }, {} as any),
         [AVALANCHE_FUJI]: codeOwnersOnAvax.reduce((acc, cv) => {
           acc[cv.code] = cv;
           return acc;

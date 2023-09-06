@@ -29,7 +29,7 @@ export default function StatsTooltip({
     <>
       <p className="Tooltip-row">
         <span className="label">
-          <Trans>{title} on AvalancheFuji:</Trans>
+          <Trans>{title} on OdxTestnet:</Trans>
         </span>
         <span className="amount">
           {showDollar && "$"}

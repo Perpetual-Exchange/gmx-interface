@@ -1,4 +1,4 @@
-import { ARBITRUM, AVALANCHE, ETH_MAINNET, AVALANCHE_FUJI } from "./chains";
+import { ARBITRUM, AVALANCHE, ETH_MAINNET, AVALANCHE_FUJI,ODX_ZKEVM_TESTNET } from "./chains";
 import { isDevelopment } from "./env";
 import { getSubgraphUrlKey } from "./localStorage";
 
@@ -21,6 +21,12 @@ const SUBGRAPH_URLS = {
 
   [ETH_MAINNET]: {
     chainLink: "https://api.thegraph.com/subgraphs/name/deividask/chainlink",
+  },
+
+  // 待定
+  [ODX_ZKEVM_TESTNET]: {
+    stats: "https://subgraph.odx.finance/subgraphs/name/odx/odx-zkevm-stats",
+    referrals: "https://subgraph.odx.finance/subgraphs/name/odx/odx-zkevm-referrals",
   },
 };
 

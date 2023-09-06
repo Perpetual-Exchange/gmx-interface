@@ -18,9 +18,9 @@
 .referral-card {
   position: relative;
   padding: 2.4rem;
-  border-radius: 0;
+  border-radius: 0.5rem;
   max-width: 59.2rem;
-  border: 0.5px solid #e0ee8d;
+  border: 0.5px solid rgba(128, 174, 14, 0.6);
 }
 .referral-card .title {
   font-weight: 500;
@@ -173,10 +173,10 @@
 }
 
 .info-card {
-  border-radius: 0;
+  border-radius: 0.5rem;
   display: flex;
   justify-content: center;
-  border: 0.5px solid #e0ee8d;
+  border: 0.5px solid rgba(128, 174, 14, 0.6);
   padding: 2rem 0;
 }
 .info-card .card-label {
@@ -269,8 +269,8 @@
   justify-content: center;
   align-items: center;
   padding: 1.5rem;
-  border: 0.5px solid #e0ee8d;
-  border-radius: 0;
+  border: 0.5px solid rgba(128, 174, 14, 0.6);
+  border-radius: 0.5rem;
   font-size: var(--font-lg);
 }
 .confirm-checkbox .Checkbox {
@@ -291,7 +291,7 @@
   height: 50px;
   line-height: 50px;
   padding: 0 2rem;
-  border: 0.5px solid #e0ee8d;
+  border: 0.5px solid rgba(128, 174, 14, 0.6);
   border-radius: 8px;
   margin: 1rem 0;
 }
@@ -300,7 +300,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  border-left: 0.5px solid #e0ee8d;
+  border-left: 0.5px solid solid rgba(128, 174, 14, 0.6);
   height: 100%;
   padding: 0 1.5rem;
 }

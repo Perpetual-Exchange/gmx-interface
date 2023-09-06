@@ -35,11 +35,11 @@
   max-height: 90vh;
   overflow: auto;
   background: #171717;
-  border-radius: 0;
+  border-radius: 4px;
 }
 
 .divider {
-  border-bottom: 1px solid #e0ee8d;
+  border-bottom: 0.5px solid rgba(128, 174, 14, 0.6);
 }
 
 .Modal.non-scrollable .Modal-content {

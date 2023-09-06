@@ -12,12 +12,13 @@ import Token from "abis/Token.json";
 import PositionRouter from "abis/PositionRouter.json";
 
 import { getContract } from "config/contracts";
-import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, getConstant, getHighExecutionFee, AVALANCHE_FUJI } from "config/chains";
+import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, getConstant, getHighExecutionFee, AVALANCHE_FUJI, ODX_ZKEVM_TESTNET } from "config/chains";
 import { DECREASE, getOrderKey, INCREASE, SWAP, USD_DECIMALS } from "lib/legacy";
 
 import { groupBy } from "lodash";
-import { UI_VERSION } from "config/env";
-import { getServerBaseUrl, getServerUrl } from "config/backend";
+// import { UI_VERSION } from "config/env";
+import { getServerBaseUrl } from "config/backend";
+// getServerUrl
 import { getGmxGraphClient, nissohGraphClient } from "lib/subgraph/clients";
 import { callContract, contractFetcher } from "lib/contracts";
 import { replaceNativeTokenAddress } from "./tokens";
@@ -289,10 +290,11 @@ function invariant(condition, errorMsg) {
 }
 
 export function useTrades(chainId, account, forSingleAccount, afterId) {
+  // account = `0x1ce32739c33eecb06dfaaca0e42bd04e56ccbf0d`
   let url =
     account && account.length > 0
-      ? `${getServerBaseUrl(chainId)}/actions?account=${account}`
-      : !forSingleAccount && `${getServerBaseUrl(chainId)}/actions`;
+      ? `${getServerBaseUrl(chainId)}/${chainId}/actions?account=${account}`
+      : !forSingleAccount && `${getServerBaseUrl(chainId)}/${chainId}/actions`;
 
   if (afterId && afterId.length > 0) {
     const urlItem = new URL(url as string);
@@ -392,6 +394,10 @@ export function useExecutionFee(library, active, chainId, infoTokens) {
     multiplier = 700000;
   }
 
+  if (chainId === ODX_ZKEVM_TESTNET) {
+    multiplier = 700000;
+  }
+
   let finalExecutionFee = minExecutionFee;
 
   if (gasPrice && minExecutionFee) {
@@ -450,6 +456,7 @@ export function useStakedGmxSupply(library, active) {
 }
 
 export function useHasOutdatedUi() {
+    /*
   const url = getServerUrl(ARBITRUM, "/ui_version");
   const { data, mutate } = useSWR([url], {
     // @ts-ignore
@@ -461,8 +468,12 @@ export function useHasOutdatedUi() {
   if (data && parseFloat(data) > parseFloat(UI_VERSION)) {
     hasOutdatedUi = true;
   }
-
+  
   return { data: hasOutdatedUi, mutate };
+  */
+  
+  return {data:false}
+
 }
 
 export function useGmxPrice(chainId, libraries, active) {
@@ -482,28 +493,49 @@ export function useGmxPrice(chainId, libraries, active) {
 
 // use only the supply endpoint on arbitrum, it includes the supply on avalanche
 export function useTotalGmxSupply() {
-  const gmxSupplyUrl = getServerUrl(AVALANCHE_FUJI, "/gmx_supply");
+
+  /*
+  // const gmxSupplyUrl = getServerUrl(AVALANCHE_FUJI, "/gmx_supply");
+  const stakedGmxTrackerAddressAvax = getContract(AVALANCHE_FUJI, "StakedGmxTracker");
+  const gmxSupplyUrl = "https://gmx-server-mainnet.uw.r.appspot.com/gmx_supply"
 
   const { data: gmxSupply, mutate: updateGmxSupply } = useSWR([gmxSupplyUrl], {
     // @ts-ignore
     fetcher: (...args) => fetch(...args).then((res) => res.text()),
   });
+  */
+
+  const { data: gmxSupply, mutate: updateGmxSupply } = useSWR<BigNumber>(
+    [
+      `StakeV2:totalSupply:${ODX_ZKEVM_TESTNET}`,
+      ODX_ZKEVM_TESTNET,
+      getContract(ODX_ZKEVM_TESTNET, "GMX"),
+      "totalSupply"
+    ],
+    {
+      fetcher: contractFetcher(undefined, Token),
+    }
+  );
+
+  const mutate = useCallback(() => {
+    updateGmxSupply();
+  }, [updateGmxSupply]);
 
   return {
     total: gmxSupply ? bigNumberify(gmxSupply) : undefined,
-    mutate: updateGmxSupply,
+    mutate
   };
 }
 
 export function useTotalGmxStaked() {
-  const stakedGmxTrackerAddressAvax = getContract(AVALANCHE_FUJI, "StakedGmxTracker");
+  const stakedGmxTrackerAddressAvax = getContract(ODX_ZKEVM_TESTNET, "StakedGmxTracker");
   let totalStakedGmx = useRef(bigNumberify(0));
 
   const { data: stakedGmxSupplyAvax, mutate: updateStakedGmxSupplyAvax } = useSWR<BigNumber>(
     [
-      `StakeV2:stakedGmxSupply:${AVALANCHE_FUJI}`,
-      AVALANCHE_FUJI,
-      getContract(AVALANCHE_FUJI, "GMX"),
+      `StakeV2:stakedGmxSupply:${ODX_ZKEVM_TESTNET}`,
+      ODX_ZKEVM_TESTNET,
+      getContract(ODX_ZKEVM_TESTNET, "GMX"),
       "balanceOf",
       stakedGmxTrackerAddressAvax,
     ],

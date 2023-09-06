@@ -132,7 +132,7 @@ function PositionShareCard({
   return (
     <div className="relative">
       <div ref={positionRef} className="position-share" style={{ backgroundImage: `url(${sharePositionBgImg})` }}>
-        <img className="logo" src={gmxLogo} alt="REX Logo" />
+        <img className="logo" src={gmxLogo} alt="ODX Logo" />
         <ul className="info">
           <li className={"side " + (isLong ? "side-long" : "side-short")}>{isLong ? "LONG" : "SHORT"}</li>
           <li>{formatAmount(leverage, 4, 2, true)}x&nbsp;</li>

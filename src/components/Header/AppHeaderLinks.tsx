@@ -7,11 +7,11 @@ import { HeaderLink } from "./HeaderLink";
 import "./Header.css";
 import { isHomeSite } from "lib/legacy";
 import ExternalLink from "components/ExternalLink/ExternalLink";
-import logoImg from "img/logo_GMX.png";
+import logoImg from "img/logo_GMX.svg";
 import icon1 from "img/m/nav/icon1.svg";
 import icon2 from "img/m/nav/icon2.svg";
 import icon3 from "img/m/nav/icon3.svg";
-import icon4 from "img/m/nav/icon4.svg";
+// import icon4 from "img/m/nav/icon4.svg";
 import icon5 from "img/m/nav/icon5.svg";
 import icon6 from "img/m/nav/icon6.svg";
 
@@ -35,7 +35,7 @@ export function AppHeaderLinks({
       {small && (
         <div className="App-header-links-header">
           <Link className="App-header-link-main" to="/">
-            <img src={logoImg} alt="REX Logo" />
+            <img src={logoImg} alt="ODX Logo" />
           </Link>
           <div
             className="App-header-menu-icon-block mobile-cross-menu"
@@ -67,7 +67,8 @@ export function AppHeaderLinks({
           <Trans>Buy</Trans>
         </HeaderLink>
       </div>
-      <div className="App-header-link-container">
+
+      {/* <div className="App-header-link-container">
         <HeaderLink
           to="/referrals"
           redirectPopupTimestamp={redirectPopupTimestamp}
@@ -76,10 +77,10 @@ export function AppHeaderLinks({
           <img src={icon4} alt="" className="md:hidden" />
           <Trans>Referrals</Trans>
         </HeaderLink>
-      </div>
+      </div> */}
 
       <div className="App-header-link-container">
-        <ExternalLink href="https://docs.rollex.finance/">
+        <ExternalLink href="https://docs.odx.finance/">
           <img src={icon5} alt="" className="md:hidden" />
           <Trans>Docs</Trans>
         </ExternalLink>

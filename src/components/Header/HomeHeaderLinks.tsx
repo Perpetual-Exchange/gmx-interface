@@ -1,5 +1,5 @@
 import { FiX } from "react-icons/fi";
-import logoImg from "img/logo_GMX.png";
+import logoImg from "img/logo_GMX.svg";
 import { t } from "@lingui/macro";
 
 import "./Header.css";
@@ -37,7 +37,7 @@ export function HomeHeaderLinks({ small, clickCloseIcon, redirectPopupTimestamp,
     },
     {
       label: t`Docs`,
-      link: "https://docs.rollex.finance/",
+      link: "https://docs.odx.finance/",
     },
   ];
   return (
@@ -45,7 +45,7 @@ export function HomeHeaderLinks({ small, clickCloseIcon, redirectPopupTimestamp,
       {small && (
         <div className="App-header-links-header">
           <Link className="App-header-link-main" to="/">
-            <img src={logoImg} alt="REX Logo" />
+            <img src={logoImg} alt="ODX Logo" />
           </Link>
           <div
             className="App-header-menu-icon-block mobile-cross-menu"

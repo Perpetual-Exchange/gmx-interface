@@ -16,20 +16,13 @@
   padding-left: 3.2rem;
   padding-right: 3.2rem;
   background: transparent 0% 0% no-repeat padding-box;
-  border-bottom: 1px solid #ffffff10;
 }
 
 .App-header.large::after {
-  height: 1px;
+  height: 0.5px;
   width: 100%;
   content: " ";
-  background: linear-gradient(
-    90deg,
-    rgba(251, 251, 251, 0) 0%,
-    rgba(251, 251, 251) 30%,
-    rgba(251, 251, 251) 70%,
-    rgba(251, 251, 251, 0) 100%
-  );
+  background: #fff;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -77,16 +70,6 @@
   padding: 1.5rem 1.6rem;
   text-decoration: none;
   display: block;
-}
-
-.App-header-drawer .App-header-link-container .a:hover,
-.App-header-drawer .App-header-link-container .a:focus,
-.App-header-drawer .App-header-link-container .a:active,
-.App-header-drawer .App-header-link-container a:hover,
-.App-header-drawer .App-header-link-container a:focus,
-.App-header-drawer .App-header-link-container a.active {
-  background: #303fd024;
-  color: white;
 }
 
 .App-header-links-header {
@@ -225,6 +208,19 @@
   align-items: center;
   color: white;
   position: relative;
+}
+
+.App-header-nav-links{
+  display: flex;
+}
+.App-header-nav-links .App-header-link-container{
+  margin: 0 6.2rem;
+  display: flex;
+  align-items: center;
+}
+.App-header-nav-links .App-header-link-container a{
+  vertical-align: middle;
+  font-size: 1.8rem;
 }
 
 @media (max-width: 1033px) {
