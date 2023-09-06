@@ -44,6 +44,7 @@ import "styles/Shared.css";
 import "styles/Font.css";
 import "./App.scss";
 import "styles/Input.css";
+import "styles/customize.css";
 
 import metamaskImg from "img/metamask.png";
 import coinbaseImg from "img/coinbaseWallet.png";
@@ -213,12 +214,12 @@ function FullApp() {
           <br />
           {userOnMobileDevice ? (
             <Trans>
-              <ExternalLink href="https://metamask.io">Install MetaMask</ExternalLink>, and use ODX with its built-in
+              <ExternalLink href="https://metamask.io">Install MetaMask</ExternalLink>, and use REX with its built-in
               browser.
             </Trans>
           ) : (
             <Trans>
-              <ExternalLink href="https://metamask.io">Install MetaMask</ExternalLink> to start using ODX.
+              <ExternalLink href="https://metamask.io">Install MetaMask</ExternalLink> to start using REX.
             </Trans>
           )}
         </div>
@@ -236,13 +237,13 @@ function FullApp() {
           <br />
           {userOnMobileDevice ? (
             <Trans>
-              <ExternalLink href="https://www.coinbase.com/wallet">Install Coinbase Wallet</ExternalLink>, and use ODX
+              <ExternalLink href="https://www.coinbase.com/wallet">Install Coinbase Wallet</ExternalLink>, and use REX
               with its built-in browser.
             </Trans>
           ) : (
             <Trans>
               <ExternalLink href="https://www.coinbase.com/wallet">Install Coinbase Wallet</ExternalLink> to start using
-              ODX.
+              REX.
             </Trans>
           )}
         </div>

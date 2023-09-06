@@ -25,8 +25,8 @@ const SUBGRAPH_URLS = {
 
   // 待定
   [ROLLEX_TESTNET]: {
-    stats: "https://subgraph.odx.finance/subgraphs/name/odx/odx-zkevm-stats",
-    referrals: "https://subgraph.odx.finance/subgraphs/name/odx/odx-zkevm-referrals",
+    stats: "https://subgraph.rollex.finance/subgraphs/name/odx/odx-zkevm-stats",
+    referrals: "https://subgraph.rollex.finance/subgraphs/name/odx/odx-zkevm-referrals",
   },
 };
 

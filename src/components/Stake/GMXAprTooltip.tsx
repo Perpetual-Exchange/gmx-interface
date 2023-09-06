@@ -17,7 +17,7 @@ function renderEscrowedGMXApr(processedData) {
   if (!processedData?.gmxAprForEsGmx?.gt(0)) return;
   return (
     <StatsTooltipRow
-      label={t`Escrowed ODX APR`}
+      label={t`Escrowed REX APR`}
       showDollar={false}
       value={`${formatKeyAmount(processedData, "gmxAprForEsGmx", 2, 2, true)}%`}
     />

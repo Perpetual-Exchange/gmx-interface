@@ -2,10 +2,10 @@
   display: grid;
   grid-auto-flow: column;
   font-size: var(--font-sm);
-  border-radius: 6px;
+  border-radius: 0;
   overflow: hidden;
   color: rgba(255, 255, 255, 0.7);
-  border: 0.5px solid rgba(128, 174, 14, 0.6);
+  border: 0.5px solid #e0ee8d;
 }
 
 .Tab-option-icon {
@@ -30,7 +30,7 @@
   opacity: 1;
   pointer-events: none;
   background: var(--primary-btn-bg);
-  color: #171717;
+  color: #171717 !important;
   font-weight: 600;
 }
 
@@ -63,5 +63,5 @@
 .Tab.inline .Tab-option.active {
   opacity: 1;
   pointer-events: none;
-  color: #80ae0e;
+  color: #e0ee8d;
 }

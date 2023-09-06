@@ -132,10 +132,10 @@ export default function BeginAccountTransfer(props) {
       return t`Wallet is not connected`;
     }
     if (hasVestedGmx) {
-      return t`Vested ODX not withdrawn`;
+      return t`Vested REX not withdrawn`;
     }
     if (hasVestedGlp) {
-      return t`Vested OLP not withdrawn`;
+      return t`Vested RLP not withdrawn`;
     }
     if (!receiver || receiver.length === 0) {
       return t`Enter Receiver Address`;
@@ -178,7 +178,7 @@ export default function BeginAccountTransfer(props) {
       return error;
     }
     if (needApproval) {
-      return t`Approve ODX`;
+      return t`Approve REX`;
     }
     if (isApproving) {
       return t`Approving...`;
@@ -243,9 +243,9 @@ export default function BeginAccountTransfer(props) {
           <Trans>
             Please only use this for full account transfers.
             <br />
-            This will transfer all your ODX, esODX, OLP and Multiplier Points to your new account.
+            This will transfer all your REX, esREX, RLP and Multiplier Points to your new account.
             <br />
-            Transfers are only supported if the receiving account has not staked ODX or OLP tokens before.
+            Transfers are only supported if the receiving account has not staked REX or RLP tokens before.
             <br />
             Transfers are one-way, you will not be able to transfer staked tokens back to the sending account.
           </Trans>
@@ -275,16 +275,16 @@ export default function BeginAccountTransfer(props) {
           </div>
           <div className="BeginAccountTransfer-validations">
             <ValidationRow isValid={!hasVestedGmx}>
-              <Trans>Sender has withdrawn all tokens from ODX Vesting Vault</Trans>
+              <Trans>Sender has withdrawn all tokens from REX Vesting Vault</Trans>
             </ValidationRow>
             <ValidationRow isValid={!hasVestedGlp}>
-              <Trans>Sender has withdrawn all tokens from OLP Vesting Vault</Trans>
+              <Trans>Sender has withdrawn all tokens from RLP Vesting Vault</Trans>
             </ValidationRow>
             <ValidationRow isValid={!hasStakedGmx}>
-              <Trans>Receiver has not staked ODX tokens before</Trans>
+              <Trans>Receiver has not staked REX tokens before</Trans>
             </ValidationRow>
             <ValidationRow isValid={!hasStakedGlp}>
-              <Trans>Receiver has not staked OLP tokens before</Trans>
+              <Trans>Receiver has not staked RLP tokens before</Trans>
             </ValidationRow>
           </div>
           <div className="input-row">

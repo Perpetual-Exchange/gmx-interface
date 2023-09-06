@@ -35,7 +35,7 @@ export function AppHeaderLinks({
       {small && (
         <div className="App-header-links-header">
           <Link className="App-header-link-main" to="/">
-            <img src={logoImg} alt="ODX Logo" />
+            <img src={logoImg} alt="REX Logo" />
           </Link>
           <div
             className="App-header-menu-icon-block mobile-cross-menu"
@@ -80,7 +80,7 @@ export function AppHeaderLinks({
       </div> */}
 
       <div className="App-header-link-container">
-        <ExternalLink href="https://docs.odx.finance/">
+        <ExternalLink href="https://docs.rollex.finance/">
           <img src={icon5} alt="" className="md:hidden" />
           <Trans>Docs</Trans>
         </ExternalLink>

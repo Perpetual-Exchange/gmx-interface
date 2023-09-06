@@ -1219,7 +1219,7 @@ export function getProcessedData(
 }
 
 export function getPageTitle(data) {
-  const title = t`Decentralized Perpetual Exchange | ODX`;
+  const title = t`Decentralized Perpetual Exchange | REX`;
   return `${data} | ${title}`;
 }
 
@@ -1243,7 +1243,7 @@ export function getAppBaseUrl() {
     return "http://localhost:3011/#";
   }
 
-  return "https://dapptest.odx.finance/#";
+  return "https://dapptest.rollex.finance/#";
 }
 
 export function getRootShareApiUrl() {

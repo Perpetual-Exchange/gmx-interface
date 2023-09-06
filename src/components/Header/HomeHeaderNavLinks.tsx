@@ -6,13 +6,13 @@ export function HomeHeaderNavLinks() {
   const HOME_MENUS: HomeNavLink[] = [
     {
       label: `App`,
-      link: "https://dapptest.odx.finance",
+      link: "https://dapptest.rollex.finance",
     },{
       label: `Docs`,
-      link: "https://docs.odx.finance",
+      link: "https://docs.rollex.finance",
     },{
       label: `Twitter`,
-      link: "https://twitter.com/ODXfinance",
+      link: "https://twitter.com/REXfinance",
     },{
       label: `Discord`,
       link: "https://discord.com/invite/9MTZdXeDkq",

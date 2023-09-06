@@ -1,5 +1,4 @@
-import React from "react";
-import HomeFooter from "components/HomeFooter/HomeFooter";
+import Footer from "components/Footer/Footer";
 import "./Home.css";
 
 import featureIcon1 from "img/feature/f-1.png";
@@ -14,29 +13,22 @@ import homeTrade2 from "img/home-trade/t2.png";
 import homeTrade3 from "img/home-trade/t3.png";
 import homeTrade4 from "img/home-trade/t4.png";
 
-import homeODX1 from "img/odx/o1.svg";
-import homeODX2 from "img/odx/o2.svg";
-import homeODX3 from "img/odx/o3.svg";
-import homeODX4 from "img/odx/o4.svg";
+import homeEarn1 from "img/home-earn/s1.png";
+import homeEarn2 from "img/home-earn/s2.png";
+import homeEarn3 from "img/home-earn/s3.png";
+import homeEarn4 from "img/home-earn/s4.png";
 
-import homeC1 from "img/home-comunion/c1.png";
-import homeC2 from "img/home-comunion/c2.png";
+import homeReward1 from "img/home-reward/r1.png";
+import homeReward2 from "img/home-reward/r2.png";
+import homeReward3 from "img/home-reward/r3.png";
+import homeReward4 from "img/home-reward/r4.png";
 
-import homeP1 from "img/home-permission/p1.png";
-import homeP2 from "img/home-permission/p2.png";
-
-import homeOpside from "img/home-power/logo.svg";
-import homeArr from "img/home-power/arrow.svg";
+import homeRollux from "img/home-partner/Rollux.png";
+import homeWEconomy from "img/home-partner/WEconomy.svg";
+import homeSyscoin from "img/home-partner/Syscoin.png";
+import homePegasys from "img/home-partner/Pegasys.svg";
 
 import linePic from "img/vector1.png";
-
-import homeRoadMapO from "img/home-roadmap/o.svg";
-import homeRoadMapD from "img/home-roadmap/d.svg";
-import homeRoadMapX from "img/home-roadmap/x.svg";
-import homeRoadMapStartLight from "img/home-roadmap/start-light.png";
-import homeRoadMapEndLight from "img/home-roadmap/end-light.png";
-import homeRoadMapStartDark from "img/home-roadmap/start-dark.png";
-import homeRoadMapEndDark from "img/home-roadmap/end-dark.png";
 
 import TokenCard from "components/TokenCard/TokenCard";
 import { Trans } from "@lingui/macro";
@@ -54,8 +46,8 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
   //   answer: "The GMX token is the governance token of the GMX ecosystem, it provides the token owner voting rights on the direction of the GMX platform.<br><br>Additionally, when GMX is staked you will earn 30% of the platform-generated fees, you will also earn Escrowed GMX tokens and Multiplier Points."
   // }, {
   //   id: 3,
-  //   question: "What is the OLP Token? ",
-  //   answer: "The OLP token represents the liquidity users provide to the GMX platform for Swaps and Margin Trading.<br><br>To provide liquidity to OLP you <a href='https://gmx.io/buy_olp' target='_blank'>trade</a> your crypto asset BTC, ETH, LINK, UNI, USDC, USDT, MIM, or FRAX to the liquidity pool, in exchange, you gain exposure to a diversified index of tokens while earning 50% of the platform trading fees and esODX."
+  //   question: "What is the GLP Token? ",
+  //   answer: "The GLP token represents the liquidity users provide to the GMX platform for Swaps and Margin Trading.<br><br>To provide liquidity to GLP you <a href='https://gmx.io/buy_glp' target='_blank'>trade</a> your crypto asset BTC, ETH, LINK, UNI, USDC, USDT, MIM, or FRAX to the liquidity pool, in exchange, you gain exposure to a diversified index of tokens while earning 50% of the platform trading fees and esGMX."
   // }, {
   //   id: 4,
   //   question: "What can I trade on GMX? ",
@@ -82,7 +74,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
   //   fetcher: (...args) => fetch(...args).then((res) => res.json()),
   // });
 
-  // AVALANCHE
+  // // AVALANCHE
 
   // const avalanchePositionStatsUrl = getServerUrl(AVALANCHE, "/position_stats");
   // const { data: avalanchePositionStats } = useSWR([avalanchePositionStatsUrl], {
@@ -94,7 +86,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
   //   fetcher: (...args) => fetch(...args).then((res) => res.json()),
   // });
 
-  // Total Volume
+  // // Total Volume
 
   // const arbitrumTotalVolumeSum = getTotalVolumeSum(arbitrumTotalVolume);
   // const avalancheTotalVolumeSum = getTotalVolumeSum(avalancheTotalVolume);
@@ -134,7 +126,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
         redirectPopupTimestamp={redirectPopupTimestamp}
         showRedirectModal={showRedirectModal}
       >
-        <Trans>Launch App</Trans>
+        <Trans>Launch Dapp</Trans>
       </HeaderLink>
     );
   };
@@ -147,56 +139,20 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
           <div className="Home-title-section">
             <div className="Home-title">
               <Trans>
-                PERMISSIONLESS
-                <br />
                 DECENTRALIZED
                 <br />
-                <span style={{ color: "#80AE0E" }}>PERPETUAL</span>
+                <span style={{ color: "#e0ee8d" }}>PERPETUAL</span>
                 <br />
                 EXCHANGE
               </Trans>
             </div>
             <img src={linePic} className="mb-10 max-md:mb-5" style={{ maxWidth: "60vw" }} alt="line" />
             <div className="Home-description">
-              Easily engage in leveraged trading and swaps of BTC, ETH, and other top cryptocurrencies.
+              <Trans>Trade cryptocurrencies with liquidity, leverage and low fees.</Trans>
             </div>
             <LaunchExchangeButton />
           </div>
         </div>
-
-        <div className="Home-feature-wrap default-container">
-          <div className="Home-feature">
-            <h2>ODX zkEVM Chain</h2>
-            {/* <div className="_cont">
-              ODX is deployed on ODX zkEVM Chain which is a App-Exclusive-Chain based ZK-Rollup powerd by Opside. ODX
-              zkEVM uses Ethereum as the layer1,Inherits Ethereum's security, with asset settlement ultimately executed
-              on Ethereum.
-            </div> */}
-            <ul className=" max-md:grid-cols-1 grid grid-cols-2 Home-tip-list">
-              <li className="border-b-[0.5px] border-[#80AE0E] border-l-0 max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
-                <h3>Exclusive Chain</h3>
-                <div>ODX is deployed on ODX zkEVM Chain which is a App-Exclusive-Chain based ZK-Rollup powerd by Opside.</div>
-                <img src={homeODX1} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
-              </li>
-              <li className="border-l-[0.5px] border-b-[0.5px] border-[#80AE0E] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
-                <h3>High Security</h3>
-                <div>ODX zkEVM uses Ethereum as the layer1,Inherits Ethereum's security, with asset settlement ultimately executed on Ethereum.</div>
-                <img src={homeODX2} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
-              </li>
-              <li className="border-b-0 border-[#80AE0E] border-l-0 max-md:even:pr-40 max-md:odd:pl-40 max-md:border-b-[0.5px] relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
-                <h3>High TPS</h3>
-                <div>The exclusive ZK-Rollup brings high TPS, providing users with a better trading experience.</div>
-                <img src={homeODX3} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
-              </li>
-              <li className="border-l-[0.5px] border-b-0 border-[#80AE0E] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 max-md:border-b-0 relative even:text-right even:pr-60 even:pl-5  odd:pr-5 odd:pl-60">
-                <h3>Low Gas</h3>
-                <div>Minimal gas fees, with some transactions costing as little as 0 gas.</div>
-                <img src={homeODX4} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
-              </li>
-            </ul>
-          </div>
-        </div>
-
         <div className="Home-feature-wrap default-container">
           <div className="Home-feature">
             <h2>Features</h2>
@@ -204,14 +160,15 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
               <li>
                 <h3>Leveraged Trading</h3>
                 <div>
-                  Traders could now take advantage of up to 50x leverage on assets such as BTC, ETH, USDT, USDC etc.
+                  Traders could now take advantage of up to 50x leverage on assets such as BTC, ETH, USDT, SYS, PSYS,
+                  etc.
                 </div>
                 <img src={featureIcon1} alt="" />
               </li>
               <li>
                 <h3>Cross-Margin Collateral</h3>
                 <div>
-                  ODX enables cross-margin collateral management, allowing margin balance sharing across positions.
+                  Rollex enables cross-margin collateral management, allowing margin balance sharing across positions.
                   Traders can efficiently and conveniently manage their entire portfolio.
                 </div>
                 <img src={featureIcon2} alt="" />
@@ -219,14 +176,14 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
               <li>
                 <h3>More APR% for LP</h3>
                 <div>
-                  ODX offers one of the highest APR% for LPs in the market through multiple rewards programs and
+                  Rollex offers one of the highest APR% for LPs in the market through multiple rewards programs and
                   incentive campaign.
                 </div>
                 <img src={featureIcon3} alt="" />
               </li>
               <li>
                 <h3>Mutil Rewards Programma</h3>
-                <div>ODX has the following incentive programs </div>
+                <div>Rollex has the following incentive programs </div>
                 <div className="mt-sm easy-list">
                   <div>Trader's loyalty and credit </div>
                   <div>Holding incentive rewards </div>
@@ -236,32 +193,29 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
                 <img src={featureIcon4} alt="" />
               </li>
               <li>
-                <h3>Reduce Risks</h3>
+                <h3>Save on Costs</h3>
                 <div>
-                  ODX implements multiple risk reduction measures for users.
-                  <div className="mt-sm easy-list">
-                    <div>Individual LP</div>
-                    <div>Fee structures</div>
-                    <div>Zero price impact </div>
-                    <div>Liquidation protection</div>
-                  </div>
+                  Enter and exit positions with minimal spread and zero price impact.
+                  <a href="https://docs.rollex.finance/fee" target="_blank" className="read-more" rel=" noreferrer">
+                    learn more
+                  </a>
                 </div>
                 <img src={featureIcon5} alt="" />
               </li>
               <li>
                 <h3>Insurance Funding</h3>
                 <div>
-                  The Insurance Fund helps to ensure liquidity in OLP and provide a reliable stream of ETH rewards for
-                  all staked ODX.
+                  The Insurance Fund helps to ensure liquidity in RLP and provide a reliable stream of SYS rewards for
+                  all staked REX.
                 </div>
                 <img src={featureIcon6} alt="" />
               </li>
             </ul>
           </div>
         </div>
-        <div className="mt-[150px] max-md:mt-[75px] Home-latest-info-container default-container">
-          <div className=" border max-md:text-center border-[0.5px] rounded-[25px] max-md:grid-cols-2 grid grid-cols-4 !border-[#80AE0E]">
-            <div className="border-l-[0.5px] border-[#80AE0E] py-10 sm:pl-10 first:border-0">
+        <div className=" Home-latest-info-container default-container">
+          <div className=" border max-md:text-center border-[0.5px] max-md:grid-cols-2 grid grid-cols-4 !border-[#e0ee8d]">
+            <div className="border-l-[0.5px] border-[#e0ee8d] py-10 sm:pl-10 first:border-0">
               <div className="Home-latest-info__title">
                 <Trans>Total Trading Volume</Trans>
               </div>
@@ -272,23 +226,28 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
                 }
               </div>
             </div>
-            <div className=" border-l-[0.5px] border-[#80AE0E] py-10 sm:pl-10">
+            <div className=" border-l-[0.5px] border-[#e0ee8d] py-10 sm:pl-10">
               <div className="Home-latest-info__title">
                 <Trans>Total Value Locked</Trans>
               </div>
               <div className="Home-latest-info__value">${0}</div>
             </div>
-            <div className=" border-l-[0.5px] border-[#80AE0E] max-md:border-0 max-md:border-t-[0.5px] py-10 sm:pl-10">
+            <div className=" border-l-[0.5px] border-[#e0ee8d] max-md:border-0 max-md:border-t-[0.5px] py-10 sm:pl-10">
               <div className="Home-latest-info__title">
                 <Trans>Total Fees</Trans>
               </div>
               <div className="Home-latest-info__value">${0}</div>
             </div>
-            <div className="border-l-[0.5px] border-[#80AE0E] max-md:border-t-[0.5px] py-10 sm:pl-10">
+            <div className="border-l-[0.5px] border-[#e0ee8d] max-md:border-t-[0.5px] py-10 sm:pl-10">
               <div className="Home-latest-info__title">
                 <Trans>Open Interest</Trans>
               </div>
-              <div className="Home-latest-info__value">${0}</div>
+              <div className="Home-latest-info__value">
+                $0
+                {
+                  // formatAmount(openInterest, USD_DECIMALS, 0, true)
+                }
+              </div>
             </div>
           </div>
         </div>
@@ -306,28 +265,28 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
         <div className="Home-feature">
           <h2>Trade</h2>
           <ul className=" max-md:grid-cols-1 grid grid-cols-2 Home-tip-list">
-            <li className="border-b-[0.5px] border-[#80AE0E] border-l-0 max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
+            <li className="border-b-[0.5px] border-[#e0ee8d] border-l-0 max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Zero price impact</h3>
               <div>Swap tokens with lowest trading fees and zero price impact.</div>
               <img src={homeTrade1} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
             </li>
-            <li className="border-l-[0.5px] border-b-[0.5px] border-[#80AE0E] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
+            <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>50x Leverage</h3>
-              <div>Trade BTC, ETH, USDC and other top cryptocurrencies with up to 50x leverage</div>
+              <div>Trade BTC, ETH, SYS, PSYS and other top cryptocurrencies with up to 50x leverage</div>
               <img src={homeTrade2} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
             </li>
-            <li className="border-b-0 border-[#80AE0E] border-l-0 max-md:even:pr-40 max-md:odd:pl-40 max-md:border-b-[0.5px] relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
+            <li className="border-[#e0ee8d] border-l-0 max-md:border-b-[0.5px] max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Robust price oracle</h3>
               <div>
-                ODX uses SuperOracle as a reliable price oracle to achieve accurate and stable pricing so that traders
-                can confidently execute trades with reliable pricing information.
+                Rollex uses SuperOracle as a reliable price oracle to achieve accurate and stable pricing so that
+                traders can confidently execute trades with reliable pricing information.
               </div>
               <img src={homeTrade3} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
             </li>
-            <li className="border-l-[0.5px] border-b-0 border-[#80AE0E] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 max-md:border-b-0 relative even:text-right even:pr-60 even:pl-5  odd:pr-5 odd:pl-60">
+            <li className="border-l-[0.5px] border-b-0 border-[#e0ee8d] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 max-md:border-b-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60 ">
               <h3>Peer to Pool</h3>
               <div>
-                ODX leverages liquidity pools and peer-to-peer principles for permissionless automated trading,
+                Rollex leverages liquidity pools and peer-to-peer principles for permissionless automated trading,
                 eliminating centralized order books and traditional marketplaces.
               </div>
               <img src={homeTrade4} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
@@ -338,22 +297,29 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
 
       <div className="Home-feature-wrap default-container">
         <div className="Home-feature">
-          <h2>Community-driven</h2>
+          <h2>Earn</h2>
           <ul className="max-md:grid-cols-1 grid grid-cols-2 Home-tip-list">
-            <li className="border-[#80AE0E] border-l-0 max-md:even:pr-40 max-md:odd:pl-40 max-md:border-b-[0.5px] relative even:text-right even:pr-60 even:pl-5 odd:pr-5  odd:pl-60">
-              <h3>No Investors & Foundation</h3>
-              <div>
-                ODX is entirely governed and driven by the community. 99% of ODX tokens are allocated to the community,
-                held by community members.{" "}
-              </div>
-              <img src={homeC1} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
+            <li className="border-b-[0.5px] border-[#e0ee8d] border-l-0 max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
+              <h3>Providing Liquidity</h3>
+              <div>Providing Liquidity earn esREX rewards and 70% of platform fees</div>
+              <img src={homeEarn1} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
             </li>
-            <li className="border-l-[0.5px] border-[#80AE0E] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
-              <h3>Community Governance</h3>
+            <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
+              <h3>Stake to earn</h3>
               <div>
-                The platform's operations and updates are proposed and voted upon by the community (ODX holders).
+                Staked REX receives three types of rewards that includes Escrowed REX, Multiplier Points and SYS Rewards
               </div>
-              <img src={homeC2} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
+              <img src={homeEarn2} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
+            </li>
+            <li className="border-[#e0ee8d] border-l-0 max-md:border-b-[0.5px] max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
+              <h3>Trade to earn</h3>
+              <div>Earn REX by trading volume, the bigger the trading volume, the more you earn</div>
+              <img src={homeEarn3} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
+            </li>
+            <li className="border-l-[0.5px] border-b-0 border-[#e0ee8d] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 max-md:border-b-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
+              <h3>Open Positions</h3>
+              <div>Traders will receive esREX rewards for the period that their leveraged positions are active.</div>
+              <img src={homeEarn4} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
             </li>
           </ul>
         </div>
@@ -361,94 +327,79 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
 
       <div className="Home-feature-wrap default-container">
         <div className="Home-feature">
-          <h2>Permissionless liquidity pool</h2>
+          <h2>Rewards</h2>
           <ul className="max-md:grid-cols-1 grid grid-cols-2 Home-tip-list">
-            <li className="border-[#80AE0E] border-l-0 max-md:even:pr-40 max-md:odd:pl-40 max-md:border-b-[0.5px] relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
-              <h3>Permissionless</h3>
+            <li className="border-b-[0.5px] border-[#e0ee8d] border-l-0 max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
+              <h3>Traders' Loyalty Credit</h3>
               <div>
-                Anyone can create a liquidity pool on ODX at any time using a combination of non-stablecoins and
-                stablecoins.
+                In accordance with trading volume, Traders will be awarded REX token(the rate depends on which asset
+                users trade on){" "}
+                <a href="https://docs.rollex.xyz/rewrads" className="read-more" target="_blank" rel="noreferrer">
+                  Learn more
+                </a>
               </div>
-              <img src={homeP1} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
+              <img src={homeReward1} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
             </li>
-            <li className="border-l-[0.5px] border-[#80AE0E] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
-              <h3>High assets expansion</h3>
+            <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
+              <h3>Open Positions incentives</h3>
               <div>
-                The permissionless creation of liquidity pools on ODX enables an almost infinite expansion of tradable
-                asset types.
+                Rollex will allocate a portion of esREX tokens to open positions. You will earn esREX by just keeping
+                your positions opened.{" "}
+                <a href="https://docs.rollex.xyz/rewrads" className="read-more" target="_blank" rel="noreferrer">
+                  Learn more
+                </a>
               </div>
-              <img src={homeP2} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
+              <img src={homeReward2} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
+            </li>
+            <li className="border-[#e0ee8d] border-l-0 max-md:border-b-[0.5px] max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
+              <h3>Liquidity Providers rewards</h3>
+              <div>
+                In addition to the protocol fees that liquidity providers will receive, Rollex will also provide esREX
+                rewards as additional incentives to Liquidity Providers.{" "}
+                <a href="https://docs.rollex.xyz/rewrads" className="read-more" target="_blank" rel="noreferrer">
+                  Learn more
+                </a>
+              </div>
+              <img src={homeReward3} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
+            </li>
+            <li className="border-l-[0.5px] border-b-0 border-[#e0ee8d] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 max-md:border-b-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
+              <h3>Referral Program</h3>
+              <div>
+                Reward referrals who help Rollex attract new users. Referral users can get up to 10.0% discount on
+                transaction fees, and referrers can earn up to 15% of referral transaction fee income.
+                <a href="https://docs.rollex.xyz/rewrads" className="read-more" target="_blank" rel="noreferrer">
+                  Learn more
+                </a>
+              </div>
+              <img src={homeReward4} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
+            </li>
+          </ul>
+        </div>
+
+        <div className="Home-parnter-list">
+          <h3>Backed by the Best</h3>
+          <ul className="max-md:grid-cols-2 max-md:gap-y-10 grid  grid-cols-4">
+            <li className="flex  max-md:justify-start items-center justify-center">
+              <img src={homeRollux} alt="" className="mr-5" />
+              <div>Rollux</div>
+            </li>
+            <li className="flex max-md:justify-start items-center justify-center">
+              <img src={homeWEconomy} alt="" className="mr-5" />
+              <div>WEconomy</div>
+            </li>
+            <li className="flex max-md:justify-start items-center justify-center">
+              <img src={homeSyscoin} alt="" className="mr-5" />
+              <div>Syscoin</div>
+            </li>
+            <li className="flex max-md:justify-start items-center justify-center">
+              <img src={homePegasys} alt="" className="mr-5" />
+              <div>Pegasys</div>
             </li>
           </ul>
         </div>
       </div>
 
-      <div className="Home-roadmap default-container">
-        <h3 className="uppercase">Roadmap</h3>
-        <ul className="max-md:grid-cols-1 grid gap-10 grid-cols-3 Home-roadmap-list">
-          <li>
-            <div className="_year">2023</div>
-            <div className="_q">2023 - Q3:</div>
-            <div className="_list">
-              <div className="_item">Introduce ROLLEX Testnet</div>
-              <div className="_item">Release ODX Tokenomics</div>
-            </div>
-            <img src={homeRoadMapO} className="_water" alt="o" />
-            <img src={homeRoadMapStartLight} className="_start" alt="" />
-            <img src={homeRoadMapEndLight} className="_end" alt="" />
-          </li>
-          <li>
-            <div className="_year">2023</div>
-            <div className="_q">2023 - Q4:</div>
-            <div className="_list">
-              <div className="_item">Launch ODX Mainnet</div>
-            </div>
-            <img src={homeRoadMapD} className="_water" alt="d" />
-            <img src={homeRoadMapStartDark} className="_start" alt="" />
-            <img src={homeRoadMapEndDark} className="_end" alt="" />
-          </li>
-          <li>
-            <div className="_year">2024</div>
-            <div className="_q">2024 - Q1:</div>
-            <div className="_list">
-              <div className="_item">ODX TGE</div>
-              <div className="_item">Launch Community Governance</div>
-              <div className="_item">Initiate Permissionless Liquidity Pool</div>
-              <div className="_item">Update ODX zkEVM Chain</div>
-            </div>
-            <img src={homeRoadMapX} className="_water" alt="x" />
-            <img src={homeRoadMapStartDark} className="_start" alt="" />
-            <img src={homeRoadMapEndDark} className="_end" alt="" />
-          </li>
-        </ul>
-      </div>
-
-      <div className="Home-feature-wrap default-container">
-        <div className="Home-parnter-list">
-          <h3 className="uppercase">Powered by</h3>
-          <div className="flex  justify-center">
-            <ul
-              className="flex font-semibold max-md:text-[16px] px-10 text-[18px] text-[#9E9E9E] gap-10 items-center"
-              style={{
-                borderRadius: 55,
-                border: "0.5px #587511 solid",
-                background:
-                  "linear-gradient(90deg, rgba(88,117,17,.2) 0%, rgba(25,25,25,1) 22%, rgba(31,34,24,1) 90%, rgba(88,117,17,.2) 100%)",
-              }}
-            >
-              <a href="https://opside.network/rollup/create" target="_blank" rel="noopener noreferrer">
-                <li className="flex max-md:justify-start p-6 items-center justify-center">
-                  <img src={homeOpside} alt="" className="mr-4 max-md:w-[22px] w-[22px]" />
-                  <div>Opside ZK-RaaS</div>
-                  <img src={homeArr} alt="" className="ml-4 max-md:w-[22px] w-[22px]" />
-                </li>
-              </a>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <HomeFooter showRedirectModal={showRedirectModal} redirectPopupTimestamp={redirectPopupTimestamp} />
+      <Footer showRedirectModal={showRedirectModal} redirectPopupTimestamp={redirectPopupTimestamp} />
     </div>
   );
 }

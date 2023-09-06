@@ -16,7 +16,7 @@ export default function UsefulLinks({ className }) {
       <div className="App-card-divider"></div>
       <div className="Exchange-info-row">
         <div className="Exchange-info-label-button">
-          <ExternalLink href="https://docs.odx.finance/trade">
+          <ExternalLink href="https://docs.rollex.finance/trade">
             <Trans>Trading guide</Trans>
           </ExternalLink>
         </div>

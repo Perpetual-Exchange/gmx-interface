@@ -486,53 +486,53 @@ export const ADDITIONAL_TOKENS: { [chainId: number]: Token[] } = {
 export const PLATFORM_TOKENS: { [chainId: number]: { [symbol: string]: Token } } = {
   [AVALANCHE_FUJI]: {
     // arbitrum
-    ODX: {
-      name: "ODX",
-      symbol: "ODX",
+    REX: {
+      name: "REX",
+      symbol: "REX",
       decimals: 18,
       address: getContract(AVALANCHE_FUJI, "GMX"),
-      imageUrl: "https://dapptest.odx.finance/static/ic_gmx_40.svg",
+      imageUrl: "https://dapptest.rollex.finance/static/ic_gmx_40.svg",
     },
-    OLP: {
-      name: "OLP",
-      symbol: "OLP",
+    RLP: {
+      name: "RLP",
+      symbol: "RLP",
       decimals: 18,
       address: getContract(AVALANCHE_FUJI, "StakedGlpTracker"), // address of fsGLP token because user only holds fsGLP
-      imageUrl: "https://dapptest.odx.finance/static/ic_glp_40.svg",
+      imageUrl: "https://dapptest.rollex.finance/static/ic_glp_40.svg",
     },
   },
   [AVALANCHE]: {
     // avalanche
-    ODX: {
-      name: "ODX",
-      symbol: "ODX",
+    REX: {
+      name: "REX",
+      symbol: "REX",
       decimals: 18,
       address: getContract(AVALANCHE, "GMX"),
-      imageUrl: "https://dapptest.odx.finance/static/ic_gmx_40.svg",
+      imageUrl: "https://dapptest.rollex.finance/static/ic_gmx_40.svg",
     },
-    OLP: {
-      name: "OLP",
-      symbol: "OLP",
+    RLP: {
+      name: "RLP",
+      symbol: "RLP",
       decimals: 18,
       address: getContract(AVALANCHE, "StakedGlpTracker"), // address of fsGLP token because user only holds fsGLP
-      imageUrl: "https://dapptest.odx.finance/static/ic_glp_40.svg",
+      imageUrl: "https://dapptest.rollex.finance/static/ic_glp_40.svg",
     },
   },
   [ROLLEX_TESTNET]: {
     // arbitrum
-    ODX: {
-      name: "ODX",
-      symbol: "ODX",
+    REX: {
+      name: "REX",
+      symbol: "REX",
       decimals: 18,
       address: getContract(ROLLEX_TESTNET, "GMX"),
-      imageUrl: "https://dapptest.odx.finance/static/ic_gmx_40.svg",
+      imageUrl: "https://dapptest.rollex.finance/static/ic_gmx_40.svg",
     },
-    OLP: {
-      name: "OLP",
-      symbol: "OLP",
+    RLP: {
+      name: "RLP",
+      symbol: "RLP",
       decimals: 18,
       address: getContract(ROLLEX_TESTNET, "StakedGlpTracker"), // address of fsGLP token because user only holds fsGLP
-      imageUrl: "https://dapptest.odx.finance/static/ic_glp_40.svg",
+      imageUrl: "https://dapptest.rollex.finance/static/ic_glp_40.svg",
     },
   },
 };

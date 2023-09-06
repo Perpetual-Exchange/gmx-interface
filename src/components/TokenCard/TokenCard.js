@@ -59,23 +59,23 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
     <>
       <li>
         <div className="flex font-semibold mb-10 gap-4 items-center">
-          <img src={gmxIcon} width="40" alt="ODX Icons" />
-          <h3 className="flex-1 font-[22px]">ODX</h3>
+          <img src={gmxIcon} width="40" alt="REX Icons" />
+          <h3 className="flex-1 font-[22px]">REX</h3>
           APR:
           <span className="text-[#80AE0E]">
             <APRLabel chainId={ROLLEX_TESTNET} label="gmxAprTotal" key="ROLLEX_TESTNET" />
           </span>
         </div>
         <div>
-          $ODX is the utility token of ODX. In addition to granting participation in the governance process of the
+          $REX is the utility token of REX. In addition to granting participation in the governance process of the
           protocol, it also accrues value from the platform revenue.
-          <a href="https://docs.odx.finance/liquidity-provider" target="_blank" rel="noreferrer" className=" read-more">
+          <a href="https://docs.rollex.finance/liquidity-provider" target="_blank" rel="noreferrer" className=" read-more">
             Learn more
           </a>
         </div>
         <div className="Home-token-card-option-action">
           {/* <BuyLink to="/buy_odx" className="default-btn custom-buy-btn pointer-events-none" network={ROLLEX_TESTNET}>
-            Buy ODX
+            Buy REX
           </BuyLink> */}
 
           <BuyLink className="default-btn custom-buy-btn pointer-events-none" network={ROLLEX_TESTNET}>
@@ -86,8 +86,8 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
       </li>
       <li>
         <div className="flex font-semibold  mb-10 gap-4 items-center">
-          <img src={glpIcon} width="40" alt="OLP Icon" />
-          <h3 className="flex-1 font-[22px]">OLP</h3>
+          <img src={glpIcon} width="40" alt="RLP Icon" />
+          <h3 className="flex-1 font-[22px]">RLP</h3>
           APR:
           <span className="text-[#80AE0E]">
             <APRLabel chainId={ROLLEX_TESTNET} label="glpAprTotal" key="ROLLEX_TESTNET" />
@@ -95,15 +95,15 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
         </div>
 
         <div>
-          $OLP is a liquidity provider token. Accrues 70% of protocol revenue in the form of ETH and a portion of esODX
+          $RLP is a liquidity provider token. Accrues 70% of protocol revenue in the form of ETH and a portion of esREX
           token issuance emission.
         </div>
-        <a href="https://docs.odx.finance/liquidity-provider" target="_blank" rel="noreferrer" className=" read-more">
+        <a href="https://docs.rollex.finance/liquidity-provider" target="_blank" rel="noreferrer" className=" read-more">
           Learn more
         </a>
         <div className="Home-token-card-option-action">
           <BuyLink to="/buy_olp" className="default-btn custom-buy-btn" network={ROLLEX_TESTNET}>
-            Buy OLP
+            Buy RLP
           </BuyLink>
         </div>
       </li>

@@ -3,7 +3,7 @@ import cx from "classnames";
 
 import { AppHeaderUser } from "./AppHeaderUser";
 import { AppHeaderLinks } from "./AppHeaderLinks";
-import { HomeHeaderNavLinks }  from './HomeHeaderNavLinks';
+// import { HomeHeaderNavLinks }  from './HomeHeaderNavLinks';
 
 import logoImg from "img/logo_GMX.png";
 import { RiMenuLine } from "react-icons/ri";
@@ -101,7 +101,7 @@ export function Header({
               <AppHeaderLinks redirectPopupTimestamp={redirectPopupTimestamp} showRedirectModal={showRedirectModal} />
             )}
           </div>
-          {isHomeSite() ? <HomeHeaderNavLinks/> : null}
+          {/* {isHomeSite() ? <HomeHeaderNavLinks/> : null} */}
           <div className="App-header-container-right">
             <AppHeaderUser
               disconnectAccountAndCloseSettings={disconnectAccountAndCloseSettings}
@@ -126,7 +126,7 @@ export function Header({
                 </div>
               )}
               <div className="App-header-link-main clickable" onClick={() => setIsDrawerVisible(!isDrawerVisible)}>
-                <img src={logoImg} alt="ODX Logo" />
+                <img src={logoImg} alt="REX Logo" />
               </div>
             </div>
             <div className="App-header-container-right">

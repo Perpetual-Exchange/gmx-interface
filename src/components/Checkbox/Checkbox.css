@@ -17,13 +17,13 @@
 
 .Checkbox .Checkbox-icon {
   font-size: 1.25rem;
-  color: #80ae0e;
+  color: #e0ee8d;
   margin-right: 0.62rem;
   margin-bottom: 0;
 }
 
 .Checkbox.disabled .Checkbox-icon {
-  color: rgba(128, 174, 14, 0.6);
+  color: #e0ee8d;
 }
 
 .Checkbox-icon.inactive {

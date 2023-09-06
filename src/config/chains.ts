@@ -13,7 +13,7 @@ export const AVALANCHE_FUJI = 43113;
 export const ARBITRUM = 42161;
 export const ARBITRUM_TESTNET = 421611;
 export const FEES_HIGH_BPS = 50;
-export const ROLLEX_TESTNET = 12020;
+export const ROLLEX_TESTNET = 57000;
 
 
 // TODO take it from web3
@@ -33,7 +33,7 @@ export const IS_NETWORK_DISABLED = {
 };
 
 export const CHAIN_NAMES_MAP = {
-  [ROLLEX_TESTNET]: "ROLLEX Testnet",
+  [ROLLEX_TESTNET]: "Rollex Testnet",
   [MAINNET]: "BSC",
   [TESTNET]: "BSC Testnet",
   [ARBITRUM_TESTNET]: "ArbRinkeby",
@@ -132,7 +132,7 @@ const constants = {
 
   // config refer to AVALANCHE_FUJI
   [ROLLEX_TESTNET]: {
-    nativeTokenSymbol: "ETH",
+    nativeTokenSymbol: "TSYS",
     wrappedTokenSymbol: "WETH",
     defaultCollateralSymbol: "USDT",
     defaultFlagOrdersEnabled: true,
@@ -146,7 +146,7 @@ const constants = {
   },
 };
 
-const ALCHEMY_WHITELISTED_DOMAINS = ["d.odx.finance", "dapptest.odx.finance"];
+const ALCHEMY_WHITELISTED_DOMAINS = ["d.rollex.finance", "dapptest.rollex.finance"];
 
 export const RPC_PROVIDERS = {
   [ETH_MAINNET]: ["https://rpc.ankr.com/eth"],
@@ -170,7 +170,7 @@ export const RPC_PROVIDERS = {
   [ARBITRUM_TESTNET]: ["https://rinkeby.arbitrum.io/rpc"],
   [AVALANCHE]: ["https://api.avax.network/ext/bc/C/rpc"],
   [AVALANCHE_FUJI]: ["https://api.avax-test.network/ext/bc/C/rpc"],
-  [ROLLEX_TESTNET]: ["https://pre-alpha-zkrollup-rpc.opside.network/odx-zkevm-testnet"]
+  [ROLLEX_TESTNET]: ["https://rpc-tanenbaum.rollux.com"]
 };
 
 export const FALLBACK_PROVIDERS = {
@@ -247,7 +247,7 @@ export const NETWORK_METADATA: { [chainId: number]: NetworkMetadata } = {
   },
   [ROLLEX_TESTNET]: {
     chainId: "0x" + ROLLEX_TESTNET.toString(16),
-    chainName: "ODX zkEVM Testnet",
+    chainName: "REX zkEVM Testnet",
     nativeCurrency: {
       name: "ETH",
       symbol: "ETH",
@@ -318,7 +318,7 @@ export function getExplorerUrl(chainId) {
   } else if (chainId === AVALANCHE_FUJI) {
     return "https://testnet.snowtrace.io/";
   } else if (chainId === ROLLEX_TESTNET) {
-    return "https://odx-zkevm-testnet.zkevm.opside.info/";
+    return "https://rollux.tanenbaum.io/";
   }
   return "https://etherscan.io/";
 }

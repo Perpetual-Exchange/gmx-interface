@@ -2180,7 +2180,7 @@ export default function SwapBox(props) {
                 trigger orders. <br />
                 <br />
                 For screenshots and more information, please see the{" "}
-                <ExternalLink href="https://docs.odx.finance">docs</ExternalLink>.
+                <ExternalLink href="https://docs.rollex.finance">docs</ExternalLink>.
               </Trans>
             </div>
           )}
@@ -2275,7 +2275,7 @@ export default function SwapBox(props) {
                           top right of the page after connecting your wallet.
                           <br />
                           <br />
-                          <ExternalLink href="https://docs.odx.finance/trade#opening-a-position">
+                          <ExternalLink href="https://docs.rollex.finance/trade#opening-a-position">
                             More Info
                           </ExternalLink>
                         </Trans>
@@ -2304,7 +2304,7 @@ export default function SwapBox(props) {
                           This exit price will change with the price of the asset.
                           <br />
                           <br />
-                          <ExternalLink href="https://docs.odx.finance/trade#opening-a-position">
+                          <ExternalLink href="https://docs.rollex.finance/trade#opening-a-position">
                             More Info
                           </ExternalLink>
                         </Trans>
@@ -2343,7 +2343,7 @@ export default function SwapBox(props) {
                           </div>
                         )}
                         <br />
-                        <ExternalLink href="https://docs.odx.finance/fee">
+                        <ExternalLink href="https://docs.rollex.finance/fee">
                           <Trans>More Info</Trans>
                         </ExternalLink>
                       </div>

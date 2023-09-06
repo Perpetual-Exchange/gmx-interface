@@ -34,5 +34,5 @@ export function getFooterLinks(isHome) {
 
 export const SOCIAL_LINKS: SocialLink[] = [
   { link: "https://discord.gg/9MTZdXeDkq", name: "Discord", icon: discordIcon },
-  { link: "https://twitter.com/ODXfinance", name: "Twitter", icon: twitterIcon },
+  { link: "https://twitter.com/REXfinance", name: "Twitter", icon: twitterIcon },
 ];

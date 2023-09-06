@@ -19,13 +19,13 @@
 }
 
 .App-header.large::after {
-  height: 0.5px;
-  width: 100%;
-  content: " ";
-  background: #fff;
-  position: absolute;
+  background: linear-gradient(90deg,hsla(0,0%,98%,0),#fbfbfb 30%,#fbfbfb 70%,hsla(0,0%,98%,0));
   bottom: 0;
+  content: " ";
+  height: 1px;
   left: 0;
+  position: absolute;
+  width: 100%;
 }
 
 .App-header.large .App-header-links {
@@ -178,7 +178,7 @@
   display: inline-flex;
   cursor: pointer;
   border: none;
-  border-radius: 1.5rem;
+  border-radius: 0;
   font-size: var(--font-base);
   background: none;
   color: white;

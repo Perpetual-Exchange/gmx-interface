@@ -126,7 +126,7 @@
 
 .Exchange-swap-connect-wallet:hover {
   background: #272e33;
-  border-radius: 0.6rem;
+  border-radius: 0;
 }
 
 .Exchange-swap-settings.Exchange-swap-txns-status {
@@ -312,7 +312,7 @@
   position: relative;
   padding: 0.9rem 0.31rem;
   z-index: 2;
-  border: 0.5px solid rgba(128, 174, 14, 0.6);
+  border: 0.5px solid #e0ee8d;
 }
 
 .ExchangeChart.tv .ExchangeChart-bottom {
@@ -510,7 +510,7 @@ table.Exchange-list.Orders td {
 }
 
 table.Exchange-list tr {
-  border-bottom: 0.5px solid rgba(128, 174, 14, 0.6);
+  border-bottom: 0.5px solid #e0ee8d;
 }
 
 table.Exchange-list tr:last-child {
@@ -646,7 +646,7 @@ table.Exchange-list th {
   padding: 1.5rem;
   margin-bottom: 1.05rem;
   border-radius: 0.8rem;
-  border: 0.5px solid rgba(128, 174, 14, 0.6);
+  border: 0.5px solid #e0ee8d;
 }
 
 .Exchange-swap-section:hover,
