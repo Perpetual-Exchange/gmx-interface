@@ -390,21 +390,30 @@ export const TOKENS: { [chainId: number]: Token[] } = {
   ],
   [ROLLEX_TESTNET]: [
     {
-      name: "Ethereum",
-      symbol: "ETH",
+      name: "TSYS",
+      symbol: "TSYS",
       decimals: 18,
       address: ethers.constants.AddressZero,
       isNative: true,
       isShortable: true,
-      imageUrl: "https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880",
+      imageUrl: "https://gorollux.com/assets/syscoin.3e0a89a5.svg",
     },
     {
-      name: "Ethereum (WETH)",
-      symbol: "WETH",
-      address: "0xc7a1bAe0Db6203F3Ee3C721909B3b959a1b437Ca",
+      name: "TSYS (WTSYS)",
+      symbol: "WTSYS",
+      address: "0xcAc0759160d57A33D332Ed36a555C10957694407",
       decimals: 18,
       isWrapped: true,// 名称待定
       isTempHidden: true,
+      isShortable: true,
+      baseSymbol: "TSYS",
+      imageUrl: "https://gorollux.com/assets/syscoin.3e0a89a5.svg",
+    },
+    {
+      name: "Ethereum (WETH)",
+      symbol: "ETH",
+      address: "0x5eD4813824E5e2bAF9BBC211121b21aB38E02522",
+      decimals: 18,
       isShortable: true,
       baseSymbol: "ETH",
       imageUrl: "https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880",
@@ -412,7 +421,7 @@ export const TOKENS: { [chainId: number]: Token[] } = {
     {
       name: "USDT",
       symbol: "USDT",
-      address: "0xFefEab21A1CddBAda7c1077FBc1cC92e07B5ce78",
+      address: "0x9D973BAc12BB62A55be0F9f7Ad201eEA4f9B8428",
       decimals: 18,
       isStable: true,
       imageUrl: "https://assets.coingecko.com/coins/images/325/thumb/Tether.png?1668148663",
@@ -421,17 +430,17 @@ export const TOKENS: { [chainId: number]: Token[] } = {
       name: "Bitcoin (BTC)",
       symbol: "BTC",
       decimals: 18,
-      address: "0xAAb8FCD8DD22a5de73550F8e67fF9Ca970d1257E",
+      address: "0xfA600253bB6fE44CEAb0538000a8448807e50c85",
       isShortable: true,
       imageUrl: "https://assets.coingecko.com/coins/images/7598/thumb/wrapped_bitcoin_wbtc.png?1548822744",
     },
     {
-      name: "USDC",
-      symbol: "USDC",
+      name: "DAI",
+      symbol: "DAI",
       decimals: 18,
-      address: "0x6187f53e7AC4cfB95ea1c4E906e777d0d2f6763E",
+      address: "0x66A1b915B55bde2Fa3402ED59bB5aF19879C1178",
       isStable: true,
-      imageUrl: "https://assets.coingecko.com/coins/images/6319/thumb/USD_Coin_icon.png?1547042389",
+      imageUrl: "https://assets.coingecko.com/coins/images/9956/thumb/4943.png?1636636734",
     }
   ],
 };
@@ -648,17 +657,19 @@ export const ICONLINKS = {
   },
   [ROLLEX_TESTNET]: {
     ETH: {
-      // coingecko: "https://www.coingecko.com/en/coins/weth",
-      rollexTestnet: "https://odx-zkevm-testnet.zkevm.opside.info/address/0xc7a1bAe0Db6203F3Ee3C721909B3b959a1b437Ca",
-    },
-    USDC: {
-      rollexTestnet: "https://odx-zkevm-testnet.zkevm.opside.info/address/0x6187f53e7AC4cfB95ea1c4E906e777d0d2f6763E",
+      rollexTestnet: "https://rollux.tanenbaum.io/address/0x5eD4813824E5e2bAF9BBC211121b21aB38E02522",
     },
     USDT: {
-      rollexTestnet: "https://odx-zkevm-testnet.zkevm.opside.info/address/0xFefEab21A1CddBAda7c1077FBc1cC92e07B5ce78",
+      rollexTestnet: "https://rollux.tanenbaum.io/address/0x9D973BAc12BB62A55be0F9f7Ad201eEA4f9B8428",
     },
     BTC: {
-      rollexTestnet: "https://odx-zkevm-testnet.zkevm.opside.info/address/0xAAb8FCD8DD22a5de73550F8e67fF9Ca970d1257E",
+      rollexTestnet: "https://rollux.tanenbaum.io/address/0xfA600253bB6fE44CEAb0538000a8448807e50c85",
+    },
+    DAI: {
+      rollexTestnet: "https://rollux.tanenbaum.io/address/0x66A1b915B55bde2Fa3402ED59bB5aF19879C1178",
+    },
+    WTSYS: {
+      rollexTestnet: "https://rollux.tanenbaum.io/address/0xcAc0759160d57A33D332Ed36a555C10957694407",
     },
   },
 };

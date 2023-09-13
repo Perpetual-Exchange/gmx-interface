@@ -485,8 +485,8 @@ export default function DashboardV2() {
                 {chainName} Total Stats start from {totalStatsStartDate}.<br /> To view detailed stats, please check the
               </Trans>{" "}
               {chainId === ROLLEX_TESTNET && (
-                // <ExternalLink href="https://stats.rollex.finance/">Analytics page</ExternalLink>
-                <span>Analytics page</span>
+                <ExternalLink href="https://stats.rollex.finance/">Analytics page</ExternalLink>
+                // <span>Analytics page</span>
               )}
               .
             </div>
