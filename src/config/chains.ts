@@ -133,7 +133,7 @@ const constants = {
   // config refer to AVALANCHE_FUJI
   [ROLLEX_TESTNET]: {
     nativeTokenSymbol: "TSYS",
-    wrappedTokenSymbol: "WETH",
+    wrappedTokenSymbol: "WTSYS",
     defaultCollateralSymbol: "USDT",
     defaultFlagOrdersEnabled: true,
     positionReaderPropsLength: 9,
@@ -146,7 +146,7 @@ const constants = {
   },
 };
 
-const ALCHEMY_WHITELISTED_DOMAINS = ["d.rollex.finance", "dapptest.rollex.finance"];
+const ALCHEMY_WHITELISTED_DOMAINS = ["d.rollex.finance", "dapp.rollex.finance"];
 
 export const RPC_PROVIDERS = {
   [ETH_MAINNET]: ["https://rpc.ankr.com/eth"],

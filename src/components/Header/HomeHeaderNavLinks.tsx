@@ -6,7 +6,7 @@ export function HomeHeaderNavLinks() {
   const HOME_MENUS: HomeNavLink[] = [
     {
       label: `App`,
-      link: "https://dapptest.rollex.finance",
+      link: "https://dapp.rollex.finance",
     },{
       label: `Docs`,
       link: "https://docs.rollex.finance",
