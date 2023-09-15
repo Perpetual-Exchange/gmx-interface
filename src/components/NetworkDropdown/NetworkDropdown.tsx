@@ -3,7 +3,6 @@ import { Menu } from "@headlessui/react";
 import ModalWithPortal from "../Modal/ModalWithPortal";
 import { t, Trans } from "@lingui/macro";
 import cx from "classnames";
-import { HiDotsVertical } from "react-icons/hi";
 import "./NetworkDropdown.css";
 import language24Icon from "img/ic_language24.svg";
 import settingsIcon from "img/ic_settings_16.svg";
@@ -89,10 +88,7 @@ function NavIcons({ selectorLabel }) {
       <button className="transparent">
         <img className="network-dropdown-icon" src={icon} alt={selectorLabel} />
       </button>
-      <div className="network-dropdown-seperator" />
-      <button className="transparent">
-        <HiDotsVertical color="white" size={20} />
-      </button>
+      <button className="transparent max-md:!hidden !pl-0">{selectorLabel}</button>
     </>
   );
 }

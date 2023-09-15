@@ -782,7 +782,7 @@ export const Exchange = forwardRef((props, ref) => {
   const LIST_SECTIONS_LABELS = {
     [ORDERS]: orders.length ? t`Orders (${orders.length})` : t`Orders`,
     [POSITIONS]: positions.length ? t`Positions (${positions.length})` : t`Positions`,
-    [TRADES]: t`Trades`,
+    [TRADES]: t`Trades History`,
   };
   if (!LIST_SECTIONS.includes(listSection)) {
     listSection = LIST_SECTIONS[0];
@@ -796,7 +796,7 @@ export const Exchange = forwardRef((props, ref) => {
     if (cancelOrderIdList.length === 0) return;
     return (
       <button
-        className="muted font-base cancel-order-btn"
+        className="font-base muted cancel-order-btn"
         disabled={isCancelMultipleOrderProcessing}
         type="button"
         onClick={onMultipleCancelClick}
@@ -809,7 +809,7 @@ export const Exchange = forwardRef((props, ref) => {
   const getListSection = () => {
     return (
       <div>
-        <div className="Exchange-list-tab-container">
+        <div className="mt-20 Exchange-list-tab-container">
           <Tab
             options={LIST_SECTIONS}
             optionLabels={LIST_SECTIONS_LABELS}

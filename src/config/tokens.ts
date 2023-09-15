@@ -1,6 +1,6 @@
 import { ethers } from "ethers";
 import { getContract } from "./contracts";
-import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, AVALANCHE_FUJI, MAINNET, TESTNET, SEPOLIA } from "./chains";
+import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, AVALANCHE_FUJI, MAINNET, TESTNET, ROLLEX_TESTNET } from "./chains";
 import { Token } from "domain/tokens";
 
 export const TOKENS: { [chainId: number]: Token[] } = {
@@ -349,79 +349,99 @@ export const TOKENS: { [chainId: number]: Token[] } = {
       name: "Wrapped AVAX",
       symbol: "WAVAX",
       decimals: 18,
-      address: "0x1D308089a2D1Ced3f1Ce36B1FcaF815b07217be3",
+      address: "0x2E11Aad6Ffa2E7f4F3b75187BFDa0A3633b3711d",
       isWrapped: true,
       baseSymbol: "AVAX",
       imageUrl: "https://assets.coingecko.com/coins/images/12559/small/coin-round-red.png?1604021818",
     },
     {
-      name: "Ethereum (WETH.e)",
+      name: "Ethereum (OETH)",
       symbol: "ETH",
-      address: "0x8226EC2c1926c9162b6F815153d10018A7ccdf07",
+      address: "0x18753A15a1d75c2569d20591907190F1E97178a9",
       decimals: 18,
       isShortable: true,
       imageUrl: "https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880",
     },
     {
-      name: "USD Coin",
-      symbol: "USDC",
-      address: "0xC492c8d82DC576Ad870707bb40EDb63E2026111E",
-      decimals: 6,
+      name: "USDT",
+      symbol: "USDT",
+      address: "0x4B834f076F6546bB16Ae586836fcCE4d1bcBB02e",
+      decimals: 18,
       isStable: true,
       imageUrl: "https://assets.coingecko.com/coins/images/6319/thumb/USD_Coin_icon.png?1547042389",
     },
-  ],
-  [SEPOLIA]: [
     {
-      name: "SepoliaETH",
-      symbol: "ETH",
-      decimals: 18,
-      address: ethers.constants.AddressZero,
-      isNative: true,
-      isShortable: true,
-      imageUrl: "https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880",
-    },
-    {
-      name: "Ethereum (WETH.e)",
-      symbol: "WETH",
-      address: "0x7E160F7a1f90E3BfB380eA6Fba9cbD860d7Cd0D1",
-      decimals: 18,
-      isWrapped: true,
-      imageUrl: "https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880",
-    },
-    {
-      name: "Bitcoin (BTC.b)",
+      name: "Bitcoin (BTC)",
       symbol: "BTC",
-      address: "0xdd9D0b2e8eE0552ee93AAEd6af62D386bF19b70E",
       decimals: 18,
+      address: "0x731eD5C081FeBd4AB928B0c164Dac31B2d7A313F",
       isShortable: true,
-      imageUrl: "https://assets.coingecko.com/coins/images/26115/thumb/btcb.png?1655921693",
+      imageUrl: "https://assets.coingecko.com/coins/images/7598/thumb/wrapped_bitcoin_wbtc.png?1548822744",
     },
     {
       name: "Chainlink",
       symbol: "LINK",
       decimals: 18,
-      address: "0x7E209F90c1D7238163947339b37ef34aaa86795D",
+      address: "0x7BAd7a252D35C5bfD577976C98BA81c211a48897",
       isStable: false,
       isShortable: true,
       imageUrl: "https://assets.coingecko.com/coins/images/877/thumb/chainlink-new-logo.png?1547034700",
     },
+  ],
+  [ROLLEX_TESTNET]: [
     {
-      name: "Dai",
+      name: "TSYS",
+      symbol: "TSYS",
+      decimals: 18,
+      address: ethers.constants.AddressZero,
+      isNative: true,
+      isShortable: true,
+      imageUrl: "https://gorollux.com/assets/syscoin.3e0a89a5.svg",
+    },
+    {
+      name: "TSYS (WTSYS)",
+      symbol: "WTSYS",
+      address: "0xcAc0759160d57A33D332Ed36a555C10957694407",
+      decimals: 18,
+      isWrapped: true,// 名称待定
+      isTempHidden: true,
+      isShortable: true,
+      baseSymbol: "TSYS",
+      imageUrl: "https://gorollux.com/assets/syscoin.3e0a89a5.svg",
+    },
+    {
+      name: "Ethereum (WETH)",
+      symbol: "ETH",
+      address: "0x5eD4813824E5e2bAF9BBC211121b21aB38E02522",
+      decimals: 18,
+      isShortable: true,
+      baseSymbol: "ETH",
+      imageUrl: "https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880",
+    },
+    {
+      name: "USDT",
+      symbol: "USDT",
+      address: "0x9D973BAc12BB62A55be0F9f7Ad201eEA4f9B8428",
+      decimals: 18,
+      isStable: true,
+      imageUrl: "https://assets.coingecko.com/coins/images/325/thumb/Tether.png?1668148663",
+    },
+    {
+      name: "Bitcoin (BTC)",
+      symbol: "BTC",
+      decimals: 18,
+      address: "0xfA600253bB6fE44CEAb0538000a8448807e50c85",
+      isShortable: true,
+      imageUrl: "https://assets.coingecko.com/coins/images/7598/thumb/wrapped_bitcoin_wbtc.png?1548822744",
+    },
+    {
+      name: "DAI",
       symbol: "DAI",
       decimals: 18,
-      address: "0x6530b1af3CdCe25574F44E3a284158f3AfF89Ed1",
+      address: "0x66A1b915B55bde2Fa3402ED59bB5aF19879C1178",
       isStable: true,
       imageUrl: "https://assets.coingecko.com/coins/images/9956/thumb/4943.png?1636636734",
-    },
-    {
-      name: "USD Coin",
-      symbol: "USDC",
-      address: "0xd41D4FeF58b8c008F6e4d9614f2Fa9ed2Aec8aAb",
-      decimals: 18,
-      isStable: true,
-      imageUrl: "https://assets.coingecko.com/coins/images/6319/thumb/USD_Coin_icon.png?1547042389",
-    },
+    }
   ],
 };
 
@@ -470,80 +490,58 @@ export const ADDITIONAL_TOKENS: { [chainId: number]: Token[] } = {
       imageUrl: "https://github.com/gmx-io/gmx-assets/blob/main/GMX-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",
     },
   ],
-  [SEPOLIA]: [
-    {
-      name: "GMX",
-      symbol: "GMX",
-      address: getContract(SEPOLIA, "GMX"),
-      decimals: 18,
-      imageUrl: "https://assets.coingecko.com/coins/images/18323/small/arbit.png?1631532468",
-    },
-    {
-      name: "Escrowed GMX",
-      symbol: "esGMX",
-      address: getContract(SEPOLIA, "ES_GMX"),
-      decimals: 18,
-    },
-    {
-      name: "GMX LP",
-      symbol: "GLP",
-      address: getContract(SEPOLIA, "GLP"),
-      decimals: 18,
-      imageUrl: "https://github.com/gmx-io/gmx-assets/blob/main/GMX-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",
-    },
-  ],
 };
 
 export const PLATFORM_TOKENS: { [chainId: number]: { [symbol: string]: Token } } = {
-  [ARBITRUM]: {
+  [AVALANCHE_FUJI]: {
     // arbitrum
-    GMX: {
-      name: "GMX",
-      symbol: "GMX",
+    REX: {
+      name: "REX",
+      symbol: "REX",
       decimals: 18,
-      address: getContract(ARBITRUM, "GMX"),
-      imageUrl: "https://assets.coingecko.com/coins/images/18323/small/arbit.png?1631532468",
+      address: getContract(AVALANCHE_FUJI, "GMX"),
+      imageUrl: "https://dapp.rollex.finance/static/ic_gmx_40.svg",
     },
-    GLP: {
-      name: "GMX LP",
-      symbol: "GLP",
+    RLP: {
+      name: "RLP",
+      symbol: "RLP",
       decimals: 18,
-      address: getContract(ARBITRUM, "StakedGlpTracker"), // address of fsGLP token because user only holds fsGLP
-      imageUrl: "https://github.com/gmx-io/gmx-assets/blob/main/GMX-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",
+      address: getContract(AVALANCHE_FUJI, "StakedGlpTracker"), // address of fsGLP token because user only holds fsGLP
+      imageUrl: "https://dapp.rollex.finance/static/ic_glp_40.svg",
     },
   },
   [AVALANCHE]: {
     // avalanche
-    GMX: {
-      name: "GMX",
-      symbol: "GMX",
+    REX: {
+      name: "REX",
+      symbol: "REX",
       decimals: 18,
       address: getContract(AVALANCHE, "GMX"),
-      imageUrl: "https://assets.coingecko.com/coins/images/18323/small/arbit.png?1631532468",
+      imageUrl: "https://dapp.rollex.finance/static/ic_gmx_40.svg",
     },
-    GLP: {
-      name: "GMX LP",
-      symbol: "GLP",
+    RLP: {
+      name: "RLP",
+      symbol: "RLP",
       decimals: 18,
       address: getContract(AVALANCHE, "StakedGlpTracker"), // address of fsGLP token because user only holds fsGLP
-      imageUrl: "https://github.com/gmx-io/gmx-assets/blob/main/GMX-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",
+      imageUrl: "https://dapp.rollex.finance/static/ic_glp_40.svg",
     },
   },
-  [SEPOLIA]: {
-    // SEPOLIA
-    GMX: {
-      name: "GMX",
-      symbol: "GMX",
+  [ROLLEX_TESTNET]: {
+    // arbitrum
+    REX: {
+      name: "REX",
+      symbol: "REX",
       decimals: 18,
-      address: getContract(SEPOLIA, "GMX"),
-      imageUrl: "https://assets.coingecko.com/coins/images/18323/small/arbit.png?1631532468",
+      address: getContract(ROLLEX_TESTNET, "GMX"),
+      imageUrl: "https://dapp.rollex.finance/static/ic_gmx_40.svg",
     },
-    GLP: {
-      name: "GMX LP",
-      symbol: "GLP",
+    RLP: {
+      name: "RLP",
+      symbol: "RLP",
       decimals: 18,
-      address: getContract(SEPOLIA, "StakedGlpTracker"), // address of fsGLP token because user only holds fsGLP
-      imageUrl: "https://github.com/gmx-io/gmx-assets/blob/main/GMX-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",
+      address: getContract(ROLLEX_TESTNET, "StakedGlpTracker"), // address of fsGLP token because user only holds fsGLP
+      imageUrl: "https://dapp.rollex.finance/static/ic_glp_40.svg",
     },
   },
 };
@@ -657,17 +655,21 @@ export const ICONLINKS = {
       avalanche: "https://testnet.snowtrace.io/address/0xC492c8d82DC576Ad870707bb40EDb63E2026111E",
     },
   },
-  [SEPOLIA]: {
-    GMX: {
-      coingecko: "https://www.coingecko.com/en/coins/gmx",
-      sepolia: "https://sepolia.etherscan.io/address/0xb9b84f0fd7fb846933c5bcefafba483fe1b6cd1e",
+  [ROLLEX_TESTNET]: {
+    ETH: {
+      rollexTestnet: "https://rollux.tanenbaum.io/address/0x5eD4813824E5e2bAF9BBC211121b21aB38E02522",
     },
-    GLP: {
-      sepolia: "https://sepolia.etherscan.io/address/0xc6bc996320c16cb59f73410ab42ee1c589a0f70a",
+    USDT: {
+      rollexTestnet: "https://rollux.tanenbaum.io/address/0x9D973BAc12BB62A55be0F9f7Ad201eEA4f9B8428",
     },
-    USDC: {
-      coingecko: "https://www.coingecko.com/en/coins/usd-coin",
-      sepolia: "https://sepolia.etherscan.io/address/0xb16f35c0ae2912430dac15764477e179d9b9ebea",
+    BTC: {
+      rollexTestnet: "https://rollux.tanenbaum.io/address/0xfA600253bB6fE44CEAb0538000a8448807e50c85",
+    },
+    DAI: {
+      rollexTestnet: "https://rollux.tanenbaum.io/address/0x66A1b915B55bde2Fa3402ED59bB5aF19879C1178",
+    },
+    WTSYS: {
+      rollexTestnet: "https://rollux.tanenbaum.io/address/0xcAc0759160d57A33D332Ed36a555C10957694407",
     },
   },
 };
@@ -692,7 +694,7 @@ export const TOKENS_BY_SYMBOL_MAP: { [chainId: number]: { [symbol: string]: Toke
 export const WRAPPED_TOKENS_MAP: { [chainId: number]: Token } = {};
 export const NATIVE_TOKENS_MAP: { [chainId: number]: Token } = {};
 
-const CHAIN_IDS = [MAINNET, TESTNET, ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, AVALANCHE_FUJI, SEPOLIA];
+const CHAIN_IDS = [MAINNET, TESTNET, ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, AVALANCHE_FUJI, ROLLEX_TESTNET];
 
 for (let j = 0; j < CHAIN_IDS.length; j++) {
   const chainId = CHAIN_IDS[j];
@@ -750,7 +752,9 @@ export function getToken(chainId: number, address: string) {
 }
 
 export function getTokenBySymbol(chainId: number, symbol: string) {
+  // console.log('getTokenBySymbol=====>',chainId,symbol,TOKENS_BY_SYMBOL_MAP);
   const token = TOKENS_BY_SYMBOL_MAP[chainId][symbol];
+  // console.log('token=====>',token);
   if (!token) {
     throw new Error(`Incorrect symbol "${symbol}" for chainId ${chainId}`);
   }
@@ -777,7 +781,9 @@ export function getNormalizedTokenSymbol(tokenSymbol) {
 const AVAILABLE_CHART_TOKENS = {
   [ARBITRUM]: ["ETH", "BTC", "LINK", "UNI"],
   [AVALANCHE]: ["AVAX", "ETH", "BTC"],
-  [SEPOLIA]: ["ETH", "BTC", "LINK"],
+  [AVALANCHE_FUJI]: ["AVAX", "ETH", "BTC"],
+  //待定
+  [ROLLEX_TESTNET]: ["ETH", "BTC", "TSYS"],
 };
 
 export function isChartAvailabeForToken(chainId: number, tokenSymbol: string) {

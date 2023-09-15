@@ -47,7 +47,7 @@
 }
 
 .App-header-drawer {
-  background: #17182c88 0% 0% no-repeat padding-box;
+  background: #454545;
   box-shadow: 0.8rem 0.3rem 0.6rem #00000029;
   opacity: 1;
   backdrop-filter: blur(2.7rem);
@@ -62,18 +62,22 @@
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
   max-width: 100%;
+  border-radius: 0 2.4rem 2.4rem 0;
 }
 .App-header-drawer::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
 }
 
+.App-header-drawer .App-header-link-container {
+  margin: 0 1rem;
+}
 .App-header-drawer .App-header-link-container .a,
 .App-header-drawer .App-header-link-container a {
-  font-size: var(--font-sm);
+  font-size: 16px;
   line-height: 1.8rem;
   font-weight: normal;
   letter-spacing: 0.1px;
-  color: #a0a3c4;
+  color: #fff;
   padding: 1.5rem 1.6rem;
   text-decoration: none;
   display: block;
@@ -85,17 +89,47 @@
 .App-header-drawer .App-header-link-container a:hover,
 .App-header-drawer .App-header-link-container a:focus,
 .App-header-drawer .App-header-link-container a.active {
-  background: #303fd024;
-  color: white;
+  position: relative;
+}
+
+.App-header-drawer .App-header-link-container a.active:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.3rem;
+  right: 0;
+  bottom: 0.3rem;
+  border: 1px solid #e0ee8d;
+  background: rgba(128, 174, 14, 0.12);
+  border-radius: 10rem;
 }
 
 .App-header-links-header {
-  height: 6.2rem;
+  position: relative;
+  height: 7.2rem;
   display: flex;
   align-items: center;
   z-index: 3;
   margin-left: 1.6rem;
   justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+}
+
+.App-header-links-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 1.6rem;
+  bottom: 0;
+  border-bottom: 0.5px solid #e0ee8d;
+}
+
+.App-header-drawer .App-header-link-container img {
+  display: inline-block;
+  margin-right: 0.6rem;
+  width: 18px;
+  height: 18px;
 }
 
 .App-header-container-left {
@@ -138,7 +172,7 @@
     rgba(7, 157, 250, 1) 77%,
     rgba(2, 207, 207, 1) 100%
   );
-  border-radius: 0.3rem;
+  border-radius: 0;
   box-shadow: 0 0 0.4rem 0.6rem rgba(45, 66, 252, 0.15);
 }
 
@@ -148,9 +182,14 @@
 .App-box-highlight,
 .App-box-solid {
   position: relative;
-  border-radius: 0.4rem;
-  background: #16182e;
+  border-radius: 0;
+  background: #171717;
   font-size: var(--font-base);
+}
+
+.App-box {
+  border: 0.5px solid #e0ee8d;
+  border-radius: 0;
 }
 
 .App-card-bottom-placeholder {
@@ -279,11 +318,11 @@
 }
 
 .App-card-info-title {
-  font-size: var(--font-md);
+  font-size: 1.8rem;
   line-height: 2.1rem;
   font-weight: normal;
   letter-spacing: 0px;
-  color: #ffffff;
+  color: #c1c1c1;
 }
 
 .App-card-info-subtitle {
@@ -316,7 +355,7 @@
   height: 5.1rem;
   width: 26.35rem;
   border: 1px solid var(--dark-blue-border);
-  border-radius: 0.3rem;
+  border-radius: 0;
   position: relative;
   color: white;
   font-size: 2rem;
@@ -368,7 +407,7 @@ button.App-connect-wallet {
   height: 3.6rem;
   color: #17182c;
   background: #03cfcd 0% 0% no-repeat padding-box;
-  border-radius: 0.4rem;
+  border-radius: 0;
 }
 
 button.App-connect-wallet:hover {
@@ -382,7 +421,7 @@ button.App-connect-wallet:hover {
 .App-header-user-address {
   border: 1px solid #ffffff29;
   height: 3.6rem;
-  border-radius: 0.4rem;
+  border-radius: 0;
   display: inline-flex;
   align-items: center;
   color: white;
@@ -395,9 +434,9 @@ button.App-connect-wallet:hover {
 }
 
 .App-card-divider {
-  height: 1px;
-  background: #23263b;
-  margin: 1.05rem -1.5rem;
+  height: 0.5px;
+  background: #e0ee8d;
+  margin: 2.05rem -3rem;
 }
 
 .App-box-solid {
@@ -416,10 +455,13 @@ button.App-connect-wallet:hover {
 }
 
 .section-title-block {
+  position: relative;
+  overflow: hidden;
   display: flex;
   margin-bottom: 2.325rem;
-  max-width: 58.4rem;
-  width: 100%;
+  border: 0.5px solid #e0ee8d;
+  border-radius: 0;
+  padding: 2rem 3rem;
 }
 
 .page-main-content .section-title-block {
@@ -531,9 +573,10 @@ button.App-connect-wallet:hover {
 }
 
 .App-card {
-  padding: 1.5rem;
-  border-radius: 0.4rem;
+  padding: 3rem;
+  border-radius: 0;
   font-size: var(--font-base);
+  border: 0.5px solid #e0ee8d;
 }
 
 .App-card-title {
@@ -542,10 +585,11 @@ button.App-connect-wallet:hover {
   font-weight: normal;
   letter-spacing: 0px;
   color: #ffffff;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-weight: 600;
 }
 
 .Position-card-title {
@@ -639,12 +683,22 @@ button.App-connect-wallet:hover {
   color: #a0a3c4;
   font-size: var(--font-base);
   line-height: 1.8rem;
-  font-weight: normal;
+  font-weight: 500;
 }
 
 .App-header-container-left .a.active,
 .App-header-container-left a.active {
-  color: white;
+  color: #e0ee8d;
+  position: relative;
+}
+
+.App-header-container-left a.active::after {
+  content: "";
+  position: absolute;
+  left: 1.7rem;
+  top: 70%;
+  width: 50%;
+  border-bottom: 0.5px solid #e0ee8d;
 }
 
 .Toastify {
@@ -781,7 +835,7 @@ button.App-connect-wallet:hover {
   cursor: pointer;
   display: inline-block;
   padding: 1.5rem;
-  border-radius: 0.3rem;
+  border-radius: 0;
   border: none;
   font-size: var(--font-sm);
 }
@@ -873,7 +927,7 @@ button.App-button-option:disabled {
   display: inline-flex;
   cursor: pointer;
   border: none;
-  border-radius: 1.5rem;
+  border-radius: 0;
   font-size: var(--font-base);
   background: none;
   color: white;
@@ -881,7 +935,7 @@ button.App-button-option:disabled {
   width: 2.4rem;
   height: 2.4rem;
   align-items: center;
-  border-radius: 0.4rem;
+  border-radius: 0;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -927,8 +981,8 @@ button.App-button-option:disabled {
 }
 
 .App-content {
-  position: static !important;
   padding-top: 60px;
+  position: static !important;
 }
 
 .App-footer {
@@ -1009,19 +1063,19 @@ button.App-button {
 .Toastify__toast--error {
   background: #333957;
   color: white;
-  border-radius: 0.6rem;
+  border-radius: 0;
 }
 
 .Toastify__toast--success {
   background: transparent linear-gradient(90deg, #19836c 0%, #177c66 100%) 0% 0% no-repeat padding-box;
   color: white;
   box-shadow: 0px 0.3rem 0.6rem #0000005c;
-  border-radius: 0.4rem;
+  border-radius: 0;
 }
 
 .Toastify__close-button {
   align-self: flex-start;
-  border-radius: 0.4rem;
+  border-radius: 0;
   width: 2.1rem;
   min-width: 2.1rem;
   height: 2rem;
@@ -1112,7 +1166,7 @@ button.App-button {
 }
 
 .App-slider .rc-slider-track {
-  background: linear-gradient(90deg, #2e3dcd, #2d42fc);
+  background: #e0ee8d;
 }
 
 .App-slider .rc-slider-dot {
@@ -1120,22 +1174,25 @@ button.App-button {
   border-radius: 1px;
   width: 2px;
   margin-left: -1px;
-  background: #282d4a;
+  background: #e0ee8d;
 }
 
 .App-slider .rc-slider-dot-active {
-  background: #3d51ff;
+  background: #e0ee8d;
 }
 
 .App-slider .rc-slider-handle {
-  background: #303652;
-  border: 2px solid #2d42fc;
+  background: #e0ee8d;
+  border: 2px #e0ee8d;
 }
 
 .App-slider .rc-slider-handle:active {
   box-shadow: 0 0 0.4rem 0.6rem rgba(45, 66, 252, 0.2);
 }
 
+.App-slider .rc-slider-step {
+  border: 0.5px solid #e0ee8d;
+}
 .App-slider .rc-slider-mark-text,
 .App-slider .rc-slider-mark-text-active {
   color: white;
@@ -1194,10 +1251,28 @@ button.App-button {
   top: 0;
   width: 100%;
 }
-
+.custom-buy-btn {
+  background-color: #e0ee8d;
+  background-position: 90% center !important;
+  background-repeat: no-repeat !important;
+  color: #171717 !important;
+}
 .Tab-title-section {
-  padding: 3.1rem 0 0;
+  position: relative;
+  overflow: hidden;
+  padding: 3rem;
+  border-radius: 0;
   margin-bottom: 2.4rem;
+  border: 0.5px solid #e0ee8d;
+}
+
+.right-b-icon {
+  position: absolute;
+  right: 7%;
+  height: 160%;
+  top: -30%;
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 .Home-language-menu {

@@ -12,8 +12,18 @@
   padding: 5rem 0;
   bottom: 0;
   position: relative;
+  /* border-top: 0.5px solid #fff; */
 }
 .Footer-wrapper::after {
+  background: linear-gradient(90deg,hsla(0,0%,98%,0),#fbfbfb 30%,#fbfbfb 70%,hsla(0,0%,98%,0));
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+/* .Footer-wrapper::after {
   height: 1px;
   width: 100%;
   content: " ";
@@ -27,7 +37,7 @@
   position: absolute;
   top: 0;
   left: 0;
-}
+} */
 
 .Footer-social-link-block {
   margin: 3rem auto;

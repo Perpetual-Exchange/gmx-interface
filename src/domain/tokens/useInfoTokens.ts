@@ -17,7 +17,6 @@ import { getTokens, getWhitelistedTokens } from "config/tokens";
 import { Web3Provider } from "@ethersproject/providers";
 import { getSpread } from "./utils";
 
-//
 export function useInfoTokens(
   library: Web3Provider | undefined,
   chainId: number,
@@ -48,8 +47,7 @@ export function useInfoTokens(
     }
   );
 
-  const indexPricesUrl = getServerUrl(chainId, "/prices");
-
+  const indexPricesUrl = getServerUrl(chainId, `/${chainId}/prices`);
   const { data: indexPrices } = useSWR([indexPricesUrl], {
     // @ts-ignore spread args incorrect type
     fetcher: (...args) => fetch(...args).then((res) => res.json()),

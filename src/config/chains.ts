@@ -1,7 +1,7 @@
 import { ethers } from "ethers";
 import { sample } from "lodash";
 import { NetworkMetadata } from "lib/wallets";
-import { isDevelopment } from "./env";
+// import { isDevelopment } from "./env";
 
 const { parseEther } = ethers.utils;
 
@@ -13,35 +13,38 @@ export const AVALANCHE_FUJI = 43113;
 export const ARBITRUM = 42161;
 export const ARBITRUM_TESTNET = 421611;
 export const FEES_HIGH_BPS = 50;
-export const SEPOLIA = 11155111;
+export const ROLLEX_TESTNET = 57000;
+
 
 // TODO take it from web3
-export const DEFAULT_CHAIN_ID = SEPOLIA;
+export const DEFAULT_CHAIN_ID = ROLLEX_TESTNET;
 export const CHAIN_ID = DEFAULT_CHAIN_ID;
 
-export const SUPPORTED_CHAIN_IDS = [SEPOLIA, AVALANCHE];
+export const SUPPORTED_CHAIN_IDS = [ROLLEX_TESTNET];
 
-if (isDevelopment()) {
-  SUPPORTED_CHAIN_IDS.push(SEPOLIA, AVALANCHE_FUJI);
-}
+// if (isDevelopment()) {
+//   SUPPORTED_CHAIN_IDS.push(AVALANCHE_FUJI);
+// }
 
 export const IS_NETWORK_DISABLED = {
-  [SEPOLIA]: false,
-  [AVALANCHE]: false,
+  [ROLLEX_TESTNET]: false,
+  [AVALANCHE_FUJI]: false,
+  [AVALANCHE]: false
 };
 
 export const CHAIN_NAMES_MAP = {
+  [ROLLEX_TESTNET]: "Rollex Testnet",
   [MAINNET]: "BSC",
   [TESTNET]: "BSC Testnet",
   [ARBITRUM_TESTNET]: "ArbRinkeby",
   [ARBITRUM]: "Arbitrum",
   [AVALANCHE]: "Avalanche",
   [AVALANCHE_FUJI]: "Avalanche Fuji",
-  [SEPOLIA]: "Sepolia",
 };
 
 export const GAS_PRICE_ADJUSTMENT_MAP = {
-  [SEPOLIA]: "0",
+  [AVALANCHE_FUJI]: "0",
+  [ROLLEX_TESTNET]: "0",
   [AVALANCHE]: "3000000000", // 3 gwei
 };
 
@@ -50,7 +53,8 @@ export const MAX_GAS_PRICE_MAP = {
 };
 
 export const HIGH_EXECUTION_FEES_MAP = {
-  [SEPOLIA]: 3, // 3 USD
+  [AVALANCHE_FUJI]: 3, // 3 USD
+  [ROLLEX_TESTNET]: 3, // 3 USD
   [AVALANCHE]: 3, // 3 USD
 };
 
@@ -98,20 +102,6 @@ const constants = {
     DECREASE_ORDER_EXECUTION_GAS_FEE: parseEther("0.000300001"),
   },
 
-  [SEPOLIA]: {
-    nativeTokenSymbol: "ETH",
-    wrappedTokenSymbol: "WETH",
-    defaultCollateralSymbol: "USDC",
-    defaultFlagOrdersEnabled: false,
-    positionReaderPropsLength: 9,
-    v2: true,
-
-    SWAP_ORDER_EXECUTION_GAS_FEE: parseEther("0.01"),
-    INCREASE_ORDER_EXECUTION_GAS_FEE: parseEther("0.01"),
-    // contract requires that execution fee be strictly greater than instead of gte
-    DECREASE_ORDER_EXECUTION_GAS_FEE: parseEther("0.010000001"),
-  },
-
   [AVALANCHE]: {
     nativeTokenSymbol: "AVAX",
     wrappedTokenSymbol: "WAVAX",
@@ -129,7 +119,22 @@ const constants = {
   [AVALANCHE_FUJI]: {
     nativeTokenSymbol: "AVAX",
     wrappedTokenSymbol: "WAVAX",
-    defaultCollateralSymbol: "USDC",
+    defaultCollateralSymbol: "USDT",
+    defaultFlagOrdersEnabled: true,
+    positionReaderPropsLength: 9,
+    v2: true,
+
+    SWAP_ORDER_EXECUTION_GAS_FEE: parseEther("0.01"),
+    INCREASE_ORDER_EXECUTION_GAS_FEE: parseEther("0.01"),
+    // contract requires that execution fee be strictly greater than instead of gte
+    DECREASE_ORDER_EXECUTION_GAS_FEE: parseEther("0.0100001"),
+  },
+
+  // config refer to AVALANCHE_FUJI
+  [ROLLEX_TESTNET]: {
+    nativeTokenSymbol: "TSYS",
+    wrappedTokenSymbol: "WTSYS",
+    defaultCollateralSymbol: "USDT",
     defaultFlagOrdersEnabled: true,
     positionReaderPropsLength: 9,
     v2: true,
@@ -141,7 +146,7 @@ const constants = {
   },
 };
 
-const ALCHEMY_WHITELISTED_DOMAINS = ["gmx.io", "app.gmx.io"];
+const ALCHEMY_WHITELISTED_DOMAINS = ["d.rollex.finance", "dapp.rollex.finance"];
 
 export const RPC_PROVIDERS = {
   [ETH_MAINNET]: ["https://rpc.ankr.com/eth"],
@@ -165,13 +170,12 @@ export const RPC_PROVIDERS = {
   [ARBITRUM_TESTNET]: ["https://rinkeby.arbitrum.io/rpc"],
   [AVALANCHE]: ["https://api.avax.network/ext/bc/C/rpc"],
   [AVALANCHE_FUJI]: ["https://api.avax-test.network/ext/bc/C/rpc"],
-  [SEPOLIA]: ["https://eth-sepolia.g.alchemy.com/v2/Y3RwKW9kEoiq94_e1pUYNLnVdAO0iGCv"],
+  [ROLLEX_TESTNET]: ["https://rpc-tanenbaum.rollux.com"]
 };
 
 export const FALLBACK_PROVIDERS = {
-  [ARBITRUM]: [getAlchemyHttpUrl()],
+  // [ARBITRUM]: [getAlchemyHttpUrl()],
   [AVALANCHE]: ["https://avax-mainnet.gateway.pokt.network/v1/lb/626f37766c499d003aada23b"],
-  [SEPOLIA]: ["https://eth-sepolia.g.alchemy.com/v2/Y3RwKW9kEoiq94_e1pUYNLnVdAO0iGCv"],
 };
 
 export const NETWORK_METADATA: { [chainId: number]: NetworkMetadata } = {
@@ -219,17 +223,6 @@ export const NETWORK_METADATA: { [chainId: number]: NetworkMetadata } = {
     rpcUrls: RPC_PROVIDERS[ARBITRUM],
     blockExplorerUrls: [getExplorerUrl(ARBITRUM)],
   },
-  [SEPOLIA]: {
-    chainId: "0x" + SEPOLIA.toString(16),
-    chainName: "Arbitrum",
-    nativeCurrency: {
-      name: "ETH",
-      symbol: "ETH",
-      decimals: 18,
-    },
-    rpcUrls: RPC_PROVIDERS[SEPOLIA],
-    blockExplorerUrls: [getExplorerUrl(SEPOLIA)],
-  },
   [AVALANCHE]: {
     chainId: "0x" + AVALANCHE.toString(16),
     chainName: "Avalanche",
@@ -251,6 +244,17 @@ export const NETWORK_METADATA: { [chainId: number]: NetworkMetadata } = {
     },
     rpcUrls: RPC_PROVIDERS[AVALANCHE_FUJI],
     blockExplorerUrls: [getExplorerUrl(AVALANCHE_FUJI)],
+  },
+  [ROLLEX_TESTNET]: {
+    chainId: "0x" + ROLLEX_TESTNET.toString(16),
+    chainName: "REX zkEVM Testnet",
+    nativeCurrency: {
+      name: "ETH",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    rpcUrls: RPC_PROVIDERS[ROLLEX_TESTNET],
+    blockExplorerUrls: [getExplorerUrl(ROLLEX_TESTNET)],
   },
 };
 
@@ -313,8 +317,8 @@ export function getExplorerUrl(chainId) {
     return "https://snowtrace.io/";
   } else if (chainId === AVALANCHE_FUJI) {
     return "https://testnet.snowtrace.io/";
-  } else if (chainId === SEPOLIA) {
-    return "https://sepolia.etherscan.io/";
+  } else if (chainId === ROLLEX_TESTNET) {
+    return "https://rollux.tanenbaum.io/";
   }
   return "https://etherscan.io/";
 }

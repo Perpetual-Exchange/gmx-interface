@@ -14,7 +14,7 @@ type Props = {
   symbol?: string;
   shouldFormat?: boolean;
 };
-
+//
 export default function StatsTooltip({
   title,
   total,
@@ -29,17 +29,7 @@ export default function StatsTooltip({
     <>
       <p className="Tooltip-row">
         <span className="label">
-          <Trans>{title} on Arbitrum:</Trans>
-        </span>
-        <span className="amount">
-          {showDollar && "$"}
-          {formatAmount(arbitrumValue, shouldFormat ? decimalsForConversion : 0, 0, true)}
-          {!showDollar && symbol && " " + symbol}
-        </span>
-      </p>
-      <p className="Tooltip-row">
-        <span className="label">
-          <Trans>{title} on Avalanche:</Trans>
+          <Trans>{title} on OdxTestnet:</Trans>
         </span>
         <span className="amount">
           {showDollar && "$"}
@@ -47,7 +37,7 @@ export default function StatsTooltip({
           {!showDollar && symbol && " " + symbol}
         </span>
       </p>
-      <div className="Tooltip-divider" />
+      {/* <div className="Tooltip-divider" />
       <p className="Tooltip-row">
         <span className="label">
           <Trans>Total:</Trans>
@@ -57,7 +47,7 @@ export default function StatsTooltip({
           {formatAmount(total, shouldFormat ? decimalsForConversion : 0, 0, true)}
           {!showDollar && symbol && " " + symbol}
         </span>
-      </p>
+      </p> */}
     </>
   );
 }

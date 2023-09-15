@@ -4,7 +4,7 @@ import { Link, useHistory } from "react-router-dom";
 import GlpSwap from "components/Glp/GlpSwap";
 import Footer from "components/Footer/Footer";
 import "./BuyGlp.css";
-
+import b1 from "../../img/app-dashboard/b1.png";
 import { Trans } from "@lingui/macro";
 import { getNativeToken } from "config/tokens";
 import { useChainId } from "lib/chains";
@@ -23,16 +23,17 @@ export default function BuyGlp(props) {
   }, [history.location.hash]);
 
   return (
-    <div className="default-container page-layout">
+    <div className="default-container page-layout BuyGlp-page">
       <div className="section-title-block">
+        <img src={b1} className="right-b-icon" alt="" />
         <div className="section-title-content">
           <div className="Page-title">
-            <Trans>Buy / Sell GLP</Trans>
+            <Trans>Buy / Sell RLP</Trans>
           </div>
           <div className="Page-description">
             <Trans>
-              Purchase <ExternalLink href="https://gmxio.gitbook.io/gmx/glp">GLP tokens</ExternalLink> to earn{" "}
-              {nativeTokenSymbol} fees from swaps and leverages trading.
+              Purchase <ExternalLink href="https://docs.rollex.finance/rewards#as-a-olp-staker">RLP tokens</ExternalLink>{" "}
+              to earn {nativeTokenSymbol} fees from swaps and leverages trading.
             </Trans>
             <br />
             <Trans>

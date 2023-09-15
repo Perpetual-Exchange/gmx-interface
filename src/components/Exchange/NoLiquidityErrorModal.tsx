@@ -43,7 +43,7 @@ export default function NoLiquidityErrorModal({
     modalError === "BUFFER" ? t`${shortCollateralToken.symbol} Required` : t`${fromToken.symbol} Pool Capacity Reached`;
 
   return (
-    <Modal isVisible={Boolean(modalError)} setIsVisible={setModalError} label={label} className="Error-modal font-base">
+    <Modal isVisible={Boolean(modalError)} setIsVisible={setModalError} label={label} className="font-base Error-modal">
       <div>
         <Trans>
           You need to select {swapTokenSymbol} as the "Pay" token to use it for collateral to initiate this trade.
@@ -52,7 +52,7 @@ export default function NoLiquidityErrorModal({
       <br />
       <div>
         <Trans>
-          As there is not enough liquidity in GLP to swap {fromToken.symbol} to {swapTokenSymbol}, you can use the
+          As there is not enough liquidity in RLP to swap {fromToken.symbol} to {swapTokenSymbol}, you can use the
           option below to do so:
         </Trans>
       </div>

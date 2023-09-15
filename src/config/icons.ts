@@ -1,7 +1,9 @@
-import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, AVALANCHE_FUJI, SEPOLIA } from "config/chains";
+import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, AVALANCHE_FUJI, ROLLEX_TESTNET } from "config/chains";
 import arbitrum from "img/ic_arbitrum_24.svg";
 import avalanche from "img/ic_avalanche_24.svg";
 import avalancheTestnet from "img/ic_avalanche_testnet_24.svg";
+// import rollexTestnet from "img/ic_odx_testnet.png";
+import rollexTestnet from "img/network_logo.png";
 
 import gmxIcon from "img/ic_gmx_40.svg";
 import glpIcon from "img/ic_glp_40.svg";
@@ -26,9 +28,13 @@ const ICONS = {
   },
   [AVALANCHE_FUJI]: {
     network: avalancheTestnet,
+    gmx: gmxIcon,
+    glp: glpIcon,
   },
-  [SEPOLIA]: {
-    network: avalancheTestnet,
+  [ROLLEX_TESTNET]: {
+    network: rollexTestnet,
+    gmx: gmxIcon,
+    glp: glpIcon,
   },
   common: {
     gmx: gmxIcon,

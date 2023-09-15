@@ -121,7 +121,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
   const LaunchExchangeButton = () => {
     return (
       <HeaderLink
-        className="default-btn LaunchExchangeButton pointer-events-none"
+        className="default-btn LaunchExchangeButton"
         to="/trade"
         redirectPopupTimestamp={redirectPopupTimestamp}
         showRedirectModal={showRedirectModal}
@@ -196,7 +196,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
                 <h3>Save on Costs</h3>
                 <div>
                   Enter and exit positions with minimal spread and zero price impact.
-                  <a href="https://docs.rollex.xyz/features" target="_blank" className="read-more" rel=" noreferrer">
+                  <a href="https://docs.rollex.finance/fee" target="_blank" className="read-more" rel=" noreferrer">
                     learn more
                   </a>
                 </div>

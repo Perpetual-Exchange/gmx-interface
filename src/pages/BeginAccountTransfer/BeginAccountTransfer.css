@@ -1,3 +1,7 @@
+.BeginAccountTransfer.Page {
+  padding-top: 10rem;
+}
+
 .ValidationRow {
   display: grid;
   grid-template-columns: auto 1fr;

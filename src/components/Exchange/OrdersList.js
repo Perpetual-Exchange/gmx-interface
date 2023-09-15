@@ -342,7 +342,7 @@ export default function OrdersList(props) {
                     </p>
                     <p>
                       This can also cause limit/triggers to not be executed if the price is not reached for long enough.{" "}
-                      <ExternalLink href="https://gmxio.gitbook.io/gmx/trading#stop-loss-take-profit-orders">
+                      <ExternalLink href="https://docs.rollex.finance/trade#stop-loss--take-profit-orders">
                         Read more
                       </ExternalLink>
                       .
@@ -545,13 +545,15 @@ export default function OrdersList(props) {
 
   return (
     <React.Fragment>
-      <table className="Exchange-list Orders App-box large">
-        <tbody>
-          {renderHead()}
-          {renderEmptyRow()}
-          {renderLargeList()}
-        </tbody>
-      </table>
+      <div className="App-box">
+        <table className="Exchange-list Orders  large">
+          <tbody>
+            {renderHead()}
+            {renderEmptyRow()}
+            {renderLargeList()}
+          </tbody>
+        </table>
+      </div>
       {(!orders || orders.length === 0) && (
         <div className="Exchange-empty-positions-list-note small App-card">
           <Trans>No open orders</Trans>

@@ -89,6 +89,8 @@ export default function useReferralsData(account) {
           },
         })
         .then((res) => {
+          // eslint-disable-next-line no-console
+          console.log(1111111, chainId, res.data);
           const rebateDistributions: any[] = [];
           const discountDistributions: any[] = [];
           res.data.distributions.forEach((d) => {

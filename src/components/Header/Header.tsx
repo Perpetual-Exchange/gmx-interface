@@ -3,15 +3,21 @@ import cx from "classnames";
 
 import { AppHeaderUser } from "./AppHeaderUser";
 import { AppHeaderLinks } from "./AppHeaderLinks";
+// import { HomeHeaderNavLinks }  from './HomeHeaderNavLinks';
 
 import logoImg from "img/logo_GMX.png";
-
+import { RiMenuLine } from "react-icons/ri";
+import { FaTimes } from "react-icons/fa";
 import { AnimatePresence as FramerAnimatePresence, motion } from "framer-motion";
 
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { isHomeSite } from "lib/legacy";
-
+import { HomeHeaderLinks } from "./HomeHeaderLinks";
+const slideVariants = {
+  hidden: { x: "-100%" },
+  visible: { x: 0 },
+};
 // Fix framer-motion old React FC type (solved in react 18)
 const AnimatePresence = (props: React.ComponentProps<typeof FramerAnimatePresence> & { children: ReactNode }) => (
   <FramerAnimatePresence {...props} />
@@ -88,13 +94,14 @@ export function Header({
         <div className="App-header large">
           <div className="App-header-container-left">
             <Link className="App-header-link-main" to="/">
-              <img src={logoImg} alt=" Logo" />
+              <img src={logoImg} alt="Logo" />
               <strong>Rollex</strong>
             </Link>
             {isHomeSite() ? null : ( // <HomeHeaderLinks redirectPopupTimestamp={redirectPopupTimestamp} showRedirectModal={showRedirectModal} />
               <AppHeaderLinks redirectPopupTimestamp={redirectPopupTimestamp} showRedirectModal={showRedirectModal} />
             )}
           </div>
+          {/* {isHomeSite() ? <HomeHeaderNavLinks/> : null} */}
           <div className="App-header-container-right">
             <AppHeaderUser
               disconnectAccountAndCloseSettings={disconnectAccountAndCloseSettings}
@@ -112,9 +119,14 @@ export function Header({
             })}
           >
             <div className="App-header-container-left">
+              {isHomeSite() ? null : (
+                <div className="App-header-menu-icon-block" onClick={() => setIsDrawerVisible(!isDrawerVisible)}>
+                  {!isDrawerVisible && <RiMenuLine className="App-header-menu-icon" />}
+                  {isDrawerVisible && <FaTimes className="App-header-menu-icon" />}
+                </div>
+              )}
               <div className="App-header-link-main clickable" onClick={() => setIsDrawerVisible(!isDrawerVisible)}>
-                <img src={logoImg} alt="GMX Logo" />
-                <strong>Rollex</strong>
+                <img src={logoImg} alt="REX Logo" />
               </div>
             </div>
             <div className="App-header-container-right">
@@ -130,6 +142,36 @@ export function Header({
           </div>
         </div>
       </header>
+      <AnimatePresence>
+        {isDrawerVisible && (
+          <motion.div
+            onClick={() => setIsDrawerVisible(false)}
+            className="App-header-links-container App-header-drawer"
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            variants={slideVariants}
+            transition={{ duration: 0.2 }}
+          >
+            {isHomeSite() ? (
+              <HomeHeaderLinks
+                small
+                clickCloseIcon={() => setIsDrawerVisible(false)}
+                redirectPopupTimestamp={redirectPopupTimestamp}
+                showRedirectModal={showRedirectModal}
+              />
+            ) : (
+              <AppHeaderLinks
+                small
+                openSettings={openSettings}
+                clickCloseIcon={() => setIsDrawerVisible(false)}
+                redirectPopupTimestamp={redirectPopupTimestamp}
+                showRedirectModal={showRedirectModal}
+              />
+            )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }
