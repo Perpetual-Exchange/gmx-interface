@@ -1,5 +1,7 @@
-import Footer from "components/Footer/Footer";
+// import Footer from "components/Footer/Footer";
+import Footer from "components/HomeFooter/HomeFooter";
 import "./Home.css";
+import RoadMap  from './RoadMap.tsx';
 
 import featureIcon1 from "img/feature/f-1.png";
 import featureIcon2 from "img/feature/f-2.png";
@@ -121,7 +123,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
   const LaunchExchangeButton = () => {
     return (
       <HeaderLink
-        className="default-btn LaunchExchangeButton pointer-events-none"
+        className="default-btn LaunchExchangeButton"
         to="/trade"
         redirectPopupTimestamp={redirectPopupTimestamp}
         showRedirectModal={showRedirectModal}
@@ -130,6 +132,10 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
       </HeaderLink>
     );
   };
+
+  const linkTo = (url)=>{
+    window.open(url || '/')
+  }
 
   return (
     <div className="Home">
@@ -148,7 +154,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
             </div>
             <img src={linePic} className="mb-10 max-md:mb-5" style={{ maxWidth: "60vw" }} alt="line" />
             <div className="Home-description">
-              <Trans>Trade cryptocurrencies with liquidity, leverage and low fees.</Trans>
+              <Trans>Easily engage in leveraged trading and swaps of BTC,ETH, SYS,and other top cryptocurrencies.</Trans>
             </div>
             <LaunchExchangeButton />
           </div>
@@ -168,7 +174,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
               <li>
                 <h3>Cross-Margin Collateral</h3>
                 <div>
-                  Rollex enables cross-margin collateral management, allowing margin balance sharing across positions.
+                  RoMEX enables cross-margin collateral management, allowing margin balance sharing across positions.
                   Traders can efficiently and conveniently manage their entire portfolio.
                 </div>
                 <img src={featureIcon2} alt="" />
@@ -176,19 +182,19 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
               <li>
                 <h3>More APR% for LP</h3>
                 <div>
-                  Rollex offers one of the highest APR% for LPs in the market through multiple rewards programs and
+                  RoMEX offers one of the highest APR% for LPs in the market through multiple rewards programs and
                   incentive campaign.
                 </div>
                 <img src={featureIcon3} alt="" />
               </li>
               <li>
                 <h3>Mutil Rewards Programma</h3>
-                <div>Rollex has the following incentive programs </div>
+                <div>RoMEX has the following incentive programs </div>
                 <div className="mt-sm easy-list">
                   <div>Trader's loyalty and credit </div>
                   <div>Holding incentive rewards </div>
                   <div>Liquidity provider rewards </div>
-                  <div>Referral program</div>
+                  {/* <div>Referral program</div> */}
                 </div>
                 <img src={featureIcon4} alt="" />
               </li>
@@ -196,7 +202,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
                 <h3>Save on Costs</h3>
                 <div>
                   Enter and exit positions with minimal spread and zero price impact.
-                  <a href="https://docs.rollex.xyz/features" target="_blank" className="read-more" rel=" noreferrer">
+                  <a href="https://docs.romex.finance/fee" target="_blank" className="read-more" rel=" noreferrer">
                     learn more
                   </a>
                 </div>
@@ -278,7 +284,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
             <li className="border-[#e0ee8d] border-l-0 max-md:border-b-[0.5px] max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Robust price oracle</h3>
               <div>
-                Rollex uses SuperOracle as a reliable price oracle to achieve accurate and stable pricing so that
+                RoMEX uses SuperOracle as a reliable price oracle to achieve accurate and stable pricing so that
                 traders can confidently execute trades with reliable pricing information.
               </div>
               <img src={homeTrade3} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
@@ -286,7 +292,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
             <li className="border-l-[0.5px] border-b-0 border-[#e0ee8d] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 max-md:border-b-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60 ">
               <h3>Peer to Pool</h3>
               <div>
-                Rollex leverages liquidity pools and peer-to-peer principles for permissionless automated trading,
+                RoMEX leverages liquidity pools and peer-to-peer principles for permissionless automated trading,
                 eliminating centralized order books and traditional marketplaces.
               </div>
               <img src={homeTrade4} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
@@ -343,7 +349,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
             <li className="border-l-[0.5px] border-b-[0.5px] border-[#e0ee8d] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Open Positions incentives</h3>
               <div>
-                Rollex will allocate a portion of esREX tokens to open positions. You will earn esREX by just keeping
+                RoMEX will allocate a portion of esREX tokens to open positions. You will earn esREX by just keeping
                 your positions opened.{" "}
                 <a href="https://docs.rollex.xyz/rewrads" className="read-more" target="_blank" rel="noreferrer">
                   Learn more
@@ -354,7 +360,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
             <li className="border-[#e0ee8d] border-l-0 max-md:border-b-[0.5px] max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Liquidity Providers rewards</h3>
               <div>
-                In addition to the protocol fees that liquidity providers will receive, Rollex will also provide esREX
+                In addition to the protocol fees that liquidity providers will receive, RoMEX will also provide esREX
                 rewards as additional incentives to Liquidity Providers.{" "}
                 <a href="https://docs.rollex.xyz/rewrads" className="read-more" target="_blank" rel="noreferrer">
                   Learn more
@@ -365,7 +371,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
             <li className="border-l-[0.5px] border-b-0 border-[#e0ee8d] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 max-md:border-b-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Referral Program</h3>
               <div>
-                Reward referrals who help Rollex attract new users. Referral users can get up to 10.0% discount on
+                Reward referrals who help RoMEX attract new users. Referral users can get up to 10.0% discount on
                 transaction fees, and referrers can earn up to 15% of referral transaction fee income.
                 <a href="https://docs.rollex.xyz/rewrads" className="read-more" target="_blank" rel="noreferrer">
                   Learn more
@@ -376,22 +382,24 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
           </ul>
         </div>
 
+        <RoadMap/>
+
         <div className="Home-parnter-list">
-          <h3>Backed by the Best</h3>
-          <ul className="max-md:grid-cols-2 max-md:gap-y-10 grid  grid-cols-4">
-            <li className="flex  max-md:justify-start items-center justify-center">
+          <h3>Powered by</h3>
+          <ul className="max-md:grid-cols-2 max-md:gap-y-10 max-md:gap-x-10 grid  grid-cols-4 md:gap-x-10">
+            <li className="flex  max-md:justify-start items-center justify-center" onClick={()=>linkTo('https://rollux.com')}>
               <img src={homeRollux} alt="" className="mr-5" />
               <div>Rollux</div>
             </li>
-            <li className="flex max-md:justify-start items-center justify-center">
+            <li className="flex max-md:justify-start items-center justify-center"  onClick={()=>linkTo('https://weconomy.network')}>
               <img src={homeWEconomy} alt="" className="mr-5" />
               <div>WEconomy</div>
             </li>
-            <li className="flex max-md:justify-start items-center justify-center">
+            <li className="flex max-md:justify-start items-center justify-center"  onClick={()=>linkTo('https://syscoin.org')}>
               <img src={homeSyscoin} alt="" className="mr-5" />
               <div>Syscoin</div>
             </li>
-            <li className="flex max-md:justify-start items-center justify-center">
+            <li className="flex max-md:justify-start items-center justify-center"  onClick={()=>linkTo('https://app.pegasys.fi')}>
               <img src={homePegasys} alt="" className="mr-5" />
               <div>Pegasys</div>
             </li>

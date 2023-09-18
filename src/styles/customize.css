@@ -1,0 +1,23 @@
+.hide{
+    display: none !important;
+  }
+  
+  .Comingsoon-card{
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .Comingsoon-card::after{
+    content: 'Coming Soon ';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 0;
+  }

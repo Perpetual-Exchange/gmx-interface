@@ -23,7 +23,7 @@
   &.primary {
     background: var(--primary-btn-bg);
     color: #171717;
-    border-radius: 0.3rem;
+    border-radius: 0;
     padding: 1.65rem 1.6rem;
     line-height: 1;
 
@@ -39,9 +39,14 @@
   &.primary-action {
     background: var(--primary-btn-bg);
     color: #171717;
-    border-radius: 0.3rem;
+    border-radius: 0;
     padding: 1.65rem 1.6rem;
     line-height: 1;
+    font-weight: 600;
+    text-decoration: none;
+    &:hover{
+      text-decoration: none;
+    }
 
     &:not([disabled]):hover {
       background: var(--primary-btn-hover);
@@ -55,11 +60,10 @@
   }
 
   &.secondary {
-    background-color: rgba(180, 187, 255, 0.1);
-    border-radius: var(--border-radius-sm);
-    color: #fff;
+    color: #e0ee8d;
+    border-radius: 4px;
     padding: 1.1rem 1.25rem;
-    font-weight: normal;
+    font-weight: 700;
     position: relative;
     line-height: 1;
     letter-spacing: 0;
@@ -75,8 +79,8 @@
 
     > .arrow-icon {
       position: absolute;
-      right: 0.5rem;
-      top: 0.5rem;
+      right: 0.2rem;
+      top: 1.5rem;
       max-width: 0.8rem;
     }
 

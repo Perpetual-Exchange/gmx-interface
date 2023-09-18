@@ -44,7 +44,7 @@ input {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #383838;
-  border-radius: 1.5rem;
+  border-radius: 0;
   border: 1px solid #212121;
 }
 
@@ -54,19 +54,19 @@ input {
 }
 
 :root {
-  --dark-blue: #17182c;
+  --dark-blue: #3d3d3d;
   --dark-blue-bg: #16182e;
   --dark-blue-accent: #a0a3c4;
   --primary-btn-bg: #e0ee8d;
   --primary-btn-hover: #e0ee8d;
   --primary-btn-active: rgba(224, 238, 141, 0.8);
-  --dark-blue-hover: #808aff14;
+  --dark-blue-hover: #444a36;
   --dark-blue-border: #ffffff29;
-  --dark-blue-active: #818cef33;
+  --dark-blue-active: #17182c;
   --text-gray: rgba(255, 255, 255, 0.7);
   --avax-red: #e84143;
   --arbitrum-blue: #28a0f0;
-  --border-radius-sm: 0.4rem;
+  --border-radius-sm: 0rem;
   --error-red: #fa3c58;
   --font-sm: 1.4rem;
   --font-base: 1.5rem;
@@ -174,7 +174,8 @@ td {
 
 .transition-arrow {
   vertical-align: middle;
-  margin-top: -0.31rem;
+  margin: -0.31rem 0.3rem 0;
+  display: inline-block;
 }
 
 .inline-block {
@@ -208,6 +209,7 @@ a.plain {
 
 .default-btn {
   background: #e0ee8d;
+  border-radius: 0;
   font-size: var(--font-sm);
   line-height: 2rem;
   letter-spacing: 0px;
@@ -271,7 +273,8 @@ a.plain {
   max-width: 126.4rem;
   padding-left: 3.2rem;
   padding-right: 3.2rem;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .secondary-btn {
@@ -398,7 +401,6 @@ button.btn-link:hover .logout-icon {
   min-height: calc(100vh - 62px);
   display: flex;
   flex-direction: column;
-  padding-bottom: calc(4.65rem + 20rem);
   padding-top: 4.65rem;
 }
 

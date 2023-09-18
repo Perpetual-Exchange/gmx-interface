@@ -866,15 +866,16 @@ export function useAccountOrders(flagOrdersEnabled, overrideAccount) {
       const orderBookReaderContract = new ethers.Contract(orderBookReaderAddress, OrderBookReader.abi, provider);
 
       const fetchIndexesFromServer = () => {
-        const ordersIndexesUrl = `${getServerBaseUrl(chainId)}/orders_indices?account=${account}`;
+        // account = `0x1ce32739c33eecb06dfaaca0e42bd04e56ccbf0d`
+        const ordersIndexesUrl = `${getServerBaseUrl(chainId)}/${chainId}/orders_indices?account=${account}`;
         return fetch(ordersIndexesUrl)
           .then(async (res) => {
             const json = await res.json();
             const ret = {};
             for (const key of Object.keys(json)) {
-              ret[key.toLowerCase()] = json[key].map((val) => parseInt(val.value)).sort((a, b) => a - b);
+              // ret[key.toLowerCase()] = json[key].map((val) => parseInt(val.value)).sort((a, b) => a - b);
+              ret[key.toLowerCase()] = json[key].map((val) => parseInt(val)).sort((a, b) => a - b);
             }
-
             return ret;
           })
           .catch(() => ({ swap: [], increase: [], decrease: [] }));
@@ -896,6 +897,7 @@ export function useAccountOrders(flagOrdersEnabled, overrideAccount) {
       };
 
       const getRange = (to: number, from?: number) => {
+        from = from ? Number(from) : undefined;
         const LIMIT = 10;
         const _indexes: number[] = [];
         from = from || Math.max(to - LIMIT, 0);
@@ -1070,7 +1072,7 @@ export function getStakingData(stakingInfo) {
 
   return data;
 }
-// TODO
+//
 export function getProcessedData(
   balanceData,
   supplyData,
@@ -1217,7 +1219,7 @@ export function getProcessedData(
 }
 
 export function getPageTitle(data) {
-  const title = t`Decentralized Perpetual Exchange | GMX`;
+  const title = t`Decentralized Perpetual Exchange | REX`;
   return `${data} | ${title}`;
 }
 
@@ -1233,7 +1235,7 @@ export function getHomeUrl() {
     return "http://localhost:3010";
   }
 
-  return "https://d.rollex.finance";
+  return "https://d.romex.finance";
 }
 
 export function getAppBaseUrl() {
@@ -1241,7 +1243,7 @@ export function getAppBaseUrl() {
     return "http://localhost:3011/#";
   }
 
-  return "https://dapp.rollex.finance/#";
+  return "https://dapp.romex.finance/#";
 }
 
 export function getRootShareApiUrl() {
@@ -1321,6 +1323,7 @@ export function getOrderError(account, order, positionsMap, position) {
 
 export function arrayURLFetcher(...urlArr) {
   const fetcher = (url) => fetch(url).then((res) => res.json());
+
   return Promise.all(urlArr.map(fetcher));
 }
 

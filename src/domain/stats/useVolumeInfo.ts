@@ -1,5 +1,5 @@
 import { GMX_STATS_API_URL } from "config/backend";
-import { ARBITRUM, AVALANCHE } from "config/chains";
+import { ROLLEX_TESTNET } from "config/chains";
 import { bigNumberify } from "lib/numbers";
 import useSWR from "swr";
 
@@ -12,8 +12,10 @@ export function useVolumeInfo() {
       const res = await fetch(url);
       const json = await res.json();
       return {
-        [ARBITRUM]: bigNumberify(json[ARBITRUM]),
-        [AVALANCHE]: bigNumberify(json[AVALANCHE]),
+        // [ARBITRUM]: bigNumberify(json[ARBITRUM]),
+        // [AVALANCHE]: bigNumberify(json[AVALANCHE]),
+        // [AVALANCHE_FUJI]: bigNumberify(json[AVALANCHE_FUJI]),
+        [ROLLEX_TESTNET]: bigNumberify(json[ROLLEX_TESTNET]),
         total: bigNumberify(json.total),
       };
     },

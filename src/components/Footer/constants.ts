@@ -1,7 +1,7 @@
 import { t } from "@lingui/macro";
 import "./Footer.css";
 import twitterIcon from "img/ic_twitter.svg";
-import discordIcon from "img/ic_discord.png";
+import discordIcon from "img/ic_discord.svg";
 
 type Link = {
   label: string;
@@ -33,6 +33,6 @@ export function getFooterLinks(isHome) {
 }
 
 export const SOCIAL_LINKS: SocialLink[] = [
-  { link: "https://discord.gg/6Egts9DP8v", name: "Discord", icon: discordIcon },
-  { link: "https://twitter.com/RollexFinance", name: "Twitter", icon: twitterIcon },
+  { link: "https://discord.gg/9MTZdXeDkq", name: "Discord", icon: discordIcon },
+  { link: "https://twitter.com/REXfinance", name: "Twitter", icon: twitterIcon },
 ];

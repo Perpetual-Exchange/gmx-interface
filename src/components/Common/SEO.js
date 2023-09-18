@@ -4,8 +4,8 @@ import { t } from "@lingui/macro";
 function SEO(props) {
   const { children, ...customMeta } = props;
   const meta = {
-    title: t`Rollex | Decentralized Perpetual Exchange`,
-    description: t`Trade spot or perpetual BTC, ETH, SYS, PSYS and other top cryptocurrencies with up to 50x leverage directly on Rollux`,
+    title: t`REX | Decentralized Perpetual Exchange`,
+    description: t`Trade spot or perpetual BTC, ETH, USDT, USDC and other top cryptocurrencies with up to 50x leverage directly on Ethereum`,
     image: "/og.png",
     type: "exchange",
     ...customMeta,
@@ -17,12 +17,12 @@ function SEO(props) {
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
         <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="Rollex" />
+        <meta property="og:site_name" content="REX" />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@gmx_io" />
+        <meta name="twitter:site" content="@REXfinance" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />

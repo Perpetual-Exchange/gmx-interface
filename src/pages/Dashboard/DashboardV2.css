@@ -1,11 +1,11 @@
 .DashboardV2 {
-  padding-top: 4.65rem;
+  padding-top: 15.65rem !important;
 }
 
 .DashboardV2-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 1.5rem;
+  grid-gap: 3rem;
   margin-top: 0.8rem;
 }
 
@@ -42,22 +42,12 @@
 .stats-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 1.5rem;
+  grid-column-gap: 3rem;
   margin-bottom: 1.5rem;
-}
-
-.stats-wrapper .App-card {
-  width: 100%;
-  display: flex;
 }
 
 .stats-block {
   width: 100%;
-}
-
-.stats-piechart {
-  margin: -1rem;
-  margin-left: 1.5rem;
 }
 
 .stats-block--glp .stats-label {
@@ -171,12 +161,5 @@
   .stats-wrapper .App-card {
     flex-wrap: wrap;
     padding-bottom: 0;
-  }
-
-  .stats-piechart {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 0;
   }
 }

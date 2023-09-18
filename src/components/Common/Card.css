@@ -1,6 +1,6 @@
 .card {
-  border-radius: 0.4rem;
-  background: #16182e;
+  border-radius: 0;
+  border: 0.5px solid #e0ed8d99;
 }
 
 .card-header {
@@ -16,8 +16,8 @@
 }
 
 .card-divider {
-  height: 1px;
-  background: #23263b;
+  height: 0.5px;
+  background: #e0ee8d;
 }
 .card-body {
   padding: 1.5rem;

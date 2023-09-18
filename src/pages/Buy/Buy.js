@@ -1,28 +1,26 @@
 import React from "react";
-import { Trans, t } from "@lingui/macro";
+import { t } from "@lingui/macro";
 import Footer from "components/Footer/Footer";
 import "./Buy.css";
 import TokenCard from "components/TokenCard/TokenCard";
-import buyGMXIcon from "img/buy_gmx.svg";
 import SEO from "components/Common/SEO";
 import { getPageTitle } from "lib/legacy";
+import b1 from "../../img/app-dashboard/b1.png";
 
 export default function BuyGMXGLP() {
   return (
-    <SEO title={getPageTitle(t`Buy GLP or GMX`)}>
-      <div className="BuyGMXGLP page-layout">
+    <SEO title={getPageTitle(t`Buy RLP or REX`)}>
+      <div className="BuyGMXGLP page-layout Buy-page">
         <div className="BuyGMXGLP-container default-container">
           <div className="section-title-block">
-            <div className="section-title-icon">
-              <img src={buyGMXIcon} alt="buyGMXIcon" />
-            </div>
+            <img src={b1} className="right-b-icon" alt="" />
             <div className="section-title-content">
-              <div className="Page-title">
-                <Trans>Buy GMX or GLP</Trans>
-              </div>
+              <div className="Page-title">Buy REX or RLP</div>
             </div>
           </div>
-          <TokenCard />
+          <ul className="max-md:grid-cols-1 grid grid-cols-2 App-card tokenomics-list">
+            <TokenCard />
+          </ul>
         </div>
         <Footer />
       </div>

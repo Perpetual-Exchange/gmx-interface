@@ -12,11 +12,12 @@ import { ICONLINKS, PLATFORM_TOKENS } from "config/tokens";
 import { addTokenToMetamask } from "lib/wallets";
 import { useChainId } from "lib/chains";
 import { Token } from "domain/tokens";
-import { ARBITRUM, AVALANCHE } from "config/chains";
+import { ARBITRUM, AVALANCHE, ROLLEX_TESTNET } from "config/chains";
 import { getIcon } from "config/icons";
 
 const avalancheIcon = getIcon(AVALANCHE, "network");
 const arbitrumIcon = getIcon(ARBITRUM, "network");
+const odexTestnetIcon = getIcon(ROLLEX_TESTNET, "network");
 
 type Props = {
   assetSymbol: string;
@@ -26,11 +27,12 @@ type Props = {
 function AssetDropdown({ assetSymbol, assetInfo }: Props) {
   const { active } = useWeb3React();
   const { chainId } = useChainId();
-  let { coingecko, arbitrum, avalanche, reserves } = ICONLINKS[chainId][assetSymbol] || {};
+  let { coingecko, arbitrum, avalanche, reserves, rollexTestnet } = ICONLINKS[chainId][assetSymbol] || {};
   const unavailableTokenSymbols =
     {
       42161: ["ETH"],
       43114: ["AVAX"],
+      57000: ["TSYS"],
     }[chainId] || [];
 
   return (
@@ -41,7 +43,7 @@ function AssetDropdown({ assetSymbol, assetInfo }: Props) {
       <Menu.Items as="div" className="asset-menu-items">
         <Menu.Item>
           <>
-            {reserves && assetSymbol === "GLP" && (
+            {reserves && assetSymbol === "RLP" && (
               <ExternalLink href={reserves} className="asset-item">
                 <img className="asset-item-icon" src={nansenPortfolioIcon} alt="Proof of Reserves" />
                 <p>
@@ -76,6 +78,14 @@ function AssetDropdown({ assetSymbol, assetInfo }: Props) {
             {avalanche && (
               <ExternalLink href={avalanche} className="asset-item">
                 <img className="asset-item-icon" src={avalancheIcon} alt="Open in explorer" />
+                <p>
+                  <Trans>Open in Explorer</Trans>
+                </p>
+              </ExternalLink>
+            )}
+            {rollexTestnet && (
+              <ExternalLink href={rollexTestnet} className="asset-item">
+                <img className="asset-item-icon" src={odexTestnetIcon} alt="Open in explorer" />
                 <p>
                   <Trans>Open in Explorer</Trans>
                 </p>
