@@ -86,10 +86,10 @@
 }
 
 .GlpSwap-token-list {
-  border-radius: 24px;
+  border-radius: 0;
   padding: 1rem 2.5rem 2.5rem;
   text-align: left;
-  border: 0.5px solid #e0ee8d;
+  border: 0.5px solid #e0ed8d99;
 }
 
 .GlpSwap-token-list-content {

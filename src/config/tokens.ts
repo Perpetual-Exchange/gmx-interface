@@ -415,7 +415,6 @@ export const TOKENS: { [chainId: number]: Token[] } = {
       address: "0x5eD4813824E5e2bAF9BBC211121b21aB38E02522",
       decimals: 18,
       isShortable: true,
-      baseSymbol: "ETH",
       imageUrl: "https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880",
     },
     {

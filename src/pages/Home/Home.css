@@ -449,7 +449,7 @@
   margin-top: 15rem;
 }
 .Home-feature {
-  border: 0.5px solid #e0ee8d;
+  border: 0.5px solid #e0ed8d99;
   color: #858585;
 }
 .Home-feature h2 {
@@ -457,7 +457,7 @@
   height: 8rem;
   line-height: 8rem;
   text-align: center;
-  border-bottom: 0.5px solid #e0ee8d;
+  border-bottom: 0.5px solid #e0ed8d99;
   padding: 0;
   margin: 0;
   color: #fff;
@@ -481,8 +481,8 @@
   padding-bottom: 30px;
   padding-right: 20px;
   height: 265px;
-  border-bottom: 0.5px solid #e0ee8d;
-  border-left: 0.5px solid #e0ee8d;
+  border-bottom: 0.5px solid #e0ed8d99;
+  border-left: 0.5px solid #e0ed8d99;
   font-size: 1.7rem;
 }
 .Home-feature-list > li:first-child,
@@ -528,7 +528,7 @@
 }
 .tokenomics-list > li {
   padding: 30px 30px 20px;
-  border-left: 0.5px solid #e0ee8d;
+  border-left: 0.5px solid #e0ed8d99;
 }
 .tokenomics-list > li:first-child {
   border-left: 0;
@@ -564,7 +564,7 @@
 }
 
 .Home-parnter-list {
-  border: 0.5px solid #e0ee8d;
+  border: 0.5px solid #e0ed8d99;
   border-bottom: 0;
   margin-top: 100px;
   padding: 80px 35px;
@@ -580,7 +580,7 @@
   padding: 10px 20px;
   font-size: 2.2rem;
   color: #e0ee8d;
-  border: 0.5px solid #e0ee8d;
+  border: 0.5px solid #e0ed8d99;
   border-radius: 100px;
   font-weight: bold;
   cursor: pointer;
@@ -720,7 +720,7 @@
   }
   .Home-feature-list > li:nth-child(4),
   .Home-feature-list > li:nth-child(5) {
-    border-bottom: 0.5px solid #e0ee8d;
+    border-bottom: 0.5px solid #e0ed8d99;
   }
 
   .Home-latest-info__value {
@@ -731,6 +731,6 @@
     border-left: 0;
   }
   .tokenomics-list > li:last-child {
-    border-top: 0.5px solid #e0ee8d;
+    border-top: 0.5px solid #e0ed8d99;
   }
 }

@@ -312,7 +312,7 @@
   position: relative;
   padding: 0.9rem 0.31rem;
   z-index: 2;
-  border: 0.5px solid #e0ee8d;
+  border: 0.5px solid #e0ed8d99;
 }
 
 .ExchangeChart.tv .ExchangeChart-bottom {
@@ -510,7 +510,7 @@ table.Exchange-list.Orders td {
 }
 
 table.Exchange-list tr {
-  border-bottom: 0.5px solid #e0ee8d;
+  border-bottom: 0.5px solid #e0ed8d99;
 }
 
 table.Exchange-list tr:last-child {
@@ -646,7 +646,7 @@ table.Exchange-list th {
   padding: 1.5rem;
   margin-bottom: 1.05rem;
   border-radius: 0.8rem;
-  border: 0.5px solid #e0ee8d;
+  border: 0.5px solid #e0ed8d99;
 }
 
 .Exchange-swap-section:hover,

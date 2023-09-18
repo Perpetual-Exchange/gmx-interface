@@ -247,7 +247,7 @@ export const NETWORK_METADATA: { [chainId: number]: NetworkMetadata } = {
   },
   [ROLLEX_TESTNET]: {
     chainId: "0x" + ROLLEX_TESTNET.toString(16),
-    chainName: "REX zkEVM Testnet",
+    chainName: "Rollux Testnet",
     nativeCurrency: {
       name: "ETH",
       symbol: "ETH",

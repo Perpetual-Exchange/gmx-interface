@@ -1,4 +1,5 @@
-import Footer from "components/Footer/Footer";
+// import Footer from "components/Footer/Footer";
+import Footer from "components/HomeFooter/HomeFooter";
 import "./Home.css";
 import RoadMap  from './RoadMap.tsx';
 

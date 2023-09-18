@@ -3775,8 +3775,8 @@ msgid "You are earning {0}% more {nativeTokenSymbol} rewards using {1} Staked Mu
 msgstr "You are earning {0}% more {nativeTokenSymbol} rewards using {1} Staked Multiplier Points."
 
 #: src/components/ModalViews/RedirectModal.js
-msgid "You are leaving rollex.finance and will be redirected to a third party, independent website."
-msgstr "You are leaving rollex.finance and will be redirected to a third party, independent website."
+msgid "You are leaving romex.finance and will be redirected to a third party, independent website."
+msgstr "You are leaving romex.finance and will be redirected to a third party, independent website."
 
 #: src/pages/BuyGMX/BuyGMX.tsx
 msgid "You can buy AVAX directly on <0>Avalanche</0> using these options:"

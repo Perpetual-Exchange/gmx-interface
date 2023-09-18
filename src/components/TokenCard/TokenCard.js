@@ -62,7 +62,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           <img src={gmxIcon} width="40" alt="REX Icons" />
           <h3 className="flex-1 font-[22px]">REX</h3>
           APR:
-          <span className="text-[#80AE0E]">
+          <span className="text-[#E0EE8D]">
             <APRLabel chainId={ROLLEX_TESTNET} label="gmxAprTotal" key="ROLLEX_TESTNET" />
           </span>
         </div>
@@ -89,7 +89,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           <img src={glpIcon} width="40" alt="RLP Icon" />
           <h3 className="flex-1 font-[22px]">RLP</h3>
           APR:
-          <span className="text-[#80AE0E]">
+          <span className="text-[#E0EE8D]">
             <APRLabel chainId={ROLLEX_TESTNET} label="glpAprTotal" key="ROLLEX_TESTNET" />
           </span>
         </div>

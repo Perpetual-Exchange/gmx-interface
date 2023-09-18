@@ -1396,7 +1396,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
             <Trans>Earn</Trans>
           </div>
           <div className="Page-description">
-            By staking RLP on the REX zkEVM network, you can earn protocol income and rewards.
+            By staking RLP on the Rollux Testnet, you can earn protocol income and rewards.
           </div>
         </div>
       </div>

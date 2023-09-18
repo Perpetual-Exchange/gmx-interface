@@ -22,7 +22,14 @@ export default function Footer({ showRedirectModal, redirectPopupTimestamp }: Pr
             );
           })}
         </div>
-        <div className="HomeFooter-links">© 2023 romex.finance</div>
+        
+        <div className="Footer-links">
+          Powered by{" "}
+          <a href="https://twitter.com/WEconomyNetwork" target="_blank" rel="noreferrer">
+            @WEconomy
+          </a>
+        </div>
+
       </div>
     </div>
   );

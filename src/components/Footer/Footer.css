@@ -1,13 +1,13 @@
 .Footer {
-  /* margin-top: 150px; */
+  margin-top: 150px;
   color: #9e9e9e;
-  background: #000000;
+  /* background: #000000; */
 }
 
 .Footer h3 {
   font-size: 2.8rem;
   margin-top: 3rem;
-  color: #E0EE8D;
+  /* color: #E0EE8D; */
 }
 .Footer-wrapper {
   text-align: center;
@@ -17,7 +17,7 @@
   /* border-top: 0.5px solid #fff; */
 }
 .Footer-wrapper::after {
-  /* background: linear-gradient(90deg,hsla(0,0%,98%,0),#fbfbfb 30%,#fbfbfb 70%,hsla(0,0%,98%,0)); */
+  background: linear-gradient(90deg,hsla(0,0%,98%,0),#fbfbfb 30%,#fbfbfb 70%,hsla(0,0%,98%,0));
   content: "";
   height: 1px;
   left: 0;
