@@ -6,10 +6,10 @@ export default function RoadMap() {
     date:'2023',
     tag:'R',
     list:[{
-      text:'Publish Rollex Docs',
+      text:'Publish RoMex Docs',
       state:true
     },{
-      text:'Launch Rollex Website',
+      text:'Launch RoMex Website',
       state:true
     },{
       text:'Introduce Rollux Testnet',

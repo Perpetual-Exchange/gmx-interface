@@ -1235,7 +1235,7 @@ export function getHomeUrl() {
     return "http://localhost:3010";
   }
 
-  return "https://d.romex.finance";
+  return "/";
 }
 
 export function getAppBaseUrl() {
@@ -1251,7 +1251,7 @@ export function getRootShareApiUrl() {
     return "https://gmxs.vercel.app";
   }
 
-  return "https://share.gmx.io";
+  return "/";
 }
 
 export function getTradePageUrl() {
@@ -1259,7 +1259,7 @@ export function getTradePageUrl() {
     return "http://localhost:3011/#/trade";
   }
 
-  return "https://app.gmx.io/#/trade";
+  return "#/trade";
 }
 
 export function importImage(name) {
