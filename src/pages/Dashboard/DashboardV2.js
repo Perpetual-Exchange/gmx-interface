@@ -330,7 +330,7 @@ export default function DashboardV2() {
                     <br />
                     <br />
                     Get lower fees to{" "}
-                    <Link to="/buy_olp" target="_blank" rel="noopener noreferrer">
+                    <Link to="/buy_rlp" target="_blank" rel="noopener noreferrer">
                       buy RLP
                     </Link>{" "}
                     with {tokenInfo.symbol}, and to{" "}
@@ -766,7 +766,7 @@ export default function DashboardV2() {
                               renderContent={() => (
                                 <>
                                   <StatsTooltipRow
-                                    label={t`Price on Rollex Testnet`}
+                                    label={t`Price on Rollux Testnet`}
                                     value={formatAmount(gmxPriceFromAvalanche, USD_DECIMALS, 2, true)}
                                     showDollar={true}
                                   />

@@ -1052,6 +1052,10 @@ msgstr "Download"
 msgid "Earn"
 msgstr "Earn"
 
+#: src/pages/Home/Home.js
+msgid "Easily engage in leveraged trading and swaps of BTC,ETH, SYS,and other top cryptocurrencies."
+msgstr "Easily engage in leveraged trading and swaps of BTC,ETH, SYS,and other top cryptocurrencies."
+
 #: src/pages/Ecosystem/Ecosystem.js
 msgid "Ecosystem Projects"
 msgstr "Ecosystem Projects"
@@ -2332,8 +2336,8 @@ msgid "Price is below Mark Price"
 msgstr "Price is below Mark Price"
 
 #: src/pages/Dashboard/DashboardV2.js
-msgid "Price on Rollex Testnet"
-msgstr "Price on Rollex Testnet"
+msgid "Price on Rollux Testnet"
+msgstr "Price on Rollux Testnet"
 
 #: src/pages/Stake/StakeV2.js
 msgid "Price on Testnet"
@@ -3299,10 +3303,6 @@ msgstr "Total fees earned since {0}: {1} USD<0/>Fee assets: {feeText}"
 #: src/components/Header/AppHeaderUser.tsx
 msgid "Trade"
 msgstr "Trade"
-
-#: src/pages/Home/Home.js
-msgid "Trade cryptocurrencies with liquidity, leverage and low fees."
-msgstr "Trade cryptocurrencies with liquidity, leverage and low fees."
 
 #: src/components/Exchange/ExchangeBanner.js
 msgid "Trade on REX and win <0>$250.000</0> in prizes! Live until November 30th, <1>click here</1> to learn more."

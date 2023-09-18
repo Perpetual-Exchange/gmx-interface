@@ -95,7 +95,7 @@ export function Header({
           <div className="App-header-container-left">
             <Link className="App-header-link-main" to="/">
               <img src={logoImg} alt="Logo" />
-              <strong>Rollex</strong>
+              <strong>RoMEX</strong>
             </Link>
             {isHomeSite() ? null : ( // <HomeHeaderLinks redirectPopupTimestamp={redirectPopupTimestamp} showRedirectModal={showRedirectModal} />
               <AppHeaderLinks redirectPopupTimestamp={redirectPopupTimestamp} showRedirectModal={showRedirectModal} />

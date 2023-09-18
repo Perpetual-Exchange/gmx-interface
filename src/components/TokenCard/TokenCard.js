@@ -74,7 +74,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           </a>
         </div>
         <div className="Home-token-card-option-action">
-          {/* <BuyLink to="/buy_odx" className="default-btn custom-buy-btn pointer-events-none" network={ROLLEX_TESTNET}>
+          {/* <BuyLink to="/buy_rex" className="default-btn custom-buy-btn pointer-events-none" network={ROLLEX_TESTNET}>
             Buy REX
           </BuyLink> */}
 
@@ -102,7 +102,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           Learn more
         </a>
         <div className="Home-token-card-option-action">
-          <BuyLink to="/buy_olp" className="default-btn custom-buy-btn" network={ROLLEX_TESTNET}>
+          <BuyLink to="/buy_rlp" className="default-btn custom-buy-btn" network={ROLLEX_TESTNET}>
             Buy RLP
           </BuyLink>
         </div>
