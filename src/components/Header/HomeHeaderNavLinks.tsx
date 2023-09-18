@@ -12,7 +12,7 @@ export function HomeHeaderNavLinks() {
       link: "https://docs.romex.finance",
     },{
       label: `Twitter`,
-      link: "https://twitter.com/REXfinance",
+      link: "https://twitter.com/RomexFi",
     },{
       label: `Discord`,
       link: "https://discord.com/invite/9MTZdXeDkq",
