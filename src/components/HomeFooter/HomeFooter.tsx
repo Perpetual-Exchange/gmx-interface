@@ -22,7 +22,7 @@ export default function Footer({ showRedirectModal, redirectPopupTimestamp }: Pr
             );
           })}
         </div>
-        <div className="HomeFooter-links">© 2023 rollex.finance</div>
+        <div className="HomeFooter-links">© 2023 romex.finance</div>
       </div>
     </div>
   );

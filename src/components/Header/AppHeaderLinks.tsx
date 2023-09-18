@@ -80,7 +80,7 @@ export function AppHeaderLinks({
       </div> */}
 
       <div className="App-header-link-container">
-        <ExternalLink href="https://docs.rollex.finance/">
+        <ExternalLink href="https://docs.romex.finance/">
           <img src={icon5} alt="" className="md:hidden" />
           <Trans>Docs</Trans>
         </ExternalLink>

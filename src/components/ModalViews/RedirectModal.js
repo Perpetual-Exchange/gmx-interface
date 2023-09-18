@@ -26,7 +26,7 @@ export function RedirectPopupModal({
       setIsVisible={setRedirectModalVisible}
       label={t`Launch App`}
     >
-      <Trans>You are leaving rollex.finance and will be redirected to a third party, independent website.</Trans>
+      <Trans>You are leaving romex.finance and will be redirected to a third party, independent website.</Trans>
       <br />
       <br />
       <Trans>

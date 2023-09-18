@@ -3775,7 +3775,7 @@ msgid "You are earning {0}% more {nativeTokenSymbol} rewards using {1} Staked Mu
 msgstr "스테이킹된 {1} 멀티플라이어 포인트을 통해 보상의 {nativeTokenSymbol} {0}% 더 획득하고 있습니다."
 
 #: src/components/ModalViews/RedirectModal.js
-msgid "You are leaving rollex.finance and will be redirected to a third party, independent website."
+msgid "You are leaving romex.finance and will be redirected to a third party, independent website."
 msgstr ""
 
 #: src/pages/BuyGMX/BuyGMX.tsx

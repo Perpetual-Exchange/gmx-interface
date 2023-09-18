@@ -69,7 +69,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
         <div>
           $REX is the utility token of REX. In addition to granting participation in the governance process of the
           protocol, it also accrues value from the platform revenue.
-          <a href="https://docs.rollex.finance/liquidity-provider" target="_blank" rel="noreferrer" className=" read-more">
+          <a href="https://docs.romex.finance/liquidity-provider" target="_blank" rel="noreferrer" className=" read-more">
             Learn more
           </a>
         </div>
@@ -98,7 +98,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           $RLP is a liquidity provider token. Accrues 70% of protocol revenue in the form of ETH and a portion of esREX
           token issuance emission.
         </div>
-        <a href="https://docs.rollex.finance/liquidity-provider" target="_blank" rel="noreferrer" className=" read-more">
+        <a href="https://docs.romex.finance/liquidity-provider" target="_blank" rel="noreferrer" className=" read-more">
           Learn more
         </a>
         <div className="Home-token-card-option-action">

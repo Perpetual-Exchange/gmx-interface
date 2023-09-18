@@ -1286,7 +1286,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
           return (
             <Trans>
               Boost your rewards with Multiplier Points.&nbsp;
-              <ExternalLink href="https://docs.rollex.finance/rewards#multiplier-points">More info</ExternalLink>.
+              <ExternalLink href="https://docs.romex.finance/rewards#multiplier-points">More info</ExternalLink>.
             </Trans>
           );
         }}
@@ -1932,7 +1932,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
           <div className="Page-description">
             Convert esREX tokens to REX tokens.
             <a
-              href="https://docs.rollex.finance/rewards#vesting"
+              href="https://docs.romex.finance/rewards#vesting"
               className="link-underline"
               target="_blank"
               rel="noopener noreferrer"

@@ -500,14 +500,14 @@ export const PLATFORM_TOKENS: { [chainId: number]: { [symbol: string]: Token } }
       symbol: "REX",
       decimals: 18,
       address: getContract(AVALANCHE_FUJI, "GMX"),
-      imageUrl: "https://dapp.rollex.finance/static/ic_gmx_40.svg",
+      imageUrl: "https://dapp.romex.finance/static/ic_gmx_40.svg",
     },
     RLP: {
       name: "RLP",
       symbol: "RLP",
       decimals: 18,
       address: getContract(AVALANCHE_FUJI, "StakedGlpTracker"), // address of fsGLP token because user only holds fsGLP
-      imageUrl: "https://dapp.rollex.finance/static/ic_glp_40.svg",
+      imageUrl: "https://dapp.romex.finance/static/ic_glp_40.svg",
     },
   },
   [AVALANCHE]: {
@@ -517,14 +517,14 @@ export const PLATFORM_TOKENS: { [chainId: number]: { [symbol: string]: Token } }
       symbol: "REX",
       decimals: 18,
       address: getContract(AVALANCHE, "GMX"),
-      imageUrl: "https://dapp.rollex.finance/static/ic_gmx_40.svg",
+      imageUrl: "https://dapp.romex.finance/static/ic_gmx_40.svg",
     },
     RLP: {
       name: "RLP",
       symbol: "RLP",
       decimals: 18,
       address: getContract(AVALANCHE, "StakedGlpTracker"), // address of fsGLP token because user only holds fsGLP
-      imageUrl: "https://dapp.rollex.finance/static/ic_glp_40.svg",
+      imageUrl: "https://dapp.romex.finance/static/ic_glp_40.svg",
     },
   },
   [ROLLEX_TESTNET]: {
@@ -534,14 +534,14 @@ export const PLATFORM_TOKENS: { [chainId: number]: { [symbol: string]: Token } }
       symbol: "REX",
       decimals: 18,
       address: getContract(ROLLEX_TESTNET, "GMX"),
-      imageUrl: "https://dapp.rollex.finance/static/ic_gmx_40.svg",
+      imageUrl: "https://dapp.romex.finance/static/ic_gmx_40.svg",
     },
     RLP: {
       name: "RLP",
       symbol: "RLP",
       decimals: 18,
       address: getContract(ROLLEX_TESTNET, "StakedGlpTracker"), // address of fsGLP token because user only holds fsGLP
-      imageUrl: "https://dapp.rollex.finance/static/ic_glp_40.svg",
+      imageUrl: "https://dapp.romex.finance/static/ic_glp_40.svg",
     },
   },
 };

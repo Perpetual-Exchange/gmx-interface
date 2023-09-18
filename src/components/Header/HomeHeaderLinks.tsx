@@ -37,7 +37,7 @@ export function HomeHeaderLinks({ small, clickCloseIcon, redirectPopupTimestamp,
     },
     {
       label: t`Docs`,
-      link: "https://docs.rollex.finance/",
+      link: "https://docs.romex.finance/",
     },
   ];
   return (

@@ -357,7 +357,7 @@ export default function DashboardV2() {
               )}
               <br />
               <div>
-                <ExternalLink href="https://docs.rollex.finance/liquidity-provider">
+                <ExternalLink href="https://docs.romex.finance/liquidity-provider">
                   <Trans>More Info</Trans>
                 </ExternalLink>
               </div>
@@ -485,7 +485,7 @@ export default function DashboardV2() {
                 {chainName} Total Stats start from {totalStatsStartDate}.<br /> To view detailed stats, please check the
               </Trans>{" "}
               {chainId === ROLLEX_TESTNET && (
-                <ExternalLink href="https://stats.rollex.finance/">Analytics page</ExternalLink>
+                <ExternalLink href="https://stats.romex.finance/">Analytics page</ExternalLink>
                 // <span>Analytics page</span>
               )}
               .
@@ -740,7 +740,7 @@ export default function DashboardV2() {
                   </div>
                   <div className="flex-1"></div>
                   <a
-                    href="https://docs.rollex.finance/liquidity-provider"
+                    href="https://docs.romex.finance/liquidity-provider"
                     target="_blank"
                     className="font-normal text-[18px] hover:text-[#e0ee8d]"
                     rel="noreferrer"
@@ -869,7 +869,7 @@ export default function DashboardV2() {
                   </div>
                   <div className="flex-1"></div>
                   <a
-                    href="https://docs.rollex.finance/liquidity-provider"
+                    href="https://docs.romex.finance/liquidity-provider"
                     target="_blank"
                     className="font-normal text-[18px] hover:text-[#e0ee8d]"
                     rel="noreferrer"

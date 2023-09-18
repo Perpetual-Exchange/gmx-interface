@@ -3775,7 +3775,7 @@ msgid "You are earning {0}% more {nativeTokenSymbol} rewards using {1} Staked Mu
 msgstr "Вы зарабатываете {0}% больше {nativeTokenSymbol} вознаграждений, используя {1} Ставку Множителя Бонусов."
 
 #: src/components/ModalViews/RedirectModal.js
-msgid "You are leaving rollex.finance and will be redirected to a third party, independent website."
+msgid "You are leaving romex.finance and will be redirected to a third party, independent website."
 msgstr ""
 
 #: src/pages/BuyGMX/BuyGMX.tsx

@@ -342,7 +342,7 @@ export default function OrdersList(props) {
                     </p>
                     <p>
                       This can also cause limit/triggers to not be executed if the price is not reached for long enough.{" "}
-                      <ExternalLink href="https://docs.rollex.finance/trade#stop-loss--take-profit-orders">
+                      <ExternalLink href="https://docs.romex.finance/trade#stop-loss--take-profit-orders">
                         Read more
                       </ExternalLink>
                       .
