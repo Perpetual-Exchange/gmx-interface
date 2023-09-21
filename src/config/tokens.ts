@@ -390,8 +390,8 @@ export const TOKENS: { [chainId: number]: Token[] } = {
   ],
   [ROLLEX_TESTNET]: [
     {
-      name: "TSYS",
-      symbol: "TSYS",
+      name: "SYS",
+      symbol: "SYS",
       decimals: 18,
       address: ethers.constants.AddressZero,
       isNative: true,
@@ -399,14 +399,14 @@ export const TOKENS: { [chainId: number]: Token[] } = {
       imageUrl: "https://gorollux.com/assets/syscoin.3e0a89a5.svg",
     },
     {
-      name: "TSYS (WTSYS)",
-      symbol: "WTSYS",
+      name: "SYS (WSYS)",
+      symbol: "WSYS",
       address: "0xcAc0759160d57A33D332Ed36a555C10957694407",
       decimals: 18,
       isWrapped: true,// 名称待定
       isTempHidden: true,
       isShortable: true,
-      baseSymbol: "TSYS",
+      baseSymbol: "SYS",
       imageUrl: "https://gorollux.com/assets/syscoin.3e0a89a5.svg",
     },
     {
@@ -417,14 +417,14 @@ export const TOKENS: { [chainId: number]: Token[] } = {
       isShortable: true,
       imageUrl: "https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880",
     },
-    {
+    /*{
       name: "USDT",
       symbol: "USDT",
       address: "0x9D973BAc12BB62A55be0F9f7Ad201eEA4f9B8428",
       decimals: 18,
       isStable: true,
       imageUrl: "https://assets.coingecko.com/coins/images/325/thumb/Tether.png?1668148663",
-    },
+    },*/
     {
       name: "Bitcoin (BTC)",
       symbol: "BTC",
@@ -667,7 +667,7 @@ export const ICONLINKS = {
     DAI: {
       rollexTestnet: "https://rollux.tanenbaum.io/address/0x66A1b915B55bde2Fa3402ED59bB5aF19879C1178",
     },
-    WTSYS: {
+    WSYS: {
       rollexTestnet: "https://rollux.tanenbaum.io/address/0xcAc0759160d57A33D332Ed36a555C10957694407",
     },
   },
@@ -782,7 +782,7 @@ const AVAILABLE_CHART_TOKENS = {
   [AVALANCHE]: ["AVAX", "ETH", "BTC"],
   [AVALANCHE_FUJI]: ["AVAX", "ETH", "BTC"],
   //待定
-  [ROLLEX_TESTNET]: ["ETH", "BTC", "TSYS"],
+  [ROLLEX_TESTNET]: ["ETH", "BTC", "SYS"],
 };
 
 export function isChartAvailabeForToken(chainId: number, tokenSymbol: string) {

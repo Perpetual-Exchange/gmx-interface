@@ -1538,11 +1538,11 @@ msgstr ""
 msgid "Language"
 msgstr "言語"
 
-#: src/components/Header/AppHeaderUser.tsx
 #: src/components/ModalViews/RedirectModal.js
 msgid "Launch App"
 msgstr ""
 
+#: src/components/Header/AppHeaderUser.tsx
 #: src/pages/Home/Home.js
 msgid "Launch Dapp"
 msgstr ""

@@ -32,7 +32,7 @@ function AssetDropdown({ assetSymbol, assetInfo }: Props) {
     {
       42161: ["ETH"],
       43114: ["AVAX"],
-      57000: ["TSYS"],
+      57000: ["SYS"],
     }[chainId] || [];
 
   return (

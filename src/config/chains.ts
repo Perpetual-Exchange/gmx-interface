@@ -132,9 +132,9 @@ const constants = {
 
   // config refer to AVALANCHE_FUJI
   [ROLLEX_TESTNET]: {
-    nativeTokenSymbol: "TSYS",
-    wrappedTokenSymbol: "WTSYS",
-    defaultCollateralSymbol: "USDT",
+    nativeTokenSymbol: "SYS",
+    wrappedTokenSymbol: "WSYS",
+    defaultCollateralSymbol: "DAI",
     defaultFlagOrdersEnabled: true,
     positionReaderPropsLength: 9,
     v2: true,
