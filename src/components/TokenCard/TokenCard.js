@@ -58,15 +58,16 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
   return (
     <>
       <li>
-        <div className="flex font-semibold mb-10 gap-4 items-center">
+        <div className="flex font-semibold mb-10 gap-4 items-center  opacity-40">
           <img src={gmxIcon} width="40" alt="REX Icons" />
           <h3 className="flex-1 font-[22px]">REX</h3>
           APR:
           <span className="text-[#E0EE8D]">
-            <APRLabel chainId={ROLLEX_TESTNET} label="gmxAprTotal" key="ROLLEX_TESTNET" />
+            {/* <APRLabel chainId={ROLLEX_TESTNET} label="gmxAprTotal" key="ROLLEX_TESTNET" /> */}
+            -- %
           </span>
         </div>
-        <div>
+        <div className="opacity-40">
           $REX is the utility token of REX. In addition to granting participation in the governance process of the
           protocol, it also accrues value from the platform revenue.
           <a href="https://docs.romex.finance/liquidity-provider" target="_blank" rel="noreferrer" className=" read-more">
@@ -78,7 +79,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
             Buy REX
           </BuyLink> */}
 
-          <BuyLink className="default-btn custom-buy-btn pointer-events-none" network={ROLLEX_TESTNET}>
+          <BuyLink className="default-btn custom-buy-btn pointer-events-none opacity-40" network={ROLLEX_TESTNET}>
             Coming Soon
           </BuyLink>
 
