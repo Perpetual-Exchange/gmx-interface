@@ -705,7 +705,7 @@ export default function DashboardV2() {
                     />
                   </div>
                 </div>
-                <div className="App-card-row">
+                <div className="App-card-row" style={{display:'none'}}>
                   <div className="label">
                     <Trans>Floor Price Fund</Trans>
                   </div>
