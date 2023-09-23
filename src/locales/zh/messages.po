@@ -4093,7 +4093,7 @@ msgid "{nativeTokenSymbol} can not be sent to smart contract addresses. Select a
 msgstr ""
 
 #: src/components/StatsTooltip/StatsTooltip.tsx
-msgid "{title} on OdxTestnet:"
+msgid "{title} on Rollux Testnet:"
 msgstr ""
 
 #: src/pages/Dashboard/DashboardV1.js

@@ -29,7 +29,7 @@ export default function StatsTooltip({
     <>
       <p className="Tooltip-row">
         <span className="label">
-          <Trans>{title} on OdxTestnet:</Trans>
+          <Trans>{title} on Rollux Testnet:</Trans>
         </span>
         <span className="amount">
           {showDollar && "$"}
