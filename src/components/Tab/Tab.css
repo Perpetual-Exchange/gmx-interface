@@ -5,7 +5,7 @@
   border-radius: 0;
   overflow: hidden;
   color: rgba(255, 255, 255, 0.7);
-  border: 0.5px solid #e0ed8d99;
+  border: 0.5px solid #00FF9F;
 }
 
 .Tab-option-icon {
@@ -63,5 +63,5 @@
 .Tab.inline .Tab-option.active {
   opacity: 1;
   pointer-events: none;
-  color: #e0ee8d;
+  color: #00FF9F;
 }

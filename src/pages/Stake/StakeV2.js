@@ -1760,7 +1760,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
               <div className="flex-1">
                 <Trans>Total Rewards</Trans>
               </div>
-              <div className="font-normal text-[22px] text-[#e0ee8d]">
+              <div className="font-normal text-[22px] text-[#00FF9F]">
                 ${formatKeyAmount(processedData, "totalRewardsUsd", USD_DECIMALS, 2, true)}
               </div>
             </div>

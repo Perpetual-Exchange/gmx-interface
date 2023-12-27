@@ -9,7 +9,7 @@
     margin-bottom: 40px;
   }
   .item{
-    border: 0.5px solid #e0ed8d99;
+    border: 0.5px solid #00FF9F;
     padding: 8rem 3rem;
     height: 42rem;
     position: relative;
@@ -31,7 +31,7 @@
       height: 5rem;
       line-height: 10rem;
       opacity: .1;
-      color: #E0EE8D;
+      color: #00FF9F;
       transition: all 0.3s;
     }
     &::before{
@@ -51,7 +51,7 @@
       font-size: 16rem;
       font-weight: bold;
       opacity: .1;
-      color: #E0EE8D;
+      color: #00FF9F;
       height: 20rem;
       line-height: 20rem;
       transition: all 0.3s;

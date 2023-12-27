@@ -5,7 +5,7 @@ import { AppHeaderUser } from "./AppHeaderUser";
 import { AppHeaderLinks } from "./AppHeaderLinks";
 // import { HomeHeaderNavLinks }  from './HomeHeaderNavLinks';
 
-import logoImg from "img/logo_GMX.png";
+import logoImg from "img/logo_GMX.svg";
 import { RiMenuLine } from "react-icons/ri";
 import { FaTimes } from "react-icons/fa";
 import { AnimatePresence as FramerAnimatePresence, motion } from "framer-motion";
@@ -95,7 +95,7 @@ export function Header({
           <div className="App-header-container-left">
             <Link className="App-header-link-main" to="/">
               <img src={logoImg} alt="Logo" />
-              <strong>RoMEX</strong>
+              {/* <strong>RoMEX</strong> */}
             </Link>
             {isHomeSite() ? null : ( // <HomeHeaderLinks redirectPopupTimestamp={redirectPopupTimestamp} showRedirectModal={showRedirectModal} />
               <AppHeaderLinks redirectPopupTimestamp={redirectPopupTimestamp} showRedirectModal={showRedirectModal} />

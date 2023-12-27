@@ -742,7 +742,7 @@ export default function DashboardV2() {
                   <a
                     href="https://docs.romex.finance/liquidity-provider"
                     target="_blank"
-                    className="font-normal text-[18px] hover:text-[#e0ee8d]"
+                    className="font-normal text-[18px] hover:text-[#00FF9F]"
                     rel="noreferrer"
                   >
                     Read More
@@ -871,7 +871,7 @@ export default function DashboardV2() {
                   <a
                     href="https://docs.romex.finance/liquidity-provider"
                     target="_blank"
-                    className="font-normal text-[18px] hover:text-[#e0ee8d]"
+                    className="font-normal text-[18px] hover:text-[#00FF9F]"
                     rel="noreferrer"
                   >
                     Read More

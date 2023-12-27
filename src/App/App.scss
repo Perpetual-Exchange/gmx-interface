@@ -23,7 +23,7 @@
 }
 
 .App-header.large {
-  height: 6.2rem;
+  // height: 6.2rem;
   backdrop-filter: blur(4px);
   display: flex;
   justify-content: space-between;
@@ -99,7 +99,7 @@
   top: 0.3rem;
   right: 0;
   bottom: 0.3rem;
-  border: 1px solid #e0ed8d99;
+  border: 1px solid #00FF9F;
   background: rgba(128, 174, 14, 0.12);
   border-radius: 10rem;
 }
@@ -122,7 +122,7 @@
   left: 0;
   right: 1.6rem;
   bottom: 0;
-  border-bottom: 0.5px solid #e0ed8d99;
+  border-bottom: 0.5px solid #00FF9F;
 }
 
 .App-header-drawer .App-header-link-container img {
@@ -188,7 +188,7 @@
 }
 
 .App-box {
-  border: 0.5px solid #e0ed8d99;
+  border: 0.5px solid #00FF9F;
   border-radius: 0;
 }
 
@@ -435,7 +435,7 @@ button.App-connect-wallet:hover {
 
 .App-card-divider {
   height: 0.5px;
-  background: #e0ed8d99;
+  background: #00FF9F;
   margin: 2.05rem -3rem;
 }
 
@@ -459,7 +459,7 @@ button.App-connect-wallet:hover {
   overflow: hidden;
   display: flex;
   margin-bottom: 2.325rem;
-  border: 0.5px solid #e0ed8d99;
+  border: 0.5px solid #00FF9F;
   border-radius: 0;
   padding: 2rem 3rem;
 }
@@ -576,7 +576,7 @@ button.App-connect-wallet:hover {
   padding: 3rem;
   border-radius: 0;
   font-size: var(--font-base);
-  border: 0.5px solid #e0ed8d99;
+  border: 0.5px solid #00FF9F;
 }
 
 .App-card-title {
@@ -646,7 +646,7 @@ button.App-connect-wallet:hover {
 
 .App-header-link-main img {
   display: inline-block;
-  height: 3rem;
+  height: 3.5rem;
   vertical-align: middle;
   margin-right: 6px;
 }
@@ -688,7 +688,7 @@ button.App-connect-wallet:hover {
 
 .App-header-container-left .a.active,
 .App-header-container-left a.active {
-  color: #e0ee8d;
+  color: #00FF9F;
   position: relative;
 }
 
@@ -698,7 +698,7 @@ button.App-connect-wallet:hover {
   left: 1.7rem;
   top: 70%;
   width: 50%;
-  border-bottom: 0.5px solid #e0ed8d99;
+  border-bottom: 0.5px solid #00FF9F;
 }
 
 .Toastify {
@@ -981,7 +981,7 @@ button.App-button-option:disabled {
 }
 
 .App-content {
-  padding-top: 60px;
+  // padding-top: 60px;
   position: static !important;
 }
 
@@ -1166,7 +1166,7 @@ button.App-button {
 }
 
 .App-slider .rc-slider-track {
-  background: #e0ee8d;
+  background: #00FF9F;
 }
 
 .App-slider .rc-slider-dot {
@@ -1174,16 +1174,16 @@ button.App-button {
   border-radius: 1px;
   width: 2px;
   margin-left: -1px;
-  background: #e0ee8d;
+  background: #00FF9F;
 }
 
 .App-slider .rc-slider-dot-active {
-  background: #e0ee8d;
+  background: #00FF9F;
 }
 
 .App-slider .rc-slider-handle {
-  background: #e0ee8d;
-  border: 2px #e0ee8d;
+  background: #00FF9F;
+  border: 2px #00FF9F;
 }
 
 .App-slider .rc-slider-handle:active {
@@ -1191,7 +1191,7 @@ button.App-button {
 }
 
 .App-slider .rc-slider-step {
-  border: 0.5px solid #e0ed8d99;
+  border: 0.5px solid #00FF9F;
 }
 .App-slider .rc-slider-mark-text,
 .App-slider .rc-slider-mark-text-active {
@@ -1252,8 +1252,8 @@ button.App-button {
   width: 100%;
 }
 .custom-buy-btn {
-  background-color: #e0ee8d;
-  background-position: 90% center !important;
+  // background-color: #00FF9F;
+  // background-position: 90% center !important;
   background-repeat: no-repeat !important;
   color: #171717 !important;
 }
@@ -1263,7 +1263,7 @@ button.App-button {
   padding: 3rem;
   border-radius: 0;
   margin-bottom: 2.4rem;
-  border: 0.5px solid #e0ed8d99;
+  border: 0.5px solid #00FF9F;
 }
 
 .right-b-icon {

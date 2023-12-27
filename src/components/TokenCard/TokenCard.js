@@ -10,6 +10,7 @@ import { ROLLEX_TESTNET } from "config/chains";
 import { switchNetwork } from "lib/wallets";
 import { useChainId } from "lib/chains";
 import { getIcon } from "config/icons";
+import btn2Raw  from '../../img/feature/btn2Raw.svg';
 const glpIcon = getIcon("common", "glp");
 const gmxIcon = getIcon("common", "gmx");
 
@@ -62,7 +63,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           <img src={gmxIcon} width="40" alt="REX Icons" />
           <h3 className="flex-1 font-[22px]">REX</h3>
           APR:
-          <span className="text-[#E0EE8D]">
+          <span className="text-[#00FF9F]">
             {/* <APRLabel chainId={ROLLEX_TESTNET} label="gmxAprTotal" key="ROLLEX_TESTNET" /> */}
             -- %
           </span>
@@ -79,8 +80,8 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
             Buy REX
           </BuyLink> */}
 
-          <BuyLink className="default-btn custom-buy-btn pointer-events-none opacity-40" network={ROLLEX_TESTNET}>
-            Coming Soon
+          <BuyLink className="default-btn custom-buy-btn pointer-events-none opacity-40 flex items-center space-x-2" network={ROLLEX_TESTNET}>
+            <span> Coming Soon</span> <img src={btn2Raw} alt="" srcset="" className="w-3" />
           </BuyLink>
 
         </div>
@@ -90,7 +91,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           <img src={glpIcon} width="40" alt="RLP Icon" />
           <h3 className="flex-1 font-[22px]">RLP</h3>
           APR:
-          <span className="text-[#E0EE8D]">
+          <span className="text-[#00FF9F]">
             <APRLabel chainId={ROLLEX_TESTNET} label="glpAprTotal" key="ROLLEX_TESTNET" />
           </span>
         </div>
@@ -103,8 +104,8 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           Learn more
         </a>
         <div className="Home-token-card-option-action">
-          <BuyLink to="/buy_rlp" className="default-btn custom-buy-btn" network={ROLLEX_TESTNET}>
-            Buy RLP
+          <BuyLink to="/buy_rlp" className="default-btn custom-buy-btn flex items-center space-x-2" network={ROLLEX_TESTNET}>
+            <span>Buy RLP</span> <img src={btn2Raw} alt="" srcset="" className="w-3" />
           </BuyLink>
         </div>
       </li>

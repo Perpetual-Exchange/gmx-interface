@@ -10,8 +10,8 @@
   position: relative;
   background: url("img/shapes2.png");
   background-repeat: no-repeat;
-  background-size: auto 1300px;
-  background-position: right -160px;
+  background-size: auto 1200px;
+  background-position: top center;
 }
 
 .Home-title {
@@ -26,7 +26,8 @@
   position: relative;
   /* z-index: 2; */
   width: 100%;
-  padding-top: 10rem;
+  padding-top: 25rem;
+  padding-bottom: 10rem;
 }
 
 .Home-title-section {
@@ -449,16 +450,19 @@
   margin-top: 15rem;
 }
 .Home-feature {
-  border: 0.5px solid #e0ed8d99;
+  /* border: 0.5px solid #00FF9F; */
+  background: url('../../img/feature/lineBg.png');
+  background-size: 100% 100%;
   color: #858585;
 }
 .Home-feature h2 {
   font-size: 3rem;
   height: 8rem;
   line-height: 8rem;
-  text-align: center;
-  border-bottom: 0.5px solid #e0ed8d99;
-  padding: 0;
+  padding-left: 7rem;
+  /* text-align: center; */
+  /* border-bottom: 0.5px solid #00FF9F; */
+  /* padding: 0; */
   margin: 0;
   color: #fff;
   font-weight: 700;
@@ -473,7 +477,7 @@
 .Home-feature-list {
   list-style: none;
   overflow: hidden;
-  padding: 0;
+  padding: 4rem;
 }
 .Home-feature-list > li {
   position: relative;
@@ -481,8 +485,8 @@
   padding-bottom: 30px;
   padding-right: 20px;
   height: 265px;
-  border-bottom: 0.5px solid #e0ed8d99;
-  border-left: 0.5px solid #e0ed8d99;
+  border-bottom: 0.5px solid #545957;
+  border-left: 0.5px solid #545957;
   font-size: 1.7rem;
 }
 .Home-feature-list > li:first-child,
@@ -528,7 +532,7 @@
 }
 .tokenomics-list > li {
   padding: 30px 30px 20px;
-  border-left: 0.5px solid #e0ed8d99;
+  border-left: 0.5px solid #00FF9F;
 }
 .tokenomics-list > li:first-child {
   border-left: 0;
@@ -541,12 +545,12 @@
 }
 
 .tokenomics-list .custom-buy-btn {
-  font-size: 1.8rem;
-  height: 50px;
-  line-height: 50px;
-  padding-right: 70px !important;
-  background-image: url(../../img/RightArrow.png);
-  background-position: 90% center;
+  font-size: 1.4rem;
+  height: 40px;
+  line-height: 40px;
+  /* padding-right: 70px !important; */
+  background: url(../../img/feature/btnbg2.png) center;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   margin-top: 20px;
 }
@@ -564,7 +568,7 @@
 }
 
 .Home-parnter-list {
-  border: 0.5px solid #e0ed8d99;
+  border: 0.5px solid #00FF9F;
   border-bottom: 0;
   margin-top: 100px;
   padding: 80px 35px;
@@ -579,8 +583,8 @@
 .Home-parnter-list > ul > li {
   padding: 10px 20px;
   font-size: 2.2rem;
-  color: #e0ee8d;
-  border: 0.5px solid #e0ed8d99;
+  color: #00FF9F;
+  border: 0.5px solid #00FF9F;
   border-radius: 100px;
   font-weight: bold;
   cursor: pointer;
@@ -720,7 +724,7 @@
   }
   .Home-feature-list > li:nth-child(4),
   .Home-feature-list > li:nth-child(5) {
-    border-bottom: 0.5px solid #e0ed8d99;
+    border-bottom: 0.5px solid #00FF9F;
   }
 
   .Home-latest-info__value {
@@ -731,6 +735,6 @@
     border-left: 0;
   }
   .tokenomics-list > li:last-child {
-    border-top: 0.5px solid #e0ed8d99;
+    border-top: 0.5px solid #00FF9F;
   }
 }
