@@ -26,7 +26,8 @@
 }
 
 .Tab.block .Tab-option:hover {
-  color: rgba(255, 255, 255, 1);
+  color: #00FF9F;
+  opacity: 0.8;
 }
 
 .Tab.block .Tab-option.active {

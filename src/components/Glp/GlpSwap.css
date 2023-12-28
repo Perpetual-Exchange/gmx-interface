@@ -103,18 +103,17 @@
   border-bottom: none;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  &::after{
-    content: '';
-    position: absolute;
-    left: -1.5px;
-    width: calc(100% + 3px);
-    height: 50px;
-    bottom: -50px;
-    background: url('../../img/app/GlpSwap-token-list-bg.png') no-repeat top;
-    background-size: 100% 100%;
-  }
 }
-
+.GlpSwap-token-list::after{
+  content: '';
+  position: absolute;
+  left: -1.5px;
+  width: calc(100% + 3px);
+  height: 50px;
+  bottom: -50px;
+  background: url('../../img/app/GlpSwap-token-list-bg.png') no-repeat top;
+  background-size: 100% 100%;
+}
 .GlpSwap-token-list-content {
   display: grid;
   padding: 1.5rem;
