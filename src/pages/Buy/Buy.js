@@ -18,7 +18,7 @@ export default function BuyGMXGLP() {
               <div className="Page-title">Buy REX or RLP</div>
             </div>
           </div>
-          <ul className="max-md:grid-cols-1 grid grid-cols-2 App-card tokenomics-list">
+          <ul className="max-md:grid-cols-1 grid grid-cols-2 gap-20 buyrex-cards">
             <TokenCard />
           </ul>
         </div>

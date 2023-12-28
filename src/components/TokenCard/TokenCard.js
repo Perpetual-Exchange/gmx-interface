@@ -75,10 +75,14 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
             Learn more
           </a>
         </div>
+
+        <div class="App-card-divider"></div>
+        
         <div className="Home-token-card-option-action">
           {/* <BuyLink to="/buy_rex" className="default-btn custom-buy-btn pointer-events-none" network={ROLLEX_TESTNET}>
             Buy REX
           </BuyLink> */}
+          
 
           <BuyLink className="default-btn custom-buy-btn pointer-events-none opacity-40 flex items-center space-x-2" network={ROLLEX_TESTNET}>
             <span> Coming Soon</span> <img src={btn2Raw} alt="" srcset="" className="w-3" />
@@ -103,6 +107,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
         <a href="https://docs.romex.finance/liquidity-provider" target="_blank" rel="noreferrer" className=" read-more">
           Learn more
         </a>
+        <div class="App-card-divider"></div>
         <div className="Home-token-card-option-action">
           <BuyLink to="/buy_rlp" className="default-btn custom-buy-btn flex items-center space-x-2" network={ROLLEX_TESTNET}>
             <span>Buy RLP</span> <img src={btn2Raw} alt="" srcset="" className="w-3" />

@@ -498,7 +498,7 @@ export default function DashboardV2() {
               <div className="App-card-title">
                 <Trans>Overview</Trans>
               </div>
-              <div className="App-card-divider"></div>
+              <div className="App-card-divider hidden"></div>
               <div className="App-card-content">
                 <div className="App-card-row">
                   <div className="label">
@@ -643,7 +643,7 @@ export default function DashboardV2() {
               <div className="App-card-title">
                 <Trans>Total Stats</Trans>
               </div>
-              <div className="App-card-divider"></div>
+              <div className="App-card-divider hidden"></div>
               <div className="App-card-content">
                 <div className="App-card-row">
                   <div className="label">
@@ -748,7 +748,7 @@ export default function DashboardV2() {
                     Read More
                   </a>
                 </div>
-                <div className="App-card-divider"></div>
+                <div className="App-card-divider hidden"></div>
                 <div className="flex">
                   <div className="stats-block">
                     <div className="App-card-content">
@@ -871,13 +871,13 @@ export default function DashboardV2() {
                   <a
                     href="https://docs.romex.finance/liquidity-provider"
                     target="_blank"
-                    className="font-normal text-[18px] hover:text-[#00FF9F]"
+                    className="font-normal text-[18px] hover:text-[#00FF9F] relative top-5 right-20"
                     rel="noreferrer"
                   >
                     Read More
                   </a>
                 </div>
-                <div className="App-card-divider"></div>
+                <div className="App-card-divider hidden"></div>
                 <div className="flex">
                   <div className="stats-block">
                     <div className="App-card-content">
@@ -962,7 +962,7 @@ export default function DashboardV2() {
                 <img src={currentIcons.network} width="30" className="mr-4" alt="Network Icon" />
                 <Trans>RLP Index Composition</Trans>
               </div>
-              <div className="App-card-divider"></div>
+              <div className="App-card-divider hidden"></div>
               <table className="token-table">
                 <thead>
                   <tr>
@@ -1083,7 +1083,7 @@ export default function DashboardV2() {
                         </div>
                       </div>
                     </div>
-                    <div className="App-card-divider"></div>
+                    <div className="App-card-divider hidden"></div>
                     <div className="App-card-content">
                       <div className="App-card-row">
                         <div className="label">

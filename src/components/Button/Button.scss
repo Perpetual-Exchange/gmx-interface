@@ -39,11 +39,14 @@
   &.primary-action {
     background: var(--primary-btn-bg);
     color: #171717;
-    border-radius: 0;
+    border-radius: 8px;
     padding: 1.65rem 1.6rem;
     line-height: 1;
     font-weight: 600;
     text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    border-bottom-left-radius: 0;
     &:hover{
       text-decoration: none;
     }
@@ -56,6 +59,16 @@
     &:not([disabled]):active {
       background-color: var(--primary-btn-active);
       box-shadow: 0 0 0.4rem 0.6rem rgb(45 66 252 / 10%);
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 40px;
+      height: 100%;
+      background: #171717;
+      transform: rotate(-45deg) translate(-35px);
     }
   }
 

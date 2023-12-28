@@ -1602,7 +1602,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
           
           <div className="App-card">
             <div className="App-card-title">RLP ({chainName})</div>
-            <div className="App-card-divider"></div>
+            <div className="App-card-divider hidden"></div>
             <div className="App-card-content">
               <div className="App-card-row">
                 <div className="label">
@@ -1755,16 +1755,16 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
           </div>
 
 
-          <div className="App-card primary overflow-hidden StakeV2-total-rewards-card">
+          <div className="App-card primary StakeV2-total-rewards-card">
             <div className="flex App-card-title">
               <div className="flex-1">
                 <Trans>Total Rewards</Trans>
               </div>
-              <div className="font-normal text-[22px] text-[#00FF9F]">
+              <div className="font-normal text-[22px] text-[#00FF9F] relative top-5 right-20">
                 ${formatKeyAmount(processedData, "totalRewardsUsd", USD_DECIMALS, 2, true)}
               </div>
             </div>
-            <div className="App-card-divider"></div>
+            <div className="App-card-divider hidden"></div>
             <div className="App-card-content">
               <div className="App-card-row">
                 <div className="label">

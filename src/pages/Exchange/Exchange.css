@@ -14,10 +14,18 @@
 .Exchange-list-tab-container {
   display: grid;
   grid-template-columns: auto auto;
-  padding-left: 0.8rem;
-  padding-right: 0.8rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1.05rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  /* margin-top: 1.5rem; */
+  /* margin-bottom: 1.05rem; */
+  border-bottom: 0.5px solid #5459575f;
+  /* padding-bottom: 1rem; */
+}
+.Exchange-list-tab-container  .Tab-option{
+  border-right: 0.5px solid #5459575f;
+  padding: 0 1rem;
+  padding: 1.5rem;
+  padding-right: 2rem;
 }
 
 .Exchange-should-show-position-lines {
@@ -67,8 +75,17 @@
 
 .Exchange-lists.large {
   display: block;
+  border: 0.5px solid #5459575f;
+  border-radius: 1rem;
+  margin-top: 3rem;
+  overflow: hidden;
 }
-
+.Exchange-lists .App-box{
+  border: none;
+}
+.Exchange-lists .App-card::after,.Exchange-lists .App-card::before{
+  display: none;
+}
 .Exchange-lists.small {
   display: none;
 }
@@ -312,7 +329,8 @@
   position: relative;
   padding: 0.9rem 0.31rem;
   z-index: 2;
-  border: 0.5px solid #00FF9F;
+  border: 0.5px solid #5459575f;
+  border-radius: 1rem;
 }
 
 .ExchangeChart.tv .ExchangeChart-bottom {
@@ -509,9 +527,9 @@ table.Exchange-list.Orders td {
   padding-bottom: 1.4rem;
 }
 
-table.Exchange-list tr {
-  border-bottom: 0.5px solid #00FF9F;
-}
+/* table.Exchange-list tr {
+  border-bottom: 0.5px solid #5459575f;
+} */
 
 table.Exchange-list tr:last-child {
   border-bottom: none;
@@ -604,6 +622,8 @@ table.Exchange-list th {
 
 .Exchange-swap-box-inner {
   padding: 1.5rem;
+  border: 0.5px solid #5459575f;
+  border-radius: 1rem !important;
 }
 
 .Exchange-swap-market-box {
@@ -614,6 +634,10 @@ table.Exchange-list th {
 
 .Exchange-swap-market-box .App-card-divider {
   margin: 0 -1.5rem 1.5rem;
+}
+
+.Exchange-swap-box >.App-card::before{
+  display: none;
 }
 
 .Exchange-swap-box .Radio {
@@ -646,7 +670,7 @@ table.Exchange-list th {
   padding: 1.5rem;
   margin-bottom: 1.05rem;
   border-radius: 0.8rem;
-  border: 0.5px solid #00FF9F;
+  border: 0.5px solid #5459575f;
 }
 
 .Exchange-swap-section:hover,
@@ -656,7 +680,7 @@ table.Exchange-list th {
 
 .Exchange-swap-option-tabs.Tab.block .Tab-option {
   padding: 1.05rem;
-  color: #fff;
+  /* color: #fff; */
 }
 
 .Exchange-swap-order-type-tabs {
@@ -669,6 +693,7 @@ table.Exchange-list th {
   top: 50%;
   margin-top: -0.5rem;
   transform: scale(0.75);
+  display: none;
 }
 
 .Exchange-swap-section-top {

@@ -1,8 +1,8 @@
 .App-header-network {
   position: relative;
   margin-left: 2.4rem;
-  border: 1px solid var(--dark-blue-border);
-  border-radius: var(--border-radius-sm);
+  /* border: 1px solid var(--dark-blue-border); */
+  /* border-radius: var(--border-radius-sm); */
   height: 3.6rem;
   display: inline-flex;
   align-items: center;
@@ -29,14 +29,17 @@
   border-bottom: 1px solid #ffffff29;
 }
 .App-header-network:hover {
-  background: var(--dark-blue-hover);
+  /* background: var(--dark-blue-hover); */
   cursor: pointer;
+  /* opacity: 0.8; */
 }
 .App-header-network:active {
-  background: var(--dark-blue-active);
+  /* background: var(--dark-blue-active); */
+  opacity: 0.8;
 }
 .network-dropdown:active {
-  background: var(--dark-blue-active);
+  /* background: var(--dark-blue-active); */
+  opacity: 0.8;
 }
 
 .network-dropdown > button.transparent {

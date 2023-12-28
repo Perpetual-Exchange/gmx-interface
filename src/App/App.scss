@@ -188,8 +188,10 @@
 }
 
 .App-box {
-  border: 0.5px solid #00FF9F;
-  border-radius: 0;
+  // border: 0.5px solid #00FF9F;
+  border-radius: 1rem;
+  border: .5px solid #5459575f;
+  // border-radius: 0;
 }
 
 .App-card-bottom-placeholder {
@@ -419,9 +421,9 @@ button.App-connect-wallet:hover {
 }
 
 .App-header-user-address {
-  border: 1px solid #ffffff29;
+  border: 1px solid #00FF9F;
   height: 3.6rem;
-  border-radius: 0;
+  border-radius: 8px;
   display: inline-flex;
   align-items: center;
   color: white;
@@ -435,8 +437,11 @@ button.App-connect-wallet:hover {
 
 .App-card-divider {
   height: 0.5px;
-  background: #00FF9F;
-  margin: 2.05rem -3rem;
+  background: #54595774;
+  margin: 2.05rem -2.9rem;
+  &.margin-x-0{
+    margin: 2.05rem 0;
+  }
 }
 
 .App-box-solid {
@@ -459,9 +464,9 @@ button.App-connect-wallet:hover {
   overflow: hidden;
   display: flex;
   margin-bottom: 2.325rem;
-  border: 0.5px solid #00FF9F;
+  // border: 0.5px solid #00FF9F;
   border-radius: 0;
-  padding: 2rem 3rem;
+  padding: 2rem 0rem;
 }
 
 .page-main-content .section-title-block {
@@ -573,23 +578,54 @@ button.App-connect-wallet:hover {
 }
 
 .App-card {
-  padding: 3rem;
+  // padding: 3rem;
   border-radius: 0;
   font-size: var(--font-base);
-  border: 0.5px solid #00FF9F;
+  // border: 0.5px solid #00FF9F;
+  position: relative;
+  >div,>li{
+    position: relative;
+    z-index: 1;
+  }
+  &::after{
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: calc(100% + 1px);
+    height: 40px;
+    background: url('../img/app/app-card-bg-bottom.png') no-repeat top;
+    background-size: 100% 100%;
+  }
+  &::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 75px);
+    top: 75px;
+    left: 1px;
+    border-left: 1px solid #5459575f;
+    border-right: 1px solid #5459575f;
+    z-index: 0;
+    box-sizing: border-box;
+  }
 }
 
 .App-card-title {
   font-size: var(--font-md);
-  line-height: 2.1rem;
-  font-weight: normal;
+  line-height: 2.5rem;
+  font-weight: bold;
   letter-spacing: 0px;
   color: #ffffff;
-  margin-bottom: 2.5rem;
+  // margin-bottom: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-weight: 600;
+  background: url('../img/app/app-card-bg-top.png') no-repeat top;
+  background-size: 100% 100%;
+  padding: 2.5rem;
+  height: 75px;
 }
 
 .Position-card-title {
@@ -603,6 +639,25 @@ button.App-connect-wallet:hover {
 .App-card-content {
   display: grid;
   grid-row-gap: 0.8rem;
+  padding: 3rem;
+  padding-bottom: 1rem;
+  position: relative;
+  // min-height: 300px;
+  // &::after,&::before{
+  //   position: absolute;
+  //   height: 100%;
+  //   width: .5px;
+  //   background: #5459575f;
+  //   top: 0;
+  // }
+  // &::after{
+  //   content: '';
+  //   left: 1px;
+  // }
+  // &::before{
+  //   content: '';
+  //   right: 1px;
+  // }
 }
 
 .App-card-row {
@@ -1102,6 +1157,14 @@ button.App-button {
   backdrop-filter: blur(2rem);
 }
 
+.buyrex-cards{
+  >li{
+    background: url('../img/app/buyrex-bg.png') center no-repeat;
+    background-size: 100% 100%;
+    padding: 4rem 3rem;
+  }
+}
+
 @keyframes zoomIn {
   from {
     opacity: 0;
@@ -1256,14 +1319,15 @@ button.App-button {
   // background-position: 90% center !important;
   background-repeat: no-repeat !important;
   color: #171717 !important;
+  border-radius: 4px;
 }
 .Tab-title-section {
   position: relative;
   overflow: hidden;
-  padding: 3rem;
+  padding: 3rem 0;
   border-radius: 0;
   margin-bottom: 2.4rem;
-  border: 0.5px solid #00FF9F;
+  // border: 0.5px solid #00FF9F;
 }
 
 .right-b-icon {
@@ -1273,6 +1337,7 @@ button.App-button {
   top: -30%;
   pointer-events: none;
   opacity: 0.5;
+  display: none;
 }
 
 .Home-language-menu {

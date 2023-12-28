@@ -60,9 +60,9 @@ input {
   --primary-btn-bg: #00FF9F;
   --primary-btn-hover: #00FF9F;
   --primary-btn-active: rgba(224, 238, 141, 0.8);
-  --dark-blue-hover: #444a36;
-  --dark-blue-border: #ffffff29;
-  --dark-blue-active: #17182c;
+  --dark-blue-hover: #00ff9d17;
+  --dark-blue-border: #00FF9F;
+  --dark-blue-active: #00ff9d17;
   --text-gray: rgba(255, 255, 255, 0.7);
   --avax-red: #e84143;
   --arbitrum-blue: #28a0f0;
@@ -209,7 +209,7 @@ a.plain {
 
 .default-btn {
   /* background: #00FF9F; */
-  background: url('../img/feature/btnbg.svg');
+  background: url('../img/feature/btnbg.png');
   background-size: 100% 100%;
   border-radius: 0;
   font-size: var(--font-sm);
@@ -229,6 +229,11 @@ a.plain {
   cursor: pointer;
   border: none;
   appearance: none;
+}
+
+.default-btn.primary{
+  background: #00FF9F;
+  border-radius: 8px;
 }
 
 .default-btn:hover {

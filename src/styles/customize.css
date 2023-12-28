@@ -5,6 +5,7 @@
   .Comingsoon-card{
     position: relative;
     overflow: hidden;
+    border-radius: 10px;
   }
   
   .Comingsoon-card::after{
@@ -20,4 +21,6 @@
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
     border-radius: 0;
+    background-image: none;
+    z-index: 11;
   }

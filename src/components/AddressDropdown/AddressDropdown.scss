@@ -12,6 +12,7 @@
 .user-address {
   margin-left: 1rem;
   margin-right: 1rem;
+  color: #00FF9F;
 }
 
 .App-header-user-address {
@@ -31,9 +32,9 @@
   min-width: 15.5rem;
   width: 100%;
   transform-origin: top right;
-  border-radius: 0.4rem;
-  background: #3d3d3d;
-  border: 1px solid #32344c;
+  border-radius: 8px;
+  background: #1C1B1B;
+  border: 1px solid #545957;
   list-style: none;
   cursor: pointer;
   outline: none;
@@ -50,7 +51,7 @@
     border-radius: 0.4rem;
 
     &:hover {
-      background: #444a36 !important;
+      background: #00ff9f1a !important;
       border-radius: 0.4rem;
       opacity: 1;
       color: #eee;

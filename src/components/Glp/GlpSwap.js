@@ -712,7 +712,7 @@ export default function GlpSwap(props) {
               </div>
             </div>
           </div>
-          <div className="App-card-divider" />
+          <div className="App-card-divider hidden" />
           <div className="App-card-content">
             <div className="App-card-row">
               <div className="label">
@@ -739,7 +739,7 @@ export default function GlpSwap(props) {
               </div>
             </div>
           </div>
-          <div className="App-card-divider" />
+          <div className="App-card-divider margin-x-0"/>
           <div className="App-card-content">
             {!isBuying && (
               <div className="App-card-row">

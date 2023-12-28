@@ -7,8 +7,8 @@
   color: #fff;
   font-size: var(--font-sm);
   cursor: pointer;
-  border: 1px solid var(--dark-blue-border);
-  border-radius: var(--border-radius-sm);
+  border: 1px solid #00FF9F;
+  border-radius: 8px;
 
   .btn-icon {
     display: inline-flex;
@@ -16,10 +16,11 @@
     justify-content: center;
   }
   .btn-label {
-    font-weight: 400;
     font-size: var(--font-sm);
     margin-left: 0.8rem;
     letter-spacing: 0;
+    color: #00FF9F;
+    font-weight: bold;
   }
   &:hover {
     background: var(--dark-blue-hover);

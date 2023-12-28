@@ -809,7 +809,7 @@ export const Exchange = forwardRef((props, ref) => {
   const getListSection = () => {
     return (
       <div>
-        <div className="mt-20 Exchange-list-tab-container">
+        <div className="Exchange-list-tab-container">
           <Tab
             options={LIST_SECTIONS}
             optionLabels={LIST_SECTIONS_LABELS}
