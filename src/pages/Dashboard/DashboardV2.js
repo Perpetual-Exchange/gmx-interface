@@ -49,6 +49,9 @@ import { useChainId } from "lib/chains";
 import { formatDate } from "lib/dates";
 import { getIcons } from "config/icons";
 import useUniqueUsers from "domain/stats/useUniqueUsers";
+import Banners  from './Banners.tsx';
+
+
 // const ACTIVE_CHAIN_IDS = [AVALANCHE_FUJI, AVALANCHE];
 // const ACTIVE_CHAIN_IDS = [AVALANCHE_FUJI, ROLLEX_TESTNET];
 const ACTIVE_CHAIN_IDS = [ROLLEX_TESTNET];
@@ -474,6 +477,7 @@ export default function DashboardV2() {
   return (
     <SEO title={getPageTitle(t`Dashboard`)}>
       <div className="default-container page-layout DashboardV2">
+        <Banners/>
         <div className="section-title-block">
           <img src={d1} className="right-b-icon" alt="" />
           <div className="section-title-content">
