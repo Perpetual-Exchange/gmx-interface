@@ -214,12 +214,12 @@ function FullApp() {
           <br />
           {userOnMobileDevice ? (
             <Trans>
-              <ExternalLink href="https://metamask.io">Install MetaMask</ExternalLink>, and use REX with its built-in
+              <ExternalLink href="https://metamask.io">Install MetaMask</ExternalLink>, and use NOX with its built-in
               browser.
             </Trans>
           ) : (
             <Trans>
-              <ExternalLink href="https://metamask.io">Install MetaMask</ExternalLink> to start using REX.
+              <ExternalLink href="https://metamask.io">Install MetaMask</ExternalLink> to start using NOX.
             </Trans>
           )}
         </div>
@@ -237,13 +237,13 @@ function FullApp() {
           <br />
           {userOnMobileDevice ? (
             <Trans>
-              <ExternalLink href="https://www.coinbase.com/wallet">Install Coinbase Wallet</ExternalLink>, and use REX
+              <ExternalLink href="https://www.coinbase.com/wallet">Install Coinbase Wallet</ExternalLink>, and use NOX
               with its built-in browser.
             </Trans>
           ) : (
             <Trans>
               <ExternalLink href="https://www.coinbase.com/wallet">Install Coinbase Wallet</ExternalLink> to start using
-              REX.
+              NOX.
             </Trans>
           )}
         </div>

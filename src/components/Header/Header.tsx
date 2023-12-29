@@ -95,7 +95,7 @@ export function Header({
           <div className="App-header-container-left">
             <Link className="App-header-link-main" to="/">
               <img src={logoImg} alt="Logo" />
-              {/* <strong>RoMEX</strong> */}
+              {/* <strong>NeonNexus</strong> */}
             </Link>
             {isHomeSite() ? null : ( // <HomeHeaderLinks redirectPopupTimestamp={redirectPopupTimestamp} showRedirectModal={showRedirectModal} />
               <AppHeaderLinks redirectPopupTimestamp={redirectPopupTimestamp} showRedirectModal={showRedirectModal} />
@@ -126,7 +126,7 @@ export function Header({
                 </div>
               )}
               <div className="App-header-link-main clickable" onClick={() => setIsDrawerVisible(!isDrawerVisible)}>
-                <img src={logoImg} alt="REX Logo" />
+                <img src={logoImg} alt="NOX Logo" />
               </div>
             </div>
             <div className="App-header-container-right">

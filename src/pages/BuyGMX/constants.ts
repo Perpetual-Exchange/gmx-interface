@@ -2,7 +2,7 @@ import { ARBITRUM, ROLLEX_TESTNET } from "config/chains";
 import { getContract } from "config/contracts";
 
 const ARBITRUM_GMX = getContract(ARBITRUM, "GMX").toLowerCase();
-const REX_GMX = getContract(ROLLEX_TESTNET, "GMX").toLowerCase();
+const NOX_GMX = getContract(ROLLEX_TESTNET, "GMX").toLowerCase();
 
 type Exchange = {
   name: string;
@@ -20,7 +20,7 @@ export const EXTERNAL_LINKS = {
   [ROLLEX_TESTNET]: {
     networkWebsite: "https://testnet.snowtrace.io/",
     buyGmx: {
-      traderjoe: `https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=${REX_GMX}`,
+      traderjoe: `https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=${NOX_GMX}`,
     },
   },
 };
@@ -58,7 +58,7 @@ export const GMX_FROM_ANY_NETWORKS: Exchange[] = [
     icon: "ic_bungee.png",
     links: {
       [ARBITRUM]: `https://multitx.bungee.exchange/?toChainId=42161&toTokenAddress=${ARBITRUM_GMX}`,
-      [ROLLEX_TESTNET]: `https://multitx.bungee.exchange/?toChainId=43114&toTokenAddress=${REX_GMX}`,
+      [ROLLEX_TESTNET]: `https://multitx.bungee.exchange/?toChainId=43114&toTokenAddress=${NOX_GMX}`,
     },
   },
   {
@@ -66,7 +66,7 @@ export const GMX_FROM_ANY_NETWORKS: Exchange[] = [
     icon: "ic_o3.png",
     links: {
       [ARBITRUM]: `https://o3swap.com/swap?dst_chain=42161&dst_token_hash=${ARBITRUM_GMX}`,
-      [ROLLEX_TESTNET]: `https://o3swap.com/swap?dst_chain=43114&dst_token_hash=${REX_GMX}`,
+      [ROLLEX_TESTNET]: `https://o3swap.com/swap?dst_chain=43114&dst_token_hash=${NOX_GMX}`,
     },
   },
 ];
@@ -222,7 +222,7 @@ export const DECENTRALISED_AGGRIGATORS: Exchange[] = [
     icon: "ic_matcha.png",
     links: {
       [ARBITRUM]: `https://www.matcha.xyz/markets/42161/${ARBITRUM_GMX}`,
-      [ROLLEX_TESTNET]: `https://www.matcha.xyz/markets/43114/${REX_GMX}`,
+      [ROLLEX_TESTNET]: `https://www.matcha.xyz/markets/43114/${NOX_GMX}`,
     },
   },
   {
@@ -230,7 +230,7 @@ export const DECENTRALISED_AGGRIGATORS: Exchange[] = [
     icon: "ic_paraswap.svg",
     links: {
       [ARBITRUM]: `https://app.paraswap.io/#/${ARBITRUM_GMX}?network=arbitrum`,
-      [ROLLEX_TESTNET]: `https://app.paraswap.io/#/${REX_GMX}?network=avalanche`,
+      [ROLLEX_TESTNET]: `https://app.paraswap.io/#/${NOX_GMX}?network=avalanche`,
     },
   },
   {
@@ -254,7 +254,7 @@ export const DECENTRALISED_AGGRIGATORS: Exchange[] = [
     icon: "ic_dodo.svg",
     links: {
       [ARBITRUM]: `https://app.dodoex.io/?from=ETH&to=${ARBITRUM_GMX}&network=arbitrum`,
-      [ROLLEX_TESTNET]: `https://app.dodoex.io/?from=AVAX&to=${REX_GMX}&network=avalanche`,
+      [ROLLEX_TESTNET]: `https://app.dodoex.io/?from=AVAX&to=${NOX_GMX}&network=avalanche`,
     },
   },
   {
@@ -266,7 +266,7 @@ export const DECENTRALISED_AGGRIGATORS: Exchange[] = [
     name: "Yieldyak",
     icon: "ic_yield_yak.png",
     links: {
-      [ROLLEX_TESTNET]: `https://yieldyak.com/swap?outputCurrency=${REX_GMX}`,
+      [ROLLEX_TESTNET]: `https://yieldyak.com/swap?outputCurrency=${NOX_GMX}`,
     },
   },
   {

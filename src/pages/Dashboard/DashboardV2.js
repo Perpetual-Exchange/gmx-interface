@@ -331,7 +331,7 @@ export default function DashboardV2() {
                     <br />
                     Get lower fees to{" "}
                     <Link to="/buy_rlp" target="_blank" rel="noopener noreferrer">
-                      buy RLP
+                      buy NLP
                     </Link>{" "}
                     with {tokenInfo.symbol}, and to{" "}
                     <Link to="/trade" target="_blank" rel="noopener noreferrer">
@@ -357,7 +357,7 @@ export default function DashboardV2() {
               )}
               <br />
               <div>
-                <ExternalLink href="https://docs.romex.finance/liquidity-provider">
+                <ExternalLink href="https://docs.neonnexus.io/liquidity-provider">
                   <Trans>More Info</Trans>
                 </ExternalLink>
               </div>
@@ -485,7 +485,7 @@ export default function DashboardV2() {
                 {chainName} Total Stats start from {totalStatsStartDate}.<br /> To view detailed stats, please check the
               </Trans>{" "}
               {chainId === ROLLEX_TESTNET && (
-                <ExternalLink href="https://stats.romex.finance/">Analytics page</ExternalLink>
+                <ExternalLink href="https://stats.neonnexus.io/">Analytics page</ExternalLink>
                 // <span>Analytics page</span>
               )}
               .
@@ -509,14 +509,14 @@ export default function DashboardV2() {
                       handle={`$${formatAmount(tvl, USD_DECIMALS, 0, true)}`}
                       position="right-bottom"
                       renderContent={() => (
-                        <span>{t`Assets Under Management: REX staked (All chains) + RLP pool (${chainName}).`}</span>
+                        <span>{t`Assets Under Management: NOX staked (All chains) + NLP pool (${chainName}).`}</span>
                       )}
                     />
                   </div>
                 </div>
                 <div className="App-card-row">
                   <div className="label">
-                    <Trans>RLP Pool</Trans>
+                    <Trans>NLP Pool</Trans>
                   </div>
                   <div>
                     <TooltipComponent
@@ -524,9 +524,9 @@ export default function DashboardV2() {
                       position="right-bottom"
                       renderContent={() => (
                         <Trans>
-                          <p>Total value of tokens in RLP pool ({chainName}).</p>
+                          <p>Total value of tokens in NLP pool ({chainName}).</p>
                           <p>
-                            Other websites may show a higher value as they add positions' collaterals to the RLP pool.
+                            Other websites may show a higher value as they add positions' collaterals to the NLP pool.
                           </p>
                         </Trans>
                       )}
@@ -720,7 +720,7 @@ export default function DashboardV2() {
               <Trans>Tokens</Trans>
             </div>
             <div className="Page-description">
-              <Trans>Platform and RLP index tokens.</Trans>
+              <Trans>Platform and NLP index tokens.</Trans>
             </div>
           </div>
           <div className="DashboardV2-token-cards">
@@ -729,18 +729,18 @@ export default function DashboardV2() {
                 <div className="App-card-title">
                   <div className="App-card-title-mark">
                     <div className="App-card-title-mark-icon">
-                      <img src={currentIcons.gmx} width="30" alt="REX Token Icon" />
+                      <img src={currentIcons.gmx} width="30" alt="NOX Token Icon" />
                     </div>
                     <div className="App-card-title-mark-info">
-                      <div className="App-card-title-mark-title">REX</div>
+                      <div className="App-card-title-mark-title">NOX</div>
                     </div>
                     <div className="mt-2">
-                      <AssetDropdown assetSymbol="REX" />
+                      <AssetDropdown assetSymbol="NOX" />
                     </div>
                   </div>
                   <div className="flex-1"></div>
                   <a
-                    href="https://docs.romex.finance/liquidity-provider"
+                    href="https://docs.neonnexus.io/liquidity-provider"
                     target="_blank"
                     className="font-normal text-[18px] hover:text-[#00FF9F]"
                     rel="noreferrer"
@@ -780,7 +780,7 @@ export default function DashboardV2() {
                         <div className="label">
                           <Trans>Supply</Trans>
                         </div>
-                        <div>{formatAmount(totalGmxSupply, GMX_DECIMALS, 0, true)} REX</div>
+                        <div>{formatAmount(totalGmxSupply, GMX_DECIMALS, 0, true)} NOX</div>
                       </div>
                       <div className="App-card-row">
                         <div className="label">
@@ -858,18 +858,18 @@ export default function DashboardV2() {
                 <div className="App-card-title">
                   <div className="App-card-title-mark">
                     <div className="App-card-title-mark-icon">
-                      <img src={currentIcons.glp} width="30" alt="RLP Icon" />
+                      <img src={currentIcons.glp} width="30" alt="NLP Icon" />
                     </div>
                     <div className="App-card-title-mark-info">
-                      <div className="App-card-title-mark-title">RLP</div>
+                      <div className="App-card-title-mark-title">NLP</div>
                     </div>
                     <div className="mt-2">
-                      <AssetDropdown assetSymbol="RLP" />
+                      <AssetDropdown assetSymbol="NLP" />
                     </div>
                   </div>
                   <div className="flex-1"></div>
                   <a
-                    href="https://docs.romex.finance/liquidity-provider"
+                    href="https://docs.neonnexus.io/liquidity-provider"
                     target="_blank"
                     className="font-normal text-[18px] hover:text-[#00FF9F] relative top-5 right-20"
                     rel="noreferrer"
@@ -891,7 +891,7 @@ export default function DashboardV2() {
                         <div className="label">
                           <Trans>Supply</Trans>
                         </div>
-                        <div>{formatAmount(glpSupply, GLP_DECIMALS, 0, true)} RLP</div>
+                        <div>{formatAmount(glpSupply, GLP_DECIMALS, 0, true)} NLP</div>
                       </div>
                       <div className="App-card-row">
                         <div className="label">
@@ -948,7 +948,7 @@ export default function DashboardV2() {
                           ))}
                         </Pie>
                         <text x={"50%"} y={"50%"} fill="white" textAnchor="middle" dominantBaseline="middle">
-                          RLP Pool
+                          NLP Pool
                         </text>
                         <Tooltip content={<CustomTooltip />} />
                       </PieChart>
@@ -960,7 +960,7 @@ export default function DashboardV2() {
             <div className="mt-40 token-table-wrapper App-card">
               <div className="App-card-title">
                 <img src={currentIcons.network} width="30" className="mr-4" alt="Network Icon" />
-                <Trans>RLP Index Composition</Trans>
+                <Trans>NLP Index Composition</Trans>
               </div>
               <div className="App-card-divider hidden"></div>
               <table className="token-table">
@@ -1056,7 +1056,7 @@ export default function DashboardV2() {
               </table>
             </div>
             <div className="Page-title Tab-title-section glp-composition-small">
-              <Trans>RLP Index Composition</Trans>{" "}
+              <Trans>NLP Index Composition</Trans>{" "}
               <img className="Page-title-icon" src={currentIcons.network} width="24" alt="Network Icon" />
             </div>
             <div className="token-grid">

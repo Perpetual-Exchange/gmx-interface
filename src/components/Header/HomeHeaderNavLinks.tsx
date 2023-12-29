@@ -6,10 +6,10 @@ export function HomeHeaderNavLinks() {
   const HOME_MENUS: HomeNavLink[] = [
     {
       label: `App`,
-      link: "https://dapp.romex.finance",
+      link: "https://dapp.neonnexus.io",
     },{
       label: `Docs`,
-      link: "https://docs.romex.finance",
+      link: "https://docs.neonnexus.io",
     },{
       label: `Twitter`,
       link: "https://twitter.com/RomexFi",

@@ -124,7 +124,7 @@ function FeesTooltip({
           <br />
           <div className="PositionSeller-fee-item">
             <Trans>
-              <ExternalLink href="https://docs.romex.finance/fee">More Info</ExternalLink> about fees.
+              <ExternalLink href="https://docs.neonnexus.io/fee">More Info</ExternalLink> about fees.
             </Trans>
           </div>
         </div>

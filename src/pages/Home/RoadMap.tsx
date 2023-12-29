@@ -6,10 +6,10 @@ export default function RoadMap() {
     date:'2023',
     tag:'R',
     list:[{
-      text:'Publish RoMex Docs',
+      text:'Publish NeonNexus Docs',
       state:true
     },{
-      text:'Launch RoMex Website',
+      text:'Launch NeonNexus Website',
       state:true
     },{
       text:'Introduce Rollux Testnet',
@@ -26,7 +26,7 @@ export default function RoadMap() {
       text:'Launch Rewards Campaign',
       state:false
     },{
-      text:'Release REX Tokenomics',
+      text:'Release NOX Tokenomics',
       state:false
     }]
   },{
@@ -34,7 +34,7 @@ export default function RoadMap() {
     date:'2024',
     tag:'X',
     list:[{
-      text:'REX Token Airdrop Campaign',
+      text:'NOX Token Airdrop Campaign',
       state:false
     },{
       text:'DAO Governance',

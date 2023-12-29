@@ -28,11 +28,11 @@ export default function BuyGlp(props) {
         <img src={b1} className="right-b-icon" alt="" />
         <div className="section-title-content">
           <div className="Page-title">
-            <Trans>Buy / Sell RLP</Trans>
+            <Trans>Buy / Sell NLP</Trans>
           </div>
           <div className="Page-description">
             <Trans>
-              Purchase <ExternalLink href="https://docs.romex.finance/rewards#as-a-olp-staker">RLP tokens</ExternalLink>{" "}
+              Purchase <ExternalLink href="https://docs.neonnexus.io/rewards#as-a-olp-staker">NLP tokens</ExternalLink>{" "}
               to earn {nativeTokenSymbol} fees from swaps and leverages trading.
             </Trans>
             <br />

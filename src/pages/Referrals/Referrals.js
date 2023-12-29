@@ -117,10 +117,10 @@ function Referrals({ connectWallet, setPendingTxns, pendingTxns }) {
             </div>
             <div className="Page-description">
               <Trans>
-                Get fee discounts and earn rebates through the REX referral program.
+                Get fee discounts and earn rebates through the NOX referral program.
                 <br />
                 For more information, please read the{" "}
-                <ExternalLink href="https://docs.romex.finance/referrals">referral program details</ExternalLink>.
+                <ExternalLink href="https://docs.neonnexus.io/referrals">referral program details</ExternalLink>.
               </Trans>
             </div>
           </div>

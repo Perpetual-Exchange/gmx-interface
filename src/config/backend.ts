@@ -1,16 +1,16 @@
 import { ARBITRUM_TESTNET, MAINNET, AVALANCHE_FUJI, ROLLEX_TESTNET } from "./chains";
 
 // export const GMX_STATS_API_URL = "https://stats.gmx.io/api";
-export const GMX_STATS_API_URL = "https://dapp.romex.finance/api";
+export const GMX_STATS_API_URL = "https://dapp.neonnexus.io/api";
 
 const BACKEND_URLS = {
   // default: "https://gmx-server-mainnet.uw.r.appspot.com",
-  default: "https://dapp.romex.finance/api",
+  default: "https://dapp.neonnexus.io/api",
 
   [MAINNET]: "https://gambit-server-staging.uc.r.appspot.com",
   [ARBITRUM_TESTNET]: "https://gambit-server-devnet.uc.r.appspot.com",
-  [AVALANCHE_FUJI]: "https://dapp.romex.finance/api",
-  [ROLLEX_TESTNET]: "https://dapp.romex.finance/api",
+  [AVALANCHE_FUJI]: "https://dapp.neonnexus.io/api",
+  [ROLLEX_TESTNET]: "https://dapp.neonnexus.io/api",
 };
 
 export function getServerBaseUrl(chainId: number) {

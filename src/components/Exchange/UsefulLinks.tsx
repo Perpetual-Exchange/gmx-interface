@@ -16,7 +16,7 @@ export default function UsefulLinks({ className }) {
       <div className="App-card-divider"></div>
       <div className="Exchange-info-row">
         <div className="Exchange-info-label-button">
-          <ExternalLink href="https://docs.romex.finance/trade">
+          <ExternalLink href="https://docs.neonnexus.io/trade">
             <Trans>Trading guide</Trans>
           </ExternalLink>
         </div>

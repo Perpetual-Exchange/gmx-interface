@@ -182,7 +182,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
               <li>
                 <h3>Cross-Margin Collateral</h3>
                 <div>
-                  RoMEX enables cross-margin collateral management, allowing margin balance sharing across positions.
+                  NeonNexus enables cross-margin collateral management, allowing margin balance sharing across positions.
                   Traders can efficiently and conveniently manage their entire portfolio.
                 </div>
                 <img src={featureIcon2} alt="" />
@@ -190,14 +190,14 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
               <li>
                 <h3>More APR% for LP</h3>
                 <div>
-                  RoMEX offers one of the highest APR% for LPs in the market through multiple rewards programs and
+                  NeonNexus offers one of the highest APR% for LPs in the market through multiple rewards programs and
                   incentive campaign.
                 </div>
                 <img src={featureIcon3} alt="" />
               </li>
               <li>
                 <h3>Mutil Rewards Programma</h3>
-                <div>RoMEX has the following incentive programs </div>
+                <div>NeonNexus has the following incentive programs </div>
                 <div className="mt-sm easy-list">
                   <div>Trader's loyalty and credit </div>
                   <div>Holding incentive rewards </div>
@@ -210,7 +210,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
                 <h3>Save on Costs</h3>
                 <div>
                   Enter and exit positions with minimal spread and zero price impact.
-                  <a href="https://docs.romex.finance/fee" target="_blank" className="read-more" rel=" noreferrer">
+                  <a href="https://docs.neonnexus.io/fee" target="_blank" className="read-more" rel=" noreferrer">
                     learn more
                   </a>
                 </div>
@@ -219,8 +219,8 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
               <li>
                 <h3>Insurance Funding</h3>
                 <div>
-                  The Insurance Fund helps to ensure liquidity in RLP and provide a reliable stream of SYS rewards for
-                  all staked REX.
+                  The Insurance Fund helps to ensure liquidity in NLP and provide a reliable stream of SYS rewards for
+                  all staked NOX.
                 </div>
                 <img src={featureIcon6} alt="" />
               </li>
@@ -292,7 +292,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
             <li className="border-[#545957] border-l-0 max-md:border-b-[0.5px] max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Robust price oracle</h3>
               <div>
-                RoMEX uses SuperOracle as a reliable price oracle to achieve accurate and stable pricing so that
+                NeonNexus uses SuperOracle as a reliable price oracle to achieve accurate and stable pricing so that
                 traders can confidently execute trades with reliable pricing information.
               </div>
               <img src={homeTrade3} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
@@ -300,7 +300,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
             <li className="border-l-[0.5px] border-b-0 border-[#545957] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 max-md:border-b-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60 ">
               <h3>Peer to Pool</h3>
               <div>
-                RoMEX leverages liquidity pools and peer-to-peer principles for permissionless automated trading,
+                NeonNexus leverages liquidity pools and peer-to-peer principles for permissionless automated trading,
                 eliminating centralized order books and traditional marketplaces.
               </div>
               <img src={homeTrade4} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
@@ -315,24 +315,24 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
           <ul className="max-md:grid-cols-1 grid grid-cols-2 Home-tip-list">
             <li className="border-b-[0.5px] border-[#545957] border-l-0 max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Providing Liquidity</h3>
-              <div>Providing Liquidity earn esREX rewards and 70% of platform fees</div>
+              <div>Providing Liquidity earn esNOX rewards and 70% of platform fees</div>
               <img src={homeEarn1} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
             </li>
             <li className="border-l-[0.5px] border-b-[0.5px] border-[#545957] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Stake to earn</h3>
               <div>
-                Staked REX receives three types of rewards that includes Escrowed REX, Multiplier Points and SYS Rewards
+                Staked NOX receives three types of rewards that includes Escrowed NOX, Multiplier Points and SYS Rewards
               </div>
               <img src={homeEarn2} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
             </li>
             <li className="border-[#545957] border-l-0 max-md:border-b-[0.5px] max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Trade to earn</h3>
-              <div>Earn REX by trading volume, the bigger the trading volume, the more you earn</div>
+              <div>Earn NOX by trading volume, the bigger the trading volume, the more you earn</div>
               <img src={homeEarn3} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
             </li>
             <li className="border-l-[0.5px] border-b-0 border-[#545957] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 max-md:border-b-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Open Positions</h3>
-              <div>Traders will receive esREX rewards for the period that their leveraged positions are active.</div>
+              <div>Traders will receive esNOX rewards for the period that their leveraged positions are active.</div>
               <img src={homeEarn4} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
             </li>
           </ul>
@@ -346,7 +346,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
             <li className="border-b-[0.5px] border-[#545957] border-l-0 max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Traders' Loyalty Credit</h3>
               <div>
-                In accordance with trading volume, Traders will be awarded REX token(the rate depends on which asset
+                In accordance with trading volume, Traders will be awarded NOX token(the rate depends on which asset
                 users trade on){" "}
                 <a href="https://docs.rollex.xyz/rewrads" className="read-more" target="_blank" rel="noreferrer">
                   Learn more
@@ -357,7 +357,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
             <li className="border-l-[0.5px] border-b-[0.5px] border-[#545957] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Open Positions incentives</h3>
               <div>
-                RoMEX will allocate a portion of esREX tokens to open positions. You will earn esREX by just keeping
+                NeonNexus will allocate a portion of esNOX tokens to open positions. You will earn esNOX by just keeping
                 your positions opened.{" "}
                 <a href="https://docs.rollex.xyz/rewrads" className="read-more" target="_blank" rel="noreferrer">
                   Learn more
@@ -368,7 +368,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
             <li className="border-[#545957] border-l-0 max-md:border-b-[0.5px] max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Liquidity Providers rewards</h3>
               <div>
-                In addition to the protocol fees that liquidity providers will receive, RoMEX will also provide esREX
+                In addition to the protocol fees that liquidity providers will receive, NeonNexus will also provide esNOX
                 rewards as additional incentives to Liquidity Providers.{" "}
                 <a href="https://docs.rollex.xyz/rewrads" className="read-more" target="_blank" rel="noreferrer">
                   Learn more
@@ -379,7 +379,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
             <li className="border-l-[0.5px] border-b-0 border-[#545957] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 max-md:border-b-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Referral Program</h3>
               <div>
-                Reward referrals who help RoMEX attract new users. Referral users can get up to 10.0% discount on
+                Reward referrals who help NeonNexus attract new users. Referral users can get up to 10.0% discount on
                 transaction fees, and referrers can earn up to 15% of referral transaction fee income.
                 <a href="https://docs.rollex.xyz/rewrads" className="read-more" target="_blank" rel="noreferrer">
                   Learn more

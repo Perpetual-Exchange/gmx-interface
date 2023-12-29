@@ -30,19 +30,19 @@ msgid "<0/>Profit price: {0} ${1}. This rule applies for the next {2}, until {3}
 msgstr ""
 
 #: src/App/App.js
-msgid "<0>Install Coinbase Wallet</0> to start using REX."
+msgid "<0>Install Coinbase Wallet</0> to start using NOX."
 msgstr ""
 
 #: src/App/App.js
-msgid "<0>Install Coinbase Wallet</0>, and use REX with its built-in browser."
+msgid "<0>Install Coinbase Wallet</0>, and use NOX with its built-in browser."
 msgstr ""
 
 #: src/App/App.js
-msgid "<0>Install MetaMask</0> to start using REX."
+msgid "<0>Install MetaMask</0> to start using NOX."
 msgstr ""
 
 #: src/App/App.js
-msgid "<0>Install MetaMask</0>, and use REX with its built-in browser."
+msgid "<0>Install MetaMask</0>, and use NOX with its built-in browser."
 msgstr ""
 
 #: src/components/Exchange/OrdersToa.js
@@ -58,7 +58,7 @@ msgid "<0>Return to </0><1>Homepage</1> <2>or </2> <3>Trade</3>"
 msgstr "<0>戻る </0><1>ホームページへ</1> <2>or </2> <3>トレードへ</3>"
 
 #: src/components/Glp/SwapErrorModal.tsx
-msgid "<0>The pool's capacity has been reached for {0}. Please use another token to buy RLP.</0><1>Check the \"Save on Fees\" section for tokens with the lowest fees.</1>"
+msgid "<0>The pool's capacity has been reached for {0}. Please use another token to buy NLP.</0><1>Check the \"Save on Fees\" section for tokens with the lowest fees.</1>"
 msgstr ""
 
 #: src/components/Exchange/OrdersList.js
@@ -66,11 +66,11 @@ msgid "<0>The price that orders can be executed at may differ slightly from the 
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "<0>This will withdraw and unreserve all tokens as well as pause vesting.<1/><2/>esREX tokens that have been converted to REX will remain as REX tokens.<3/><4/>To claim REX tokens without withdrawing, use the \"Claim\" button under the Total Rewards section.<5/><6/></0>"
+msgid "<0>This will withdraw and unreserve all tokens as well as pause vesting.<1/><2/>esNOX tokens that have been converted to NOX will remain as NOX tokens.<3/><4/>To claim NOX tokens without withdrawing, use the \"Claim\" button under the Total Rewards section.<5/><6/></0>"
 msgstr ""
 
 #: src/pages/Dashboard/DashboardV2.js
-msgid "<0>Total value of tokens in RLP pool ({chainName}).</0><1>Other websites may show a higher value as they add positions' collaterals to the RLP pool.</1>"
+msgid "<0>Total value of tokens in NLP pool ({chainName}).</0><1>Other websites may show a higher value as they add positions' collaterals to the NLP pool.</1>"
 msgstr ""
 
 #: src/lib/contracts/callContract.tsx
@@ -195,11 +195,11 @@ msgid "Affiliates"
 msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "After claiming you will be able to vest a maximum of {0} esREX at a ratio of {1} {stakingToken} to 1 esREX."
+msgid "After claiming you will be able to vest a maximum of {0} esNOX at a ratio of {1} {stakingToken} to 1 esNOX."
 msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "After claiming, the esREX tokens will be airdropped to your account on the selected network within 7 days."
+msgid "After claiming, the esNOX tokens will be airdropped to your account on the selected network within 7 days."
 msgstr ""
 
 #: src/components/ModalViews/RedirectModal.js
@@ -255,7 +255,7 @@ msgstr "承認はキャンセルされました"
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
 #: src/pages/Stake/StakeV2.js
-msgid "Approve REX"
+msgid "Approve NOX"
 msgstr ""
 
 #: src/components/Exchange/PositionEditor.js
@@ -271,7 +271,7 @@ msgid "Approve {stakingTokenSymbol}"
 msgstr "{stakingTokenSymbol}を承認する"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Approving REX..."
+msgid "Approving NOX..."
 msgstr ""
 
 #: src/components/Exchange/PositionEditor.js
@@ -291,7 +291,7 @@ msgid "Approving..."
 msgstr "承認中"
 
 #: src/components/Exchange/NoLiquidityErrorModal.tsx
-msgid "As there is not enough liquidity in RLP to swap {0} to {swapTokenSymbol}, you can use the option below to do so:"
+msgid "As there is not enough liquidity in NLP to swap {0} to {swapTokenSymbol}, you can use the option below to do so:"
 msgstr ""
 
 #: src/pages/Dashboard/DashboardV1.js
@@ -299,7 +299,7 @@ msgid "Assets Under Management"
 msgstr "管理下の資産総額"
 
 #: src/pages/Dashboard/DashboardV2.js
-msgid "Assets Under Management: REX staked (All chains) + RLP pool ({chainName})."
+msgid "Assets Under Management: NOX staked (All chains) + NLP pool ({chainName})."
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
@@ -317,12 +317,12 @@ msgstr "利用可能な流動性"
 
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
-msgid "Available amount to deposit into RLP."
+msgid "Available amount to deposit into NLP."
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
-msgid "Available amount to withdraw from RLP. Funds not utilized by current open positions."
+msgid "Available amount to withdraw from NLP. Funds not utilized by current open positions."
 msgstr ""
 
 #: src/components/Exchange/SwapBox.js
@@ -370,7 +370,7 @@ msgid "Buy"
 msgstr "購入"
 
 #: src/pages/BuyGlp/BuyGlp.js
-msgid "Buy / Sell RLP"
+msgid "Buy / Sell NLP"
 msgstr ""
 
 #: src/pages/BuyGMX/BuyGMX.tsx
@@ -381,51 +381,51 @@ msgstr ""
 msgid "Buy ETH directly on Arbitrum or transfer it there."
 msgstr ""
 
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy REX from Traderjoe:"
-msgstr ""
-
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy REX from Uniswap (make sure to select Arbitrum):"
-msgstr ""
-
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy REX from centralized exchanges:"
-msgstr ""
-
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy REX from centralized services"
-msgstr ""
-
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy REX from decentralized exchanges"
-msgstr ""
-
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy REX on {0}"
-msgstr ""
-
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy REX using Decentralized Exchange Aggregators:"
-msgstr ""
-
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy REX using FIAT gateways:"
-msgstr ""
-
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "Buy REX using any token from any network:"
-msgstr ""
-
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
 #: src/pages/Stake/StakeV2.js
-msgid "Buy RLP"
+msgid "Buy NLP"
 msgstr ""
 
 #: src/pages/Buy/Buy.js
-msgid "Buy RLP or REX"
+msgid "Buy NLP or NOX"
+msgstr ""
+
+#: src/pages/BuyGMX/BuyGMX.tsx
+msgid "Buy NOX from Traderjoe:"
+msgstr ""
+
+#: src/pages/BuyGMX/BuyGMX.tsx
+msgid "Buy NOX from Uniswap (make sure to select Arbitrum):"
+msgstr ""
+
+#: src/pages/BuyGMX/BuyGMX.tsx
+msgid "Buy NOX from centralized exchanges:"
+msgstr ""
+
+#: src/pages/BuyGMX/BuyGMX.tsx
+msgid "Buy NOX from centralized services"
+msgstr ""
+
+#: src/pages/BuyGMX/BuyGMX.tsx
+msgid "Buy NOX from decentralized exchanges"
+msgstr ""
+
+#: src/pages/BuyGMX/BuyGMX.tsx
+msgid "Buy NOX on {0}"
+msgstr ""
+
+#: src/pages/BuyGMX/BuyGMX.tsx
+msgid "Buy NOX using Decentralized Exchange Aggregators:"
+msgstr ""
+
+#: src/pages/BuyGMX/BuyGMX.tsx
+msgid "Buy NOX using FIAT gateways:"
+msgstr ""
+
+#: src/pages/BuyGMX/BuyGMX.tsx
+msgid "Buy NOX using any token from any network:"
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
@@ -524,7 +524,7 @@ msgstr "請求"
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "Claim REX Rewards"
+msgid "Claim NOX Rewards"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
@@ -537,12 +537,12 @@ msgid "Claim completed!"
 msgstr "請求完了!"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "Claim esREX"
+msgid "Claim esNOX"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "Claim esREX Rewards"
+msgid "Claim esNOX Rewards"
 msgstr ""
 
 #: src/pages/Stake/StakeV1.js
@@ -884,7 +884,7 @@ msgid "Dashboard"
 msgstr "ダッシュボード"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Dashboard for REX referral stats"
+msgid "Dashboard for NOX referral stats"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
@@ -921,7 +921,7 @@ msgid "Decentralized Options Strategies"
 msgstr "分散型オプションストラテジー"
 
 #: src/lib/legacy.ts
-msgid "Decentralized Perpetual Exchange | REX"
+msgid "Decentralized Perpetual Exchange | NOX"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
@@ -1220,12 +1220,12 @@ msgstr "エントリー価格"
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "Escrowed REX"
+msgid "Escrowed NOX"
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
 #: src/components/Stake/GMXAprTooltip.tsx
-msgid "Escrowed REX APR"
+msgid "Escrowed NOX APR"
 msgstr ""
 
 #: src/pages/OrdersOverview/OrdersOverview.js
@@ -1280,15 +1280,15 @@ msgid "Fees are higher than Collateral"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Fees generated by REX"
+msgid "Fees generated by NOX"
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
-msgid "Fees may vary depending on which asset you sell RLP for. <0/>Enter the amount of RLP you want to redeem in the order form, then check here to compare fees."
+msgid "Fees may vary depending on which asset you sell NLP for. <0/>Enter the amount of NLP you want to redeem in the order form, then check here to compare fees."
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
-msgid "Fees may vary depending on which asset you use to buy RLP. <0/>Enter the amount of RLP you want to purchase in the order form, then check here to compare fees."
+msgid "Fees may vary depending on which asset you use to buy NLP. <0/>Enter the amount of NLP you want to purchase in the order form, then check here to compare fees."
 msgstr ""
 
 #: src/pages/Dashboard/DashboardV2.js
@@ -1343,7 +1343,7 @@ msgid "Generating shareable image..."
 msgstr "シェア可能な画像を作成中..."
 
 #: src/pages/Referrals/Referrals.js
-msgid "Get fee discounts and earn rebates through the REX referral program.<0/>For more information, please read the <1>referral program details</1>."
+msgid "Get fee discounts and earn rebates through the NOX referral program.<0/>For more information, please read the <1>referral program details</1>."
 msgstr ""
 
 #: src/components/Header/HomeHeaderLinks.tsx
@@ -1450,7 +1450,7 @@ msgid "Insufficient Liquidity"
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
-msgid "Insufficient RLP balance"
+msgid "Insufficient NLP balance"
 msgstr ""
 
 #: src/components/Exchange/SwapBox.js
@@ -1519,7 +1519,7 @@ msgid "Job Openings"
 msgstr ""
 
 #: src/pages/Jobs/Jobs.js
-msgid "Job openings at REX."
+msgid "Job openings at NOX."
 msgstr ""
 
 #: src/pages/Jobs/Jobs.js
@@ -1548,7 +1548,7 @@ msgid "Launch Dapp"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Leaderboard for REX traders"
+msgid "Leaderboard for NOX traders"
 msgstr ""
 
 #: src/components/Exchange/PositionEditor.js
@@ -1818,11 +1818,11 @@ msgid "Max leverage: {0}x"
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
-msgid "Max pool capacity reached for {0}. Please mint RLP using another token"
+msgid "Max pool capacity reached for {0}. Please mint NLP using another token"
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
-msgid "Max pool capacity reached for {0}<0/><1/>Please mint RLP using another token"
+msgid "Max pool capacity reached for {0}<0/><1/>Please mint NLP using another token"
 msgstr ""
 
 #: src/App/App.js
@@ -1969,6 +1969,122 @@ msgstr "NFT ID"
 msgid "NFT Wallet"
 msgstr "NFTウォレット"
 
+#: src/pages/Dashboard/DashboardV2.js
+#: src/pages/Dashboard/DashboardV2.js
+msgid "NLP Index Composition"
+msgstr ""
+
+#: src/pages/Dashboard/DashboardV2.js
+msgid "NLP Pool"
+msgstr ""
+
+#: src/pages/Stake/StakeV2.js
+#: src/pages/Stake/StakeV2.js
+msgid "NLP Vault"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "NLP and NOX autocompounding vaults"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "NLP autocompounding vaults"
+msgstr ""
+
+#: src/components/Glp/GlpSwap.js
+msgid "NLP buy disabled, pending {0} upgrade"
+msgstr ""
+
+#: src/components/Glp/GlpSwap.js
+msgid "NLP sell disabled, pending {0} upgrade"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "NOX Announcements and Updates"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "NOX Blueberry NFTs"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "NOX Governance Page"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "NOX Pages"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "NOX Perpetuals Data"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "NOX Proposals Voting page"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "NOX Stats Page"
+msgstr ""
+
+#: src/pages/Stake/StakeV2.js
+#: src/pages/Stake/StakeV2.js
+msgid "NOX Vault"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "NOX Weekly Updates"
+msgstr ""
+
+#: src/pages/BuyGMX/BuyGMX.tsx
+msgid "NOX bonds can be bought on Bond Protocol with a discount and a small vesting period:"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "NOX community discussion"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "NOX dashboards and analytics."
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "NOX ecosystem pages."
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "NOX explorer for stats and traders"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "NOX fundamentals"
+msgstr ""
+
+#: src/pages/Jobs/Jobs.js
+msgid "NOX is not actively looking for new hires at the moment. However, if you think you can contribute to the project, please email <0>jobs@gmx.io</0>."
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "NOX staking calculator"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "NOX staking calculator and guide"
+msgstr ""
+
+#: src/pages/Ecosystem/Ecosystem.js
+msgid "NOX staking rewards updates and insights"
+msgstr ""
+
+#: src/pages/Stake/StakeV2.js
+#: src/pages/Stake/StakeV2.js
+msgid "NOX transfers not yet enabled"
+msgstr ""
+
+#: src/components/Common/SEO.js
+msgid "NOX | Decentralized Perpetual Exchange"
+msgstr ""
+
 #: src/components/Exchange/PositionSeller.js
 msgid "Neither Collateral nor realized PnL is enough to cover pending Fees. Please close a larger position amount."
 msgstr ""
@@ -2000,7 +2116,7 @@ msgid "No PnLs found"
 msgstr "損益が見つかりません"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "No esREX to claim"
+msgid "No esNOX to claim"
 msgstr ""
 
 #: src/components/Exchange/OrdersList.js
@@ -2018,7 +2134,7 @@ msgid "No open positions"
 msgstr "オープンのポジションはありません"
 
 #: src/pages/Jobs/Jobs.js
-msgid "No open positions at REX currently"
+msgid "No open positions at NOX currently"
 msgstr ""
 
 #: src/pages/OrdersOverview/OrdersOverview.js
@@ -2213,7 +2329,7 @@ msgid "Pay Amount"
 msgstr "支払い額"
 
 #: src/pages/Dashboard/DashboardV2.js
-msgid "Platform and RLP index tokens."
+msgid "Platform and NLP index tokens."
 msgstr ""
 
 #: src/components/Referrals/JoinReferralCode.js
@@ -2221,7 +2337,7 @@ msgid "Please input a referral code to benefit from fee discounts."
 msgstr "紹介コードを入力すると手数料割引を受けられます。"
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Please only use this for full account transfers.<0/>This will transfer all your REX, esREX, RLP and Multiplier Points to your new account.<1/>Transfers are only supported if the receiving account has not staked REX or RLP tokens before.<2/>Transfers are one-way, you will not be able to transfer staked tokens back to the sending account."
+msgid "Please only use this for full account transfers.<0/>This will transfer all your NOX, esNOX, NLP and Multiplier Points to your new account.<1/>Transfers are only supported if the receiving account has not staked NOX or NLP tokens before.<2/>Transfers are one-way, you will not be able to transfer staked tokens back to the sending account."
 msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
@@ -2352,11 +2468,11 @@ msgid "Profit price: {0} ${1}. This rule applies for the next {2}, until {3}."
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Projects developed by the REX community. <0/>Please exercise caution when interacting with any app, apps are fully maintained by community developers."
+msgid "Projects developed by the NOX community. <0/>Please exercise caution when interacting with any app, apps are fully maintained by community developers."
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Projects integrated with REX."
+msgid "Projects integrated with NOX."
 msgstr ""
 
 #: src/pages/Dashboard/AssetDropdown.tsx
@@ -2377,123 +2493,7 @@ msgid "Protocol risk explorer and stats"
 msgstr ""
 
 #: src/pages/BuyGlp/BuyGlp.js
-msgid "Purchase <0>RLP tokens</0> to earn {nativeTokenSymbol} fees from swaps and leverages trading."
-msgstr ""
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "REX Announcements and Updates"
-msgstr ""
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "REX Blueberry NFTs"
-msgstr ""
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "REX Governance Page"
-msgstr ""
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "REX Pages"
-msgstr ""
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "REX Perpetuals Data"
-msgstr ""
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "REX Proposals Voting page"
-msgstr ""
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "REX Stats Page"
-msgstr ""
-
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
-msgid "REX Vault"
-msgstr ""
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "REX Weekly Updates"
-msgstr ""
-
-#: src/pages/BuyGMX/BuyGMX.tsx
-msgid "REX bonds can be bought on Bond Protocol with a discount and a small vesting period:"
-msgstr ""
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "REX community discussion"
-msgstr ""
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "REX dashboards and analytics."
-msgstr ""
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "REX ecosystem pages."
-msgstr ""
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "REX explorer for stats and traders"
-msgstr ""
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "REX fundamentals"
-msgstr ""
-
-#: src/pages/Jobs/Jobs.js
-msgid "REX is not actively looking for new hires at the moment. However, if you think you can contribute to the project, please email <0>jobs@gmx.io</0>."
-msgstr ""
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "REX staking calculator"
-msgstr ""
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "REX staking calculator and guide"
-msgstr ""
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "REX staking rewards updates and insights"
-msgstr ""
-
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
-msgid "REX transfers not yet enabled"
-msgstr ""
-
-#: src/components/Common/SEO.js
-msgid "REX | Decentralized Perpetual Exchange"
-msgstr ""
-
-#: src/pages/Dashboard/DashboardV2.js
-#: src/pages/Dashboard/DashboardV2.js
-msgid "RLP Index Composition"
-msgstr ""
-
-#: src/pages/Dashboard/DashboardV2.js
-msgid "RLP Pool"
-msgstr ""
-
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
-msgid "RLP Vault"
-msgstr ""
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "RLP and REX autocompounding vaults"
-msgstr ""
-
-#: src/pages/Ecosystem/Ecosystem.js
-msgid "RLP autocompounding vaults"
-msgstr ""
-
-#: src/components/Glp/GlpSwap.js
-msgid "RLP buy disabled, pending {0} upgrade"
-msgstr ""
-
-#: src/components/Glp/GlpSwap.js
-msgid "RLP sell disabled, pending {0} upgrade"
+msgid "Purchase <0>NLP tokens</0> to earn {nativeTokenSymbol} fees from swaps and leverages trading."
 msgstr ""
 
 #: src/components/Exchange/PositionSeller.js
@@ -2552,11 +2552,11 @@ msgid "Receiver Address"
 msgstr "受け取り側アドレス"
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Receiver has not staked REX tokens before"
+msgid "Receiver has not staked NLP tokens before"
 msgstr ""
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Receiver has not staked RLP tokens before"
+msgid "Receiver has not staked NOX tokens before"
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
@@ -2656,7 +2656,7 @@ msgid "Reserved for Vesting"
 msgstr "べスティング用にリザーブ済"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Returns calculator for REX and RLP"
+msgid "Returns calculator for NOX and NLP"
 msgstr ""
 
 #: src/pages/Stake/StakeV1.js
@@ -2726,7 +2726,7 @@ msgstr "自分への移転はサポートされていません"
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
 #: src/pages/Stake/StakeV2.js
-msgid "Sell RLP"
+msgid "Sell NLP"
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
@@ -2747,11 +2747,11 @@ msgid "Selling..."
 msgstr "売却中..."
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Sender has withdrawn all tokens from REX Vesting Vault"
+msgid "Sender has withdrawn all tokens from NLP Vesting Vault"
 msgstr ""
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Sender has withdrawn all tokens from RLP Vesting Vault"
+msgid "Sender has withdrawn all tokens from NOX Vesting Vault"
 msgstr ""
 
 #: src/App/App.js
@@ -2852,19 +2852,19 @@ msgid "Stake Multiplier Points"
 msgstr "マルチプライヤーポイントをステークする"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Stake REX"
+msgid "Stake NOX"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "Stake REX Rewards"
+msgid "Stake NOX Rewards"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "Stake esREX"
+msgid "Stake esNOX"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "Stake esREX Rewards"
+msgid "Stake esNOX Rewards"
 msgstr ""
 
 #: src/pages/Stake/StakeV1.js
@@ -3062,15 +3062,15 @@ msgid "Telegram Groups"
 msgstr "Telegramグループ"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Telegram bot for Open Interest on REX"
+msgid "Telegram bot for NOX Swaps monitoring"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Telegram bot for REX Swaps monitoring"
+msgid "Telegram bot for NOX position updates"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Telegram bot for REX position updates"
+msgid "Telegram bot for Open Interest on NOX"
 msgstr ""
 
 #: src/components/Footer/constants.ts
@@ -3080,7 +3080,7 @@ msgid "Terms and Conditions"
 msgstr "規約"
 
 #: src/pages/Stake/StakeV1.js
-msgid "The <0>REX migration</0> is in progress, please migrate your GMT, xGMT, GMT-USDG and xGMT-USDG tokens.<1/>USDG tokens will continue to function as before and do not need to be migrated."
+msgid "The <0>NOX migration</0> is in progress, please migrate your GMT, xGMT, GMT-USDG and xGMT-USDG tokens.<1/>USDG tokens will continue to function as before and do not need to be migrated."
 msgstr ""
 
 #: src/components/Stake/GMXAprTooltip.tsx
@@ -3092,7 +3092,7 @@ msgid "The Gambit protocol is in beta, please read the <0>staking details</0>be
 msgstr "Gambitプロトコルはベータ版であり、参加する前に<0>ステーキングの詳細</0>を読んでください。"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "The address of the esREX (IOU) token is {esGmxIouAddress}."
+msgid "The address of the esNOX (IOU) token is {esGmxIouAddress}."
 msgstr ""
 
 #: src/components/Exchange/SwapBox.js
@@ -3100,11 +3100,11 @@ msgid "The borrow fee is calculated as (assets borrowed) / (total assets in pool
 msgstr "借入手数料は1時間につき、(借入アセット額 ÷ プール内アセット総額) × 0.01% の式で計算されます。"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "The esREX (IOU) token is transferrable. You can add the token to your wallet and send it to another address to claim if you'd like."
+msgid "The esNOX (IOU) token is transferrable. You can add the token to your wallet and send it to another address to claim if you'd like."
 msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "The esREX tokens can be staked or vested at any time."
+msgid "The esNOX tokens can be staked or vested at any time."
 msgstr ""
 
 #: src/lib/contracts/callContract.tsx
@@ -3136,7 +3136,7 @@ msgid "The spread is > 1%, please ensure the trade details are acceptable before
 msgstr ""
 
 #: src/components/ModalViews/RedirectModal.js
-msgid "The website is a community deployed and maintained instance of the open source <0>REX front end</0>, hosted and served on the distributed, peer-to-peer <1>IPFS network</1>."
+msgid "The website is a community deployed and maintained instance of the open source <0>NOX front end</0>, hosted and served on the distributed, peer-to-peer <1>IPFS network</1>."
 msgstr ""
 
 #: src/components/Exchange/SwapBox.js
@@ -3193,7 +3193,7 @@ msgid "To complete the transfer, you must switch your connected account to {rece
 msgstr "移転を完了するには、{receiver}のアカウントに接続しなおす必要があります。"
 
 #: src/pages/BuyGMX/BuyGMX.tsx
-msgid "To purchase REX on the {0} blockchain, please <0>change your network</0>."
+msgid "To purchase NOX on the {0} blockchain, please <0>change your network</0>."
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
@@ -3305,7 +3305,7 @@ msgid "Trade"
 msgstr "トレード"
 
 #: src/components/Exchange/ExchangeBanner.js
-msgid "Trade on REX and win <0>$250.000</0> in prizes! Live until November 30th, <1>click here</1> to learn more."
+msgid "Trade on NOX and win <0>$250.000</0> in prizes! Live until November 30th, <1>click here</1> to learn more."
 msgstr ""
 
 #: src/components/Common/SEO.js
@@ -3482,7 +3482,7 @@ msgid "Unstake"
 msgstr "アンステーク"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Unstake REX"
+msgid "Unstake NOX"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
@@ -3490,7 +3490,7 @@ msgid "Unstake completed!"
 msgstr "アンステーク完了!"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Unstake esREX"
+msgid "Unstake esNOX"
 msgstr ""
 
 #: src/pages/Stake/StakeV1.js
@@ -3574,27 +3574,27 @@ msgid "Vest"
 msgstr "べスティング"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "Vest with REX on Arbitrum"
+msgid "Vest with NLP on Arbitrum"
 msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "Vest with REX on Avalanche"
+msgid "Vest with NLP on Avalanche"
 msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "Vest with RLP on Arbitrum"
+msgid "Vest with NOX on Arbitrum"
 msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "Vest with RLP on Avalanche"
+msgid "Vest with NOX on Avalanche"
 msgstr ""
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Vested REX not withdrawn"
+msgid "Vested NLP not withdrawn"
 msgstr ""
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-msgid "Vested RLP not withdrawn"
+msgid "Vested NOX not withdrawn"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
@@ -3719,11 +3719,11 @@ msgid "Withdraw failed."
 msgstr "出金できませんでした"
 
 #: src/pages/Stake/StakeV2.js
-msgid "Withdraw from REX Vault"
+msgid "Withdraw from NLP Vault"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "Withdraw from RLP Vault"
+msgid "Withdraw from NOX Vault"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
@@ -3767,7 +3767,7 @@ msgid "Yield Vaults"
 msgstr "イールドボールト"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Yield simulator for REX"
+msgid "Yield simulator for NOX"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
@@ -3775,7 +3775,7 @@ msgid "You are earning {0}% more {nativeTokenSymbol} rewards using {1} Staked Mu
 msgstr "あなたがステークしている{1}マルチプレイヤーポイントにより、報酬の{nativeTokenSymbol}が{0}%上乗せされています。"
 
 #: src/components/ModalViews/RedirectModal.js
-msgid "You are leaving romex.finance and will be redirected to a third party, independent website."
+msgid "You are leaving neonnexus.io and will be redirected to a third party, independent website."
 msgstr ""
 
 #: src/pages/BuyGMX/BuyGMX.tsx
@@ -3799,7 +3799,7 @@ msgid "You can check your claim history <0>here</0>."
 msgstr "<0>こちら</0>で請求履歴を確認できます。"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "You can currently vest a maximum of {0} esREX tokens at a ratio of {1} {stakingToken} to 1 esREX."
+msgid "You can currently vest a maximum of {0} esNOX tokens at a ratio of {1} {stakingToken} to 1 esNOX."
 msgstr ""
 
 #: src/components/Exchange/ConfirmationBox.js
@@ -3840,11 +3840,11 @@ msgid "You have not deposited any tokens for vesting."
 msgstr "べスティング用のトークンが入金されていません。"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "You have {0} esREX (IOU) tokens."
+msgid "You have {0} esNOX (IOU) tokens."
 msgstr ""
 
 #: src/pages/Stake/StakeV2.js
-msgid "You need a total of at least {0} {stakeTokenLabel} to vest {1} esREX."
+msgid "You need a total of at least {0} {stakeTokenLabel} to vest {1} esNOX."
 msgstr ""
 
 #: src/components/Exchange/NoLiquidityErrorModal.tsx
@@ -3868,7 +3868,7 @@ msgid "You will receive at least {0} {1} if this order is executed. The executio
 msgstr "この注文が執行された場合、少なくとも{0} {1}を受け取ることになります。正確な執行価格は注文執行時のスワップ手数料によって異なります。"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "Your esREX (IOU) balance will decrease by your claim amount after claiming, this is expected behaviour."
+msgid "Your esNOX (IOU) balance will decrease by your claim amount after claiming, this is expected behaviour."
 msgstr ""
 
 #: src/components/Exchange/ConfirmationBox.js
@@ -3896,7 +3896,7 @@ msgid "collateral"
 msgstr "担保"
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "esREX OTC Market"
+msgid "esNOX OTC Market"
 msgstr ""
 
 #: src/pages/PositionsOverview/PositionsOverview.js
@@ -3943,6 +3943,27 @@ msgstr "{0}が承認されました!"
 msgid "{0} Capacity Reached"
 msgstr "{0}のキャパシティに到達しました"
 
+#: src/components/Glp/GlpSwap.js
+msgid "{0} NLP (${1})"
+msgstr ""
+
+#: src/components/Glp/GlpSwap.js
+msgid "{0} NLP bought with {1} {2}!"
+msgstr ""
+
+#: src/components/Glp/GlpSwap.js
+msgid "{0} NLP have been reserved for vesting."
+msgstr ""
+
+#: src/components/Glp/GlpSwap.js
+msgid "{0} NLP sold for {1} {2}!"
+msgstr ""
+
+#: src/pages/Stake/StakeV2.js
+#: src/pages/Stake/StakeV2.js
+msgid "{0} NOX tokens can be claimed, use the options under the Total Rewards section to claim them."
+msgstr ""
+
 #: src/components/Exchange/NoLiquidityErrorModal.tsx
 msgid "{0} Pool Capacity Reached"
 msgstr "{0}のプールキャパシティに到達しました"
@@ -3954,27 +3975,6 @@ msgstr "{0}のプールキャパシティに到達しました"
 msgid "{0} Price"
 msgstr "{0} 価格"
 
-#: src/pages/Stake/StakeV2.js
-#: src/pages/Stake/StakeV2.js
-msgid "{0} REX tokens can be claimed, use the options under the Total Rewards section to claim them."
-msgstr ""
-
-#: src/components/Glp/GlpSwap.js
-msgid "{0} RLP (${1})"
-msgstr ""
-
-#: src/components/Glp/GlpSwap.js
-msgid "{0} RLP bought with {1} {2}!"
-msgstr ""
-
-#: src/components/Glp/GlpSwap.js
-msgid "{0} RLP have been reserved for vesting."
-msgstr ""
-
-#: src/components/Glp/GlpSwap.js
-msgid "{0} RLP sold for {1} {2}!"
-msgstr ""
-
 #: src/components/Exchange/NoLiquidityErrorModal.tsx
 msgid "{0} Required"
 msgstr "{0}が必要です"
@@ -3984,7 +3984,7 @@ msgid "{0} is above its target weight.<0/><1/>Get lower fees to <2>swap</2> toke
 msgstr "{0}はターゲットウェイトを超過しています。<0/><1/>トークンを{1}に<2>スワップ</2>すると手数料が低くなります。"
 
 #: src/pages/Dashboard/DashboardV2.js
-msgid "{0} is below its target weight.<0/><1/>Get lower fees to <2>buy RLP</2> with {1}, and to <3>swap</3> {2} for other tokens."
+msgid "{0} is below its target weight.<0/><1/>Get lower fees to <2>buy NLP</2> with {1}, and to <3>swap</3> {2} for other tokens."
 msgstr ""
 
 #: src/components/Exchange/SwapBox.js
@@ -4006,7 +4006,7 @@ msgstr "{0}が注文フォームで選択されました"
 
 #: src/pages/Stake/StakeV2.js
 #: src/pages/Stake/StakeV2.js
-msgid "{0} tokens have been converted to REX from the {1} esREX deposited for vesting."
+msgid "{0} tokens have been converted to NOX from the {1} esNOX deposited for vesting."
 msgstr ""
 
 #: src/components/Exchange/SwapBox.js

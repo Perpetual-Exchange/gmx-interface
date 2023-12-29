@@ -47,13 +47,13 @@ export default function BuyGMX() {
         <div className="section-title-block">
           <div className="section-title-content">
             <div className="Page-title">
-              <Trans>Buy REX on {getChainName(chainId)}</Trans>
+              <Trans>Buy NOX on {getChainName(chainId)}</Trans>
             </div>
             <div className="Page-description">
               <Trans>Choose to buy from decentralized or centralized exchanges.</Trans>
               <br />
               <Trans>
-                To purchase REX on the {isArbitrum ? "Avalanche" : "Arbitrum"} blockchain, please{" "}
+                To purchase NOX on the {isArbitrum ? "Avalanche" : "Arbitrum"} blockchain, please{" "}
                 <span onClick={() => onNetworkSelect(isArbitrum ? AVALANCHE : ARBITRUM)}>change your network</span>.
               </Trans>
             </div>
@@ -165,12 +165,12 @@ export default function BuyGMX() {
 function DecentralisedExchanges({ chainId, externalLinks }) {
   const isArbitrum = chainId === ARBITRUM;
   return (
-    <Card title={t`Buy REX from decentralized exchanges`}>
+    <Card title={t`Buy NOX from decentralized exchanges`}>
       <div className="App-card-content">
         {isArbitrum ? (
           <div className="exchange-info-group">
             <div className="BuyGMXGLP-description">
-              <Trans>Buy REX from Uniswap (make sure to select Arbitrum):</Trans>
+              <Trans>Buy NOX from Uniswap (make sure to select Arbitrum):</Trans>
             </div>
             <div className="col-1 buttons-group">
               <Button
@@ -187,7 +187,7 @@ function DecentralisedExchanges({ chainId, externalLinks }) {
         ) : (
           <div className="exchange-info-group">
             <div className="BuyGMXGLP-description">
-              <Trans>Buy REX from Traderjoe:</Trans>
+              <Trans>Buy NOX from Traderjoe:</Trans>
             </div>
             <div className="col-1 buttons-group">
               <Button
@@ -204,7 +204,7 @@ function DecentralisedExchanges({ chainId, externalLinks }) {
         )}
         <div className="exchange-info-group">
           <div className="BuyGMXGLP-description">
-            <Trans>Buy REX using Decentralized Exchange Aggregators:</Trans>
+            <Trans>Buy NOX using Decentralized Exchange Aggregators:</Trans>
           </div>
           <div className="buttons-group">
             {DECENTRALISED_AGGRIGATORS.filter((e) => chainId in e.links).map((exchange) => {
@@ -227,7 +227,7 @@ function DecentralisedExchanges({ chainId, externalLinks }) {
         </div>
         <div className="exchange-info-group">
           <div className="BuyGMXGLP-description">
-            <Trans>Buy REX using any token from any network:</Trans>
+            <Trans>Buy NOX using any token from any network:</Trans>
           </div>
           <div className="buttons-group">
             {GMX_FROM_ANY_NETWORKS.filter((e) => chainId in e.links).map((exchange) => {
@@ -251,13 +251,13 @@ function DecentralisedExchanges({ chainId, externalLinks }) {
         {isArbitrum && (
           <div className="exchange-info-group">
             <div className="BuyGMXGLP-description">
-              <Trans>REX bonds can be bought on Bond Protocol with a discount and a small vesting period:</Trans>
+              <Trans>NOX bonds can be bought on Bond Protocol with a discount and a small vesting period:</Trans>
             </div>
             <div className="col-1 buttons-group">
               <Button
                 variant="secondary"
                 textAlign="left"
-                to={"https://app.bondprotocol.finance/#/issuers/REX"}
+                to={"https://app.bondprotocol.finance/#/issuers/NOX"}
                 imgInfo={{ src: bondProtocolIcon, alt: "Bond Protocol" }}
                 newTab
               >
@@ -273,11 +273,11 @@ function DecentralisedExchanges({ chainId, externalLinks }) {
 
 function CentralisedExchanges({ chainId }) {
   return (
-    <Card title={t`Buy REX from centralized services`}>
+    <Card title={t`Buy NOX from centralized services`}>
       <div className="App-card-content">
         <div className="exchange-info-group">
           <div className="BuyGMXGLP-description">
-            <Trans>Buy REX from centralized exchanges:</Trans>
+            <Trans>Buy NOX from centralized exchanges:</Trans>
           </div>
           <div className="buttons-group">
             {CENTRALISED_EXCHANGES.filter((e) => chainId in e.links).map((exchange) => {
@@ -301,7 +301,7 @@ function CentralisedExchanges({ chainId }) {
 
         <div className="exchange-info-group">
           <div className="BuyGMXGLP-description">
-            <Trans>Buy REX using FIAT gateways:</Trans>
+            <Trans>Buy NOX using FIAT gateways:</Trans>
           </div>
           <div className="col-2 buttons-group">
             {FIAT_GATEWAYS.filter((e) => chainId in e.links).map((exchange) => {

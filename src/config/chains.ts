@@ -146,7 +146,7 @@ const constants = {
   },
 };
 
-const ALCHEMY_WHITELISTED_DOMAINS = ["d.romex.finance", "dapp.romex.finance"];
+const ALCHEMY_WHITELISTED_DOMAINS = ["d.neonnexus.io", "dapp.neonnexus.io"];
 
 export const RPC_PROVIDERS = {
   [ETH_MAINNET]: ["https://rpc.ankr.com/eth"],

@@ -37,7 +37,7 @@ export function HomeHeaderLinks({ small, clickCloseIcon, redirectPopupTimestamp,
     },
     {
       label: t`Docs`,
-      link: "https://docs.romex.finance/",
+      link: "https://docs.neonnexus.io/",
     },
   ];
   return (
@@ -45,7 +45,7 @@ export function HomeHeaderLinks({ small, clickCloseIcon, redirectPopupTimestamp,
       {small && (
         <div className="App-header-links-header">
           <Link className="App-header-link-main" to="/">
-            <img src={logoImg} alt="REX Logo" />
+            <img src={logoImg} alt="NOX Logo" />
           </Link>
           <div
             className="App-header-menu-icon-block mobile-cross-menu"

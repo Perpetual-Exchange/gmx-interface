@@ -60,8 +60,8 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
     <>
       <li>
         <div className="flex font-semibold mb-10 gap-4 items-center  opacity-40">
-          <img src={gmxIcon} width="40" alt="REX Icons" />
-          <h3 className="flex-1 font-[22px]">REX</h3>
+          <img src={gmxIcon} width="40" alt="NOX Icons" />
+          <h3 className="flex-1 font-[22px]">NOX</h3>
           APR:
           <span className="text-[#00FF9F]">
             {/* <APRLabel chainId={ROLLEX_TESTNET} label="gmxAprTotal" key="ROLLEX_TESTNET" /> */}
@@ -69,9 +69,9 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           </span>
         </div>
         <div className="opacity-40">
-          $REX is the utility token of REX. In addition to granting participation in the governance process of the
+          $NOX is the utility token of NOX. In addition to granting participation in the governance process of the
           protocol, it also accrues value from the platform revenue.
-          <a href="https://docs.romex.finance/liquidity-provider" target="_blank" rel="noreferrer" className=" read-more">
+          <a href="https://docs.neonnexus.io/liquidity-provider" target="_blank" rel="noreferrer" className=" read-more">
             Learn more
           </a>
         </div>
@@ -80,7 +80,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
         
         <div className="Home-token-card-option-action">
           {/* <BuyLink to="/buy_rex" className="default-btn custom-buy-btn pointer-events-none" network={ROLLEX_TESTNET}>
-            Buy REX
+            Buy NOX
           </BuyLink> */}
           
 
@@ -92,8 +92,8 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
       </li>
       <li>
         <div className="flex font-semibold  mb-10 gap-4 items-center">
-          <img src={glpIcon} width="40" alt="RLP Icon" />
-          <h3 className="flex-1 font-[22px]">RLP</h3>
+          <img src={glpIcon} width="40" alt="NLP Icon" />
+          <h3 className="flex-1 font-[22px]">NLP</h3>
           APR:
           <span className="text-[#00FF9F]">
             <APRLabel chainId={ROLLEX_TESTNET} label="glpAprTotal" key="ROLLEX_TESTNET" />
@@ -101,16 +101,16 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
         </div>
 
         <div>
-          $RLP is a liquidity provider token. Accrues 70% of protocol revenue in the form of ETH and a portion of esREX
+          $NLP is a liquidity provider token. Accrues 70% of protocol revenue in the form of ETH and a portion of esNOX
           token issuance emission.
         </div>
-        <a href="https://docs.romex.finance/liquidity-provider" target="_blank" rel="noreferrer" className=" read-more">
+        <a href="https://docs.neonnexus.io/liquidity-provider" target="_blank" rel="noreferrer" className=" read-more">
           Learn more
         </a>
         <div class="App-card-divider"></div>
         <div className="Home-token-card-option-action">
           <BuyLink to="/buy_rlp" className="default-btn custom-buy-btn flex items-center space-x-2" network={ROLLEX_TESTNET}>
-            <span>Buy RLP</span> <img src={btn2Raw} alt="" srcset="" className="w-3" />
+            <span>Buy NLP</span> <img src={btn2Raw} alt="" srcset="" className="w-3" />
           </BuyLink>
         </div>
       </li>

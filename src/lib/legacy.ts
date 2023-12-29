@@ -1219,7 +1219,7 @@ export function getProcessedData(
 }
 
 export function getPageTitle(data) {
-  const title = t`Decentralized Perpetual Exchange | REX`;
+  const title = t`Decentralized Perpetual Exchange | NOX`;
   return `${data} | ${title}`;
 }
 
@@ -1243,7 +1243,7 @@ export function getAppBaseUrl() {
     return "http://localhost:3011/#";
   }
 
-  return "https://dapp.romex.finance/#";
+  return "https://dapp.neonnexus.io/#";
 }
 
 export function getRootShareApiUrl() {

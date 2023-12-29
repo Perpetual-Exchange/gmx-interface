@@ -494,16 +494,16 @@ export const ADDITIONAL_TOKENS: { [chainId: number]: Token[] } = {
 export const PLATFORM_TOKENS: { [chainId: number]: { [symbol: string]: Token } } = {
   [AVALANCHE_FUJI]: {
     // arbitrum
-    REX: {
-      name: "REX",
-      symbol: "REX",
+    NOX: {
+      name: "NOX",
+      symbol: "NOX",
       decimals: 18,
       address: getContract(AVALANCHE_FUJI, "GMX"),
       imageUrl: "https://dapp.romex.finance/static/ic_gmx_40.svg",
     },
-    RLP: {
-      name: "RLP",
-      symbol: "RLP",
+    NLP: {
+      name: "NLP",
+      symbol: "NLP",
       decimals: 18,
       address: getContract(AVALANCHE_FUJI, "StakedGlpTracker"), // address of fsGLP token because user only holds fsGLP
       imageUrl: "https://dapp.romex.finance/static/ic_glp_40.svg",
@@ -511,16 +511,16 @@ export const PLATFORM_TOKENS: { [chainId: number]: { [symbol: string]: Token } }
   },
   [AVALANCHE]: {
     // avalanche
-    REX: {
-      name: "REX",
-      symbol: "REX",
+    NOX: {
+      name: "NOX",
+      symbol: "NOX",
       decimals: 18,
       address: getContract(AVALANCHE, "GMX"),
       imageUrl: "https://dapp.romex.finance/static/ic_gmx_40.svg",
     },
-    RLP: {
-      name: "RLP",
-      symbol: "RLP",
+    NLP: {
+      name: "NLP",
+      symbol: "NLP",
       decimals: 18,
       address: getContract(AVALANCHE, "StakedGlpTracker"), // address of fsGLP token because user only holds fsGLP
       imageUrl: "https://dapp.romex.finance/static/ic_glp_40.svg",
@@ -528,16 +528,16 @@ export const PLATFORM_TOKENS: { [chainId: number]: { [symbol: string]: Token } }
   },
   [ROLLEX_TESTNET]: {
     // arbitrum
-    REX: {
-      name: "REX",
-      symbol: "REX",
+    NOX: {
+      name: "NOX",
+      symbol: "NOX",
       decimals: 18,
       address: getContract(ROLLEX_TESTNET, "GMX"),
       imageUrl: "https://dapp.romex.finance/static/ic_gmx_40.svg",
     },
-    RLP: {
-      name: "RLP",
-      symbol: "RLP",
+    NLP: {
+      name: "NLP",
+      symbol: "NLP",
       decimals: 18,
       address: getContract(ROLLEX_TESTNET, "StakedGlpTracker"), // address of fsGLP token because user only holds fsGLP
       imageUrl: "https://dapp.romex.finance/static/ic_glp_40.svg",
