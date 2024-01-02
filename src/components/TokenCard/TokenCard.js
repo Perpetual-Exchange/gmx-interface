@@ -109,7 +109,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
         </a>
         <div class="App-card-divider"></div>
         <div className="Home-token-card-option-action">
-          <BuyLink to="/buy_rlp" className="default-btn custom-buy-btn flex items-center space-x-2" network={ROLLEX_TESTNET}>
+          <BuyLink to="/buy_nlp" className="default-btn custom-buy-btn flex items-center space-x-2" network={ROLLEX_TESTNET}>
             <span>Buy NLP</span> <img src={btn2Raw} alt="" srcset="" className="w-3" />
           </BuyLink>
         </div>

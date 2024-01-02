@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import './Banners.css';
+// import 'swiper/css/autoplay';
 
 export default function Banners(){
     return <div className='Banners'>

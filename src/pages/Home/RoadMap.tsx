@@ -2,9 +2,9 @@ import "./RoadMap.scss";
 
 export default function RoadMap() {
   const LIST_INFO = [{
-    title:'2023 - Q3:',
+    title:'2023 - Q4:',
     date:'2023',
-    tag:'R',
+    tag:'N',
     list:[{
       text:'Publish NeonNexus Docs',
       state:true
@@ -13,34 +13,43 @@ export default function RoadMap() {
       state:true
     },{
       text:'Introduce Rollux Testnet',
-      state:false
+      state:true
+    },{
+      text:'Launch on Rollux Testnet',
+      state:true
     }]
   },{
-    title:'2023 - Q4:',
+    title:'2023 - Q1:',
     date:'2023',
-    tag:'E',
+    tag:'O',
     list:[{
-      text:'Launch on Rollux Mainnet',
+      text:'Launch NOX Tokenomics',
+      state:true
+    },{
+      text:'Launch Testnet Airdrop Campaign  ',
       state:false
     },{
-      text:'Launch Rewards Campaign',
+      text:'Upgrade Permissionless Pool',
       state:false
     },{
-      text:'Release NOX Tokenomics',
+      text:'Launch IDO ',
+      state:false
+    },{
+      text:'Launch on Mainnet',
       state:false
     }]
   },{
-    title:'2024 - Q1:',
+    title:'2024 - Q2:',
     date:'2024',
     tag:'X',
     list:[{
-      text:'NOX Token Airdrop Campaign',
+      text:'Liquidity Growth Incentive',
+      state:false
+    },{
+      text:'Marketing Campaign',
       state:false
     },{
       text:'DAO Governance',
-      state:false
-    },{
-      text:'Add New Assets',
       state:false
     }]
   }]

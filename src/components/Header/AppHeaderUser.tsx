@@ -87,14 +87,24 @@ export function AppHeaderUser({
     return (
       <div className="App-header-user">
         <div className={cx("App-header-trade-link", { "homepage-header": isHomeSite() })}>
-          <HeaderLink
+
+        <a
+          href="https://dapptest.neonnexus.io"
+          target="_blank"
+          rel="noreferrer"
+          className="default-btn strong primary"
+        >
+          {isHomeSite() ? <Trans>Launch Dapp</Trans> : <Trans>Trade</Trans>}
+        </a>
+
+          {/* <HeaderLink
             className="default-btn strong primary"
             to="/trade"
             redirectPopupTimestamp={redirectPopupTimestamp}
             showRedirectModal={showRedirectModal}
           >
             {isHomeSite() ? <Trans>Launch Dapp</Trans> : <Trans>Trade</Trans>}
-          </HeaderLink>
+          </HeaderLink> */}
         </div>
 
         {

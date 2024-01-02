@@ -34,7 +34,7 @@ import linePic from "img/vector1.png";
 
 import TokenCard from "components/TokenCard/TokenCard";
 import { Trans } from "@lingui/macro";
-import { HeaderLink } from "components/Header/HeaderLink";
+// import { HeaderLink } from "components/Header/HeaderLink";
 
 import shapesCtx from "img/shapesCtx.svg";
 
@@ -124,14 +124,14 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
 
   const LaunchExchangeButton = () => {
     return (
-      <HeaderLink
+      <a
+        href="https://dapptest.neonnexus.io"
+        target="_blank"
+        rel="noreferrer"
         className="default-btn LaunchExchangeButton"
-        to="/trade"
-        redirectPopupTimestamp={redirectPopupTimestamp}
-        showRedirectModal={showRedirectModal}
       >
         <Trans>Launch Dapp</Trans>
-      </HeaderLink>
+      </a>
     );
   };
 
@@ -141,8 +141,15 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
 
   return (
     <div className="Home">
+
       <div className="Home-top">
         {/* <div className="Home-top-image"></div> */}
+
+        <div className="video-bg">
+          <video autoplay="true" muted loop preload="auto">
+            <source src="/bg.mp4" type="video/mp4" />
+          </video>
+        </div>
 
         <div className="Home-title-section-container default-container flex items-center justify-between">
 
@@ -167,7 +174,50 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
 
         </div>
 
+
+        
+
         <div className="Home-feature-wrap default-container">
+
+        <div className="Home-latest-info-container default-container">
+          <div className="max-md:text-center max-md:grid-cols-2 grid grid-cols-4">
+            <div className="border-l-[0.5px] border-[#545957] py-6 sm:pl-10 first:border-0">
+              <div className="Home-latest-info__title">
+                <Trans>Total Trading Volume</Trans>
+              </div>
+              <div className="Home-latest-info__value">
+                $0
+                {
+                  // formatAmount(totalVolumeSum, USD_DECIMALS, 0, true)
+                }
+              </div>
+            </div>
+            <div className=" border-l-[0.5px] border-[#545957] py-6 sm:pl-10">
+              <div className="Home-latest-info__title">
+                <Trans>Total Value Locked</Trans>
+              </div>
+              <div className="Home-latest-info__value">${0}</div>
+            </div>
+            <div className=" border-l-[0.5px] border-[#545957] max-md:border-0 max-md:border-t-[0.5px] py-6 sm:pl-10">
+              <div className="Home-latest-info__title">
+                <Trans>Total Fees</Trans>
+              </div>
+              <div className="Home-latest-info__value">${0}</div>
+            </div>
+            <div className="border-l-[0.5px] border-[#545957] max-md:border-t-[0.5px] py-6 sm:pl-10">
+              <div className="Home-latest-info__title">
+                <Trans>Open Interest</Trans>
+              </div>
+              <div className="Home-latest-info__value">
+                $0
+                {
+                  // formatAmount(openInterest, USD_DECIMALS, 0, true)
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+        
           <div className="Home-feature">
             <h2>Features</h2>
             <ul className="max-md:grid-cols-1 grid grid-cols-3 Home-feature-list">
@@ -227,44 +277,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
             </ul>
           </div>
         </div>
-        <div className="Home-latest-info-container default-container">
-          <div className="max-md:text-center max-md:grid-cols-2 grid grid-cols-4">
-            <div className="border-l-[0.5px] border-[#545957] py-6 sm:pl-10 first:border-0">
-              <div className="Home-latest-info__title">
-                <Trans>Total Trading Volume</Trans>
-              </div>
-              <div className="Home-latest-info__value">
-                $0
-                {
-                  // formatAmount(totalVolumeSum, USD_DECIMALS, 0, true)
-                }
-              </div>
-            </div>
-            <div className=" border-l-[0.5px] border-[#545957] py-6 sm:pl-10">
-              <div className="Home-latest-info__title">
-                <Trans>Total Value Locked</Trans>
-              </div>
-              <div className="Home-latest-info__value">${0}</div>
-            </div>
-            <div className=" border-l-[0.5px] border-[#545957] max-md:border-0 max-md:border-t-[0.5px] py-6 sm:pl-10">
-              <div className="Home-latest-info__title">
-                <Trans>Total Fees</Trans>
-              </div>
-              <div className="Home-latest-info__value">${0}</div>
-            </div>
-            <div className="border-l-[0.5px] border-[#545957] max-md:border-t-[0.5px] py-6 sm:pl-10">
-              <div className="Home-latest-info__title">
-                <Trans>Open Interest</Trans>
-              </div>
-              <div className="Home-latest-info__value">
-                $0
-                {
-                  // formatAmount(openInterest, USD_DECIMALS, 0, true)
-                }
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </div>
       <div className="Home-feature-wrap default-container">
         <div className="Home-feature">

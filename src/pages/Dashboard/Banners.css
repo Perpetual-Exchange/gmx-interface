@@ -1,11 +1,12 @@
 .Banners {
-  border: 1px solid red;
+  border: 1px solid #54595774;
   padding: 30px;
+  border-radius: 10px;
 }
 .Banners .item{
   background: #4e4e4e;
   border-radius: 4px;
-  height: 200px;
+  height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1736,10 +1736,10 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
               </div>
               <div className="App-card-divider"></div>
               <div className="m-0 App-card-buttons">
-                <Button variant="secondary" to="/buy_rlp">
+                <Button variant="secondary" to="/buy_nlp">
                   <Trans>Buy NLP</Trans>
                 </Button>
-                <Button variant="secondary" to="/buy_rlp#redeem">
+                <Button variant="secondary" to="/buy_nlp#redeem">
                   <Trans>Sell NLP</Trans>
                 </Button>
                 {/* {hasInsurance && (

@@ -498,7 +498,7 @@ function FullApp() {
                   connectWallet={connectWallet}
                 />
               </Route>
-              <Route exact path="/buy_rlp">
+              <Route exact path="/buy_nlp">
                 <BuyGlp
                   savedSlippageAmount={savedSlippageAmount}
                   setPendingTxns={setPendingTxns}

@@ -49,7 +49,7 @@ import { useChainId } from "lib/chains";
 import { formatDate } from "lib/dates";
 import { getIcons } from "config/icons";
 import useUniqueUsers from "domain/stats/useUniqueUsers";
-import Banners  from './Banners.tsx';
+// import Banners  from './Banners.tsx';
 
 
 // const ACTIVE_CHAIN_IDS = [AVALANCHE_FUJI, AVALANCHE];
@@ -333,7 +333,7 @@ export default function DashboardV2() {
                     <br />
                     <br />
                     Get lower fees to{" "}
-                    <Link to="/buy_rlp" target="_blank" rel="noopener noreferrer">
+                    <Link to="/buy_nlp" target="_blank" rel="noopener noreferrer">
                       buy NLP
                     </Link>{" "}
                     with {tokenInfo.symbol}, and to{" "}
@@ -477,7 +477,7 @@ export default function DashboardV2() {
   return (
     <SEO title={getPageTitle(t`Dashboard`)}>
       <div className="default-container page-layout DashboardV2">
-        <Banners/>
+        {/* <Banners/> */}
         <div className="section-title-block">
           <img src={d1} className="right-b-icon" alt="" />
           <div className="section-title-content">

@@ -12,10 +12,10 @@ export function HomeHeaderNavLinks() {
       link: "https://docs.neonnexus.io",
     },{
       label: `Twitter`,
-      link: "https://twitter.com/RomexFi",
+      link: "https://twitter.com/NeonNexus_io",
     },{
       label: `Discord`,
-      link: "https://discord.com/invite/9MTZdXeDkq",
+      link: "https://twitter.com/NeonNexus_io",
     },
   ];
   return (
