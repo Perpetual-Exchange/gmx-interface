@@ -407,7 +407,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
 
         <div className="Home-parnter-list">
           <h3>Powered by</h3>
-          <ul className="max-md:grid-cols-2 max-md:gap-y-10 max-md:gap-x-10 grid  grid-cols-4 md:gap-x-10">
+          <ul className="max-md:grid-cols-2 max-md:gap-y-10 max-md:gap-x-10 grid  grid-cols-3 md:gap-x-10">
             <li className="flex  max-md:justify-start items-center justify-center" onClick={()=>linkTo('https://rollux.com')}>
               <img src={homeRollux} alt="" className="mr-5" />
               <div>Rollux</div>
