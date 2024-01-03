@@ -11,6 +11,7 @@ import { ethers } from "ethers";
 
 import d1 from "../../img/app-dashboard/d1.png";
 import d2 from "../../img/app-dashboard/d2.png";
+import glpIcon from "img/ic_glp_40.svg";
 
 import {
   USD_DECIMALS,
@@ -963,7 +964,7 @@ export default function DashboardV2() {
             </div>
             <div className="mt-40 token-table-wrapper App-card">
               <div className="App-card-title">
-                <img src={currentIcons.network} width="30" className="mr-4" alt="Network Icon" />
+                <img src={glpIcon} width="30" className="mr-4" alt="Network Icon" />
                 <Trans>NLP Index Composition</Trans>
               </div>
               <div className="App-card-divider hidden"></div>
