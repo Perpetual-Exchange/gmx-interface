@@ -11,7 +11,7 @@ import { FaTimes } from "react-icons/fa";
 import { AnimatePresence as FramerAnimatePresence, motion } from "framer-motion";
 
 import "./Header.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { isHomeSite } from "lib/legacy";
 import { HomeHeaderLinks } from "./HomeHeaderLinks";
 const slideVariants = {
@@ -93,10 +93,10 @@ export function Header({
       <header>
         <div className="App-header large">
           <div className="App-header-container-left">
-            <Link className="App-header-link-main" to="/">
+            <a className="App-header-link-main" href="https://neonnexus.io" target={'_self'}>
               <img src={logoImg} alt="Logo" />
               {/* <strong>NeonNexus</strong> */}
-            </Link>
+            </a>
             {isHomeSite() ? null : ( // <HomeHeaderLinks redirectPopupTimestamp={redirectPopupTimestamp} showRedirectModal={showRedirectModal} />
               <AppHeaderLinks redirectPopupTimestamp={redirectPopupTimestamp} showRedirectModal={showRedirectModal} />
             )}

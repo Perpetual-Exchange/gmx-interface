@@ -26,7 +26,7 @@ import homeReward3 from "img/home-reward/r3.png";
 import homeReward4 from "img/home-reward/r4.png";
 
 import homeRollux from "img/home-partner/Rollux.png";
-import homeWEconomy from "img/home-partner/WEconomy.svg";
+// import homeWEconomy from "img/home-partner/WEconomy.svg";
 import homeSyscoin from "img/home-partner/Syscoin.png";
 import homePegasys from "img/home-partner/Pegasys.svg";
 
@@ -126,7 +126,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
     return (
       <a
         href="https://dapptest.neonnexus.io"
-        target="_blank"
+        target="_self"
         rel="noreferrer"
         className="default-btn LaunchExchangeButton"
       >
@@ -412,10 +412,10 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
               <img src={homeRollux} alt="" className="mr-5" />
               <div>Rollux</div>
             </li>
-            <li className="flex max-md:justify-start items-center justify-center"  onClick={()=>linkTo('https://weconomy.network')}>
+            {/* <li className="flex max-md:justify-start items-center justify-center"  onClick={()=>linkTo('https://weconomy.network')}>
               <img src={homeWEconomy} alt="" className="mr-5" />
               <div>WEconomy</div>
-            </li>
+            </li> */}
             <li className="flex max-md:justify-start items-center justify-center"  onClick={()=>linkTo('https://syscoin.org')}>
               <img src={homeSyscoin} alt="" className="mr-5" />
               <div>Syscoin</div>
