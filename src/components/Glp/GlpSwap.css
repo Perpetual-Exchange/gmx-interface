@@ -325,3 +325,9 @@
     margin-top: 0.8rem;
   }
 }
+
+@media (max-width: 750px) {
+  .token-grid {
+    grid-gap: 5rem;
+  }
+}

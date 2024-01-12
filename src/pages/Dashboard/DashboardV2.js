@@ -747,7 +747,7 @@ export default function DashboardV2() {
                   <a
                     href="https://docs.neonnexus.io/liquidity-provider"
                     target="_blank"
-                    className="font-normal text-[18px] hover:text-[#00FF9F]"
+                    className="font-normal text-[18px] hover:text-[#9AF950]"
                     rel="noreferrer"
                   >
                     Read More
@@ -876,7 +876,7 @@ export default function DashboardV2() {
                   <a
                     href="https://docs.neonnexus.io/liquidity-provider"
                     target="_blank"
-                    className="font-normal text-[18px] hover:text-[#00FF9F] relative top-5 right-20"
+                    className="font-normal text-[18px] hover:text-[#9AF950] relative top-5 right-20"
                     rel="noreferrer"
                   >
                     Read More

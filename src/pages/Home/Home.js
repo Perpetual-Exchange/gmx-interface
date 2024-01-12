@@ -151,16 +151,16 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
           </video>
         </div>
 
-        <div className="Home-title-section-container default-container flex items-center justify-between">
+        <div className="flex items-center justify-between Home-title-section-container default-container">
 
           <div className="Home-title-section">
             <div className="Home-title">
               <Trans>
-                DECENTRALIZED
+                <span className="opacity-80">DECENTRALIZED</span>
                 <br />
-                <span style={{ color: "#00FF9F" }}>PERPETUAL</span>
+                <span style={{ color: "#9AF950" }}>PERPETUAL</span>
                 <br />
-                EXCHANGE
+                <span className="opacity-80">EXCHANGE</span>
               </Trans>
             </div>
             <img src={linePic} className="mb-10 max-md:mb-5" style={{ maxWidth: "60vw" }} alt="line" />
@@ -170,7 +170,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
             <LaunchExchangeButton />
           </div>
 
-          <img src={shapesCtx} alt=''/>
+          <img src={shapesCtx} alt='' className="banner-img"/>
 
         </div>
 
@@ -180,7 +180,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
         <div className="Home-feature-wrap default-container">
 
         <div className="Home-latest-info-container default-container">
-          <div className="max-md:text-center max-md:grid-cols-2 grid grid-cols-4">
+          <div className="grid grid-cols-4 max-md:text-center max-md:grid-cols-2">
             <div className="border-l-[0.5px] border-[#545957] py-6 sm:pl-10 first:border-0">
               <div className="Home-latest-info__title">
                 <Trans>Total Trading Volume</Trans>
@@ -220,7 +220,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
         
           <div className="Home-feature">
             <h2>Features</h2>
-            <ul className="max-md:grid-cols-1 grid grid-cols-3 Home-feature-list">
+            <ul className="grid grid-cols-3 max-md:grid-cols-1 Home-feature-list">
               <li>
                 <h3>Leveraged Trading</h3>
                 <div>
@@ -282,7 +282,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
       <div className="Home-feature-wrap default-container">
         <div className="Home-feature">
           <h2>Tokenomics</h2>
-          <ul className="max-md:grid-cols-1 grid grid-cols-2 tokenomics-list">
+          <ul className="grid grid-cols-2 max-md:grid-cols-1 tokenomics-list">
             <TokenCard showRedirectModal={showRedirectModal} redirectPopupTimestamp={redirectPopupTimestamp} />
           </ul>
         </div>
@@ -291,16 +291,16 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
       <div className="Home-feature-wrap default-container">
         <div className="Home-feature">
           <h2>Trade</h2>
-          <ul className=" max-md:grid-cols-1 grid grid-cols-2 Home-tip-list">
+          <ul className="grid grid-cols-2 max-md:grid-cols-1 Home-tip-list">
             <li className="border-b-[0.5px] border-[#545957] border-l-0 max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Zero price impact</h3>
               <div>Swap tokens with lowest trading fees and zero price impact.</div>
-              <img src={homeTrade1} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
+              <img src={homeTrade1} alt="" className="absolute max-md:top-20 max-md:left-8 top-16 left-12" />
             </li>
             <li className="border-l-[0.5px] border-b-[0.5px] border-[#545957] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>50x Leverage</h3>
               <div>Trade BTC, ETH, SYS, PSYS and other top cryptocurrencies with up to 50x leverage</div>
-              <img src={homeTrade2} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
+              <img src={homeTrade2} alt="" className="absolute max-md:top-20 max-md:right-8 top-16 right-12" />
             </li>
             <li className="border-[#545957] border-l-0 max-md:border-b-[0.5px] max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Robust price oracle</h3>
@@ -308,7 +308,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
                 NeonNexus uses SuperOracle as a reliable price oracle to achieve accurate and stable pricing so that
                 traders can confidently execute trades with reliable pricing information.
               </div>
-              <img src={homeTrade3} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
+              <img src={homeTrade3} alt="" className="absolute max-md:top-20 max-md:left-8 top-16 left-12" />
             </li>
             <li className="border-l-[0.5px] border-b-0 border-[#545957] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 max-md:border-b-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60 ">
               <h3>Peer to Pool</h3>
@@ -316,7 +316,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
                 NeonNexus leverages liquidity pools and peer-to-peer principles for permissionless automated trading,
                 eliminating centralized order books and traditional marketplaces.
               </div>
-              <img src={homeTrade4} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
+              <img src={homeTrade4} alt="" className="absolute max-md:top-20 max-md:right-8 top-16 right-12" />
             </li>
           </ul>
         </div>
@@ -325,28 +325,28 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
       <div className="Home-feature-wrap default-container">
         <div className="Home-feature">
           <h2>Earn</h2>
-          <ul className="max-md:grid-cols-1 grid grid-cols-2 Home-tip-list">
+          <ul className="grid grid-cols-2 max-md:grid-cols-1 Home-tip-list">
             <li className="border-b-[0.5px] border-[#545957] border-l-0 max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Providing Liquidity</h3>
               <div>Providing Liquidity earn esNOX rewards and 70% of platform fees</div>
-              <img src={homeEarn1} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
+              <img src={homeEarn1} alt="" className="absolute max-md:top-20 max-md:left-8 top-16 left-12" />
             </li>
             <li className="border-l-[0.5px] border-b-[0.5px] border-[#545957] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Stake to earn</h3>
               <div>
                 Staked NOX receives three types of rewards that includes Escrowed NOX, Multiplier Points and SYS Rewards
               </div>
-              <img src={homeEarn2} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
+              <img src={homeEarn2} alt="" className="absolute max-md:top-20 max-md:right-8 top-16 right-12" />
             </li>
             <li className="border-[#545957] border-l-0 max-md:border-b-[0.5px] max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Trade to earn</h3>
               <div>Earn NOX by trading volume, the bigger the trading volume, the more you earn</div>
-              <img src={homeEarn3} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
+              <img src={homeEarn3} alt="" className="absolute max-md:top-20 max-md:left-8 top-16 left-12" />
             </li>
             <li className="border-l-[0.5px] border-b-0 border-[#545957] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 max-md:border-b-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Open Positions</h3>
               <div>Traders will receive esNOX rewards for the period that their leveraged positions are active.</div>
-              <img src={homeEarn4} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
+              <img src={homeEarn4} alt="" className="absolute max-md:top-20 max-md:right-8 top-16 right-12" />
             </li>
           </ul>
         </div>
@@ -355,7 +355,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
       <div className="Home-feature-wrap default-container">
         <div className="Home-feature">
           <h2>Rewards</h2>
-          <ul className="max-md:grid-cols-1 grid grid-cols-2 Home-tip-list">
+          <ul className="grid grid-cols-2 max-md:grid-cols-1 Home-tip-list">
             <li className="border-b-[0.5px] border-[#545957] border-l-0 max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Traders' Loyalty Credit</h3>
               <div>
@@ -365,7 +365,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
                   Learn more
                 </a>
               </div>
-              <img src={homeReward1} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
+              <img src={homeReward1} alt="" className="absolute max-md:top-20 max-md:left-8 top-16 left-12" />
             </li>
             <li className="border-l-[0.5px] border-b-[0.5px] border-[#545957] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Open Positions incentives</h3>
@@ -376,7 +376,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
                   Learn more
                 </a>
               </div>
-              <img src={homeReward2} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
+              <img src={homeReward2} alt="" className="absolute max-md:top-20 max-md:right-8 top-16 right-12" />
             </li>
             <li className="border-[#545957] border-l-0 max-md:border-b-[0.5px] max-md:even:pr-40 max-md:odd:pl-40 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Liquidity Providers rewards</h3>
@@ -387,7 +387,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
                   Learn more
                 </a>
               </div>
-              <img src={homeReward3} alt="" className="max-md:top-20 max-md:left-8 top-16 left-12 absolute" />
+              <img src={homeReward3} alt="" className="absolute max-md:top-20 max-md:left-8 top-16 left-12" />
             </li>
             <li className="border-l-[0.5px] border-b-0 border-[#545957] max-md:even:pr-40 max-md:odd:pl-40 max-md:border-l-0 max-md:border-b-0 relative even:text-right even:pr-60 even:pl-5 odd:pr-5 odd:pl-60">
               <h3>Referral Program</h3>
@@ -398,7 +398,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
                   Learn more
                 </a>
               </div>
-              <img src={homeReward4} alt="" className="max-md:top-20 max-md:right-8 top-16 right-12 absolute" />
+              <img src={homeReward4} alt="" className="absolute max-md:top-20 max-md:right-8 top-16 right-12" />
             </li>
           </ul>
         </div>
@@ -407,20 +407,20 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
 
         <div className="Home-parnter-list">
           <h3>Powered by</h3>
-          <ul className="max-md:grid-cols-2 max-md:gap-y-10 max-md:gap-x-10 grid  grid-cols-3 md:gap-x-10">
-            <li className="flex  max-md:justify-start items-center justify-center" onClick={()=>linkTo('https://rollux.com')}>
+          <ul className="grid grid-cols-3 max-md:grid-cols-2 max-md:gap-y-10 max-md:gap-x-10 md:gap-x-10">
+            <li className="flex items-center justify-center max-md:justify-start" onClick={()=>linkTo('https://rollux.com')}>
               <img src={homeRollux} alt="" className="mr-5" />
               <div>Rollux</div>
             </li>
-            {/* <li className="flex max-md:justify-start items-center justify-center"  onClick={()=>linkTo('https://weconomy.network')}>
+            {/* <li className="flex items-center justify-center max-md:justify-start"  onClick={()=>linkTo('https://weconomy.network')}>
               <img src={homeWEconomy} alt="" className="mr-5" />
               <div>WEconomy</div>
             </li> */}
-            <li className="flex max-md:justify-start items-center justify-center"  onClick={()=>linkTo('https://syscoin.org')}>
+            <li className="flex items-center justify-center max-md:justify-start"  onClick={()=>linkTo('https://syscoin.org')}>
               <img src={homeSyscoin} alt="" className="mr-5" />
               <div>Syscoin</div>
             </li>
-            <li className="flex max-md:justify-start items-center justify-center"  onClick={()=>linkTo('https://app.pegasys.fi')}>
+            <li className="flex items-center justify-center max-md:justify-start"  onClick={()=>linkTo('https://app.pegasys.fi')}>
               <img src={homePegasys} alt="" className="mr-5" />
               <div>Pegasys</div>
             </li>

@@ -57,11 +57,11 @@ input {
   --dark-blue: #3d3d3d;
   --dark-blue-bg: #16182e;
   --dark-blue-accent: #a0a3c4;
-  --primary-btn-bg: #00FF9F;
-  --primary-btn-hover: #00FF9F;
+  --primary-btn-bg: #9AF950;
+  --primary-btn-hover: #9AF950;
   --primary-btn-active: rgba(224, 238, 141, 0.8);
   --dark-blue-hover: #00ff9d17;
-  --dark-blue-border: #00FF9F;
+  --dark-blue-border: #9AF950;
   --dark-blue-active: #00ff9d17;
   --text-gray: rgba(255, 255, 255, 0.7);
   --avax-red: #e84143;
@@ -135,7 +135,7 @@ td {
 }
 
 .border {
-  border: 0.5px solid #00FF9F;
+  border: 0.5px solid #9AF950;
 }
 
 .align-right {
@@ -208,8 +208,8 @@ a.plain {
 }
 
 .default-btn {
-  /* background: #00FF9F; */
-  background: url('../img/feature/btnbg.png');
+  /* background: #9AF950; */
+  background: url('../img/feature/btnbg.svg');
   background-size: 100% 100%;
   border-radius: 0;
   font-size: var(--font-sm);
@@ -232,7 +232,7 @@ a.plain {
 }
 
 .default-btn.primary{
-  background: #00FF9F;
+  background: #9AF950;
   border-radius: 8px;
 }
 

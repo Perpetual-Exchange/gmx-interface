@@ -29,6 +29,10 @@ msgstr "24h Volumen"
 msgid "<0/>Profit price: {0} ${1}. This rule applies for the next {2}, until {3}."
 msgstr ""
 
+#: src/pages/Home/Home.js
+msgid "<0>DECENTRALIZED</0><1/><2>PERPETUAL</2><3/><4>EXCHANGE</4>"
+msgstr ""
+
 #: src/App/App.js
 msgid "<0>Install Coinbase Wallet</0> to start using NOX."
 msgstr ""
@@ -864,10 +868,6 @@ msgstr "Aktuell {0} long"
 #: src/components/Exchange/SwapBox.js
 msgid "Current {0} shorts"
 msgstr "Aktuell {0} shorts"
-
-#: src/pages/Home/Home.js
-msgid "DECENTRALIZED<0/><1>PERPETUAL</1><2/>EXCHANGE"
-msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
 #: src/pages/Ecosystem/Ecosystem.js

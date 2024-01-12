@@ -5,7 +5,7 @@
   border-radius: 0;
   overflow: hidden;
   color: rgba(255, 255, 255, 0.7);
-  /* border: 0.5px solid #00FF9F; */
+  /* border: 0.5px solid #9AF950; */
 }
 
 .Tab-option-icon {
@@ -21,12 +21,12 @@
   padding-right: 1.5rem;
   cursor: pointer;
   border-radius: 8px;
-  border: 1px solid #00FF9F;
-  color: #00FF9F;
+  border: 1px solid #9AF950;
+  color: #9AF950;
 }
 
 .Tab.block .Tab-option:hover {
-  color: #00FF9F;
+  color: #9AF950;
   opacity: 0.8;
 }
 
@@ -68,6 +68,6 @@
 .Tab.inline .Tab-option.active {
   opacity: 1;
   pointer-events: none;
-  color: #00FF9F;
+  color: #9AF950;
   font-weight: bold;
 }

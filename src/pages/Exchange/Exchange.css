@@ -783,6 +783,7 @@ input.Exchange-swap-input.small {
   transform: rotate(90deg);
   font-size: 2rem;
   opacity: 0.8;
+  color: black;
 }
 
 .Exchange-swap-ball {

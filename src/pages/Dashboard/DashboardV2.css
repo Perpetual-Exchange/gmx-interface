@@ -163,3 +163,31 @@
     padding-bottom: 0;
   }
 }
+
+@media (max-width: 750px) {
+  .DashboardV2-cards{
+    grid-gap: 7rem;
+  }
+  .App-card::after{
+    bottom: -20px !important;
+    height: 20px !important;
+  }
+  .stats-wrapper{
+    grid-gap: 3rem;
+  }
+  .App-card{
+    width: calc(100vw - 4.4rem);
+  }
+  .App-card-title-mark{
+    margin-top: 30px;
+  }
+  .App-card-title{
+    padding: 1.5rem !important;
+  }
+  .Comingsoon-card::after{
+    height: 100% !important;
+  }
+  .App-card-content{
+    padding: 2rem !important;
+  }
+}
